@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JForm name="Cotizaciones_PrintParamForm" mainClass="com.aspsols.cotizaciones.reportes.Cotizaciones_PrintParamForm">
+  <Entities>
+    <Entity name="TOOLBAR" className="com.aspsols.cotizaciones.reportes.data.TOOLBAR_Cotizaciones_PrintParamForm" updateAllowed="true" insertAllowed="true" deleteAllowed="true" databaseEntity="false" dataSource="null" alias="null" maxPageSize="50" whereClause="null" orderBy="null" nonUpdatableEntity="false" queryDataSource="null" navigationStyle="SameRecord" singleRecord="false">
+      <fields>
+        <Field name="run" className="com.aspsols.cotizaciones.reportes.data.TOOLBAR_Cotizaciones_PrintParamForm.Run" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" />
+        <Field name="exit" className="com.aspsols.cotizaciones.reportes.data.TOOLBAR_Cotizaciones_PrintParamForm.Exit" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" />
+        <Field name="help" className="com.aspsols.cotizaciones.reportes.data.TOOLBAR_Cotizaciones_PrintParamForm.Help" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" />
+      </fields>
+    </Entity>
+    <Entity name="DATA" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm" updateAllowed="true" insertAllowed="true" deleteAllowed="true" databaseEntity="false" dataSource="null" alias="null" maxPageSize="50" whereClause="null" orderBy="null" nonUpdatableEntity="false" queryDataSource="null" navigationStyle="SameRecord" singleRecord="false">
+      <fields>
+        <Field name="PF_cot" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PF_cot" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
+        <Field name="PF_rev" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PF_rev" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
+        <Field name="PF_c_agr" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PF_c_agr" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
+        <Field name="PF_per" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PF_per" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
+        <Field name="PF_c_emp" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PF_c_emp" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
+        <Field name="DESFORMAT" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.DESFORMAT" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" initialValue="PDF" />
+      </fields>
+    </Entity>
+  </Entities>
+  <SQLStatements />
+</JForm>
+

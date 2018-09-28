@@ -1,0 +1,67 @@
+<?xml version="1.0" ?>
+<project name="JSP7_Cotizaciones_Rep" basedir="." default="main">
+
+    <property name="bin.dir"     value="bin"/>
+    <property name="tomcat.dir"  value="D:/ASP/apache-tomcat-6.0.18"/>
+    <property name="war"         value="JSP7_Cotizaciones_Rep"/>
+    <property name="war.dir"     value="${tomcat.dir}/webapps"/>
+    <property name="jar.dir"     value="${war.dir}/${war}/WEB-INF/lib"/>
+    <property name="browser"     location="rundll32 url.dll,FileProtocolHandler"/>
+    <property name="file" 		 value="http://localhost:8089/${war}/resources/GWTJReportGenerator.html?cn=com.aspsols.cotizaciones.reportes.Cotizaciones_Print&amp;irttt=T&amp;ssty=NS&amp;"/>
+    <property name="jspDocument" location="reports/com/aspsols/cotizaciones/reportes"/>
+    <property name="package"     location="com/aspsols/cotizaciones/reportes"/>
+    <!-- Configure properties to access the Manager application -->
+    <property name="manager.url"      value="http://localhost:8089/manager"/>
+    <property name="manager.username" value="admin"/>
+    <property name="manager.password" value="admin"/>
+    
+    <!-- Definition of taskdef from catalina-ant -->
+    <taskdef name="start"     classname="org.apache.catalina.ant.StartTask"
+    classpath="${tomcat.dir}/lib/catalina-ant.jar"/>
+    <taskdef name="stop"      classname="org.apache.catalina.ant.StopTask"
+    classpath="${tomcat.dir}/lib/catalina-ant.jar"/>
+    
+    <!-- Targets definition -->
+    <target name="stop" description="Stop Tomcat application">
+        <stop url="${manager.url}" failonerror="true" username="${manager.username}"
+        password="${manager.password}" path="/${war}"/>
+        <echo>
+        Stopping the context...
+        </echo>
+    </target>
+    <target name="copy">
+        <copy todir="${war.dir}/${war}/reports/com/aspsols/cotizaciones/reportes">
+        <fileset dir="${bin.dir}/com/aspsols/cotizaciones/reportes" excludes="**/*.java, **.java, **.class, **/*.class, **.controller, **.model, **.view, data*/**, jdbc/**"/>
+        </copy>
+    </target>
+    
+    <target name="jar" depends="stop">
+        <echo>
+        Building the jar file...
+        </echo>
+        <jar destfile="${jar.dir}/${ant.project.name}.jar" basedir="${bin.dir}"
+        excludes="**.jrb, **.jfb, **.jpb, **.jlb, **.jmb, **.properties, **/*.jsp, **.jfp, temp/**, jdbc/**"/>
+    </target>
+    
+    <target name="start" description="Start Tomcat application">
+        <start url="${manager.url}" failonerror="true"
+        username="${manager.username}"
+        password="${manager.password}"
+        path="/${war}"/>
+        <echo>
+        Starting the context...
+        </echo>
+    </target>
+    
+    <target name="run">
+        <waitfor maxwait="15" maxwaitunit="second">
+            <http url="http://localhost:8089"/>
+        </waitfor>
+        <exec executable="cmd.exe">
+            <arg value="/c"/>
+            <arg value="rundll32 url.dll,FileProtocolHandler ${file} "/>
+        </exec>
+    </target>
+    
+    <target name="main" depends="jar, copy, start, run" />
+</project>
