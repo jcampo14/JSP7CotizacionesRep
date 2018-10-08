@@ -2,7 +2,7 @@
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.6.0_45"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/despliegue/ASPCommunication.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/despliegue/ASPLogger.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/despliegue/ConverterUtils.jar"/>
