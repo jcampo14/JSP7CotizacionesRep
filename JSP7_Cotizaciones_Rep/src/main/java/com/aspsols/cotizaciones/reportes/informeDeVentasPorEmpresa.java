@@ -201,39 +201,48 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 	java.lang.Double valor_periodo1=null;
 	java.lang.Double valor_periodo2=null;
 	java.lang.Double valor_porcentaje=null;
-	java.lang.String sqlCommand1="SELECT SUM(round(fd.can * fd.ven,2)) ";
-	sqlCommand1+=" FROM fac_det fd, fac_enc fe ";
-	sqlCommand1+="WHERE fe.fac=fd.fac AND fe.c_emp=fd.c_emp  AND fe.c_agr=fd.c_agr  AND fe.n_ide=fd.n_ide  AND fe.est='A'  AND substr(fe.per_ct,1,4)=#parameterPeriodo   ";
-	sqlCommand1+="GROUP BY substr(fe.per_ct,1,4) ";
-	//Generated vector to hold the arguments.
-	Vector<SqlParameter> arguments1=new Vector<SqlParameter>();
-	SqlParameter sqlParameter1=new SqlParameter("parameterPeriodo",getField("periodo").getFieldValue());
-	arguments1.add(sqlParameter1);
-	Vector resulSet1=getDAOObject().getRecords(sqlCommand1,arguments1);
-	setRowsAffected(resulSet1.size());
-	if (resulSet1.size()==0){
-		throw new NoDataFoundException("No Data found.");
-	} else if (resulSet1.size()>1){
-		throw new TooManyRows("Too many Rows.");
+	try{
+		java.lang.String sqlCommand1="SELECT SUM(round(fd.can * fd.ven,2)) ";
+		sqlCommand1+=" FROM fac_det fd, fac_enc fe ";
+		sqlCommand1+="WHERE fe.fac=fd.fac AND fe.c_emp=fd.c_emp  AND fe.c_agr=fd.c_agr  AND fe.n_ide=fd.n_ide  AND fe.est='A'  AND substr(fe.per_ct,1,4)=#parameterPeriodo   ";
+		sqlCommand1+="GROUP BY substr(fe.per_ct,1,4) ";
+		//Generated vector to hold the arguments.
+		Vector<SqlParameter> arguments1=new Vector<SqlParameter>();
+		SqlParameter sqlParameter1=new SqlParameter("parameterPeriodo",getField("periodo").getFieldValue());
+		arguments1.add(sqlParameter1);
+		Vector resulSet1=getDAOObject().getRecords(sqlCommand1,arguments1);
+		setRowsAffected(resulSet1.size());
+		if (resulSet1.size()==0){
+			throw new NoDataFoundException("No Data found.");
+		} else if (resulSet1.size()>1){
+			throw new TooManyRows("Too many Rows.");
+		}
+		valor_periodo1=(java.lang.Double)convertTo2(((Vector)resulSet1.get(0)).get(0),"java.lang.Double");
+	} catch(NoDataFoundException expt1){
+		valor_periodo1=null;
 	}
-	valor_periodo1=(java.lang.Double)convertTo2(((Vector)resulSet1.get(0)).get(0),"java.lang.Double");
-	java.lang.String sqlCommand2="SELECT SUM(round(fd.can * fd.ven,2)) ";
-	sqlCommand2+=" FROM fac_det fd, fac_enc fe ";
-	sqlCommand2+="WHERE fe.fac=fd.fac AND fe.c_emp=fd.c_emp  AND fe.c_agr=fd.c_agr  AND fe.n_ide=fd.n_ide  AND fe.est='A'  AND substr(fe.per_ct,1,4)=(substr(#parameterPeriodo ,1,4) - 1)  ";
-	sqlCommand2+="GROUP BY substr(fe.per_ct,1,4) ";
-	//Generated vector to hold the arguments.
-	Vector<SqlParameter> arguments2=new Vector<SqlParameter>();
-	SqlParameter sqlParameter2=new SqlParameter("parameterPeriodo",getField("periodo").getFieldValue());
-	arguments2.add(sqlParameter2);
-	Vector resulSet2=getDAOObject().getRecords(sqlCommand2,arguments2);
-	setRowsAffected(resulSet2.size());
-	if (resulSet2.size()==0){
-		throw new NoDataFoundException("No Data found.");
-	} else if (resulSet2.size()>1){
-		throw new TooManyRows("Too many Rows.");
+	try{
+		java.lang.String sqlCommand2="SELECT SUM(round(fd.can * fd.ven,2)) ";
+		sqlCommand2+=" FROM fac_det fd, fac_enc fe ";
+		sqlCommand2+="WHERE fe.fac=fd.fac AND fe.c_emp=fd.c_emp  AND fe.c_agr=fd.c_agr  AND fe.n_ide=fd.n_ide  AND fe.est='A'  AND substr(fe.per_ct,1,4)=(substr(#parameterPeriodo ,1,4) - 1)  ";
+		sqlCommand2+="GROUP BY substr(fe.per_ct,1,4) ";
+		//Generated vector to hold the arguments.
+		Vector<SqlParameter> arguments2=new Vector<SqlParameter>();
+		SqlParameter sqlParameter2=new SqlParameter("parameterPeriodo",getField("periodo").getFieldValue());
+		arguments2.add(sqlParameter2);
+		Vector resulSet2=getDAOObject().getRecords(sqlCommand2,arguments2);
+		setRowsAffected(resulSet2.size());
+		if (resulSet2.size()==0){
+			throw new NoDataFoundException("No Data found.");
+		} else if (resulSet2.size()>1){
+			throw new TooManyRows("Too many Rows.");
+		}
+		valor_periodo2=(java.lang.Double)convertTo2(((Vector)resulSet2.get(0)).get(0),"java.lang.Double");
+		valor_porcentaje=convertTo(divide ((multiply (valor_periodo1,100)),valor_periodo2),valor_porcentaje);
+	} catch(NoDataFoundException expt2){
+		valor_periodo2=null;
+		valor_porcentaje=null;
 	}
-	valor_periodo2=(java.lang.Double)convertTo2(((Vector)resulSet2.get(0)).get(0),"java.lang.Double");
-	valor_porcentaje=convertTo(divide ((multiply (valor_periodo1,100)),valor_periodo2),valor_porcentaje);
 	Object object1=ASPMath.round(valor_porcentaje,2);
 	return (java.lang.Double)convertTo2(object1,"java.lang.Double");
 
