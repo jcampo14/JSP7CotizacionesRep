@@ -93,6 +93,7 @@ public class informeDeVentasPorEmpresa_class1 extends JReportRuntime {
 	protected Group groupGROUP0 = new Group("GROUP0",queryQUERY0,"NONE",null,0);
 	protected GroupField groupFieldGROUP0SUBSTR_FE_PER_CT_1_4_ = new GroupField("SUBSTR_FE_PER_CT_1_4_",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldGROUP0SUM_ROUND_FD_CAN_FD_VEN_2_ = new GroupField("SUM_ROUND_FD_CAN_FD_VEN_2_",1,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldFormula_columnsPorcentaje_total = new GroupField("porcentaje_total",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","porcentaje_total_method","FORMULA",null,false,0,tempGroup,this);
 	protected GraphicsObjectServer graphicServergraphicTitulo = new GraphicsObjectServer("Titulo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,100,40,false,false,-1,0,null,0,0,new Font("Arial",1,14),false,"Report parameters");
 	protected GraphicsObjectServer graphicServergraphicParameterperiodo = new GraphicsObjectServer("parameterperiodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,80,80,false,false,-1,0,null,0,0,new Font("Arial",0,10),false,"periodo");
 	protected ReportRegion reportRegionHeaderBody = new ReportRegion("BODY");

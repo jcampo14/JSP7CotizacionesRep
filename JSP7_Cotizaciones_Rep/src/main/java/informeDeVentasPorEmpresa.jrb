@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1539985574153" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1540240839641" MHB="10" MVB="10"
      N1="informeDeVentasPorEmpresa" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PPO="null" PT="null"
      RUTA="C:\Users\asp_789\git\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorEmpresa.jrb"
      SBP="true" SPF="true" UM="Pixels">
-     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo,QUERY0,GROUP0,SUBSTR_FE_PER_CT_1_4_,SUM_ROUND_FD_CAN_FD_VEN_2_">
+     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo,QUERY0,GROUP0,SUBSTR_FE_PER_CT_1_4_,SUM_ROUND_FD_CAN_FD_VEN_2_,porcentaje_total">
           <SYSTEM_PARAMETERS>
-               <BACKGROUND DT="java.lang.String" IV="false" MAZ="80"
-                    N1="BACKGROUND" VL="false"/>
-               <COPIES DT="java.lang.Double" IM="null" IV="1" MAZ="4"
-                    N1="COPIES" VL="false"/>
-               <CURRENCY DT="java.lang.String" IV="null" MAZ="1024"
-                    N1="CURRENCY" VL="false"/>
-               <DECIMAL DT="java.lang.String" IV="0" MAZ="1"
-                    N1="DECIMAL" VL="false"/>
-               <DESFORMAT DT="java.lang.String" IV="dec" MAZ="1024"
-                    N1="DESFORMAT" VL="false"/>
-               <DESNAME DT="java.lang.String" IV="null" MAZ="1024"
-                    N1="DESNAME" VL="false"/>
-               <DESTYPE DT="java.lang.String" IV="Preview" MAZ="80"
-                    N1="DESTYPE" VL="false"/>
-               <MODE DT="java.lang.String" IV="Default" MAZ="80"
-                    N1="MODE" VL="false"/>
-               <ORIENTATION DT="java.lang.String" IV="Default" MAZ="80"
-                    N1="ORIENTATION" VL="false"/>
-               <PRINTJOB DT="java.lang.String" IV="false" MAZ="80"
-                    N1="PRINTJOB" VL="false"/>
-               <THOUSANDS DT="java.lang.String" IV="0" MAZ="1"
-                    N1="THOUSANDS" VL="false"/>
-               <MAXRECORDS DT="java.lang.Integer" IV="0" MAZ="80"
-                    N1="MAXRECORDS" VL="false"/>
+               <BACKGROUND DT="java.lang.String" IV="false"
+                    JN="parameterBACKGROUND" MAZ="80" N1="BACKGROUND" VL="false"/>
+               <COPIES DT="java.lang.Double" IM="null" IV="1"
+                    JN="parameterCOPIES" MAZ="4" N1="COPIES" VL="false"/>
+               <CURRENCY DT="java.lang.String" IV="null"
+                    JN="parameterCURRENCY" MAZ="1024" N1="CURRENCY" VL="false"/>
+               <DECIMAL DT="java.lang.String" IV="0"
+                    JN="parameterDECIMAL" MAZ="1" N1="DECIMAL" VL="false"/>
+               <DESFORMAT DT="java.lang.String" IV="dec"
+                    JN="parameterDESFORMAT" MAZ="1024" N1="DESFORMAT" VL="false"/>
+               <DESNAME DT="java.lang.String" IV="null"
+                    JN="parameterDESNAME" MAZ="1024" N1="DESNAME" VL="false"/>
+               <DESTYPE DT="java.lang.String" IV="Preview"
+                    JN="parameterDESTYPE" MAZ="80" N1="DESTYPE" VL="false"/>
+               <MODE DT="java.lang.String" IV="Default"
+                    JN="parameterMODE" MAZ="80" N1="MODE" VL="false"/>
+               <ORIENTATION DT="java.lang.String" IV="Default"
+                    JN="parameterORIENTATION" MAZ="80" N1="ORIENTATION" VL="false"/>
+               <PRINTJOB DT="java.lang.String" IV="false"
+                    JN="parameterPRINTJOB" MAZ="80" N1="PRINTJOB" VL="false"/>
+               <THOUSANDS DT="java.lang.String" IV="0"
+                    JN="parameterTHOUSANDS" MAZ="1" N1="THOUSANDS" VL="false"/>
+               <MAXRECORDS DT="java.lang.Integer" IV="0"
+                    JN="parameterMAXRECORDS" MAZ="80" N1="MAXRECORDS" VL="false"/>
           </SYSTEM_PARAMETERS>
           <USER_PARAMETERS>
                <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
-                    MAZ="20" N1="periodo" VL="false"/>
+                    JN="parameterPeriodo" MAZ="20" N1="periodo" VL="false"/>
           </USER_PARAMETERS>
           <QUERIES>
                <QUERY CB="null"
                     COLUMNS="SUBSTR_FE_PER_CT_1_4_,SUM_ROUND_FD_CAN_FD_VEN_2_"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;SUBSTR(FE.PER_CT, 1 , 4 ),SUM( ROUND (FD.CAN * FD.VEN, 2 ))&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;SUBSTR_FE_PER_CT_1_4_,SUM_ROUND_FD_CAN_FD_VEN_2_,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
                     EQS="null" GB="GROUP BY SUBSTR(FE.PER_CT, 1 , 4 )"
                     GR="GROUP0" H1="30" LG="GROUP0" MRF="0" N1="QUERY0"
                     OB="null" OBR="SQL" PARAMETERS="" PND="false"
-                    PX="40" PY="40"
+                    PX="79" PY="41"
                     Q1="select substr(fe.per_ct,1,4), sum(round(fd.can*fd.ven,2))&#xd;&#xa;from FAC_DET fd, fac_enc fe&#xd;&#xa;where fe.fac = fd.fac&#xd;&#xa;and fe.c_emp = fd.c_emp&#xd;&#xa;and fe.c_agr = fd.c_agr&#xd;&#xa;and fe.n_ide = fd.n_ide&#xd;&#xa;and fe.est = 'A'&#xd;&#xa;and substr(fe.per_ct,1,4) = :periodo&#xd;&#xa;group by substr(fe.per_ct,1,4)&#xd;&#xa;union all&#xd;&#xa;select substr(fe.per_ct,1,4), sum(round(fd.can*fd.ven,2))&#xd;&#xa;from FAC_DET fd, fac_enc fe&#xd;&#xa;where fe.fac = fd.fac&#xd;&#xa;and fe.c_emp = fd.c_emp&#xd;&#xa;and fe.c_agr = fd.c_agr&#xd;&#xa;and fe.n_ide = fd.n_ide&#xd;&#xa;and fe.est = 'A'&#xd;&#xa;and substr(fe.per_ct,1,4) = (substr(:periodo,1,4)-1)&#xd;&#xa;group by substr(fe.per_ct,1,4)"
                     QTR=" SELECT  SUBSTR(FE.PER_CT, 1 , 4 )   ,SUM( ROUND (FD.CAN * FD.VEN, 2 ))    FROM FAC_DET FD, FAC_ENC FE  WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND SUBSTR(FE.PER_CT, 1 , 4 ) = #periodo  GROUP BY SUBSTR(FE.PER_CT, 1 , 4 ) UNION ALL SELECT  SUBSTR(FE.PER_CT, 1 , 4 )   ,SUM( ROUND (FD.CAN * FD.VEN, 2 ))    FROM FAC_DET FD, FAC_ENC FE  WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND SUBSTR(FE.PER_CT, 1 , 4 ) =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )   GROUP BY SUBSTR(FE.PER_CT, 1 , 4 )"
                     T1="MASTER"
@@ -53,24 +53,33 @@
                     W1="80" W2="WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND SUBSTR(FE.PER_CT, 1 , 4 ) = #periodo"/>
           </QUERIES>
           <GROUPS>
-               <GROUP CONTENIDO="" FT="None" GRT="Normal" H1="150"
-                    N1="GROUP0" PND="true" PX="30" PY="120" QN="QUERY0"
-                    SF="null" W1="100">
+               <GROUP CONTENIDO="" FT="None" GR="GROUP_porcentaje_total"
+                    GRT="Normal" H1="150" N1="GROUP0" PND="true" PX="40"
+                    PY="123" QN="QUERY0" SF="null" W1="229">
                     <GROUP_FIELD BO="Ascending"
                          CCT="SUBSTR(FE.PER_CT, 1 , 4 )"
                          CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0SUBSTR_FE_PER_CT_1_4_);"
                          CT="DATABASE" DT="java.lang.String" GR="GROUP0"
+                         JN="groupFieldGROUP0SUBSTR_FE_PER_CT_1_4_"
                          N1="SUBSTR_FE_PER_CT_1_4_" QF="0"
                          RV="SUBSTR(FE.PER_CT, 1 , 4 )" VIN="null"/>
                     <GROUP_FIELD BO="Ascending"
                          CCT="SUM( ROUND (FD.CAN * FD.VEN, 2 ))"
                          CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0SUM_ROUND_FD_CAN_FD_VEN_2_);"
                          CT="DATABASE" DT="java.lang.String" GR="GROUP0"
+                         JN="groupFieldGROUP0SUM_ROUND_FD_CAN_FD_VEN_2_"
                          N1="SUM_ROUND_FD_CAN_FD_VEN_2_" QF="1"
                          RV="SUM( ROUND (FD.CAN * FD.VEN, 2 ))" VIN="null"/>
                </GROUP>
           </GROUPS>
-          <FORMULA_COLUMNS/>
+          <FORMULA_COLUMNS>
+               <FORMULA BO="None"
+                    CONTENIDO="this.queryLogic.addToFields(this.groupFieldFormula_columnsPorcentaje_total);"
+                    CT="FORMULA" DT="java.lang.String" FW="20" H1="20"
+                    JN="groupFieldFormula_columnsPorcentaje_total"
+                    N1="porcentaje_total" PF="porcentaje_total_method"
+                    PND="true" PX="383" PY="117" VFM="null" VIN="null" W1="120"/>
+          </FORMULA_COLUMNS>
           <SUMMARY_COLUMNS/>
           <PLACEHOLDER_COLUMNS/>
           <DATA_LINKS/>
@@ -209,7 +218,7 @@
                <TOTALS_FIELDS/>
           </WIZARD_REFERENCE>
      </DATA_MODEL>
-     <LAYOUT_MODEL NAMES="FRAME0,REPEATING_FRAME0,SUM_ROUND_FD_CAN_FD_VEN_2_,SUBSTR_FE_PER_CT_1_4_,TEXT_GRAPHIC0,TEXT_GRAPHIC1,TITLE,LAYOUT_FIELD0,TEXT_GRAPHIC2">
+     <LAYOUT_MODEL NAMES="FRAME0,REPEATING_FRAME0,SUM_ROUND_FD_CAN_FD_VEN_2_,SUBSTR_FE_PER_CT_1_4_,TEXT_GRAPHIC0,TEXT_GRAPHIC1,TEXT_GRAPHIC3,porcentaje,TITLE,LAYOUT_FIELD0,TEXT_GRAPHIC2">
           <HEADER BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
                CONTENIDO="this.presentationRules.getSections().add(this.reportSectionHeader);"
                H1="792" HPP="1" NPG="false" OR="Portrait" VPP="1" W1="612">
@@ -224,17 +233,17 @@
                CONTENIDO="this.presentationRules.getSections().add(this.reportSectionMain);"
                H1="792" HPP="1" LAYERS="-2" NPG="false" OR="Portrait"
                VPP="1" W1="612">
-               <BODY LAYERS="5">
+               <BODY LAYERS="7">
                     <ANCHORS PHN="ROOT&amp;"/>
                     <FRAME B1="null" BG="255,255,255"
                          BPO="Enclosing object" CF="null" DO="0 Grades"
                          ELS="true" FE="null" H1="21" HE="Variable"
                          IF="false"
-                         JAVA="protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame(&quot;FRAME0&quot;,155,6,21,209,reportRegionMainBody,0,null,&quot;VARIABLE&quot;,&quot;VARIABLE&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
+                         JAVA="protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame(&quot;FRAME0&quot;,155,6,21,284,reportRegionMainBody,0,null,&quot;VARIABLE&quot;,&quot;VARIABLE&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
                          KAO="false" LN="0" LS="Normal" LW="-1"
                          N1="FRAME0" NPG="false" PBA="false" PBB="false"
                          PHN="ROOT&amp;" PND="false" POO="First page"
-                         PP="false" PX="155" PY="6" VE="Variable" W1="209">
+                         PP="false" PX="155" PY="6" VE="Variable" W1="204">
                          <REPEATING_FRAME B1="null" BG="255,255,255"
                               BPO="Enclosing object" CF="null"
                               CMD="false" DO="0 Grades" ELS="false"
@@ -250,13 +259,14 @@
                               <LAYOUT_FIELD B1="null" BCF="None"
                                    BG="255,255,255" BO="Ascending"
                                    BPO="Enclosing object" CF="null"
-                                   DO="0 Grades" DT="java.lang.String"
+                                   DO="0 Grades" DT="java.lang.Double"
                                    ELS="false" F2="Arial,0,7" FE="null"
-                                   FG="0,0,0" FM="null" H1="10"
-                                   HA="Alg_Left" HE="Fixed" IF="false"
-                                   IV="null" KAO="false" LB="null"
-                                   LN="3" LS="Normal" LW="-1"
-                                   Last_Location="72,10" MAZ="10"
+                                   FG="0,0,0"
+                                   FM="###,###,###,###,###,###,###"
+                                   H1="10" HA="Alg_Right" HE="Fixed"
+                                   IF="false" IV="null" KAO="false"
+                                   LB="null" LN="3" LS="Normal" LW="-1"
+                                   Last_Location="227,16" MAZ="10"
                                    MWL="0"
                                    N1="SUM_ROUND_FD_CAN_FD_VEN_2_"
                                    NPG="false" PBA="false" PBB="false"
@@ -273,11 +283,11 @@
                                    DO="0 Grades" DT="java.lang.String"
                                    ELS="false" F2="Arial,0,7" FE="null"
                                    FG="255,255,255" FM="null" H1="10"
-                                   HA="Alg_Left" HE="Fixed" IF="true"
+                                   HA="Alg_Center" HE="Fixed" IF="true"
                                    IV="null" KAO="false" LB="null"
                                    LN="2" LS="Normal" LW="-1"
-                                   Last_Location="72,0" MAZ="10" MWL="0"
-                                   N1="SUBSTR_FE_PER_CT_1_4_"
+                                   Last_Location="227,6" MAZ="10"
+                                   MWL="0" N1="SUBSTR_FE_PER_CT_1_4_"
                                    NPG="false" PBA="false" PBB="false"
                                    PHN="ROOT&amp;"
                                    PNB="true,true,true,1,1,!Report"
@@ -311,6 +321,35 @@
                               PNB="true,true,true,1,1,!Report"
                               PND="true" POO="Default" PP="false"
                               PX="156" PY="6" UL="F" VE="Fixed" W1="71"/>
+                         <GRAPHIC B1="null" BCF="None" BG="0,51,153"
+                              BPO="Enclosing object" CF="null"
+                              DO="0 Grades" F2="Arial,0,8" FE="null"
+                              FG="255,255,255" GT="TEXT_GRAPHIC" H1="10"
+                              HA="Alg_Center" HE="Fixed" IF="true"
+                              JN="null" KAO="false" LB="%" LN="6"
+                              LW="-1" Last_Location="288,6" MWL="0"
+                              N1="TEXT_GRAPHIC3" NPG="false" PBA="false"
+                              PBB="false" PHN="ROOT&amp;"
+                              PNB="true,true,true,1,1,!Report"
+                              PND="true" POO="Default" PP="false"
+                              PX="288" PY="6" UL="F" VE="Fixed" W1="71"/>
+                         <LAYOUT_FIELD B1="null" BCF="None"
+                              BG="255,255,255" BO="None"
+                              BPO="Enclosing object" CF="null"
+                              DO="0 Grades" DT="java.lang.String"
+                              ELS="false" F2="Arial,0,7" FE="null"
+                              FG="0,0,0" FM="null" H1="11"
+                              HA="Alg_Right" HE="Fixed" IF="false"
+                              IV="null" KAO="false" LB="null" LN="7"
+                              LS="Normal" LW="-1" Last_Location="288,16"
+                              MAZ="20" MWL="0" N1="porcentaje"
+                              NPG="false" PBA="false" PBB="false"
+                              PHN="ROOT&amp;"
+                              PNB="true,true,true,1,1,!Report"
+                              PND="true" POO="Default" PP="false"
+                              PX="288" PY="16"
+                              S1="Formula_Columns.porcentaje_total"
+                              UL="F" V2="true" VE="Fixed" VIN="false" W1="71"/>
                     </FRAME>
                </BODY>
                <MARGIN LAYERS="2">
@@ -366,8 +405,8 @@
                </MARGIN>
           </TRAILER>
      </LAYOUT_MODEL>
-     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="400" NAMES=""
-          PX="0" PY="0" W1="600">
+     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="400"
+          NAMES="Titulo,parameterperiodo,Parameterperiodo" PX="0" PY="0" W1="600">
           <PARAMETER_FIELDS/>
           <GRAPHICAL_BOILERPLATE/>
           <TEXT_BOILERPLATE/>
@@ -382,7 +421,21 @@
           <BETWEEN_PAGES/>
           <AFTER_REPORT/>
      </REPORT_EVENTS>
-     <PROGRAMUNITS/>
+     <PROGRAMUNITS>
+          <PROGRAMUNIT COMENTARY="" COMPILE="true" JAVAC=""
+               N1="porcentaje_ganancia" PARAMETROS="" PGT="PLSQL"
+               PLSQL="PROCEDURE porcentaje_ganancia IS&#xa;BEGIN&#xa;&#x9;NULL;&#xa;END;" TIPO="void"/>
+          <PROGRAMUNIT COMENTARY="" COMPILE="true"
+               FieldRef=".porcentaje_total"
+               JAVAC="&#xa;&#x9;java.lang.Double valor_periodo1=null;&#xa;&#x9;java.lang.Double valor_periodo2=null;&#xa;&#x9;java.lang.Double valor_porcentaje=null;&#xa;&#x9;java.lang.String sqlCommand1=&quot;SELECT SUM(round(fd.can * fd.ven,2)) &quot;;&#xa;&#x9;sqlCommand1+=&quot; FROM fac_det fd, fac_enc fe &quot;;&#xa;&#x9;sqlCommand1+=&quot;WHERE fe.fac=fd.fac AND fe.c_emp=fd.c_emp  AND fe.c_agr=fd.c_agr  AND fe.n_ide=fd.n_ide  AND fe.est='A'  AND substr(fe.per_ct,1,4)=#parameterPeriodo   &quot;;&#xa;&#x9;sqlCommand1+=&quot;GROUP BY substr(fe.per_ct,1,4) &quot;;&#xa;&#x9;//Generated vector to hold the arguments.&#xa;&#x9;Vector&lt;SqlParameter> arguments1=new Vector&lt;SqlParameter>();&#xa;&#x9;SqlParameter sqlParameter1=new SqlParameter(&quot;parameterPeriodo&quot;,getField(&quot;periodo&quot;).getFieldValue());&#xa;&#x9;arguments1.add(sqlParameter1);&#xa;&#x9;Vector resulSet1=getDAOObject().getRecords(sqlCommand1,arguments1);&#xa;&#x9;setRowsAffected(resulSet1.size());&#xa;&#x9;if (resulSet1.size()==0){&#xa;&#x9;&#x9;throw new NoDataFoundException(&quot;No Data found.&quot;);&#xa;&#x9;} else if (resulSet1.size()>1){&#xa;&#x9;&#x9;throw new TooManyRows(&quot;Too many Rows.&quot;);&#xa;&#x9;}&#xa;&#x9;valor_periodo1=(java.lang.Double)convertTo2(((Vector)resulSet1.get(0)).get(0),&quot;java.lang.Double&quot;);&#xa;&#x9;java.lang.String sqlCommand2=&quot;SELECT SUM(round(fd.can * fd.ven,2)) &quot;;&#xa;&#x9;sqlCommand2+=&quot; FROM fac_det fd, fac_enc fe &quot;;&#xa;&#x9;sqlCommand2+=&quot;WHERE fe.fac=fd.fac AND fe.c_emp=fd.c_emp  AND fe.c_agr=fd.c_agr  AND fe.n_ide=fd.n_ide  AND fe.est='A'  AND substr(fe.per_ct,1,4)=(substr(#parameterPeriodo ,1,4) - 1)  &quot;;&#xa;&#x9;sqlCommand2+=&quot;GROUP BY substr(fe.per_ct,1,4) &quot;;&#xa;&#x9;//Generated vector to hold the arguments.&#xa;&#x9;Vector&lt;SqlParameter> arguments2=new Vector&lt;SqlParameter>();&#xa;&#x9;SqlParameter sqlParameter2=new SqlParameter(&quot;parameterPeriodo&quot;,getField(&quot;periodo&quot;).getFieldValue());&#xa;&#x9;arguments2.add(sqlParameter2);&#xa;&#x9;Vector resulSet2=getDAOObject().getRecords(sqlCommand2,arguments2);&#xa;&#x9;setRowsAffected(resulSet2.size());&#xa;&#x9;if (resulSet2.size()==0){&#xa;&#x9;&#x9;throw new NoDataFoundException(&quot;No Data found.&quot;);&#xa;&#x9;} else if (resulSet2.size()>1){&#xa;&#x9;&#x9;throw new TooManyRows(&quot;Too many Rows.&quot;);&#xa;&#x9;}&#xa;&#x9;valor_periodo2=(java.lang.Double)convertTo2(((Vector)resulSet2.get(0)).get(0),&quot;java.lang.Double&quot;);&#xa;&#x9;valor_porcentaje=convertTo(divide ((multiply (valor_periodo1,100)),valor_periodo2),valor_porcentaje);&#xa;&#x9;Object object1=ASPMath.round(valor_porcentaje,2);&#xa;&#x9;return (java.lang.Double)convertTo2(object1,&quot;java.lang.Double&quot;);&#xa;&#xa;"
+               N1="porcentaje_total_method"
+               PARAMETROS="(Vector&lt;ProcedureCallParameters>,argumentVector)"
+               PGT="PLSQL"
+               PLSQL="function porcentaje_total_method return number is &#xa;    valor_periodo1 number;&#xa;    valor_periodo2 number;&#xa;    valor_porcentaje number;&#xa;BEGIN&#xa;    select sum(round(fd.can*fd.ven,2))&#xa;    into valor_periodo1&#xa;    from FAC_DET fd, fac_enc fe&#xa;    where fe.fac = fd.fac&#xa;    and fe.c_emp = fd.c_emp&#xa;    and fe.c_agr = fd.c_agr&#xa;    and fe.n_ide = fd.n_ide&#xa;    and fe.est = 'A'&#xa;    and substr(fe.per_ct,1,4) = :periodo&#xa;    group by substr(fe.per_ct,1,4);&#xa;    select sum(round(fd.can*fd.ven,2))&#xa;    into valor_periodo2&#xa;    from FAC_DET fd, fac_enc fe&#xa;    where fe.fac = fd.fac&#xa;    and fe.c_emp = fd.c_emp&#xa;    and fe.c_agr = fd.c_agr&#xa;    and fe.n_ide = fd.n_ide&#xa;    and fe.est = 'A'&#xa;    and substr(fe.per_ct,1,4) = (substr(:periodo,1,4)-1)&#xa;    group by substr(fe.per_ct,1,4);&#xa;    valor_porcentaje := (valor_periodo1 * 100)/valor_periodo2;&#xa;&#x9;&#xa;    return round(valor_porcentaje,2);&#xa;END;&#xa;"
+               ST="Function" SUMPLA="true" TIPO="java.lang.Double" modify="true">
+               <PARAMETERS/>
+          </PROGRAMUNIT>
+     </PROGRAMUNITS>
      <LIBRARIES/>
      <IMPORTS/>
 </REPORT>

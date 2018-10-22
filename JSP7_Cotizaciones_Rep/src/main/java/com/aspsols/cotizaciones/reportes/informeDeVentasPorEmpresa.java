@@ -88,8 +88,9 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 
 	protected ParameterForm parameterForm = new ParameterForm(0,0,600,400,new Color(191,191,191),"informeDeVentasPorEmpresa");
 	protected PresentationRules presentationRules = new PresentationRules();
-	protected ReportFieldPresentation fieldPresentationMainBodySum_round_fd_can_fd_ven_2_ = new ReportFieldPresentation("SUM_ROUND_FD_CAN_FD_VEN_2_",227,16,10,61,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","SUM_ROUND_FD_CAN_FD_VEN_2_","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodySubstr_fe_per_ct_1_4_ = new ReportFieldPresentation("SUBSTR_FE_PER_CT_1_4_",227,6,10,61,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","SUBSTR_FE_PER_CT_1_4_","java.lang.String",true,0,new Color(0,51,153),null,2,new Color(255,255,255),new Font("Arial",0,7),null,"DEFAULT",false,false,true,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodySum_round_fd_can_fd_ven_2_ = new ReportFieldPresentation("SUM_ROUND_FD_CAN_FD_VEN_2_",227,16,10,61,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","SUM_ROUND_FD_CAN_FD_VEN_2_","java.lang.Double",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###,###","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodySubstr_fe_per_ct_1_4_ = new ReportFieldPresentation("SUBSTR_FE_PER_CT_1_4_",227,6,10,61,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","SUBSTR_FE_PER_CT_1_4_","java.lang.String",true,0,new Color(0,51,153),null,0,new Color(255,255,255),new Font("Arial",0,7),null,"DEFAULT",false,false,true,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPorcentaje = new ReportFieldPresentation("porcentaje",288,16,11,71,reportRegionMainBody,7,reportFrameMainBodyFrame0,"FIXED","FIXED","porcentaje_total","java.lang.String",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",522,47,13,55,reportRegionMainMargin,1,null,"FIXED","FIXED","CURRENT_DATE","java.util.Date",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,10),"dd/MM/YYYY","DEFAULT",false,false,false,false,null,0,false,-1);
 	
 	public informeDeVentasPorEmpresa() throws Exception {
@@ -137,6 +138,7 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 			
 			this.groupGROUP0.addField(this.groupFieldGROUP0SUBSTR_FE_PER_CT_1_4_);
 			this.groupGROUP0.addField(this.groupFieldGROUP0SUM_ROUND_FD_CAN_FD_VEN_2_);
+			this.queryLogic.addToFields(this.groupFieldFormula_columnsPorcentaje_total);
 			this.presentationRules.getSections().add(this.reportSectionHeader);
 			this.presentationRules.getSections().add(this.reportSectionMain);
 			this.presentationRules.getSections().add(this.reportSectionTrailer);
@@ -161,6 +163,7 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 
 			this.fieldPresentationMainBodySum_round_fd_can_fd_ven_2_.setGroupFieldReference(this.groupFieldGROUP0SUM_ROUND_FD_CAN_FD_VEN_2_);
 			this.fieldPresentationMainBodySubstr_fe_per_ct_1_4_.setGroupFieldReference(this.groupFieldGROUP0SUBSTR_FE_PER_CT_1_4_);
+			this.fieldPresentationMainBodyPorcentaje.setGroupFieldReference(this.groupFieldFormula_columnsPorcentaje_total);
 
 			this.addLayoutTextVariables();
 			this.addColumnInformation();
@@ -188,6 +191,56 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 	}
 	//*/
 
+	public void porcentaje_ganancia () {
+
+	}
+
+
+	public java.lang.Double porcentaje_total_method () {
+
+	java.lang.Double valor_periodo1=null;
+	java.lang.Double valor_periodo2=null;
+	java.lang.Double valor_porcentaje=null;
+	java.lang.String sqlCommand1="SELECT SUM(round(fd.can * fd.ven,2)) ";
+	sqlCommand1+=" FROM fac_det fd, fac_enc fe ";
+	sqlCommand1+="WHERE fe.fac=fd.fac AND fe.c_emp=fd.c_emp  AND fe.c_agr=fd.c_agr  AND fe.n_ide=fd.n_ide  AND fe.est='A'  AND substr(fe.per_ct,1,4)=#parameterPeriodo   ";
+	sqlCommand1+="GROUP BY substr(fe.per_ct,1,4) ";
+	//Generated vector to hold the arguments.
+	Vector<SqlParameter> arguments1=new Vector<SqlParameter>();
+	SqlParameter sqlParameter1=new SqlParameter("parameterPeriodo",getField("periodo").getFieldValue());
+	arguments1.add(sqlParameter1);
+	Vector resulSet1=getDAOObject().getRecords(sqlCommand1,arguments1);
+	setRowsAffected(resulSet1.size());
+	if (resulSet1.size()==0){
+		throw new NoDataFoundException("No Data found.");
+	} else if (resulSet1.size()>1){
+		throw new TooManyRows("Too many Rows.");
+	}
+	valor_periodo1=(java.lang.Double)convertTo2(((Vector)resulSet1.get(0)).get(0),"java.lang.Double");
+	java.lang.String sqlCommand2="SELECT SUM(round(fd.can * fd.ven,2)) ";
+	sqlCommand2+=" FROM fac_det fd, fac_enc fe ";
+	sqlCommand2+="WHERE fe.fac=fd.fac AND fe.c_emp=fd.c_emp  AND fe.c_agr=fd.c_agr  AND fe.n_ide=fd.n_ide  AND fe.est='A'  AND substr(fe.per_ct,1,4)=(substr(#parameterPeriodo ,1,4) - 1)  ";
+	sqlCommand2+="GROUP BY substr(fe.per_ct,1,4) ";
+	//Generated vector to hold the arguments.
+	Vector<SqlParameter> arguments2=new Vector<SqlParameter>();
+	SqlParameter sqlParameter2=new SqlParameter("parameterPeriodo",getField("periodo").getFieldValue());
+	arguments2.add(sqlParameter2);
+	Vector resulSet2=getDAOObject().getRecords(sqlCommand2,arguments2);
+	setRowsAffected(resulSet2.size());
+	if (resulSet2.size()==0){
+		throw new NoDataFoundException("No Data found.");
+	} else if (resulSet2.size()>1){
+		throw new TooManyRows("Too many Rows.");
+	}
+	valor_periodo2=(java.lang.Double)convertTo2(((Vector)resulSet2.get(0)).get(0),"java.lang.Double");
+	valor_porcentaje=convertTo(divide ((multiply (valor_periodo1,100)),valor_periodo2),valor_porcentaje);
+	Object object1=ASPMath.round(valor_porcentaje,2);
+	return (java.lang.Double)convertTo2(object1,"java.lang.Double");
+
+
+	}
+
+
 
 	private void addLayoutTextVariables() {
 	}
@@ -211,6 +264,7 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 	 * que se encuentran en los eventos de las formulas.
 	 */
 	private void addFormulaInFormula() {
+		this.groupFieldFormula_columnsPorcentaje_total.addToVectorFormulaInFormula(this.parameterPeriodo);
 	}
 		
 	/**

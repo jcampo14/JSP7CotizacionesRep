@@ -85,7 +85,7 @@ import com.aspsolutions.jframework.standar.ASPAccessFile;
 import com.aspsolutions.jframework.srw.SRWRunReportFailure;
 
 public class informeDeVentasPorEmpresa_class2 extends informeDeVentasPorEmpresa_class1 {
-	protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame("FRAME0",155,6,21,209,reportRegionMainBody,0,null,"VARIABLE","VARIABLE",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
+	protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame("FRAME0",155,6,21,204,reportRegionMainBody,0,null,"VARIABLE","VARIABLE",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
 	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame("REPEATING_FRAME0",227,6,20,61,reportRegionMainBody,1,reportFrameMainBodyFrame0,"FIXED","EXPAND","GROUP0","Across",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
 	protected DataFieldDefinition dataFieldDefinitionParameterperiodo = new DataFieldDefinition("parameterperiodo",143,80,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,20,null,null,false,"periodo");
 	protected GraphicsObjectServer graphicServergraphicTitulo = new GraphicsObjectServer("Titulo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,100,40,false,false,-1,0,null,0,0,new Font("Arial",1,14),false,"Report parameters");

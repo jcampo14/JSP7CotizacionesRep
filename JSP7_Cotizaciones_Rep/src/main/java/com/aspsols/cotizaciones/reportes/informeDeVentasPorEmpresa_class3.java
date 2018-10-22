@@ -87,6 +87,7 @@ import com.aspsolutions.jframework.srw.SRWRunReportFailure;
 public class informeDeVentasPorEmpresa_class3 extends informeDeVentasPorEmpresa_class2 {
 	protected ReportText reportTextMainBodyText_graphic0 = new ReportText("TEXT_GRAPHIC0",156,16,reportRegionMainBody,4,reportFrameMainBodyFrame0,"Solagro",10,71,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",0,7),"DEFAULT",false,false,false,false,0,"FIXED","FIXED",null,0,-1);
 	protected ReportText reportTextMainBodyText_graphic1 = new ReportText("TEXT_GRAPHIC1",156,6,reportRegionMainBody,5,reportFrameMainBodyFrame0,"Compañia",10,71,new Color(255,255,255),new Color(0,51,153),null,new Font("Arial",0,8),"DEFAULT",false,false,true,false,0,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainBodyText_graphic3 = new ReportText("TEXT_GRAPHIC3",288,6,reportRegionMainBody,6,reportFrameMainBodyFrame0,"%",10,71,new Color(255,255,255),new Color(0,51,153),null,new Font("Arial",0,8),"DEFAULT",false,false,true,false,0,"FIXED","FIXED",null,0,-1);
 	protected ReportText reportTextMainMarginTitle = new ReportText("TITLE",219,28,reportRegionMainMargin,0,null,"Informe de ventas por empresa",12,174,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",0,10),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
 	protected ReportText reportTextMainMarginText_graphic2 = new ReportText("TEXT_GRAPHIC2",481,47,reportRegionMainMargin,2,null,"Fecha : ",13,41,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",0,10),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
 
