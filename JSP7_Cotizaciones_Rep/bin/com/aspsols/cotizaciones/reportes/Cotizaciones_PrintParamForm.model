@@ -15,6 +15,7 @@
         <Field name="PF_c_agr" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PF_c_agr" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
         <Field name="PF_per" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PF_per" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
         <Field name="PF_c_emp" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PF_c_emp" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
+        <Field name="PARAMETER_FIELD0" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.PARAMETER_FIELD0" dataType="java.lang.String" initialValue="S" />
         <Field name="DESFORMAT" className="com.aspsols.cotizaciones.reportes.data.DATA_Cotizaciones_PrintParamForm.DESFORMAT" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" initialValue="PDF" />
       </fields>
     </Entity>

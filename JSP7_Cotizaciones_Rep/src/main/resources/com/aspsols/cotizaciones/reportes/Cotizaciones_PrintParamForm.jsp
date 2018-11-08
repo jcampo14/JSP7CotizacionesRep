@@ -51,6 +51,7 @@
 	                <jforms:textGraphic bindsTo="panel1.G_c_agr" height="20" width="45" left="100" cssStyle="" top="170" fill="false" fillColor="ffffff" font="Courier New,0,12" fontColor="000000" text="c_agr"/>
 	                <jforms:textGraphic bindsTo="panel1.G_per" height="20" width="31" left="100" cssStyle="" top="200" fill="false" fillColor="ffffff" font="Courier New,0,12" fontColor="000000" text="per"/>
 	                <jforms:textGraphic bindsTo="panel1.G_c_emp" height="20" width="45" left="100" cssStyle="" top="230" fill="false" fillColor="ffffff" font="Courier New,0,12" fontColor="000000" text="c_emp"/>
+	                <jforms:textGraphic bindsTo="panel1.TEXT_GRAPHIC0" height="14" width="27" left="79" cssStyle="" top="264" fill="false" fillColor="ffffff" font="Courier New,0,12" fontColor="000000" text="Ocultar totales"/>
 						                <jforms:textField bindsTo="DATA.PF_cot" height="20" width="120" top="110" left="160" backgroundColor="ffffff" foregroundColor="000000" maxSize="" placeHolder="null" echoChar="null" helpList="" tooltip="null" prompt="null" promptDistance="2,4" promptPosition="left" promptDisplayStyle="AllRecords" promptBackground="000000" promptForeground="000000" promptOpaque="false" nOfRecDisplayed="1" recordDistance="0" formatMask="null" promptCssStyle="null" caseRestriction="Normal" horizontalAlignment="Alg_Left" keyboardNavigable="true" mouseNavigable="true" cssStyle="" cursorStyle="Normal" visible="true" editable="true" enabled="true" validateFromList="false" htmlTooltip="null">
 						<jforms:font family="Arial" style="0" size="12"/>
 						<jforms:promptFont family="Arial" style="0" size="12"/>
@@ -71,6 +72,10 @@
 						<jforms:font family="Arial" style="0" size="12"/>
 						<jforms:promptFont family="Arial" style="0" size="12"/>
 					</jforms:textField>
+	                <jforms:checkBox bindsTo="DATA.PARAMETER_FIELD0" height="20" width="120" top="264" left="196" checkedValue="S" unCheckedValue="N" mappingOfOtherValues="Not Allowed" nOfRecDisplayed="1" label="null" tooltip="null" prompt="null" promptDistance="2,4" promptPosition="left" promptDisplayStyle="AllRecords" promptBackground="000000" promptForeground="000000" promptOpaque="false" visible="true" enabled="true" cssStyle="" htmlTooltip="null" recordDistance="0">
+						<jforms:font family="Arial" style="0" size="12"/>
+						<jforms:promptFont family="Arial" style="0" size="12"/>
+					</jforms:checkBox>
 				</jforms:stackedPanel>
             </jforms:frame>
         </jforms:desktopContainer>
