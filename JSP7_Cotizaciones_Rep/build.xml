@@ -2,27 +2,49 @@
 <project name="JSP7_Cotizaciones_Rep" basedir="." default="main">
 
     <property name="bin.dir"     value="bin"/>
-    <property name="tomcat.dir"  value="D:/ASP/apache-tomcat-6.0.18"/>
-    <property name="war"         value="JSP7_Cotizaciones_Rep"/>
+    <property name="tomcat.dir"  value="C:/apache-tomcat-8.0.35"/>
+    <property name="war"         value="reportes"/>
     <property name="war.dir"     value="${tomcat.dir}/webapps"/>
     <property name="jar.dir"     value="${war.dir}/${war}/WEB-INF/lib"/>
     <property name="browser"     location="rundll32 url.dll,FileProtocolHandler"/>
-    <property name="file" 		 value="http://localhost:8089/${war}/resources/GWTJReportGenerator.html?cn=com.aspsols.cotizaciones.reportes.Cotizaciones_Print&amp;irttt=T&amp;ssty=NS&amp;"/>
+    <property name="file" 		 value="http://localhost:8089/${war}/resources/GWTJReportGenerator.html?cn=com.aspsols.cotizaciones.reportes.informeDeVentasPorEmpresa&amp;irttt=T&amp;ssty=NS&amp;"/>
     <property name="jspDocument" location="reports/com/aspsols/cotizaciones/reportes"/>
     <property name="package"     location="com/aspsols/cotizaciones/reportes"/>
     <!-- Configure properties to access the Manager application -->
-    <property name="manager.url"      value="http://localhost:8089/manager"/>
-    <property name="manager.username" value="admin"/>
-    <property name="manager.password" value="admin"/>
+    <property name="manager.url"      value="http://localhost:8089/manager/text"/>
+    <property name="manager.username" value="user"/>
+    <property name="manager.password" value="password"/>
     
+	
     <!-- Definition of taskdef from catalina-ant -->
+    <!--
     <taskdef name="start"     classname="org.apache.catalina.ant.StartTask"
     classpath="${tomcat.dir}/lib/catalina-ant.jar"/>
     <taskdef name="stop"      classname="org.apache.catalina.ant.StopTask"
     classpath="${tomcat.dir}/lib/catalina-ant.jar"/>
-    
+    -->
+	
+	<!-- Definition of catalina-ant-classpath from tomcat7++ -->
+	<path id="catalina-ant-classpath">
+	    <fileset dir="${tomcat.dir}/lib">
+           <include name="catalina-ant.jar"/>
+           <include name="tomcat-coyote.jar"/>
+           <include name="tomcat-util.jar"/>
+        </fileset>
+	    <fileset dir="${tomcat.dir}/bin">
+	       <include name="tomcat-juli.jar"/>
+	    </fileset>
+	</path>
+	
+	<!-- Definition of taskdef from catalina-ant -->
+	<taskdef name="start" classname="org.apache.catalina.ant.StartTask"	classpathref="catalina-ant-classpath"/>
+	<taskdef name="stop"  classname="org.apache.catalina.ant.StopTask" classpathref="catalina-ant-classpath"/>
+	
     <!-- Targets definition -->
     <target name="stop" description="Stop Tomcat application">
+    	<echo>
+	    	Stopping previous ...
+	    </echo>
         <stop url="${manager.url}" failonerror="true" username="${manager.username}"
         password="${manager.password}" path="/${war}"/>
         <echo>

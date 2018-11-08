@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JForm name="informeDeVentasPorPeriodoParamForm" mainClass="com.aspsols.cotizaciones.reportes.informeDeVentasPorPeriodoParamForm">
+  <Listeners>
+    <Listener class="com.aspsols.cotizaciones.reportes.data.TOOLBAR_informeDeVentasPorPeriodoParamForm" name="TOOLBARListener" />
+    <Listener class="com.aspsols.cotizaciones.reportes.data.TOOLBAR_informeDeVentasPorPeriodoParamForm.Run" name="TOOLBAR_runListener" />
+    <Listener class="com.aspsols.cotizaciones.reportes.data.TOOLBAR_informeDeVentasPorPeriodoParamForm.Exit" name="TOOLBAR_exitListener" />
+    <Listener class="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorPeriodoParamForm" name="DATAListener" />
+  </Listeners>
+  <Entities>
+    <Entity name="TOOLBAR">
+      <Events />
+      <Fields>
+        <Field name="run">
+          <Events>
+            <Event name="When_Button_Pressed" listener="TOOLBAR_runListener" />
+          </Events>
+        </Field>
+        <Field name="exit">
+          <Events>
+            <Event name="When_Button_Pressed" listener="TOOLBAR_exitListener" />
+          </Events>
+        </Field>
+      </Fields>
+    </Entity>
+    <Entity name="DATA">
+      <Events />
+      <Fields />
+    </Entity>
+  </Entities>
+  <Events />
+</JForm>
+
