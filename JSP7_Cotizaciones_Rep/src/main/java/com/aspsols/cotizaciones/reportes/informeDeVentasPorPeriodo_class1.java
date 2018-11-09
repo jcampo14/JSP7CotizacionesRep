@@ -89,14 +89,19 @@ public class informeDeVentasPorPeriodo_class1 extends JReportRuntime {
 	protected QueryLogic queryLogic = new QueryLogic();
 	protected Group tempGroup = new Group("GrupoTemporal");
 	
-	protected Query queryQUERY0 = new Query("QUERY0","MASTER",null,null,null," SELECT  VENTAS_POR_PERIODO_PR(#periodo)  VENTAS_PRESENTE  ,VENTAS_POR_PERIODO_PA(#periodo)  VENTAS_PASADA   FROM DUAL",null);
+	protected Query queryQUERY0 = new Query("QUERY0","MASTER","WHERE VP.MON = VP2.MON AND VP.PER_CT = #periodo AND VP2.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )",null,"ORDER BY VP.MON"," SELECT  VP.MON  MONEDA  ,VP.PER_CT  PERIODO_ACT  ,VP.VENTAS  VENTAS_PRESENTE  ,VP2.PER_CT  PERIODO_PAS  ,VP2.VENTAS  VENTAS_PASADA   FROM VENTA_ALL_PERIODOS VP, VENTA_ALL_PERIODOS VP2  WHERE VP.MON = VP2.MON AND VP.PER_CT = #periodo AND VP2.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )",null);
+	protected Group groupGROUP_MONEDA = new Group("GROUP_MONEDA",queryQUERY0,"NONE",null,0);
 	protected Group groupGROUP0 = new Group("GROUP0",queryQUERY0,"NONE",null,0);
-	protected GroupField groupFieldGROUP0VENTAS_PRESENTE = new GroupField("VENTAS_PRESENTE",0,"java.lang.Double",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
-	protected GroupField groupFieldGROUP0VENTAS_PASADA = new GroupField("VENTAS_PASADA",1,"java.lang.Double",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP0VENTAS_PRESENTE = new GroupField("VENTAS_PRESENTE",2,"java.lang.Double",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP0VENTAS_PASADA = new GroupField("VENTAS_PASADA",4,"java.lang.Double",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP0PERIODO_ACT = new GroupField("PERIODO_ACT",1,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP0PERIODO_PAS1 = new GroupField("PERIODO_PAS1",3,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP_MONEDAMONEDA = new GroupField("MONEDA",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP_MONEDA,this);
 	protected GroupField groupFieldFormula_columnsPERIODO_PAS = new GroupField("PERIODO_PAS",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","periodo_pas_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldFormula_columnsPERIODO_PRE = new GroupField("PERIODO_PRE",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","periodo_pre_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldFormula_columnsMES = new GroupField("MES",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","mes_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldFormula_columnsPORCENTAJE = new GroupField("PORCENTAJE",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","porcentaje_method","FORMULA",null,false,0,tempGroup,this);
+	protected GroupField groupFieldPlaceholder_columnsLOGO = new GroupField("LOGO",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"PLACEHOLDER","Text",false,10,tempGroup,this);
 	protected GraphicsObjectServer graphicServergraphicTitulo = new GraphicsObjectServer("Titulo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,100,40,false,false,-1,0,null,0,0,new Font("Arial",1,14),false,"Report parameters");
 	protected GraphicsObjectServer graphicServergraphicParameterperiodo = new GraphicsObjectServer("parameterperiodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,80,80,false,false,-1,0,null,0,0,new Font("Arial",0,10),false,"periodo");
 	protected ReportRegion reportRegionHeaderBody = new ReportRegion("BODY");
