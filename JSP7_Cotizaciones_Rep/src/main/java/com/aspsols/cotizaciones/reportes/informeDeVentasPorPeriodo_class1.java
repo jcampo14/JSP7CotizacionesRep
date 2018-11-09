@@ -89,16 +89,16 @@ public class informeDeVentasPorPeriodo_class1 extends JReportRuntime {
 	protected QueryLogic queryLogic = new QueryLogic();
 	protected Group tempGroup = new Group("GrupoTemporal");
 	
-	protected Query queryQUERY0 = new Query("QUERY0","MASTER","WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND FE.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )","GROUP BY SUBSTR(FE.PER_CT, 1 , 6 )",null," SELECT  VENTAS_POR_PERIODO_PR(#periodo)  VENTAS_PRESENTE  ,SUM( ROUND (FD.CAN * FD.VEN, 2 ))  VENTAS_PASADA   FROM FAC_DET FD, FAC_ENC FE  WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND FE.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )  GROUP BY SUBSTR(FE.PER_CT, 1 , 6 )",null);
+	protected Query queryQUERY0 = new Query("QUERY0","MASTER",null,null,null," SELECT  VENTAS_POR_PERIODO_PR(#periodo)  VENTAS_PRESENTE  ,VENTAS_POR_PERIODO_PA(#periodo)  VENTAS_PASADA   FROM DUAL",null);
 	protected Group groupGROUP0 = new Group("GROUP0",queryQUERY0,"NONE",null,0);
-	protected GroupField groupFieldGROUP0VENTAS_PASADA = new GroupField("VENTAS_PASADA",1,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
-	protected GroupField groupFieldGROUP0VENTAS_PRESENTE = new GroupField("VENTAS_PRESENTE",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP0VENTAS_PRESENTE = new GroupField("VENTAS_PRESENTE",0,"java.lang.Double",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP0VENTAS_PASADA = new GroupField("VENTAS_PASADA",1,"java.lang.Double",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldFormula_columnsPERIODO_PAS = new GroupField("PERIODO_PAS",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","periodo_pas_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldFormula_columnsPERIODO_PRE = new GroupField("PERIODO_PRE",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","periodo_pre_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldFormula_columnsMES = new GroupField("MES",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","mes_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldFormula_columnsPORCENTAJE = new GroupField("PORCENTAJE",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","porcentaje_method","FORMULA",null,false,0,tempGroup,this);
-	protected GraphicsObjectServer graphicServergraphicRECTANGLE0 = new GraphicsObjectServer("RECTANGLE0",new Color(135,155,211),new Color(0,0,0),"RECTANGLE",31,225,42,65,false,false,1,0,"Normal",0,0,null,false,null);
-	protected GraphicsObjectServer graphicServergraphicTEXT_GRAPHIC0 = new GraphicsObjectServer("TEXT_GRAPHIC0",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",14,74,54,71,false,false,-1,0,null,0,0,new Font("Arial",0,11),false,"Periodo y mes :");
+	protected GraphicsObjectServer graphicServergraphicTitulo = new GraphicsObjectServer("Titulo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,100,40,false,false,-1,0,null,0,0,new Font("Arial",1,14),false,"Report parameters");
+	protected GraphicsObjectServer graphicServergraphicParameterperiodo = new GraphicsObjectServer("parameterperiodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,80,80,false,false,-1,0,null,0,0,new Font("Arial",0,10),false,"periodo");
 	protected ReportRegion reportRegionHeaderBody = new ReportRegion("BODY");
 	protected ReportRegion reportRegionHeaderMargin = new ReportRegion("MARGIN");
 	protected ReportRegion reportRegionMainBody = new ReportRegion("BODY");
@@ -107,7 +107,7 @@ public class informeDeVentasPorPeriodo_class1 extends JReportRuntime {
 	protected ReportRegion reportRegionTrailerMargin = new ReportRegion("MARGIN");
 	protected ReportMargin reportMarginHeader = new ReportMargin(70,34,34,70);
 	protected ReportSection reportSectionHeader = new ReportSection("HEADER",reportMarginHeader,792,612,reportRegionHeaderBody,reportRegionHeaderMargin,"Portrait");
-	protected ReportMargin reportMarginMain = new ReportMargin(64,30,38,76);
+	protected ReportMargin reportMarginMain = new ReportMargin(71,30,38,69);
 	protected ReportSection reportSectionMain = new ReportSection("MAIN",reportMarginMain,792,612,reportRegionMainBody,reportRegionMainMargin,"Portrait");
 	protected ReportMargin reportMarginTrailer = new ReportMargin(70,34,34,70);
 	protected ReportSection reportSectionTrailer = new ReportSection("TRAILER",reportMarginTrailer,792,612,reportRegionTrailerBody,reportRegionTrailerMargin,"Portrait");

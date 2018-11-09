@@ -86,12 +86,14 @@ import com.aspsolutions.jframework.srw.SRWRunReportFailure;
 
 public class informeDeVentasPorPeriodo extends informeDeVentasPorPeriodo_class3 {
 
-	protected ParameterForm parameterForm = new ParameterForm(0,0,359,188,new Color(191,191,191),"informeDeVentasPorPeriodo");
+	protected ParameterForm parameterForm = new ParameterForm(0,0,600,400,new Color(191,191,191),"informeDeVentasPorPeriodo");
 	protected PresentationRules presentationRules = new PresentationRules();
-	protected ReportFieldPresentation fieldPresentationMainBodyVentas_pr = new ReportFieldPresentation("VENTAS_PR",179,10,10,100,reportRegionMainBody,7,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","VENTAS_PRESENTE","java.lang.String",true,0,new Color(255,255,255),"Default,1,(0,0,0)",0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyVentas_pr = new ReportFieldPresentation("VENTAS_PR",179,10,10,100,reportRegionMainBody,7,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","VENTAS_PRESENTE","java.lang.Double",true,0,new Color(255,255,255),"Default,1,(0,0,0)",0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyPorcent = new ReportFieldPresentation("PORCENT",382,10,10,121,reportRegionMainBody,6,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","PORCENTAJE","java.lang.String",true,0,new Color(255,255,255),"Default,1,(0,0,0)",0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyVentas_pa = new ReportFieldPresentation("VENTAS_PA",279,10,10,103,reportRegionMainBody,8,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","VENTAS_PASADA","java.lang.String",true,0,new Color(255,255,255),"Default,1,(0,0,0)",0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",502,41,10,70,reportRegionMainMargin,2,null,"FIXED","FIXED","CURRENT_DATE","java.util.Date",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),"dd/MM/yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyVentas_pa = new ReportFieldPresentation("VENTAS_PA",279,10,10,103,reportRegionMainBody,8,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","VENTAS_PASADA","java.lang.Double",true,0,new Color(255,255,255),"Default,1,(0,0,0)",0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",512,42,10,61,reportRegionMainMargin,2,null,"FIXED","FIXED","CURRENT_DATE","java.util.Date",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,8),"dd/MM/yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field1 = new ReportFieldPresentation("LAYOUT_FIELD1",516,53,9,21,reportRegionMainMargin,4,null,"FIXED","FIXED","PAGE_NUMBER","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field2 = new ReportFieldPresentation("LAYOUT_FIELD2",552,53,9,21,reportRegionMainMargin,5,null,"FIXED","FIXED","TOTAL_PAGES","java.lang.String",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	
 	public informeDeVentasPorPeriodo() throws Exception {
 		super();
@@ -136,8 +138,8 @@ public class informeDeVentasPorPeriodo extends informeDeVentasPorPeriodo_class3 
 			}
 
 			
-			this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PASADA);
 			this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PRESENTE);
+			this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PASADA);
 			this.queryLogic.addToFields(this.groupFieldFormula_columnsPERIODO_PAS);
 			this.queryLogic.addToFields(this.groupFieldFormula_columnsPERIODO_PRE);
 			this.queryLogic.addToFields(this.groupFieldFormula_columnsMES);
@@ -145,8 +147,6 @@ public class informeDeVentasPorPeriodo extends informeDeVentasPorPeriodo_class3 
 			this.presentationRules.getSections().add(this.reportSectionHeader);
 			this.presentationRules.getSections().add(this.reportSectionMain);
 			this.presentationRules.getSections().add(this.reportSectionTrailer);
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE0);
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicTEXT_GRAPHIC0);
 
 			this.parameterForm.addToVectorGroupField(this.parameterPeriodo);
 			this.getJreport().addToVectorGroupField(this.parameterBACKGROUND);
@@ -162,11 +162,21 @@ public class informeDeVentasPorPeriodo extends informeDeVentasPorPeriodo_class3 
 			this.getJreport().addToVectorGroupField(this.parameterTHOUSANDS);
 			this.getJreport().addToVectorGroupField(this.parameterMAXRECORDS);
 
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicTitulo);
+			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicParameterperiodo);
 
 			this.fieldPresentationMainBodyVentas_pr.setGroupFieldReference(this.groupFieldGROUP0VENTAS_PRESENTE);
 			this.fieldPresentationMainBodyPorcent.setGroupFieldReference(this.groupFieldFormula_columnsPORCENTAJE);
 			this.fieldPresentationMainBodyVentas_pa.setGroupFieldReference(this.groupFieldGROUP0VENTAS_PASADA);
-			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
+			
+			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field1 = new PageNumbering(true,true,true,1,1,null);
+			this.fieldPresentationMainMarginLayout_field1.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field1);
+
+			
+			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field2 = new PageNumbering(true,true,true,1,1,null);
+			this.fieldPresentationMainMarginLayout_field2.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field2);
+
 
 			this.addLayoutTextVariables();
 			this.addColumnInformation();
@@ -252,6 +262,10 @@ public class informeDeVentasPorPeriodo extends informeDeVentasPorPeriodo_class3 
 		this.reportTextMainBodyT_ventas_pas.addToVectorVariables(ltvreportTextMainBodyT_ventas_pas_0);
 		LayoutTextVariables ltvreportTextMainBodyT_ventas_pas_2 = new LayoutTextVariables("PERIODO_PAS", "&PERIODO_PAS");
 		this.reportTextMainBodyT_ventas_pas.addToVectorVariables(ltvreportTextMainBodyT_ventas_pas_2);
+		LayoutTextVariables ltvreportTextMainMarginText_graphic0_0 = new LayoutTextVariables("mes", "&mes");
+		this.reportTextMainMarginText_graphic0.addToVectorVariables(ltvreportTextMainMarginText_graphic0_0);
+		LayoutTextVariables ltvreportTextMainMarginText_graphic0_2 = new LayoutTextVariables("periodo_pre", "&periodo_pre");
+		this.reportTextMainMarginText_graphic0.addToVectorVariables(ltvreportTextMainMarginText_graphic0_2);
 	}
 			
 	/**
@@ -276,8 +290,8 @@ public class informeDeVentasPorPeriodo extends informeDeVentasPorPeriodo_class3 
 		this.groupFieldFormula_columnsPERIODO_PAS.addToVectorFormulaInFormula(this.parameterPeriodo);
 		this.groupFieldFormula_columnsPERIODO_PRE.addToVectorFormulaInFormula(this.parameterPeriodo);
 		this.groupFieldFormula_columnsMES.addToVectorFormulaInFormula(this.parameterPeriodo);
-		this.groupFieldFormula_columnsPORCENTAJE.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_PASADA);
 		this.groupFieldFormula_columnsPORCENTAJE.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_PRESENTE);
+		this.groupFieldFormula_columnsPORCENTAJE.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_PASADA);
 	}
 		
 	/**

@@ -91,7 +91,9 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 	protected ReportFieldPresentation fieldPresentationMainBodySum_round_fd_can_fd_ven_2_ = new ReportFieldPresentation("SUM_ROUND_FD_CAN_FD_VEN_2_",227,16,10,61,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","SUM_ROUND_FD_CAN_FD_VEN_2_","java.lang.Double",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###,###","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodySubstr_fe_per_ct_1_4_ = new ReportFieldPresentation("SUBSTR_FE_PER_CT_1_4_",227,6,10,61,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","SUBSTR_FE_PER_CT_1_4_","java.lang.String",true,0,new Color(0,51,153),null,0,new Color(255,255,255),new Font("Arial",0,7),null,"DEFAULT",false,false,true,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyPorcentaje = new ReportFieldPresentation("porcentaje",288,16,11,71,reportRegionMainBody,7,reportFrameMainBodyFrame0,"FIXED","FIXED","porcentaje_total","java.lang.String",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",522,47,13,55,reportRegionMainMargin,1,null,"FIXED","FIXED","CURRENT_DATE","java.util.Date",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,10),"dd/MM/YYYY","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",525,36,13,51,reportRegionMainMargin,1,null,"FIXED","FIXED","CURRENT_DATE","java.util.Date",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,10),"dd/MM/YYYY","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field1 = new ReportFieldPresentation("LAYOUT_FIELD1",522,54,13,20,reportRegionMainMargin,7,null,"FIXED","FIXED","PAGE_NUMBER","java.lang.String",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,10),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field2 = new ReportFieldPresentation("LAYOUT_FIELD2",557,54,13,20,reportRegionMainMargin,8,null,"FIXED","FIXED","TOTAL_PAGES","java.lang.String",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,10),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	
 	public informeDeVentasPorEmpresa() throws Exception {
 		super();
@@ -164,6 +166,14 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 			this.fieldPresentationMainBodySum_round_fd_can_fd_ven_2_.setGroupFieldReference(this.groupFieldGROUP0SUM_ROUND_FD_CAN_FD_VEN_2_);
 			this.fieldPresentationMainBodySubstr_fe_per_ct_1_4_.setGroupFieldReference(this.groupFieldGROUP0SUBSTR_FE_PER_CT_1_4_);
 			this.fieldPresentationMainBodyPorcentaje.setGroupFieldReference(this.groupFieldFormula_columnsPorcentaje_total);
+			
+			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field1 = new PageNumbering(true,true,true,1,1,null);
+			this.fieldPresentationMainMarginLayout_field1.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field1);
+
+			
+			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field2 = new PageNumbering(true,true,true,1,1,null);
+			this.fieldPresentationMainMarginLayout_field2.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field2);
+
 
 			this.addLayoutTextVariables();
 			this.addColumnInformation();

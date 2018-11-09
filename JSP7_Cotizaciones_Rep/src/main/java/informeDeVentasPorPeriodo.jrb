@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1540332234178" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1541091174580" MHB="10" MVB="10"
      N1="informeDeVentasPorPeriodo" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PPO="null" PT="null"
      RUTA="C:\Users\asp_789\git\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorPeriodo.jrb"
      SBP="true" SPF="true" UM="Pixels" Wizard="true">
-     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo,QUERY0,GROUP0,VENTAS_PASADA,VENTAS_PRESENTE,PERIODO_PAS,PERIODO_PRE,MES,PORCENTAJE">
+     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo,QUERY0,GROUP0,VENTAS_PRESENTE,VENTAS_PASADA,PERIODO_PAS,PERIODO_PRE,MES,PORCENTAJE">
           <SYSTEM_PARAMETERS>
                <BACKGROUND DT="java.lang.String" IV="false"
                     JN="parameterBACKGROUND" MAZ="80" N1="BACKGROUND" VL="false"/>
@@ -38,33 +38,32 @@
                     JN="parameterPeriodo" MAZ="20" N1="periodo" VL="false"/>
           </USER_PARAMETERS>
           <QUERIES>
-               <QUERY CB="null" COLUMNS="VENTAS_PASADA,VENTAS_PRESENTE"
+               <QUERY CB="null" COLUMNS="VENTAS_PRESENTE,VENTAS_PASADA"
                     CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;VENTAS_PRESENTE,VENTAS_PASADA&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;VENTAS_PRESENTE,VENTAS_PASADA,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
-                    EQS="null" GB="GROUP BY SUBSTR(FE.PER_CT, 1 , 6 )"
-                    GR="GROUP0" H1="30" LG="GROUP0" MRF="0" N1="QUERY0"
-                    OB="null" OBR="SQL" PARAMETERS="" PND="false"
-                    PX="40" PY="40"
-                    Q1="SELECT VENTAS_POR_PERIODO_Pr(:periodo) VENTAS_PRESENTE,sum(round(fd.can*fd.ven,2)) VENTAS_PASADA &#xd;&#xa;from FAC_DET fd, fac_enc fe&#xd;&#xa;where fe.fac = fd.fac&#xd;&#xa;and fe.c_emp = fd.c_emp&#xd;&#xa;and fe.c_agr = fd.c_agr&#xd;&#xa;and fe.n_ide = fd.n_ide&#xd;&#xa;and fe.est = 'A'&#xd;&#xa;and fE.PER_CT =  (SUBSTR(:periodo,1,4)-1)||SUBSTR(:periodo,5,6)&#xd;&#xa;group by substr(fe.per_ct,1,6)"
-                    QTR=" SELECT  VENTAS_POR_PERIODO_PR(#periodo)  VENTAS_PRESENTE  ,SUM( ROUND (FD.CAN * FD.VEN, 2 ))  VENTAS_PASADA   FROM FAC_DET FD, FAC_ENC FE  WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND FE.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )  GROUP BY SUBSTR(FE.PER_CT, 1 , 6 )"
+                    EQS="null" GB="null" GR="GROUP0" H1="30" LG="GROUP0"
+                    MRF="0" N1="QUERY0" OB="null" OBR="SQL"
+                    PARAMETERS="" PND="false" PX="40" PY="40"
+                    Q1="select VENTAS_POR_PERIODO_Pr(:periodo) VENTAS_PRESENTE,&#xd;&#xa;VENTAS_POR_PERIODO_PA(:periodo) VENTAS_PASADA&#xd;&#xa;FROM DUAL"
+                    QTR=" SELECT  VENTAS_POR_PERIODO_PR(#periodo)  VENTAS_PRESENTE  ,VENTAS_POR_PERIODO_PA(#periodo)  VENTAS_PASADA   FROM DUAL"
                     T1="MASTER" TC="VENTAS_PRESENTE,VENTAS_PASADA"
-                    TCA="VENTAS_PRESENTE,VENTAS_PASADA," W1="80" W2="WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND FE.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )"/>
+                    TCA="VENTAS_PRESENTE,VENTAS_PASADA," W1="80" W2="null"/>
           </QUERIES>
           <GROUPS>
                <GROUP CONTENIDO="" FT="None" GRT="Normal" H1="150"
                     N1="GROUP0" PND="true" PX="30" PY="120" QN="QUERY0"
                     SF="null" W1="175">
-                    <GROUP_FIELD BO="Ascending" CCT="VENTAS_PASADA"
-                         CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PASADA);"
-                         CT="DATABASE" DT="java.lang.String"
-                         JN="groupFieldGROUP0VENTAS_PASADA"
-                         N1="VENTAS_PASADA" QF="1"
-                         RV="SUM( ROUND (FD.CAN * FD.VEN, 2 ))" VIN="null"/>
                     <GROUP_FIELD BO="Ascending" CCT="VENTAS_PRESENTE"
                          CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PRESENTE);"
-                         CT="DATABASE" DT="java.lang.String"
+                         CT="DATABASE" DT="java.lang.Double"
                          JN="groupFieldGROUP0VENTAS_PRESENTE"
-                         N1="VENTAS_PRESENTE" QF="0"
+                         N1="VENTAS_PRESENTE" PND="true" QF="0"
                          RV="VENTAS_POR_PERIODO_PR(#periodo)" VIN="null"/>
+                    <GROUP_FIELD BO="Ascending" CCT="VENTAS_PASADA"
+                         CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PASADA);"
+                         CT="DATABASE" DT="java.lang.Double"
+                         JN="groupFieldGROUP0VENTAS_PASADA"
+                         N1="VENTAS_PASADA" PND="true" QF="1"
+                         RV="VENTAS_POR_PERIODO_PA(#periodo)" VIN="null"/>
                </GROUP>
           </GROUPS>
           <FORMULA_COLUMNS>
@@ -234,7 +233,7 @@
                </TOTALS_FIELDS>
           </WIZARD_REFERENCE>
      </DATA_MODEL>
-     <LAYOUT_MODEL NAMES="FRAME0,REPEATING_FRAME0,VENTAS_PR,PORCENT,VENTAS_PA,COMPANIA,FRAME1,t_VENTAS_ACT,C_EMP,t_VENTAS_PAS,PORCENTAJE,TEXT_GRAPHIC3,TEXT_GRAPHIC4,LAYOUT_FIELD0">
+     <LAYOUT_MODEL NAMES="FRAME0,REPEATING_FRAME0,VENTAS_PR,PORCENT,VENTAS_PA,COMPANIA,FRAME1,t_VENTAS_ACT,C_EMP,t_VENTAS_PAS,PORCENTAJE,TEXT_GRAPHIC3,TEXT_GRAPHIC4,LAYOUT_FIELD0,TEXT_GRAPHIC0,LAYOUT_FIELD1,LAYOUT_FIELD2,TEXT_GRAPHIC1,TEXT_GRAPHIC2,LINE0,IMAGE0">
           <HEADER BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
                CONTENIDO="this.presentationRules.getSections().add(this.reportSectionHeader);"
                H1="792" HPP="1" NPG="false" OR="Portrait" VPP="1" W1="612">
@@ -245,12 +244,12 @@
                     <ANCHORS/>
                </MARGIN>
           </HEADER>
-          <MAIN BH="652" BW="544" BX="30" BY="64" CHH="60" CHW="80"
+          <MAIN BH="652" BW="544" BX="30" BY="71" CHH="60" CHW="80"
                CONTENIDO="this.presentationRules.getSections().add(this.reportSectionMain);"
                H1="792" HPP="1" LAYERS="-7" NPG="false" OR="Portrait"
                VPP="1" W1="612">
                <BODY LAYERS="10">
-                    <ANCHORS PHN="ROOT&amp;"/>
+                    <ANCHORS PHN="NotModifyJPanel"/>
                     <FRAME B1="null" BG="255,255,255"
                          BPO="Enclosing object" CF="null" DO="0 Grades"
                          ELS="true" FE="null" H1="39" HE="Fixed"
@@ -258,8 +257,9 @@
                          JAVA="protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame(&quot;FRAME0&quot;,13,0,39,520,reportRegionMainBody,0,null,&quot;FIXED&quot;,&quot;VARIABLE&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
                          KAO="false" LN="0" LS="Normal" LW="-1"
                          N1="FRAME0" NPG="false" PBA="false" PBB="false"
-                         PHN="ROOT&amp;" PND="false" POO="First page"
-                         PP="false" PX="13" PY="0" VE="Variable" W1="520">
+                         PHN="NotModifyJPanel" PND="false"
+                         POO="First page" PP="false" PX="13" PY="0"
+                         VE="Variable" W1="520">
                          <REPEATING_FRAME B1="Default,1,(0,0,0)"
                               BG="255,255,255" BPO="Enclosing object"
                               CF="null" CMD="false" DO="0 Grades"
@@ -269,26 +269,26 @@
                               KAO="false" LN="1" LS="Normal" LW="-1"
                               MRPP="0" MWR="0" N1="REPEATING_FRAME0"
                               NPG="false" PBA="false" PBB="false"
-                              PD="Down" PHN="ROOT&amp;" PND="false"
-                              POO="First page" PP="false" PX="50"
-                              PY="10" VE="Expand" VSBF="0" W1="453">
+                              PD="Down" PHN="NotModifyJPanel"
+                              PND="false" POO="First page" PP="false"
+                              PX="50" PY="10" VE="Expand" VSBF="0" W1="453">
                               <LAYOUT_FIELD B1="Default,1,(0,0,0)"
                                    BCF="None" BG="255,255,255"
                                    BO="Ascending" BPO="Enclosing object"
                                    CF="null" DO="0 Grades"
-                                   DT="java.lang.String" ELS="false"
+                                   DT="java.lang.Double" ELS="false"
                                    F2="Arial,0,7" FE="null" FG="0,0,0"
-                                   FM="###,###,###,###,###,###" H1="10"
-                                   HA="Alg_Center" HE="Fixed" IF="false"
-                                   IV="null" KAO="false" LB="null"
-                                   LN="7" LS="Normal" LW="-1"
+                                   FM="###,###,###,###,###,###.##"
+                                   H1="10" HA="Alg_Center" HE="Fixed"
+                                   IF="false" IV="null" KAO="false"
+                                   LB="null" LN="7" LS="Normal" LW="-1"
                                    Last_Location="179,10" MAZ="10"
                                    MWL="0" N1="VENTAS_PR" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;"
+                                   PHN="NotModifyJPanel"
                                    PNB="true,true,true,1,1,!Report"
-                                   PND="false" POO="First page"
-                                   PP="false" PX="179" PY="10"
+                                   PND="false" POO="Default" PP="false"
+                                   PX="179" PY="10"
                                    S1="GROUP0.VENTAS_PRESENTE" V2="true"
                                    VE="Expand" VIN="false" W1="100"/>
                               <LAYOUT_FIELD B1="Default,1,(0,0,0)"
@@ -303,7 +303,7 @@
                                    Last_Location="350,10" MAZ="20"
                                    MWL="0" N1="PORCENT" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;"
+                                   PHN="NotModifyJPanel"
                                    PNB="true,true,true,1,1,!Report"
                                    PND="false" POO="Default" PP="false"
                                    PX="382" PY="10"
@@ -312,17 +312,17 @@
                               <LAYOUT_FIELD B1="Default,1,(0,0,0)"
                                    BCF="None" BG="255,255,255" BO="None"
                                    BPO="Enclosing object" CF="null"
-                                   DO="0 Grades" DT="java.lang.String"
+                                   DO="0 Grades" DT="java.lang.Double"
                                    ELS="false" F2="Arial,0,7" FE="null"
                                    FG="0,0,0"
-                                   FM="###,###,###,###,###,###" H1="10"
-                                   HA="Alg_Center" HE="Fixed" IF="false"
-                                   IV="null" KAO="false" LB="null"
-                                   LN="8" LS="Normal" LW="-1"
-                                   Last_Location="247,10" MAZ="20"
+                                   FM="###,###,###,###,###,###.##"
+                                   H1="10" HA="Alg_Center" HE="Fixed"
+                                   IF="false" IV="null" KAO="false"
+                                   LB="null" LN="8" LS="Normal" LW="-1"
+                                   Last_Location="279,10" MAZ="20"
                                    MWL="0" N1="VENTAS_PA" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;"
+                                   PHN="NotModifyJPanel"
                                    PNB="true,true,true,1,1,!Report"
                                    PND="false" POO="Default" PP="false"
                                    PX="279" PY="10"
@@ -340,7 +340,7 @@
                                    LN="10" LW="-1" Last_Location="18,10"
                                    MWL="0" N1="COMPANIA" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;"
+                                   PHN="NotModifyJPanel"
                                    PNB="true,true,true,1,1,!Report"
                                    PND="true" POO="Default" PP="false"
                                    PX="50" PY="10" VE="Fixed" W1="129"/>
@@ -352,9 +352,9 @@
                               JAVA="protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame(&quot;FRAME1&quot;,50,0,10,453,reportRegionMainBody,2,reportFrameMainBodyFrame0,&quot;FIXED&quot;,&quot;FIXED&quot;,new Color(0,51,153),null,&quot;ALLPAGES&quot;,false,false,false,null,0,-1,false);"
                               KAO="false" LN="2" LS="Normal" LW="-1"
                               N1="FRAME1" NPG="false" PBA="false"
-                              PBB="false" PHN="ROOT&amp;" PND="false"
-                              POO="All pages" PP="false" PX="50" PY="0"
-                              VE="Fixed" W1="453">
+                              PBB="false" PHN="NotModifyJPanel"
+                              PND="false" POO="All pages" PP="false"
+                              PX="50" PY="0" VE="Fixed" W1="453">
                               <GRAPHIC B1="Default,1,(0,0,0)" BCF="None"
                                    BG="255,255,255"
                                    BPO="Enclosing object" CF="null"
@@ -367,7 +367,7 @@
                                    LN="4" LW="-1" Last_Location="146,0"
                                    MWL="0" N1="t_VENTAS_ACT" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;"
+                                   PHN="NotModifyJPanel"
                                    PNB="true,true,true,1,1,!Report"
                                    PND="true" POO="Firts page"
                                    PP="false" PX="179" PY="0" VE="Fixed" W1="100"/>
@@ -382,7 +382,7 @@
                                    LN="3" LW="-1" Last_Location="80,0"
                                    MWL="0" N1="C_EMP" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;"
+                                   PHN="NotModifyJPanel"
                                    PNB="true,true,true,1,1,!Report"
                                    PND="true" POO="Default" PP="false"
                                    PX="50" PY="0" UL="F" VE="Fixed" W1="129"/>
@@ -398,9 +398,9 @@
                                    LN="5" LW="-1" Last_Location="247,0"
                                    MWL="0" N1="t_VENTAS_PAS" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;"
+                                   PHN="NotModifyJPanel"
                                    PNB="true,true,true,1,1,!Report"
-                                   PND="true" POO="Default" PP="false"
+                                   PND="false" POO="Default" PP="false"
                                    PX="279" PY="0" VE="Fixed" W1="103"/>
                               <GRAPHIC B1="Default,1,(0,0,0)" BCF="None"
                                    BG="255,255,255"
@@ -413,53 +413,126 @@
                                    LW="-1" Last_Location="350,0" MWL="0"
                                    N1="PORCENTAJE" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;"
+                                   PHN="NotModifyJPanel"
                                    PNB="true,true,true,1,1,!Report"
                                    PND="true" POO="Default" PP="false"
                                    PX="382" PY="0" VE="Fixed" W1="121"/>
                          </FRAME>
                     </FRAME>
                </BODY>
-               <MARGIN LAYERS="2">
+               <MARGIN LAYERS="9">
                     <ANCHORS PHN="ROOT&amp;"/>
                     <GRAPHIC B1="null" BCF="None" BG="255,255,255"
                          BPO="Enclosing object" CF="null" DO="0 Grades"
-                         F2="Arial,1,10" FE="null" FG="0,0,0"
-                         GT="TEXT_GRAPHIC" H1="16" HA="Alg_Left"
+                         F2="Arial,1,11" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="16" HA="Alg_Right"
                          HE="Fixed" IF="false" JN="null" KAO="false"
-                         LB="Informes estadísticos para SOLAGRO S.A.S."
-                         LN="0" LW="-1" Last_Location="170,24" MWL="0"
+                         LB="SOLAGRO SOLUCIONES AGROINDRUSTRIALES S.A.S."
+                         LN="0" LW="-1" Last_Location="145,11" MWL="0"
                          N1="TEXT_GRAPHIC3" NPG="false" PBA="false"
                          PBB="false" PHN="ROOT&amp;"
                          PNB="true,true,true,1,1,!Report" PND="false"
-                         POO="Default" PP="false" PX="173" PY="24"
-                         UL="F" VE="Fixed" W1="238"/>
+                         POO="Default" PP="false" PX="145" PY="12"
+                         UL="F" VE="Fixed" W1="428"/>
                     <GRAPHIC B1="null" BCF="None" BG="255,255,255"
                          BPO="Enclosing object" CF="null" DO="0 Grades"
-                         F2="Arial,0,8" FE="null" FG="0,0,0"
-                         GT="TEXT_GRAPHIC" H1="10" HA="Alg_Left"
+                         F2="Arial,1,8" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="10" HA="Alg_Right"
                          HE="Fixed" IF="false" JN="null" KAO="false"
                          LB="Fecha:" LN="1" LW="-1"
-                         Last_Location="455,40" MWL="0"
+                         Last_Location="478,41" MWL="0"
                          N1="TEXT_GRAPHIC4" NPG="false" PBA="false"
                          PBB="false" PHN="ROOT&amp;"
                          PNB="true,true,true,1,1,!Report" PND="false"
-                         POO="Default" PP="false" PX="468" PY="41"
+                         POO="Default" PP="false" PX="478" PY="42"
                          VE="Fixed" W1="32"/>
                     <LAYOUT_FIELD B1="null" BCF="None" BG="255,255,255"
                          BO="None" BPO="Enclosing object" CF="null"
                          DO="0 Grades" DT="java.util.Date" ELS="false"
-                         F2="Arial,0,7" FE="null" FG="0,0,0"
-                         FM="dd/MM/yyyy" H1="10" HA="Alg_Left"
+                         F2="Arial,1,8" FE="null" FG="0,0,0"
+                         FM="dd/MM/yyyy" H1="10" HA="Alg_Right"
                          HE="Fixed" IF="false" IV="null" KAO="false"
                          LB="null" LN="2" LS="Normal" LW="-1"
-                         Last_Location="489,40" MAZ="20" MWL="0"
+                         Last_Location="512,41" MAZ="20" MWL="0"
                          N1="LAYOUT_FIELD0" NPG="false" PBA="false"
                          PBB="false" PHN="ROOT&amp;"
                          PNB="true,true,true,1,1,!Report" PND="false"
-                         POO="Default" PP="false" PX="502" PY="41"
+                         POO="Default" PP="false" PX="512" PY="42"
                          S1="Other variables.Current date" UL="F"
-                         V2="true" VE="Fixed" VIN="false" W1="70"/>
+                         V2="true" VE="Fixed" VIN="false" W1="61"/>
+                    <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         F2="Arial,1,9" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="12" HA="Alg_Right"
+                         HE="Fixed" IF="false" JN="null" KAO="false"
+                         LB="Informe de ventas por periodo del mes &amp;mes del año &amp;periodo_pre con respecto al año anterior"
+                         LN="3" LW="-1" Last_Location="146,28" MWL="0"
+                         N1="TEXT_GRAPHIC0" NPG="false" PBA="false"
+                         PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="146" PY="28"
+                         VE="Fixed" W1="427"/>
+                    <LAYOUT_FIELD B1="null" BCF="None" BG="255,255,255"
+                         BO="None" BPO="Enclosing object" CF="null"
+                         DO="0 Grades" DT="java.lang.String" ELS="false"
+                         F2="Arial,1,8" FE="null" FG="0,0,0" FM="null"
+                         H1="9" HA="Alg_Center" HE="Fixed" IF="false"
+                         IV="null" KAO="false" LB="null" LN="4"
+                         LS="Normal" LW="-1" Last_Location="516,52"
+                         MAZ="20" MWL="0" N1="LAYOUT_FIELD1" NPG="false"
+                         PBA="false" PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="516" PY="53"
+                         S1="Other variables.Page number" V2="true"
+                         VE="Fixed" VIN="false" W1="21"/>
+                    <LAYOUT_FIELD B1="null" BCF="None" BG="255,255,255"
+                         BO="None" BPO="Enclosing object" CF="null"
+                         DO="0 Grades" DT="java.lang.String" ELS="false"
+                         F2="Arial,1,8" FE="null" FG="0,0,0" FM="null"
+                         H1="9" HA="Alg_Right" HE="Fixed" IF="false"
+                         IV="null" KAO="false" LB="null" LN="5"
+                         LS="Normal" LW="-1" Last_Location="552,52"
+                         MAZ="20" MWL="0" N1="LAYOUT_FIELD2" NPG="false"
+                         PBA="false" PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="552" PY="53"
+                         S1="Other variables.Total pages" V2="true"
+                         VE="Fixed" VIN="false" W1="21"/>
+                    <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         F2="Arial,1,8" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="9" HA="Alg_Right"
+                         HE="Fixed" IF="false" JN="null" KAO="false"
+                         LB="página " LN="6" LW="-1"
+                         Last_Location="473,52" MWL="0"
+                         N1="TEXT_GRAPHIC1" NPG="false" PBA="false"
+                         PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="473" PY="53"
+                         VE="Fixed" W1="41"/>
+                    <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         F2="Arial,1,8" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="9" HA="Alg_Left"
+                         HE="Fixed" IF="false" JN="null" KAO="false"
+                         LB="de" LN="7" LW="-1" Last_Location="539,52"
+                         MWL="0" N1="TEXT_GRAPHIC2" NPG="false"
+                         PBA="false" PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="539" PY="53"
+                         VE="Fixed" W1="10"/>
+                    <GRAPHIC CF="null" DL="0" FC="0,0,0" FE="null"
+                         GT="LINE" H1="1" JN="null" LN="8" LS="Normal"
+                         LSW="null" LW="1" Last_Location="30,62"
+                         N1="LINE0" NPG="false" PBA="false" PBB="false"
+                         PHN="ROOT&amp;" PND="false" POO="Default"
+                         PX="30" PY="63" W1="543"/>
+                    <GRAPHIC BC="0,0,0" BV="Normal" CF="null"
+                         DO="0 Grades" FC="135,155,211" FE="null"
+                         GT="IMAGE" H1="56" IP="logo.png" JN="null"
+                         LN="9" LW="1" Last_Location="29,4" N1="IMAGE0"
+                         NPG="false" PHN="ROOT&amp;" PND="false"
+                         POO="Default" PX="27" PY="4" W1="122"/>
                </MARGIN>
           </MAIN>
           <TRAILER BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
@@ -473,39 +546,11 @@
                </MARGIN>
           </TRAILER>
      </LAYOUT_MODEL>
-     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="188"
-          NAMES="PARAMETER_FIELD0,RECTANGLE0,TEXT_GRAPHIC0" PND="true"
-          PX="0" PY="0" W1="359">
-          <PARAMETER_FIELDS>
-               <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CPT="DTextField" CSS="null" DT="java.lang.String"
-                    E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
-                    H1="19" HA="Alg_Left" IV="null" JN="null" KN="true"
-                    MAZ="20" N1="PARAMETER_FIELD0" NHL="null"
-                    PND="false" PX="145" PY="71" R3="false" S1="periodo"
-                    TT="null" V2="true" VOL="false" W1="118"/>
-          </PARAMETER_FIELDS>
-          <GRAPHICAL_BOILERPLATE>
-               <GRAPHIC BC="0,0,0" BV="Normal" CF="null"
-                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE0);"
-                    CSS="null" FC="135,155,211" FE="null" GT="RECTANGLE"
-                    H1="31" IF="false" JN="null" LN="0" LW="1"
-                    N1="RECTANGLE0" NPG="false" PBA="false" PBB="false"
-                    POO="Default" PX="42" PY="65" W1="225"/>
-          </GRAPHICAL_BOILERPLATE>
-          <TEXT_BOILERPLATE>
-               <GRAPHIC B1="null" BCF="None" BG="255,255,255"
-                    BPO="Enclosing object" CF="null"
-                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicTEXT_GRAPHIC0);"
-                    CSS="null" DO="0 Grades" F2="Arial,0,11" FE="null"
-                    FG="0,0,0" GT="TEXT_GRAPHIC" H1="14" HA="Alg_Left"
-                    HE="Fixed" IF="false" JN="null" KAO="false"
-                    LB="Periodo y mes :" LN="0" LW="-1" MWL="0"
-                    N1="TEXT_GRAPHIC0" NPG="false" PBA="false"
-                    PBB="false" PNB="true,true,true,1,1,!Report"
-                    PND="true" POO="Default" PP="false" PX="54" PY="71"
-                    UL="F" VE="Fixed" W1="74"/>
-          </TEXT_BOILERPLATE>
+     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="400"
+          NAMES="Titulo,parameterperiodo,Parameterperiodo" PX="0" PY="0" W1="600">
+          <PARAMETER_FIELDS/>
+          <GRAPHICAL_BOILERPLATE/>
+          <TEXT_BOILERPLATE/>
           <IMAGE_BOILERPLATE/>
           <SQLSTATEMENTS/>
           <P_HELP_LIST/>
