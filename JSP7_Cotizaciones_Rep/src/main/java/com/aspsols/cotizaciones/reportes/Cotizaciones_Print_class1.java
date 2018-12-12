@@ -152,6 +152,7 @@ public class Cotizaciones_Print_class1 extends JReportRuntime {
 	protected GroupField groupFieldCOSTOS_ADICCOD_COSTO = new GroupField("COD_COSTO",5,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupCOSTOS_ADIC,this);
 	protected GroupField groupFieldCOSTOS_ADICVALOR = new GroupField("VALOR",6,"java.math.BigDecimal",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupCOSTOS_ADIC,this);
 	protected GroupField groupFieldCOSTOS_ADICNOMBRE_CARGO = new GroupField("NOMBRE_CARGO",7,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupCOSTOS_ADIC,this);
+	protected GroupField groupFieldCOSTOS_ADICCOUNT_COSTOS = new GroupField("COUNT_COSTOS",0,"java.lang.Double","0",null,"ASC","COUNT",groupCOSTOS_ADIC,"REPORT","REPORT",null,"SUMMARY",null,false,0,groupCOSTOS_ADIC,this);
 	protected GroupField groupFieldDESCRIPCIONES_DETALLEC_EMP5 = new GroupField("C_EMP5",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupDESCRIPCIONES_DETALLE,this);
 	protected GroupField groupFieldDESCRIPCIONES_DETALLECOT5 = new GroupField("COT5",1,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupDESCRIPCIONES_DETALLE,this);
 	protected GroupField groupFieldDESCRIPCIONES_DETALLEREV5 = new GroupField("REV5",2,"java.math.BigInteger",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupDESCRIPCIONES_DETALLE,this);

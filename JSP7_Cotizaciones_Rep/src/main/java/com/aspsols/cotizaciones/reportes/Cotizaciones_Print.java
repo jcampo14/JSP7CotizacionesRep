@@ -358,6 +358,8 @@ public class Cotizaciones_Print extends Cotizaciones_Print_class3 {
 			this.groupCOSTOS_ADIC.addField(this.groupFieldCOSTOS_ADICCOD_COSTO);
 			this.groupCOSTOS_ADIC.addField(this.groupFieldCOSTOS_ADICVALOR);
 			this.groupCOSTOS_ADIC.addField(this.groupFieldCOSTOS_ADICNOMBRE_CARGO);
+			this.groupCOSTOS_ADIC.addField(this.groupFieldCOSTOS_ADICCOUNT_COSTOS);
+			this.groupFieldCOSTOS_ADICCOUNT_COSTOS.setSource(this.groupFieldCOSTOS_ADICCOD_COSTO);
 			
 			this.groupDESCRIPCIONES_DETALLE.addField(this.groupFieldDESCRIPCIONES_DETALLEC_EMP5);
 			this.groupDESCRIPCIONES_DETALLE.addField(this.groupFieldDESCRIPCIONES_DETALLECOT5);
@@ -1102,6 +1104,30 @@ Object object2=convertTo2(((Vector)resulSet1.get(0)).get(1),getField("email_vend
 	}
 
 
+	public java.lang.Boolean TEXT_GRAPHIC36_formatEvent () {
+
+	if (isTrue(greaterThan(getField("count_costos").getFieldValue(),0) )){
+		return (java.lang.Boolean)convertTo2(true,"java.lang.Boolean");
+	}else {
+		return (java.lang.Boolean)convertTo2(false,"java.lang.Boolean");
+	}
+
+
+	}
+
+
+	public java.lang.Boolean TEXT_GRAPHIC32_formatEvent () {
+
+	if (isTrue(greaterThan(getField("count_costos").getFieldValue(),0) )){
+		return (java.lang.Boolean)convertTo2(true,"java.lang.Boolean");
+	}else {
+		return (java.lang.Boolean)convertTo2(false,"java.lang.Boolean");
+	}
+
+
+	}
+
+
 
 	private void addLayoutTextVariables() {
 		LayoutTextVariables ltvreportTextMainBodyText_graphic4_0 = new LayoutTextVariables("Cot", "&Cot");
@@ -1196,5 +1222,7 @@ Object object2=convertTo2(((Vector)resulSet1.get(0)).get(1),getField("email_vend
 		this.fieldPresentationMainBodyCargo.addToVectorGetters(this.groupFieldGROUP_ENCABEZADOCARGO);
 		this.reportFrameMainBodyDetalle_frame.addToVectorGetters(this.parameterVer_totales);
 		this.reportFrameMainBodyFrame_detalle_sin_tot.addToVectorGetters(this.parameterVer_totales);
+		this.reportTextMainBodyText_graphic36.addToVectorGetters(this.groupFieldCOSTOS_ADICCOUNT_COSTOS);
+		this.reportTextMainBodyText_graphic32.addToVectorGetters(this.groupFieldCOSTOS_ADICCOUNT_COSTOS);
 	}
 }
