@@ -86,15 +86,16 @@ import com.aspsolutions.jframework.srw.SRWRunReportFailure;
 
 public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 {
 
-	protected ParameterForm parameterForm = new ParameterForm(0,0,292,250,new Color(191,191,191),"informeDeVentasPorEmpresa");
+	protected ParameterForm parameterForm = new ParameterForm(0,0,425,355,new Color(191,191,191),"informeDeVentasPorEmpresa");
 	protected PresentationRules presentationRules = new PresentationRules();
-	protected ReportFieldPresentation fieldPresentationMainBodyTotales = new ReportFieldPresentation("totales",202,46,10,62,reportRegionMainBody,4,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","SUM_SUMA_","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPeriodo = new ReportFieldPresentation("periodo",202,36,10,62,reportRegionMainBody,5,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","PERIODO1","java.lang.String",true,0,new Color(0,51,153),"Default,1,(0,0,0)",0,new Color(255,255,255),new Font("Arial",1,8),null,"DEFAULT",false,false,true,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyMoneda = new ReportFieldPresentation("moneda",153,46,10,49,reportRegionMainBody,6,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","MON","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPorcentaje = new ReportFieldPresentation("porcentaje",264,46,10,43,reportRegionMainBody,7,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","porcentaje_total","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",525,33,10,51,reportRegionMainMargin,1,null,"FIXED","FIXED","CURRENT_DATE","java.util.Date",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,8),"dd/MM/YYYY","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field1 = new ReportFieldPresentation("LAYOUT_FIELD1",522,45,10,20,reportRegionMainMargin,7,null,"FIXED","FIXED","PAGE_NUMBER","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field2 = new ReportFieldPresentation("LAYOUT_FIELD2",557,45,10,20,reportRegionMainMargin,8,null,"FIXED","FIXED","TOTAL_PAGES","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyLayout_field1 = new ReportFieldPresentation("LAYOUT_FIELD1",23,11,12,120,reportRegionMainBody,7,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","NOM_EMP","java.lang.String",true,0,new Color(255,255,255),"Default,1,(0,0,0)",2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPorcentaje = new ReportFieldPresentation("porcentaje",413,11,12,37,reportRegionMainBody,6,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","PORCENTAJE","java.lang.String",true,0,new Color(255,255,255),"Default,1,(0,0,0)",4,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyLayout_field2 = new ReportFieldPresentation("LAYOUT_FIELD2",143,11,12,39,reportRegionMainBody,9,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","MONEDA","java.lang.String",true,0,new Color(255,255,255),"Default,1,(0,0,0)",2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodySum_round_fd_can_fd_ven_2_ = new ReportFieldPresentation("SUM_ROUND_FD_CAN_FD_VEN_2_",182,11,12,54,reportRegionMainBody,8,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","ACTUAL","java.lang.String",true,0,new Color(255,255,255),"Default,1,(0,0,0)",4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###,###","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyLayout_field3 = new ReportFieldPresentation("LAYOUT_FIELD3",236,11,12,58,reportRegionMainBody,15,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","VENTAS_AC","java.lang.Double",true,0,new Color(255,255,255),"Default,1,(0,0,0)",2,new Color(0,0,0),new Font("Arial",0,7),"###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyLayout_field4 = new ReportFieldPresentation("LAYOUT_FIELD4",294,11,12,59,reportRegionMainBody,16,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","PASADO","java.lang.String",true,0,new Color(255,255,255),"Default,1,(0,0,0)",2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyLayout_field5 = new ReportFieldPresentation("LAYOUT_FIELD5",353,11,12,60,reportRegionMainBody,17,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","VENTAS_PA","java.lang.Double",true,0,new Color(255,255,255),"Default,1,(0,0,0)",2,new Color(0,0,0),new Font("Arial",0,7),"###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",438,36,10,53,reportRegionMainMargin,1,null,"FIXED","FIXED","CURRENT_DATE","java.sql.Date",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),"dd/MM/yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
 	
 	public informeDeVentasPorEmpresa() throws Exception {
 		super();
@@ -115,10 +116,10 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 			this.getJreport().setParameterForm(this.parameterForm);
 		    this.setJspDocument("reports/com/aspsols/cotizaciones/reportes/informeDeVentasPorEmpresaParamForm.jsp");
 			this.queryLogic.addQueries(this.queryQUERY0);
-			this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);
+			this.queryQUERY0.setInitialGroup(this.groupGROUP_MONEDA);
 			this.queryQUERY0.setMaximunRowsToFech(0);
-			String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression("PERIODO,SUM(SUMA),MON",",");
-			String[] arrayAliasqueryQUERY0 = ASPString.splitExpression("PERIODO1,SUM_SUMA_,MON,",",");
+			String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression("EMPRESA,MONEDA,ACTUAL,VENTAS_AC,PASADO,VENTAS_PA",",");
+			String[] arrayAliasqueryQUERY0 = ASPString.splitExpression("EMPRESA1,MONEDA,ACTUAL,VENTAS_AC,PASADO,VENTAS_PA,",",");
 			for(int k=0;k<arrayColumnsqueryQUERY0.length;k++){
 				boolean insertqueryQUERY0 = true;
 				SelectColumns queryQUERY0SelectColumns = new SelectColumns();
@@ -138,22 +139,27 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 				this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);
 			}
 
-			this.groupGROUP_MON.addChildGroup(this.groupGROUP0);
-			this.groupGROUP_MON.addField(this.groupFieldGROUP_MONMON);
+			this.groupGROUP_MONEDA.addChildGroup(this.groupGROUP0);
+			this.groupGROUP_MONEDA.addField(this.groupFieldGROUP_MONEDAMONEDA);
 			
-			this.groupGROUP0.addField(this.groupFieldGROUP0PERIODO1);
-			this.groupGROUP0.addField(this.groupFieldGROUP0SUM_SUMA_);
+			this.groupGROUP0.addField(this.groupFieldGROUP0EMPRESA1);
+			this.groupGROUP0.addField(this.groupFieldGROUP0ACTUAL);
+			this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_AC);
+			this.groupGROUP0.addField(this.groupFieldGROUP0PASADO);
+			this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PA);
+			this.groupGROUP0.addField(this.groupFieldGROUP0PORCENTAJE);
 			this.queryLogic.addToFields(this.groupFieldFormula_columnsPorcentaje_total);
-			this.queryLogic.addToFields(this.groupFieldFormula_columnsPeriodofin);
+			this.queryLogic.addToFields(this.groupFieldFormula_columnsNOM_EMP);
 			this.presentationRules.getSections().add(this.reportSectionHeader);
 			this.presentationRules.getSections().add(this.reportSectionMain);
 			this.presentationRules.getSections().add(this.reportSectionTrailer);
 			this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE0);
 			this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE1);
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicROUNDED_RECTANGLE0);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_title);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo);
 			this.parameterForm.addToVectorGraphics(this.graphicServergraphicTEXT_GRAPHIC0);
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicTEXT_GRAPHIC1);
 
+			this.parameterForm.addToVectorGroupField(this.parameterEmpresa);
 			this.parameterForm.addToVectorGroupField(this.parameterPeriodo);
 			this.getJreport().addToVectorGroupField(this.parameterBACKGROUND);
 			this.getJreport().addToVectorGroupField(this.parameterCOPIES);
@@ -169,19 +175,19 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 			this.getJreport().addToVectorGroupField(this.parameterMAXRECORDS);
 
 
-			this.fieldPresentationMainBodyTotales.setGroupFieldReference(this.groupFieldGROUP0SUM_SUMA_);
-			this.fieldPresentationMainBodyPeriodo.setGroupFieldReference(this.groupFieldGROUP0PERIODO1);
-			this.fieldPresentationMainBodyMoneda.setGroupFieldReference(this.groupFieldGROUP_MONMON);
-			this.fieldPresentationMainBodyPorcentaje.setGroupFieldReference(this.groupFieldFormula_columnsPorcentaje_total);
+			this.fieldPresentationMainBodyLayout_field1.setGroupFieldReference(this.groupFieldFormula_columnsNOM_EMP);
+			this.fieldPresentationMainBodyPorcentaje.setGroupFieldReference(this.groupFieldGROUP0PORCENTAJE);
+			this.fieldPresentationMainBodyLayout_field2.setGroupFieldReference(this.groupFieldGROUP_MONEDAMONEDA);
+			this.fieldPresentationMainBodySum_round_fd_can_fd_ven_2_.setGroupFieldReference(this.groupFieldGROUP0ACTUAL);
+			this.fieldPresentationMainBodyLayout_field3.setGroupFieldReference(this.groupFieldGROUP0VENTAS_AC);
+			this.fieldPresentationMainBodyLayout_field4.setGroupFieldReference(this.groupFieldGROUP0PASADO);
+			this.fieldPresentationMainBodyLayout_field5.setGroupFieldReference(this.groupFieldGROUP0VENTAS_PA);
 			
-			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field1 = new PageNumbering(true,true,true,1,1,null);
-			this.fieldPresentationMainMarginLayout_field1.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field1);
 
-			
-			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field2 = new PageNumbering(true,true,true,1,1,null);
-			this.fieldPresentationMainMarginLayout_field2.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field2);
-
+			this.reportChartMainBodyLayout_chart0.setFilePath("D:/Workspace_solagro/JSP7CotizacionesRep/JSP7_Cotizaciones_Rep/src/main/java/INFORMEEMPRESA_GRAPHICS.xml");
+			this.reportChartMainBodyLayout_chart0.setDateFormat("dd/MM/yyyy");
 			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
+			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterempresa);
 
 			this.addLayoutTextVariables();
 			this.addColumnInformation();
@@ -192,6 +198,7 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 			this.setExecutedInit(true);
 
 			this.parameterPeriodo.setQueryParameter(true);
+			this.parameterEmpresa.setQueryParameter(true);
 		} catch(Exception error) {
 			throw new Exception(error);
 		}
@@ -268,11 +275,40 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 	}
 
 
-	public java.lang.String periodofin_method () {
+	public java.lang.String nom_emp_method () {
 
-	java.lang.String periodo_fin=null;
-	periodo_fin=convertTo(substract (getField("periodo").getFieldValue(),1),periodo_fin);
-	return (java.lang.String)convertTo2(periodo_fin,"java.lang.String");
+	java.lang.String varemp=null;
+	java.lang.String sqlCommand1="SELECT emp  AS empresa ";
+	sqlCommand1+=" FROM parametros ";
+	sqlCommand1+="WHERE c_emp=#parameterEmpresa  ";
+	//Generated vector to hold the arguments.
+	Vector<SqlParameter> arguments1=new Vector<SqlParameter>();
+	SqlParameter sqlParameter1=new SqlParameter("parameterEmpresa",getField("empresa").getFieldValue());
+	arguments1.add(sqlParameter1);
+	Vector resulSet1=getDAOObject().getRecords(sqlCommand1,arguments1);
+	setRowsAffected(resulSet1.size());
+	if (resulSet1.size()==0){
+		throw new NoDataFoundException("No Data found.");
+	} else if (resulSet1.size()>1){
+		throw new TooManyRows("Too many Rows.");
+	}
+	varemp=(java.lang.String)convertTo2(((Vector)resulSet1.get(0)).get(0),"java.lang.String");
+	return (java.lang.String)convertTo2(varemp,"java.lang.String");
+
+
+	}
+
+
+	public java.lang.Double porcentaje_method () {
+
+	java.lang.Double porc=null;
+	if (isTrue(notEquals(getField("ventas_ac").getFieldValue(),0) && notEquals(getField("ventas_pa").getFieldValue(),0) )){
+		Object object1=ASPMath.round(multiply ((divide (getField("ventas_ac").getFieldValue(),getField("ventas_pa").getFieldValue())),100),2);
+		porc=convertTo(object1,porc);
+	}else {
+		porc=convertTo(0,porc);
+	}
+	return (java.lang.Double)convertTo2(porc,"java.lang.Double");
 
 
 	}
@@ -280,10 +316,10 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 
 
 	private void addLayoutTextVariables() {
-		LayoutTextVariables ltvreportTextMainMarginTitle_0 = new LayoutTextVariables("periodo", "&periodo");
-		this.reportTextMainMarginTitle.addToVectorVariables(ltvreportTextMainMarginTitle_0);
-		LayoutTextVariables ltvreportTextMainMarginTitle_2 = new LayoutTextVariables("periodofin", "&periodofin");
-		this.reportTextMainMarginTitle.addToVectorVariables(ltvreportTextMainMarginTitle_2);
+		LayoutTextVariables ltvreportTextMainBodyText_graphic5_0 = new LayoutTextVariables("mon", "&mon");
+		this.reportTextMainBodyText_graphic5.addToVectorVariables(ltvreportTextMainBodyText_graphic5_0);
+		LayoutTextVariables ltvreportTextMainMarginText_graphic4_0 = new LayoutTextVariables("periodo", "&periodo");
+		this.reportTextMainMarginText_graphic4.addToVectorVariables(ltvreportTextMainMarginText_graphic4_0);
 	}
 			
 	/**
@@ -305,8 +341,10 @@ public class informeDeVentasPorEmpresa extends informeDeVentasPorEmpresa_class3 
 	 * que se encuentran en los eventos de las formulas.
 	 */
 	private void addFormulaInFormula() {
+		this.groupFieldGROUP0PORCENTAJE.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_AC);
+		this.groupFieldGROUP0PORCENTAJE.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_PA);
 		this.groupFieldFormula_columnsPorcentaje_total.addToVectorFormulaInFormula(this.parameterPeriodo);
-		this.groupFieldFormula_columnsPeriodofin.addToVectorFormulaInFormula(this.parameterPeriodo);
+		this.groupFieldFormula_columnsNOM_EMP.addToVectorFormulaInFormula(this.parameterEmpresa);
 	}
 		
 	/**

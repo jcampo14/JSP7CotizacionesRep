@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JGRAPHICS TY="2">
+	<GR DS="DATA" QR="" XA="ACTUAL:=:-1:=:PASADO:=:-1:=:" YA="VENTAS_AC:=:-1:=:VENTAS_PA:=:-1:=:" PC="">
+		<TIT SHOW="F" TX="" CLR="0,0,0" F="Monospaced.plain,0,13" />
+		<STI SHOW="F" TX="" CLR="0,0,0" F="Monospaced.plain,0,13" />
+		<FNT SHOW="F" TX="" CLR="0,0,0" F="Monospaced.plain,0,13" />
+		<LGD SHOW="T" PS="Automatico" FCLR="255,255,255" F="Tahoma,0,11" CLR="0,0,0" />
+		<OPX>
+			<TIT SHOW="F" TX="" CLR="0,0,0" F="Tahoma,0,11" />
+			<AXIS W1="1" CLR="255,255,255" PS="0" />
+			<LBL SHOW="T" CLR="0,0,0" F="Tahoma,0,11" RT="Standard" />
+		</OPX>
+		<OPY>
+			<TIT SHOW="F" TX="" CLR="0,0,0" F="Tahoma,0,11" />
+			<AXIS W1="1" CLR="255,255,255" PS="0" />
+			<LBL SHOW="T" CLR="0,0,0" F="Tahoma,0,11" AMIN="T" MIN="0" AMAX="T" MAX="100" />
+		</OPY>
+		<OPD FCLR="255,255,255" BCLR="128,128,128" SHL="T" WHL="1" CHL="128,128,128" SVL="F" WVL="1" CVL="128,128,128" SLD="F" SPD="F">
+		</OPD>
+		<SERIES>
+		<SERIE CLR="153,153,153" /><SERIE CLR="102,102,255" /><SERIE CLR="153,255,153" /></SERIES>
+	</GR>
+</JGRAPHICS>

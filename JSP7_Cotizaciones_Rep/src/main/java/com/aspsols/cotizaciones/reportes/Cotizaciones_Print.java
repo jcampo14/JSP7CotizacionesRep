@@ -88,58 +88,58 @@ public class Cotizaciones_Print extends Cotizaciones_Print_class3 {
 
 	protected ParameterForm parameterForm = new ParameterForm(0,0,600,400,new Color(191,191,191),"Cotizaciones_Print");
 	protected PresentationRules presentationRules = new PresentationRules();
-	protected ReportFieldPresentation fieldPresentationMainBodyNombre_cliente = new ReportFieldPresentation("NOMBRE_CLIENTE",22,14,10,175,reportRegionMainBody,3,reportFrameMainBodyDatos_cliente,"FIXED","EXPAND","NOMBRE_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDir_cliente = new ReportFieldPresentation("DIR_CLIENTE",22,44,10,175,reportRegionMainBody,5,reportFrameMainBodyDatos_cliente,"FIXED","FIXED","DIR_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyTel_cliente = new ReportFieldPresentation("TEL_CLIENTE",22,54,10,175,reportRegionMainBody,6,reportFrameMainBodyDatos_cliente,"FIXED","FIXED","TEL_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyEmail_cliente = new ReportFieldPresentation("EMAIL_CLIENTE",22,64,10,175,reportRegionMainBody,7,reportFrameMainBodyDatos_cliente,"FIXED","FIXED","EMAIL_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyUbicacion_cliente = new ReportFieldPresentation("UBICACION_CLIENTE",22,74,10,175,reportRegionMainBody,8,reportFrameMainBodyDatos_cliente,"FIXED","EXPAND","UBICACION_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPersona_cargo = new ReportFieldPresentation("PERSONA_CARGO",22,24,10,175,reportRegionMainBody,97,reportFrameMainBodyDatos_cliente,"FIXED","VARIABLE","PER_CARGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,"PERSONA_CARGO_formatEvent",0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyCargo = new ReportFieldPresentation("CARGO",22,34,10,175,reportRegionMainBody,98,reportFrameMainBodyDatos_cliente,"FIXED","VARIABLE","CARGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,"CARGO_formatEvent",0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyEmi = new ReportFieldPresentation("EMI",73,107,10,144,reportRegionMainBody,13,reportFrameMainBodyEncabezado_cot,"FIXED","EXPAND","EMI","java.sql.Date",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),"dd-MMM-yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyOrigen = new ReportFieldPresentation("ORIGEN",80,137,10,137,reportRegionMainBody,14,reportFrameMainBodyEncabezado_cot,"FIXED","EXPAND","ORIGEN","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDias_validez = new ReportFieldPresentation("DIAS_VALIDEZ",150,117,10,67,reportRegionMainBody,22,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","DIAS_VALIDEZ","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyEmbalaje = new ReportFieldPresentation("EMBALAJE",97,127,10,120,reportRegionMainBody,23,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","NOMBRE_EMBALAJE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyMoneda = new ReportFieldPresentation("MONEDA",399,107,10,143,reportRegionMainBody,27,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","MONEDA_TEXTO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDestino = new ReportFieldPresentation("DESTINO",424,117,10,118,reportRegionMainBody,30,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","DESTINO_NOMBRE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDespacho = new ReportFieldPresentation("DESPACHO",101,147,10,116,reportRegionMainBody,75,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","DESPACHO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyTiempo_entrega = new ReportFieldPresentation("TIEMPO_ENTREGA",456,127,10,86,reportRegionMainBody,96,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","TIEMPO_ENTREGA","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNom_cargo = new ReportFieldPresentation("NOM_CARGO",389,137,10,153,reportRegionMainBody,100,repetitiveFrameMainBodyNombres_cargos,"FIXED","FIXED","NOMBRE_CARGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyTermino_pago = new ReportFieldPresentation("TERMINO_PAGO",155,157,10,145,reportRegionMainBody,103,reportFrameMainBodyEncabezado_cot,"FIXED","VARIABLE","TERMINO_PAGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNombre_seccion = new ReportFieldPresentation("NOMBRE_SECCION",22,87,13,55,reportRegionMainBody,33,repetitiveFrameMainBodySecciones_pre,"EXPAND","FIXED","NOMBRE_SECCION","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDescripcion_seccion = new ReportFieldPresentation("DESCRIPCION_SECCION",76,87,13,466,reportRegionMainBody,34,repetitiveFrameMainBodySecciones_pre,"FIXED","EXPAND","DESCRIPCION","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodySubtotal = new ReportFieldPresentation("SUBTOTAL",420,274,9,98,reportRegionMainBody,51,repetitiveFrameMainBodyDetalle,"FIXED","FIXED","Subtotal","java.lang.Double",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNombre_articulo = new ReportFieldPresentation("NOMBRE_ARTICULO",85,274,9,128,reportRegionMainBody,52,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","NOMBRE_ARTICULO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyCod = new ReportFieldPresentation("COD",22,274,9,63,reportRegionMainBody,53,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","COD","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyUnidad = new ReportFieldPresentation("UNIDAD",213,274,9,50,reportRegionMainBody,54,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","UNIDAD","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyCan = new ReportFieldPresentation("CAN",263,274,9,50,reportRegionMainBody,55,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","CAN","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyVen1 = new ReportFieldPresentation("VEN1",351,274,9,69,reportRegionMainBody,56,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","VEN1","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyIva1 = new ReportFieldPresentation("IVA1",313,274,9,38,reportRegionMainBody,57,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","IVA1","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyBru = new ReportFieldPresentation("BRU",412,319,9,106,reportRegionMainBody,59,reportFrameMainBodyTotales,"FIXED","EXPAND","BRU","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDes = new ReportFieldPresentation("DES",412,328,9,106,reportRegionMainBody,60,reportFrameMainBodyTotales,"FIXED","EXPAND","DES","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,"DES_formatEvent",0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyMer = new ReportFieldPresentation("MER",412,337,9,106,reportRegionMainBody,61,reportFrameMainBodyTotales,"FIXED","EXPAND","MER","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyIva = new ReportFieldPresentation("IVA",412,346,9,106,reportRegionMainBody,62,reportFrameMainBodyTotales,"FIXED","EXPAND","IVA","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyTot = new ReportFieldPresentation("TOT",412,355,9,106,reportRegionMainBody,63,reportFrameMainBodyTotales,"FIXED","EXPAND","TOT","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyTotd = new ReportFieldPresentation("TOTD",412,373,9,106,reportRegionMainBody,64,reportFrameMainBodyTotales,"FIXED","EXPAND","TOTD","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_bruto = new ReportFieldPresentation("PROMPT_TOT_BRUTO",300,319,9,112,reportRegionMainBody,80,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_BRUTO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_base = new ReportFieldPresentation("PROMPT_TOT_BASE",300,337,9,112,reportRegionMainBody,81,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_BASE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_descuento = new ReportFieldPresentation("PROMPT_TOT_DESCUENTO",300,328,9,112,reportRegionMainBody,82,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_DESCUENTO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,"PROMPT_TOT_DESCUENTO_formatEvent",0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_iva = new ReportFieldPresentation("PROMPT_TOT_IVA",300,346,9,112,reportRegionMainBody,83,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_IVA","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_parcial = new ReportFieldPresentation("PROMPT_TOT_PARCIAL",300,355,9,112,reportRegionMainBody,84,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_PARCIAL","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_neto = new ReportFieldPresentation("PROMPT_TOT_NETO",300,373,9,112,reportRegionMainBody,85,reportFrameMainBodyTotales,"FIXED","EXPAND","PROMPT_TOTAL_NETO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNombre_cargo = new ReportFieldPresentation("NOMBRE_CARGO",300,364,9,112,reportRegionMainBody,87,repetitiveFrameMainBodyCostos_adicionales,"FIXED","EXPAND","NOMBRE_CARGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyValor_cargo = new ReportFieldPresentation("VALOR_CARGO",412,364,9,106,reportRegionMainBody,88,repetitiveFrameMainBodyCostos_adicionales,"FIXED","FIXED","VALOR","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNombre_sec_enc = new ReportFieldPresentation("NOMBRE_SEC_ENC",22,178,13,496,reportRegionMainBody,67,repetitiveFrameMainBodySecciones_enc,"FIXED","EXPAND","NOMBRE_SECCION1","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDesc_sec_enc = new ReportFieldPresentation("DESC_SEC_ENC",22,194,13,496,reportRegionMainBody,68,repetitiveFrameMainBodySecciones_enc,"FIXED","EXPAND","DESCRIPCION1","java.lang.String",true,0,new Color(255,255,255),null,6,new Color(0,0,0),new Font("Arial",0,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNombre_sec_pie = new ReportFieldPresentation("NOMBRE_SEC_PIE",22,410,13,496,reportRegionMainBody,71,repetitiveFrameMainBodySecciones_pie,"FIXED","FIXED","NOMBRE_SECCION2","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDesc_sec_pie = new ReportFieldPresentation("DESC_SEC_PIE",22,426,13,496,reportRegionMainBody,72,repetitiveFrameMainBodySecciones_pie,"FIXED","FIXED","DESCRIPCION2","java.lang.String",true,0,new Color(255,255,255),null,6,new Color(0,0,0),new Font("Arial",0,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNom_articulo = new ReportFieldPresentation("NOM_ARTICULO",22,210,13,496,reportRegionMainBody,78,repetitiveFrameMainBodyDesc_det,"FIXED","EXPAND","DESCRIP_ARTICULO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyDesc_comercial = new ReportFieldPresentation("DESC_COMERCIAL",22,226,13,496,reportRegionMainBody,79,repetitiveFrameMainBodyDesc_det,"FIXED","EXPAND","INF7","java.lang.String",true,0,new Color(255,255,255),null,6,new Color(0,0,0),new Font("Arial",0,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNombre_vendedor = new ReportFieldPresentation("NOMBRE_VENDEDOR",22,555,10,255,reportRegionMainBody,90,reportFrameMainBodyFirma,"FIXED","FIXED","NOMBRE_VENDEDOR","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyEmail_vendedor = new ReportFieldPresentation("EMAIL_VENDEDOR",22,575,10,255,reportRegionMainBody,91,reportFrameMainBodyFirma,"FIXED","FIXED","EMAIL_VENDEDOR","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodySt_cantidad = new ReportFieldPresentation("ST_CANTIDAD",468,296,9,50,reportRegionMainBody,112,repetitiveFrameMainBodySt_detalle,"FIXED","FIXED","CAN","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodySt_unidad = new ReportFieldPresentation("ST_UNIDAD",418,296,9,50,reportRegionMainBody,113,repetitiveFrameMainBodySt_detalle,"FIXED","FIXED","UNIDAD","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodySt_nombre_articulo = new ReportFieldPresentation("ST_NOMBRE_ARTICULO",85,296,9,333,reportRegionMainBody,114,repetitiveFrameMainBodySt_detalle,"FIXED","EXPAND","NOMBRE_ARTICULO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodySt_cod = new ReportFieldPresentation("ST_COD",22,296,9,63,reportRegionMainBody,115,repetitiveFrameMainBodySt_detalle,"FIXED","EXPAND","COD","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyEmi = new ReportFieldPresentation("EMI",73,107,10,144,reportRegionMainBody,5,reportFrameMainBodyEncabezado_cot,"FIXED","EXPAND","EMI","java.sql.Date",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),"dd-MMM-yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyOrigen = new ReportFieldPresentation("ORIGEN",80,137,10,137,reportRegionMainBody,6,reportFrameMainBodyEncabezado_cot,"FIXED","EXPAND","ORIGEN","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDias_validez = new ReportFieldPresentation("DIAS_VALIDEZ",150,117,10,67,reportRegionMainBody,11,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","DIAS_VALIDEZ","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyEmbalaje = new ReportFieldPresentation("EMBALAJE",97,127,10,120,reportRegionMainBody,12,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","NOMBRE_EMBALAJE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyMoneda = new ReportFieldPresentation("MONEDA",399,107,10,143,reportRegionMainBody,16,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","MONEDA_TEXTO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDestino = new ReportFieldPresentation("DESTINO",424,117,10,118,reportRegionMainBody,19,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","DESTINO_NOMBRE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDespacho = new ReportFieldPresentation("DESPACHO",101,147,10,116,reportRegionMainBody,64,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","DESPACHO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyTiempo_entrega = new ReportFieldPresentation("TIEMPO_ENTREGA",456,127,10,86,reportRegionMainBody,84,reportFrameMainBodyEncabezado_cot,"FIXED","FIXED","TIEMPO_ENTREGA","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNom_cargo = new ReportFieldPresentation("NOM_CARGO",389,137,10,153,reportRegionMainBody,86,repetitiveFrameMainBodyNombres_cargos,"FIXED","FIXED","NOMBRE_CARGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyTermino_pago = new ReportFieldPresentation("TERMINO_PAGO",155,157,10,145,reportRegionMainBody,89,reportFrameMainBodyEncabezado_cot,"FIXED","VARIABLE","TERMINO_PAGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNombre_seccion = new ReportFieldPresentation("NOMBRE_SECCION",22,87,13,55,reportRegionMainBody,22,repetitiveFrameMainBodySecciones_pre,"EXPAND","FIXED","NOMBRE_SECCION","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDescripcion_seccion = new ReportFieldPresentation("DESCRIPCION_SECCION",76,87,13,466,reportRegionMainBody,23,repetitiveFrameMainBodySecciones_pre,"FIXED","EXPAND","DESCRIPCION","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodySubtotal = new ReportFieldPresentation("SUBTOTAL",420,274,9,98,reportRegionMainBody,40,repetitiveFrameMainBodyDetalle,"FIXED","FIXED","Subtotal","java.lang.Double",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNombre_articulo = new ReportFieldPresentation("NOMBRE_ARTICULO",85,274,9,128,reportRegionMainBody,41,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","NOMBRE_ARTICULO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyCod = new ReportFieldPresentation("COD",22,274,9,63,reportRegionMainBody,42,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","COD","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyUnidad = new ReportFieldPresentation("UNIDAD",213,274,9,50,reportRegionMainBody,43,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","UNIDAD","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyCan = new ReportFieldPresentation("CAN",263,274,9,50,reportRegionMainBody,44,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","CAN","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyVen1 = new ReportFieldPresentation("VEN1",351,274,9,69,reportRegionMainBody,45,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","VEN1","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyIva1 = new ReportFieldPresentation("IVA1",313,274,9,38,reportRegionMainBody,46,repetitiveFrameMainBodyDetalle,"FIXED","EXPAND","IVA1","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyBru = new ReportFieldPresentation("BRU",412,319,9,106,reportRegionMainBody,48,reportFrameMainBodyTotales,"FIXED","EXPAND","BRU","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDes = new ReportFieldPresentation("DES",412,328,9,106,reportRegionMainBody,49,reportFrameMainBodyTotales,"FIXED","EXPAND","DES","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,"DES_formatEvent",0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyMer = new ReportFieldPresentation("MER",412,337,9,106,reportRegionMainBody,50,reportFrameMainBodyTotales,"FIXED","EXPAND","MER","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyIva = new ReportFieldPresentation("IVA",412,346,9,106,reportRegionMainBody,51,reportFrameMainBodyTotales,"FIXED","EXPAND","IVA","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyTot = new ReportFieldPresentation("TOT",412,355,9,106,reportRegionMainBody,52,reportFrameMainBodyTotales,"FIXED","EXPAND","TOT","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyTotd = new ReportFieldPresentation("TOTD",412,373,9,106,reportRegionMainBody,53,reportFrameMainBodyTotales,"FIXED","EXPAND","TOTD","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_bruto = new ReportFieldPresentation("PROMPT_TOT_BRUTO",300,319,9,112,reportRegionMainBody,69,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_BRUTO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_base = new ReportFieldPresentation("PROMPT_TOT_BASE",300,337,9,112,reportRegionMainBody,70,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_BASE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_descuento = new ReportFieldPresentation("PROMPT_TOT_DESCUENTO",300,328,9,112,reportRegionMainBody,71,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_DESCUENTO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,"PROMPT_TOT_DESCUENTO_formatEvent",0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_iva = new ReportFieldPresentation("PROMPT_TOT_IVA",300,346,9,112,reportRegionMainBody,72,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_IVA","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_parcial = new ReportFieldPresentation("PROMPT_TOT_PARCIAL",300,355,9,112,reportRegionMainBody,73,reportFrameMainBodyTotales,"FIXED","FIXED","PROMPT_TOTAL_PARCIAL","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPrompt_tot_neto = new ReportFieldPresentation("PROMPT_TOT_NETO",300,373,9,112,reportRegionMainBody,74,reportFrameMainBodyTotales,"FIXED","EXPAND","PROMPT_TOTAL_NETO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNombre_cargo = new ReportFieldPresentation("NOMBRE_CARGO",300,364,9,112,reportRegionMainBody,76,repetitiveFrameMainBodyCostos_adicionales,"FIXED","EXPAND","NOMBRE_CARGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyValor_cargo = new ReportFieldPresentation("VALOR_CARGO",412,364,9,106,reportRegionMainBody,77,repetitiveFrameMainBodyCostos_adicionales,"FIXED","FIXED","VALOR","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNombre_sec_enc = new ReportFieldPresentation("NOMBRE_SEC_ENC",22,178,13,496,reportRegionMainBody,56,repetitiveFrameMainBodySecciones_enc,"FIXED","EXPAND","NOMBRE_SECCION1","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDesc_sec_enc = new ReportFieldPresentation("DESC_SEC_ENC",22,194,13,496,reportRegionMainBody,57,repetitiveFrameMainBodySecciones_enc,"FIXED","EXPAND","DESCRIPCION1","java.lang.String",true,0,new Color(255,255,255),null,6,new Color(0,0,0),new Font("Arial",0,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNombre_sec_pie = new ReportFieldPresentation("NOMBRE_SEC_PIE",22,410,13,496,reportRegionMainBody,60,repetitiveFrameMainBodySecciones_pie,"FIXED","FIXED","NOMBRE_SECCION2","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDesc_sec_pie = new ReportFieldPresentation("DESC_SEC_PIE",22,426,13,496,reportRegionMainBody,61,repetitiveFrameMainBodySecciones_pie,"FIXED","FIXED","DESCRIPCION2","java.lang.String",true,0,new Color(255,255,255),null,6,new Color(0,0,0),new Font("Arial",0,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNom_articulo = new ReportFieldPresentation("NOM_ARTICULO",22,210,13,496,reportRegionMainBody,67,repetitiveFrameMainBodyDesc_det,"FIXED","EXPAND","DESCRIP_ARTICULO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDesc_comercial = new ReportFieldPresentation("DESC_COMERCIAL",22,226,13,496,reportRegionMainBody,68,repetitiveFrameMainBodyDesc_det,"FIXED","EXPAND","INF7","java.lang.String",true,0,new Color(255,255,255),null,6,new Color(0,0,0),new Font("Arial",0,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNombre_vendedor = new ReportFieldPresentation("NOMBRE_VENDEDOR",22,555,10,255,reportRegionMainBody,79,reportFrameMainBodyFirma,"FIXED","FIXED","NOMBRE_VENDEDOR","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyEmail_vendedor = new ReportFieldPresentation("EMAIL_VENDEDOR",22,575,10,255,reportRegionMainBody,80,reportFrameMainBodyFirma,"FIXED","FIXED","EMAIL_VENDEDOR","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodySt_cantidad = new ReportFieldPresentation("ST_CANTIDAD",468,296,9,50,reportRegionMainBody,98,repetitiveFrameMainBodySt_detalle,"FIXED","FIXED","CAN","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodySt_unidad = new ReportFieldPresentation("ST_UNIDAD",418,296,9,50,reportRegionMainBody,99,repetitiveFrameMainBodySt_detalle,"FIXED","FIXED","UNIDAD","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodySt_nombre_articulo = new ReportFieldPresentation("ST_NOMBRE_ARTICULO",85,296,9,333,reportRegionMainBody,100,repetitiveFrameMainBodySt_detalle,"FIXED","EXPAND","NOMBRE_ARTICULO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodySt_cod = new ReportFieldPresentation("ST_COD",22,296,9,63,reportRegionMainBody,101,repetitiveFrameMainBodySt_detalle,"FIXED","EXPAND","COD","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNombre_cliente = new ReportFieldPresentation("NOMBRE_CLIENTE",22,14,10,175,reportRegionMainBody,109,reportFrameMainBodyDatos_cliente,"FIXED","EXPAND","NOMBRE_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyDir_cliente = new ReportFieldPresentation("DIR_CLIENTE",22,44,10,175,reportRegionMainBody,111,reportFrameMainBodyDatos_cliente,"FIXED","VARIABLE","DIR_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,"DIR_CLIENTE_formatEvent",0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyTel_cliente = new ReportFieldPresentation("TEL_CLIENTE",22,54,10,175,reportRegionMainBody,112,reportFrameMainBodyDatos_cliente,"FIXED","VARIABLE","TEL_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,"TEL_CLIENTE_formatEvent",0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyEmail_cliente = new ReportFieldPresentation("EMAIL_CLIENTE",22,64,10,175,reportRegionMainBody,113,reportFrameMainBodyDatos_cliente,"FIXED","VARIABLE","EMAIL_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,"EMAIL_CLIENTE_formatEvent",0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyUbicacion_cliente = new ReportFieldPresentation("UBICACION_CLIENTE",22,74,10,175,reportRegionMainBody,114,reportFrameMainBodyDatos_cliente,"FIXED","VARIABLE","UBICACION_CLIENTE","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPersona_cargo = new ReportFieldPresentation("PERSONA_CARGO",22,24,10,175,reportRegionMainBody,116,reportFrameMainBodyDatos_cliente,"FIXED","VARIABLE","PER_CARGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,"PERSONA_CARGO_formatEvent",0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyCargo = new ReportFieldPresentation("CARGO",22,34,10,175,reportRegionMainBody,117,reportFrameMainBodyDatos_cliente,"FIXED","VARIABLE","CARGO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,"CARGO_formatEvent",0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainMarginLogo_emp = new ReportFieldPresentation("LOGO_EMP",56,7,55,140,reportRegionMainMargin,0,null,"FIXED","FIXED","LOGO_EMP","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,10),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	
 	public Cotizaciones_Print() throws Exception {
@@ -472,13 +472,6 @@ public class Cotizaciones_Print extends Cotizaciones_Print_class3 {
 			this.getJreport().addToVectorGroupField(this.parameterMAXRECORDS);
 
 
-			this.fieldPresentationMainBodyNombre_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADONOMBRE_CLIENTE);
-			this.fieldPresentationMainBodyDir_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADODIR_CLIENTE);
-			this.fieldPresentationMainBodyTel_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOTEL_CLIENTE);
-			this.fieldPresentationMainBodyEmail_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOEMAIL_CLIENTE);
-			this.fieldPresentationMainBodyUbicacion_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOUBICACION_CLIENTE);
-			this.fieldPresentationMainBodyPersona_cargo.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOPER_CARGO);
-			this.fieldPresentationMainBodyCargo.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOCARGO);
 			this.fieldPresentationMainBodyEmi.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOEMI);
 			this.fieldPresentationMainBodyOrigen.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOORIGEN);
 			this.fieldPresentationMainBodyDias_validez.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADODIAS_VALIDEZ);
@@ -524,6 +517,13 @@ public class Cotizaciones_Print extends Cotizaciones_Print_class3 {
 			this.fieldPresentationMainBodySt_unidad.setGroupFieldReference(this.groupFieldGROUP_DETALLEUNIDAD);
 			this.fieldPresentationMainBodySt_nombre_articulo.setGroupFieldReference(this.groupFieldGROUP_DETALLENOMBRE_ARTICULO);
 			this.fieldPresentationMainBodySt_cod.setGroupFieldReference(this.groupFieldGROUP_DETALLECOD);
+			this.fieldPresentationMainBodyNombre_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADONOMBRE_CLIENTE);
+			this.fieldPresentationMainBodyDir_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADODIR_CLIENTE);
+			this.fieldPresentationMainBodyTel_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOTEL_CLIENTE);
+			this.fieldPresentationMainBodyEmail_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOEMAIL_CLIENTE);
+			this.fieldPresentationMainBodyUbicacion_cliente.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOUBICACION_CLIENTE);
+			this.fieldPresentationMainBodyPersona_cargo.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOPER_CARGO);
+			this.fieldPresentationMainBodyCargo.setGroupFieldReference(this.groupFieldGROUP_ENCABEZADOCARGO);
 			this.fieldPresentationMainMarginLogo_emp.setGroupFieldReference(this.groupFieldPlaceholder_columnsLOGO_EMP);
 			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParametercot);
 			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterrev);
@@ -604,12 +604,33 @@ Object object4=convertTo2(((Vector)resulSet1.get(0)).get(3),getField("ubicacion_
 Object object5=convertTo2(((Vector)resulSet1.get(0)).get(4),getField("email_cliente").getDataType());
 		getField("email_cliente").setFieldValue(object5);
 	} catch(NoDataFoundException expt1){
-		Object object6="";
-		getField("nombre_cliente").setFieldValue(object6);
-		Object object7="";
-		getField("dir_cliente").setFieldValue(object7);
-		Object object8="";
-		getField("tel_cliente").setFieldValue(object8);
+		try{
+			java.lang.String sqlCommand2="SELECT nombre ";
+			sqlCommand2+=" FROM prosp_cl ";
+			sqlCommand2+="WHERE n_ide=#groupFieldGROUP_ENCABEZADON_IDE  AND c_emp=#groupFieldGROUP_ENCABEZADOC_EMP1   ";
+			//Generated vector to hold the arguments.
+			Vector<SqlParameter> arguments2=new Vector<SqlParameter>();
+			SqlParameter sqlParameter3=new SqlParameter("groupFieldGROUP_ENCABEZADON_IDE",getField("n_ide").getFieldValue());
+			arguments2.add(sqlParameter3);
+			SqlParameter sqlParameter4=new SqlParameter("groupFieldGROUP_ENCABEZADOC_EMP1",getField("c_emp1").getFieldValue());
+			arguments2.add(sqlParameter4);
+			Vector resulSet2=getDAOObject().getRecords(sqlCommand2,arguments2);
+			setRowsAffected(resulSet2.size());
+			if (resulSet2.size()==0){
+				throw new NoDataFoundException("No Data found.");
+			} else if (resulSet2.size()>1){
+				throw new TooManyRows("Too many Rows.");
+			}
+Object object6=convertTo2(((Vector)resulSet2.get(0)).get(0),getField("nombre_cliente").getDataType());
+			getField("nombre_cliente").setFieldValue(object6);
+		} catch(NoDataFoundException expt2){
+			Object object7=null;
+			getField("nombre_cliente").setFieldValue(object7);
+			Object object8=null;
+			getField("dir_cliente").setFieldValue(object8);
+			Object object9=null;
+			getField("tel_cliente").setFieldValue(object9);
+		}
 	}
 	return (java.lang.String)convertTo2(null,"java.lang.String");
 
@@ -1044,18 +1065,6 @@ Object object2=convertTo2(((Vector)resulSet1.get(0)).get(1),getField("email_vend
 	}
 
 
-	public java.lang.Boolean DESC_DET_formatEvent () {
-
-	if (isTrue(isNotTrue(Utils.isNull(getField("inf7").getFieldValue())))){
-		return (java.lang.Boolean)convertTo2(true,"java.lang.Boolean");
-	}else {
-		return (java.lang.Boolean)convertTo2(false,"java.lang.Boolean");
-	}
-
-
-	}
-
-
 	public java.lang.Boolean PERSONA_CARGO_formatEvent () {
 
 	if (isTrue(isNotTrue(Utils.isNull(getField("per_cargo").getFieldValue())))){
@@ -1123,6 +1132,55 @@ Object object2=convertTo2(((Vector)resulSet1.get(0)).get(1),getField("email_vend
 	}else {
 		return (java.lang.Boolean)convertTo2(false,"java.lang.Boolean");
 	}
+
+
+	}
+
+
+	public java.lang.Boolean DIR_CLIENTE_formatEvent () {
+
+	if (isTrue(isNotTrue(Utils.isNull(getField("dir_cliente").getFieldValue())))){
+		return (java.lang.Boolean)convertTo2(true,"java.lang.Boolean");
+	}else {
+		return (java.lang.Boolean)convertTo2(false,"java.lang.Boolean");
+	}
+
+
+	}
+
+
+	public java.lang.Boolean TEL_CLIENTE_formatEvent () {
+
+	if (isTrue(isNotTrue(Utils.isNull(getField("tel_cliente").getFieldValue())))){
+		return (java.lang.Boolean)convertTo2(true,"java.lang.Boolean");
+	}else {
+		return (java.lang.Boolean)convertTo2(false,"java.lang.Boolean");
+	}
+
+
+	}
+
+
+	public java.lang.Boolean EMAIL_CLIENTE_formatEvent () {
+
+	if (isTrue(isNotTrue(Utils.isNull(getField("email_cliente").getFieldValue())))){
+		return (java.lang.Boolean)convertTo2(true,"java.lang.Boolean");
+	}else {
+		return (java.lang.Boolean)convertTo2(false,"java.lang.Boolean");
+	}
+
+
+	}
+
+
+	public java.lang.Boolean ST_DETALLE_formatEvent () {
+
+	if (isTrue(isEquals(ASPMath.mod(getField("color_reg").getFieldValue(),2),0) )){
+		setForegroundFillColor("r238g238b238");
+	}else {
+		setForegroundFillColor("white");
+	}
+	return (java.lang.Boolean)convertTo2(true,"java.lang.Boolean");
 
 
 	}
@@ -1217,12 +1275,15 @@ Object object2=convertTo2(((Vector)resulSet1.get(0)).get(1),getField("email_vend
 		this.repetitiveFrameMainBodyDetalle.addToVectorGetters(this.groupFieldGROUP_DETALLEColor_reg);
 		this.fieldPresentationMainBodyPrompt_tot_descuento.addToVectorGetters(this.groupFieldGROUP_ENCABEZADODES);
 		this.fieldPresentationMainBodyDes.addToVectorGetters(this.groupFieldGROUP_ENCABEZADODES);
-		this.repetitiveFrameMainBodyDesc_det.addToVectorGetters(this.groupFieldDESCRIPCIONES_DETALLEINF7);
 		this.fieldPresentationMainBodyPersona_cargo.addToVectorGetters(this.groupFieldGROUP_ENCABEZADOPER_CARGO);
 		this.fieldPresentationMainBodyCargo.addToVectorGetters(this.groupFieldGROUP_ENCABEZADOCARGO);
 		this.reportFrameMainBodyDetalle_frame.addToVectorGetters(this.parameterVer_totales);
 		this.reportFrameMainBodyFrame_detalle_sin_tot.addToVectorGetters(this.parameterVer_totales);
 		this.reportTextMainBodyText_graphic36.addToVectorGetters(this.groupFieldCOSTOS_ADICCOUNT_COSTOS);
 		this.reportTextMainBodyText_graphic32.addToVectorGetters(this.groupFieldCOSTOS_ADICCOUNT_COSTOS);
+		this.fieldPresentationMainBodyDir_cliente.addToVectorGetters(this.groupFieldGROUP_ENCABEZADODIR_CLIENTE);
+		this.fieldPresentationMainBodyTel_cliente.addToVectorGetters(this.groupFieldGROUP_ENCABEZADOTEL_CLIENTE);
+		this.fieldPresentationMainBodyEmail_cliente.addToVectorGetters(this.groupFieldGROUP_ENCABEZADOEMAIL_CLIENTE);
+		this.repetitiveFrameMainBodySt_detalle.addToVectorGetters(this.groupFieldGROUP_DETALLEColor_reg);
 	}
 }

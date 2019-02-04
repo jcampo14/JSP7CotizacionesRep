@@ -93,12 +93,12 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 	protected ReportFieldPresentation fieldPresentationMainBodyTotal_pas = new ReportFieldPresentation("TOTAL_PAS",354,21,10,107,reportRegionMainBody,7,reportFrameMainBodyFrame2,"FIXED","FIXED","SUMA_PAS","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###,###,###.###","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyTotal_act = new ReportFieldPresentation("TOTAL_ACT",182,21,10,107,reportRegionMainBody,9,reportFrameMainBodyFrame2,"FIXED","FIXED","SUMA_ACT","java.lang.Double",true,0,new Color(102,102,102),null,0,new Color(0,0,0),new Font("Arial",1,7),"###,###,###,###,###,###.###","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyMoneda = new ReportFieldPresentation("MONEDA",115,11,10,67,reportRegionMainBody,10,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","MON","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPorce_pas = new ReportFieldPresentation("PORCE_PAS",461,11,10,70,reportRegionMainBody,11,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","SUMA_PORC_PAS","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPorce_act = new ReportFieldPresentation("PORCE_ACT",289,11,10,65,reportRegionMainBody,12,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","SUMA_PORC_ACT","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###.##","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyMercado_n = new ReportFieldPresentation("MERCADO_N",14,11,10,101,reportRegionMainBody,13,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","NOM_MERCADO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPorce_pas = new ReportFieldPresentation("PORCE_PAS",461,11,10,70,reportRegionMainBody,11,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","PERIODO_PASADO","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPorce_act = new ReportFieldPresentation("PORCE_ACT",289,11,10,65,reportRegionMainBody,12,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","PERIODO_ACTUAL","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###.##","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyMercado_n = new ReportFieldPresentation("MERCADO_N",14,11,10,101,reportRegionMainBody,13,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","NOM","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyVentas_pasadas = new ReportFieldPresentation("VENTAS_PASADAS",354,11,10,107,reportRegionMainBody,14,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","VENTAS_PAS_ROUND","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###.###","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyVentas_actual = new ReportFieldPresentation("VENTAS_ACTUAL",182,11,10,107,reportRegionMainBody,15,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","VENTAS_ACT_ROUND","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###.###","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",522,43,10,50,reportRegionMainMargin,3,null,"FIXED","FIXED","CURRENT_DATE","java.sql.Date",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,8),"dd/MM/YYYY","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",522,43,10,50,reportRegionMainMargin,3,null,"FIXED","FIXED","CURRENT_DATE","java.sql.Date",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,8),"dd/MM/yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field1 = new ReportFieldPresentation("LAYOUT_FIELD1",524,54,9,16,reportRegionMainMargin,5,null,"FIXED","FIXED","PAGE_NUMBER","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field2 = new ReportFieldPresentation("LAYOUT_FIELD2",554,54,9,18,reportRegionMainMargin,6,null,"FIXED","FIXED","TOTAL_PAGES","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	
@@ -123,8 +123,8 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 			this.queryLogic.addQueries(this.queryQUERY0);
 			this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);
 			this.queryQUERY0.setMaximunRowsToFech(0);
-			String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression("VXJ.ZON,VXJ.MON,VXJ.MES_ACTUAL,VENTAS_ACTUAL,VXJ.MES_PASADO,VENTAS_PASADAS",",");
-			String[] arrayAliasqueryQUERY0 = ASPString.splitExpression("ZON,MON,MES_ACTUAL,VENTAS_ACTUAL,MES_PASADO,VENTAS_PASADAS,",",");
+			String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression("VXJ.ZON,VXJ.NOM,VXJ.MON,VXJ.MES_ACTUAL,VENTAS_ACTUAL,VXJ.MES_PASADO,VENTAS_PASADAS",",");
+			String[] arrayAliasqueryQUERY0 = ASPString.splitExpression("ZON,NOM,MON,MES_ACTUAL,VENTAS_ACTUAL,MES_PASADO,VENTAS_PASADAS,",",");
 			for(int k=0;k<arrayColumnsqueryQUERY0.length;k++){
 				boolean insertqueryQUERY0 = true;
 				SelectColumns queryQUERY0SelectColumns = new SelectColumns();
@@ -147,19 +147,20 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 			this.groupGROUP_MON.addChildGroup(this.groupGROUP0);
 			
 			this.groupGROUP0.addField(this.groupFieldGROUP0ZON);
+			this.groupGROUP0.addField(this.groupFieldGROUP0NOM);
 			this.groupGROUP0.addField(this.groupFieldGROUP0MES_ACTUAL);
 			this.groupGROUP0.addField(this.groupFieldGROUP0MES_PASADO);
 			this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_ACTUAL);
 			this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PASADAS);
 			this.groupGROUP0.addField(this.groupFieldGROUP0Color_reg);
 			this.groupFieldGROUP0Color_reg.setSource(this.groupFieldGROUP0ZON);
-			this.groupGROUP0.addField(this.groupFieldGROUP0SUMA_PORC_ACT);
-			this.groupGROUP0.addField(this.groupFieldGROUP0SUMA_PORC_PAS);
+			this.groupGROUP0.addField(this.groupFieldGROUP0PERIODO_ACTUAL);
+			this.groupGROUP0.addField(this.groupFieldGROUP0PERIODO_PASADO);
 			this.groupGROUP_MON.addField(this.groupFieldGROUP_MONMON);
 			this.groupGROUP_MON.addField(this.groupFieldGROUP_MONTOT_POR_ACT);
-			this.groupFieldGROUP_MONTOT_POR_ACT.setSource(this.groupFieldGROUP0SUMA_PORC_ACT);
+			this.groupFieldGROUP_MONTOT_POR_ACT.setSource(this.groupFieldGROUP0PERIODO_ACTUAL);
 			this.groupGROUP_MON.addField(this.groupFieldGROUP_MONTOT_POR_PAS);
-			this.groupFieldGROUP_MONTOT_POR_PAS.setSource(this.groupFieldGROUP0SUMA_PORC_PAS);
+			this.groupFieldGROUP_MONTOT_POR_PAS.setSource(this.groupFieldGROUP0PERIODO_PASADO);
 			this.groupGROUP_MON.addField(this.groupFieldGROUP_MONSUMA_ACT);
 			this.groupFieldGROUP_MONSUMA_ACT.setSource(this.groupFieldGROUP0VENTAS_ACTUAL);
 			this.groupGROUP_MON.addField(this.groupFieldGROUP_MONSUMA_PAS);
@@ -173,8 +174,13 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 			this.presentationRules.getSections().add(this.reportSectionHeader);
 			this.presentationRules.getSections().add(this.reportSectionMain);
 			this.presentationRules.getSections().add(this.reportSectionTrailer);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_title);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_hint);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_empresa);
 
 			this.parameterForm.addToVectorGroupField(this.parameterPeriodo);
+			this.parameterForm.addToVectorGroupField(this.parameterEmpresa);
 			this.getJreport().addToVectorGroupField(this.parameterBACKGROUND);
 			this.getJreport().addToVectorGroupField(this.parameterCOPIES);
 			this.getJreport().addToVectorGroupField(this.parameterCURRENCY);
@@ -188,20 +194,21 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 			this.getJreport().addToVectorGroupField(this.parameterTHOUSANDS);
 			this.getJreport().addToVectorGroupField(this.parameterMAXRECORDS);
 
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicTitulo);
-			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicParameterperiodo);
 
 			this.fieldPresentationMainBodyTotal_por_pas.setGroupFieldReference(this.groupFieldGROUP_MONTOT_POR_PAS);
 			this.fieldPresentationMainBodyTotal_por_act.setGroupFieldReference(this.groupFieldGROUP_MONTOT_POR_ACT);
 			this.fieldPresentationMainBodyTotal_pas.setGroupFieldReference(this.groupFieldGROUP_MONSUMA_PAS);
 			this.fieldPresentationMainBodyTotal_act.setGroupFieldReference(this.groupFieldGROUP_MONSUMA_ACT);
 			this.fieldPresentationMainBodyMoneda.setGroupFieldReference(this.groupFieldGROUP_MONMON);
-			this.fieldPresentationMainBodyPorce_pas.setGroupFieldReference(this.groupFieldGROUP0SUMA_PORC_PAS);
-			this.fieldPresentationMainBodyPorce_act.setGroupFieldReference(this.groupFieldGROUP0SUMA_PORC_ACT);
-			this.fieldPresentationMainBodyMercado_n.setGroupFieldReference(this.groupFieldFormula_columnsNOM_MERCADO);
+			this.fieldPresentationMainBodyPorce_pas.setGroupFieldReference(this.groupFieldGROUP0PERIODO_PASADO);
+			this.fieldPresentationMainBodyPorce_act.setGroupFieldReference(this.groupFieldGROUP0PERIODO_ACTUAL);
+			this.fieldPresentationMainBodyMercado_n.setGroupFieldReference(this.groupFieldGROUP0NOM);
 			this.fieldPresentationMainBodyVentas_pasadas.setGroupFieldReference(this.groupFieldFormula_columnsVENTAS_PAS_ROUND);
 			this.fieldPresentationMainBodyVentas_actual.setGroupFieldReference(this.groupFieldFormula_columnsVENTAS_ACT_ROUND);
+			
+
+			this.reportChartMainBodyLayout_chart0.setFilePath("D:/Workspace_solagro/JSP7CotizacionesRep/JSP7_Cotizaciones_Rep/src/main/java/INFOMERCADO_GRAPHICS.xml");
+			this.reportChartMainBodyLayout_chart0.setDateFormat("dd/MM/yyyy");
 			
 			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field1 = new PageNumbering(true,true,true,1,1,null);
 			this.fieldPresentationMainMarginLayout_field1.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field1);
@@ -210,6 +217,8 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field2 = new PageNumbering(true,true,true,1,1,null);
 			this.fieldPresentationMainMarginLayout_field2.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field2);
 
+			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
+			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterempresa);
 
 			this.addLayoutTextVariables();
 			this.addColumnInformation();
@@ -220,6 +229,7 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 			this.setExecutedInit(true);
 
 			this.parameterPeriodo.setQueryParameter(true);
+			this.parameterEmpresa.setQueryParameter(true);
 		} catch(Exception error) {
 			throw new Exception(error);
 		}
@@ -337,17 +347,6 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 	}
 
 
-	public java.lang.Double suma_porc_pas_method () {
-
-	java.lang.Double porc=null;
-	Object object1=ASPMath.round(multiply ((divide (getField("ventas_pasadas").getFieldValue(),getField("suma_pas").getFieldValue())),100),2);
-	porc=convertTo(object1,porc);
-	return (java.lang.Double)convertTo2(porc,"java.lang.Double");
-
-
-	}
-
-
 	public java.lang.Double ventas_act_round_method () {
 
 	java.lang.Double venta_ac=null;
@@ -370,10 +369,21 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 	}
 
 
-	public java.lang.Double suma_porc_act_method () {
+	public java.lang.Double periodo_actual_method () {
 
 	java.lang.Double porc=null;
 	Object object1=ASPMath.round(multiply ((divide (getField("ventas_actual").getFieldValue(),getField("suma_act").getFieldValue())),100),2);
+	porc=convertTo(object1,porc);
+	return (java.lang.Double)convertTo2(porc,"java.lang.Double");
+
+
+	}
+
+
+	public java.lang.Double periodo_pasado_method () {
+
+	java.lang.Double porc=null;
+	Object object1=ASPMath.round(multiply ((divide (getField("ventas_pasadas").getFieldValue(),getField("suma_pas").getFieldValue())),100),2);
 	porc=convertTo(object1,porc);
 	return (java.lang.Double)convertTo2(porc,"java.lang.Double");
 
@@ -391,6 +401,8 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 		this.reportTextMainBodyT_mes_pasado.addToVectorVariables(ltvreportTextMainBodyT_mes_pasado_0);
 		LayoutTextVariables ltvreportTextMainBodyT_mes_pasado_2 = new LayoutTextVariables("PERIODO_PA", "&PERIODO_PA");
 		this.reportTextMainBodyT_mes_pasado.addToVectorVariables(ltvreportTextMainBodyT_mes_pasado_2);
+		LayoutTextVariables ltvreportTextMainBodyText_graphic5_0 = new LayoutTextVariables("mon", "&mon");
+		this.reportTextMainBodyText_graphic5.addToVectorVariables(ltvreportTextMainBodyText_graphic5_0);
 		LayoutTextVariables ltvreportTextMainMarginText_graphic1_0 = new LayoutTextVariables("mes", "&mes");
 		this.reportTextMainMarginText_graphic1.addToVectorVariables(ltvreportTextMainMarginText_graphic1_0);
 		LayoutTextVariables ltvreportTextMainMarginText_graphic1_2 = new LayoutTextVariables("periodo_pr", "&periodo_pr");
@@ -416,10 +428,10 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 	 * que se encuentran en los eventos de las formulas.
 	 */
 	private void addFormulaInFormula() {
-		this.groupFieldGROUP0SUMA_PORC_ACT.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_ACTUAL);
-		this.groupFieldGROUP0SUMA_PORC_ACT.addToVectorFormulaInFormula(this.groupFieldGROUP_MONSUMA_ACT);
-		this.groupFieldGROUP0SUMA_PORC_PAS.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_PASADAS);
-		this.groupFieldGROUP0SUMA_PORC_PAS.addToVectorFormulaInFormula(this.groupFieldGROUP_MONSUMA_PAS);
+		this.groupFieldGROUP0PERIODO_ACTUAL.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_ACTUAL);
+		this.groupFieldGROUP0PERIODO_ACTUAL.addToVectorFormulaInFormula(this.groupFieldGROUP_MONSUMA_ACT);
+		this.groupFieldGROUP0PERIODO_PASADO.addToVectorFormulaInFormula(this.groupFieldGROUP0VENTAS_PASADAS);
+		this.groupFieldGROUP0PERIODO_PASADO.addToVectorFormulaInFormula(this.groupFieldGROUP_MONSUMA_PAS);
 		this.groupFieldFormula_columnsPERIODO_PR.addToVectorFormulaInFormula(this.groupFieldGROUP0MES_ACTUAL);
 		this.groupFieldFormula_columnsPERIODO_PA.addToVectorFormulaInFormula(this.groupFieldGROUP0MES_PASADO);
 		this.groupFieldFormula_columnsMES.addToVectorFormulaInFormula(this.parameterPeriodo);

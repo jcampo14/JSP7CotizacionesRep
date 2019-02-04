@@ -89,7 +89,7 @@ public class informeDeVentasPorPais_class1 extends JReportRuntime {
 	protected QueryLogic queryLogic = new QueryLogic();
 	protected Group tempGroup = new Group("GrupoTemporal");
 	
-	protected Query queryQUERY0 = new Query("QUERY0","MASTER","WHERE SUBSTR(XPJ.PRESENTE, 1 , 6 ) = #periodo",null,null," SELECT  XPJ.NOM   ,XPJ.MON   ,XPJ.PRESENTE   , NVL (XPJ.ACTUALES, 0 )  ACTUALES  ,XPJ.PASADAS   , NVL (XPJ.ANTERIORES, 0 )  ANTERIORES   FROM VENTAS_XPAIS_JOIN XPJ  WHERE SUBSTR(XPJ.PRESENTE, 1 , 6 ) = #periodo",null);
+	protected Query queryQUERY0 = new Query("QUERY0","MASTER","WHERE SUBSTR(XPJ.PRESENTE, 1 , 6 ) = #periodo AND C_EMP = #empresa",null,null," SELECT  XPJ.NOM   ,XPJ.MON   ,XPJ.PRESENTE   , NVL (XPJ.ACTUALES, 0 )  ACTUALES  ,XPJ.PASADAS   , NVL (XPJ.ANTERIORES, 0 )  ANTERIORES   FROM VENTAS_XPAIS_JOIN XPJ  WHERE SUBSTR(XPJ.PRESENTE, 1 , 6 ) = #periodo AND C_EMP = #empresa",null);
 	protected Group groupGROUP_MON = new Group("GROUP_MON",queryQUERY0,"NONE",null,0);
 	protected Group groupGROUP0 = new Group("GROUP0",queryQUERY0,"NONE",null,0);
 	protected GroupField groupFieldGROUP0NOM = new GroupField("NOM",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
@@ -98,8 +98,8 @@ public class informeDeVentasPorPais_class1 extends JReportRuntime {
 	protected GroupField groupFieldGROUP0PASADAS = new GroupField("PASADAS",4,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldGROUP0ANTERIORES = new GroupField("ANTERIORES",5,"java.lang.String","0",null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldGROUP0Color_reg = new GroupField("color_reg",0,"java.lang.Double","0",null,"ASC","COUNT",groupGROUP0,"REPORT","REPORT",null,"SUMMARY",null,false,0,groupGROUP0,this);
-	protected GroupField groupFieldGROUP0POR_ACT = new GroupField("POR_ACT",0,"java.lang.Double","0",null,"NONE",null,null,"REPORT","REPORT","por_act_method","FORMULA",null,false,0,groupGROUP0,this);
-	protected GroupField groupFieldGROUP0POR_PAS = new GroupField("POR_PAS",0,"java.lang.Double","0",null,"NONE",null,null,"REPORT","REPORT","por_pas_method","FORMULA",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP0PERIODO_ACTUAL = new GroupField("PERIODO_ACTUAL",0,"java.lang.Double","0",null,"NONE",null,null,"REPORT","REPORT","periodo_actual_method","FORMULA",null,false,0,groupGROUP0,this);
+	protected GroupField groupFieldGROUP0PERIODO_PASADO = new GroupField("PERIODO_PASADO",0,"java.lang.Double","0",null,"NONE",null,null,"REPORT","REPORT","periodo_pasado_method","FORMULA",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldGROUP_MONMON = new GroupField("MON",1,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP_MON,this);
 	protected GroupField groupFieldGROUP_MONSUM_ACT = new GroupField("SUM_ACT",0,"java.lang.Double",null,null,"ASC","SUM",groupGROUP0,"GROUP_MON","REPORT",null,"SUMMARY",null,false,0,groupGROUP_MON,this);
 	protected GroupField groupFieldGROUP_MONSUM_PAS = new GroupField("SUM_PAS",0,"java.lang.Double",null,null,"ASC","SUM",groupGROUP0,"GROUP_MON","REPORT",null,"SUMMARY",null,false,0,groupGROUP_MON,this);
@@ -108,8 +108,10 @@ public class informeDeVentasPorPais_class1 extends JReportRuntime {
 	protected GroupField groupFieldFormula_columnsMES = new GroupField("MES",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","mes_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldFormula_columnsPERIODO_ACT = new GroupField("PERIODO_ACT",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","periodo_act_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldFormula_columnsPERIODO_PAS = new GroupField("PERIODO_PAS",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","periodo_pas_method","FORMULA",null,false,0,tempGroup,this);
-	protected GraphicsObjectServer graphicServergraphicTitulo = new GraphicsObjectServer("Titulo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,100,40,false,false,-1,0,null,0,0,new Font("Arial",1,14),false,"Report parameters");
-	protected GraphicsObjectServer graphicServergraphicParameterperiodo = new GraphicsObjectServer("parameterperiodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,80,80,false,false,-1,0,null,0,0,new Font("Arial",0,10),false,"periodo");
+	protected GraphicsObjectServer graphicServergraphicG_title = new GraphicsObjectServer("G_title",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,164,100,50,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Parámetros del reporte");
+	protected GraphicsObjectServer graphicServergraphicG_hint = new GraphicsObjectServer("G_hint",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,276,100,80,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Escriba los valores para el parámetro.");
+	protected GraphicsObjectServer graphicServergraphicG_periodo = new GraphicsObjectServer("G_periodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,116,140,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"periodo");
+	protected GraphicsObjectServer graphicServergraphicG_empresa = new GraphicsObjectServer("G_empresa",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,116,110,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"empresa");
 	protected ReportRegion reportRegionHeaderBody = new ReportRegion("BODY");
 	protected ReportRegion reportRegionHeaderMargin = new ReportRegion("MARGIN");
 	protected ReportRegion reportRegionMainBody = new ReportRegion("BODY");

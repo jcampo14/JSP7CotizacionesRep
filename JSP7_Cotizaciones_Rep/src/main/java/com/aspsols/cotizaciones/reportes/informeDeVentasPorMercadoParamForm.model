@@ -10,7 +10,8 @@
     </Entity>
     <Entity name="DATA" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorMercadoParamForm" updateAllowed="true" insertAllowed="true" deleteAllowed="true" databaseEntity="false" dataSource="null" alias="null" maxPageSize="50" whereClause="null" orderBy="null" nonUpdatableEntity="false" queryDataSource="null" navigationStyle="SameRecord" singleRecord="false">
       <fields>
-        <Field name="parameterperiodo" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorMercadoParamForm.Parameterperiodo" dataType="java.lang.String" initialValue="null" maxSize="20" />
+        <Field name="PF_periodo" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorMercadoParamForm.PF_periodo" dataType="java.lang.String" initialValue="null" maxSize="20" required="false" />
+        <Field name="PF_empresa" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorMercadoParamForm.PF_empresa" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
         <Field name="DESFORMAT" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorMercadoParamForm.DESFORMAT" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" initialValue="PDF" />
       </fields>
     </Entity>

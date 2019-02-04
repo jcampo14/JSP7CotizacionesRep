@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1541520730658" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1549033491260" MHB="10" MVB="10"
      N1="informeDeVentasPorPais" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PND="true" PPO="null"
      PT="null"
-     RUTA="D:\Workspace_solagro\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorPais.jrb"
+     RUTA="D:\Workspace\Solagro Cotizaciones Reportes\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorPais.jrb"
      SBP="true" SPF="true" UM="Pixels" Wizard="true">
-     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo,QUERY0,GROUP_MON,GROUP0,NOM,PRESENTE,ACTUALES,PASADAS,ANTERIORES,color_reg,POR_ACT,POR_PAS,MON,SUM_ACT,SUM_PAS,TOT_POR_ACT,TOT_POR_PAS,MES,PERIODO_ACT,PERIODO_PAS">
+     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo,QUERY0,GROUP_MON,GROUP0,color_reg,PERIODO_ACTUAL,PERIODO_PASADO,SUM_ACT,SUM_PAS,TOT_POR_ACT,TOT_POR_PAS,MES,PERIODO_ACT,PERIODO_PAS,empresa,NOM,MON,PRESENTE,ACTUALES,PASADAS,ANTERIORES,empresa">
           <SYSTEM_PARAMETERS>
                <BACKGROUND DT="java.lang.String" IV="false"
                     JN="parameterBACKGROUND" MAZ="80" N1="BACKGROUND" VL="false"/>
@@ -35,22 +35,24 @@
                     JN="parameterMAXRECORDS" MAZ="80" N1="MAXRECORDS" VL="false"/>
           </SYSTEM_PARAMETERS>
           <USER_PARAMETERS>
+               <USER_PARAMETER LB="empresa" N1="empresa"/>
                <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
-                    JN="parameterPeriodo" MAZ="20" N1="periodo" VL="false"/>
+                    JN="parameterPeriodo" LB="periodo" MAZ="20"
+                    N1="periodo" VL="false"/>
           </USER_PARAMETERS>
           <QUERIES>
                <QUERY CB="null"
-                    COLUMNS="MON,NOM,PRESENTE,ACTUALES,PASADAS,ANTERIORES"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;XPJ.NOM,XPJ.MON,XPJ.PRESENTE,ACTUALES,XPJ.PASADAS,ANTERIORES&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;NOM,MON,PRESENTE,ACTUALES,PASADAS,ANTERIORES,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
-                    EQS="null" GB="null" GR="GROUP_MON" H1="30"
+                    COLUMNS="NOM,MON,PRESENTE,ACTUALES,PASADAS,ANTERIORES"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);"
+                    EQS="null" GB="null" GR="GROUP_MON" H1="44"
                     LG="GROUP0" MRF="0" N1="QUERY0" OB="null" OBR="SQL"
                     PARAMETERS="" PND="false" PX="84" PY="6"
-                    Q1="SELECT xpj.nom,xpj.mon,xpj.presente,nvl(xpj.actuales,0) actuales,xpj.pasadas,nvl(xpj.anteriores,0)anteriores&#xd;&#xa;from ventas_xpais_join xpj where  substr(xpj.presente,1,6) = :periodo"
-                    QTR=" SELECT  XPJ.NOM   ,XPJ.MON   ,XPJ.PRESENTE   , NVL (XPJ.ACTUALES, 0 )  ACTUALES  ,XPJ.PASADAS   , NVL (XPJ.ANTERIORES, 0 )  ANTERIORES   FROM VENTAS_XPAIS_JOIN XPJ  WHERE SUBSTR(XPJ.PRESENTE, 1 , 6 ) = #periodo"
+                    Q1="SELECT xpj.nom,xpj.mon,xpj.presente,nvl(xpj.actuales,0) actuales,xpj.pasadas,nvl(xpj.anteriores,0)anteriores&#xd;&#xa;from ventas_xpais_join xpj &#xd;&#xa;where  substr(xpj.presente,1,6) = :periodo&#xd;&#xa; and c_emp = :empresa"
+                    QTR=" SELECT  XPJ.NOM   ,XPJ.MON   ,XPJ.PRESENTE   , NVL (XPJ.ACTUALES, 0 )  ACTUALES  ,XPJ.PASADAS   , NVL (XPJ.ANTERIORES, 0 )  ANTERIORES   FROM VENTAS_XPAIS_JOIN XPJ  WHERE SUBSTR(XPJ.PRESENTE, 1 , 6 ) = #periodo AND C_EMP = #empresa"
                     T1="MASTER"
                     TC="XPJ.NOM,XPJ.MON,XPJ.PRESENTE,ACTUALES,XPJ.PASADAS,ANTERIORES"
                     TCA="NOM,MON,PRESENTE,ACTUALES,PASADAS,ANTERIORES,"
-                    W1="80" W2="WHERE SUBSTR(XPJ.PRESENTE, 1 , 6 ) = #periodo"/>
+                    W1="80" W2=" WHERE SUBSTR(XPJ.PRESENTE, 1 , 6 ) = #periodo AND C_EMP = #empresa"/>
           </QUERIES>
           <GROUPS>
                <GROUP
@@ -58,8 +60,8 @@
                     FT="None" GRT="Normal" H1="111" N1="GROUP_MON"
                     PND="true" PX="72" PY="90" QN="QUERY0" SF="null" W1="120">
                     <GROUP CONTENIDO="" FT="None" GR="GROUP_MON"
-                         GRT="Normal" H1="150" N1="GROUP0" PND="true"
-                         PX="75" PY="251" QN="QUERY0" SF="null" W1="138">
+                         GRT="Normal" H1="190" N1="GROUP0" PND="true"
+                         PX="62" PY="245" QN="QUERY0" SF="null" W1="184">
                          <GROUP_FIELD BO="Ascending" CCT="XPJ.NOM"
                               CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0NOM);"
                               CT="DATABASE" DT="java.lang.String"
@@ -95,15 +97,19 @@
                               N1="color_reg" PND="true" RA="Report"
                               S1="GROUP0.NOM" VIN="0"/>
                          <FORMULA BO="None"
-                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0POR_ACT);"
+                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0PERIODO_ACTUAL);"
                               CT="FORMULA" DT="java.lang.Double" FW="20"
-                              JN="groupFieldGROUP0POR_ACT" N1="POR_ACT"
-                              PF="por_act_method" PND="true" VFM="null" VIN="0"/>
+                              JN="groupFieldGROUP0PERIODO_ACTUAL"
+                              N1="PERIODO_ACTUAL"
+                              PF="periodo_actual_method" PND="true"
+                              VFM="null" VIN="0"/>
                          <FORMULA BO="None"
-                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0POR_PAS);"
+                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0PERIODO_PASADO);"
                               CT="FORMULA" DT="java.lang.Double" FW="20"
-                              JN="groupFieldGROUP0POR_PAS" N1="POR_PAS"
-                              PF="por_pas_method" PND="true" VFM="null" VIN="0"/>
+                              JN="groupFieldGROUP0PERIODO_PASADO"
+                              N1="PERIODO_PASADO"
+                              PF="periodo_pasado_method" PND="true"
+                              VFM="null" VIN="0"/>
                     </GROUP>
                     <GROUP_FIELD BO="Ascending" CCT="XPJ.MON"
                          CONTENIDO="this.groupGROUP_MON.addField(this.groupFieldGROUP_MONMON);"
@@ -122,17 +128,17 @@
                          PND="true" RA="GROUP_MON"
                          S1="GROUP0.ANTERIORES" VIN="null"/>
                     <SUMMARY BO="Ascending" CA="Report"
-                         CONTENIDO="this.groupGROUP_MON.addField(this.groupFieldGROUP_MONTOT_POR_ACT);&#xa;&#x9;&#x9;&#x9;this.groupFieldGROUP_MONTOT_POR_ACT.setSource(this.groupFieldGROUP0POR_ACT);"
+                         CONTENIDO="this.groupGROUP_MON.addField(this.groupFieldGROUP_MONTOT_POR_ACT);&#xa;&#x9;&#x9;&#x9;this.groupFieldGROUP_MONTOT_POR_ACT.setSource(this.groupFieldGROUP0PERIODO_ACTUAL);"
                          CT="SUMMARY" DT="java.lang.Double" F1="Sum"
                          JN="groupFieldGROUP_MONTOT_POR_ACT"
                          N1="TOT_POR_ACT" PND="true" RA="GROUP_MON"
-                         S1="GROUP0.POR_ACT" VIN="null"/>
+                         S1="GROUP0.PERIODO_ACTUAL" VIN="null"/>
                     <SUMMARY BO="Ascending" CA="Report"
-                         CONTENIDO="this.groupGROUP_MON.addField(this.groupFieldGROUP_MONTOT_POR_PAS);&#xa;&#x9;&#x9;&#x9;this.groupFieldGROUP_MONTOT_POR_PAS.setSource(this.groupFieldGROUP0POR_PAS);"
+                         CONTENIDO="this.groupGROUP_MON.addField(this.groupFieldGROUP_MONTOT_POR_PAS);&#xa;&#x9;&#x9;&#x9;this.groupFieldGROUP_MONTOT_POR_PAS.setSource(this.groupFieldGROUP0PERIODO_PASADO);"
                          CT="SUMMARY" DT="java.lang.Double" F1="Sum"
                          JN="groupFieldGROUP_MONTOT_POR_PAS"
                          N1="TOT_POR_PAS" PND="true" RA="GROUP_MON"
-                         S1="GROUP0.POR_PAS" VIN="null"/>
+                         S1="GROUP0.PERIODO_PASADO" VIN="null"/>
                </GROUP>
           </GROUPS>
           <FORMULA_COLUMNS>
@@ -364,7 +370,7 @@
                <TOTALS_FIELDS/>
           </WIZARD_REFERENCE>
      </DATA_MODEL>
-     <LAYOUT_MODEL NAMES="FRAME0,REPEATING_FRAME1,REPEATING_FRAME0,ANTERIORES,ACTUALES,NOM,MON,PORC_ACT,PORC_ANT,FRAME1,t_NOM,t_ANTERIORES,t_MON,t_ACTUALES,TEXT_GRAPHIC6,TEXT_GRAPHIC5,FRAME2,TOTAL_ANT,TEXT_GRAPHIC4,TOTAL_ACT,TOT_POR_ACT,TOT_POR_PAS,TITLE,IMAGE0,TEXT_GRAPHIC0,TEXT_GRAPHIC1,LAYOUT_FIELD0,TEXT_GRAPHIC2,LAYOUT_FIELD1,TEXT_GRAPHIC3,LAYOUT_FIELD2,LINE0">
+     <LAYOUT_MODEL NAMES="FRAME0,REPEATING_FRAME1,REPEATING_FRAME0,ANTERIORES,ACTUALES,NOM,MON,PORC_ACT,PORC_ANT,FRAME1,t_NOM,t_ANTERIORES,t_MON,t_ACTUALES,TEXT_GRAPHIC6,TEXT_GRAPHIC5,FRAME2,TOTAL_ANT,TEXT_GRAPHIC4,TOTAL_ACT,TOT_POR_ACT,TOT_POR_PAS,FRAME3,LAYOUT_CHART0,TEXT_GRAPHIC7,TITLE,IMAGE0,TEXT_GRAPHIC0,TEXT_GRAPHIC1,LAYOUT_FIELD0,TEXT_GRAPHIC2,LAYOUT_FIELD1,TEXT_GRAPHIC3,LAYOUT_FIELD2,LINE0">
           <HEADER BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
                CONTENIDO="this.presentationRules.getSections().add(this.reportSectionHeader);"
                H1="792" HPP="1" NPG="false" OR="Portrait" VPP="1" W1="612">
@@ -377,31 +383,32 @@
           </HEADER>
           <MAIN BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
                CONTENIDO="this.presentationRules.getSections().add(this.reportSectionMain);"
-               H1="792" HPP="1" LAYERS="-3" NPG="false" OR="Portrait"
+               H1="792" HPP="1" LAYERS="-4" NPG="false" OR="Portrait"
                VPP="1" W1="612">
-               <BODY LAYERS="21">
-                    <ANCHORS PHN="ROOT&amp;"/>
+               <BODY LAYERS="24">
+                    <ANCHORS PHN="NotModifyJPanel"/>
                     <FRAME B1="null" BG="255,255,255"
                          BPO="Enclosing object" CF="null" DO="0 Grades"
-                         ELS="true" FE="null" H1="36" HE="Fixed"
+                         ELS="true" FE="null" H1="234" HE="Fixed"
                          IF="false"
-                         JAVA="protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame(&quot;FRAME0&quot;,6,0,36,533,reportRegionMainBody,0,null,&quot;FIXED&quot;,&quot;VARIABLE&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
+                         JAVA="protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame(&quot;FRAME0&quot;,6,0,234,533,reportRegionMainBody,0,null,&quot;FIXED&quot;,&quot;VARIABLE&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
                          KAO="false" LN="0" LS="Normal" LW="-1"
                          N1="FRAME0" NPG="false" PBA="false" PBB="false"
-                         PHN="ROOT&amp;" PND="false" POO="First page"
-                         PP="false" PX="6" PY="0" VE="Variable" W1="533">
+                         PHN="NotModifyJPanel" PND="false"
+                         POO="First page" PP="false" PX="6" PY="0"
+                         VE="Variable" W1="533">
                          <REPEATING_FRAME B1="null" BG="255,255,255"
                               BPO="Enclosing object" CF="null"
                               CMD="false" DO="0 Grades" ELS="false"
-                              FE="null" GN="GROUP_MON" H1="31"
+                              FE="null" GN="GROUP_MON" H1="195"
                               HE="Fixed" HSBF="0" IF="false"
-                              JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame1 = new ReportRepetitiveFrame(&quot;REPEATING_FRAME1&quot;,26,2,31,498,reportRegionMainBody,1,reportFrameMainBodyFrame0,&quot;FIXED&quot;,&quot;VARIABLE&quot;,&quot;GROUP_MON&quot;,&quot;Down&quot;,new Color(255,255,255),null,0,&quot;DEFAULT&quot;,false,false,false,null,0,0,0,-1,false);"
+                              JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame1 = new ReportRepetitiveFrame(&quot;REPEATING_FRAME1&quot;,26,2,195,498,reportRegionMainBody,1,reportFrameMainBodyFrame0,&quot;FIXED&quot;,&quot;VARIABLE&quot;,&quot;GROUP_MON&quot;,&quot;Down&quot;,new Color(255,255,255),null,0,&quot;DEFAULT&quot;,false,false,false,null,0,0,0,-1,false);"
                               KAO="false" LN="1" LS="Normal" LW="-1"
                               MRPP="0" MWR="0" N1="REPEATING_FRAME1"
                               NPG="false" PBA="false" PBB="false"
-                              PD="Down" PHN="ROOT&amp;" PND="false"
-                              POO="Default" PP="false" PX="26" PY="2"
-                              VE="Variable" VSBF="0" W1="498">
+                              PD="Down" PHN="NotModifyJPanel"
+                              PND="false" POO="Default" PP="false"
+                              PX="26" PY="2" VE="Variable" VSBF="0" W1="498">
                               <REPEATING_FRAME B1="Default,1,(0,0,0)"
                                    BG="255,255,255"
                                    BPO="Enclosing object" CF="null"
@@ -409,14 +416,14 @@
                                    FE="REPEATING_FRAME0_formatEvent"
                                    GN="GROUP0" H1="10" HE="Fixed"
                                    HSBF="0" IF="false"
-                                   JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame(&quot;REPEATING_FRAME0&quot;,26,12,10,495,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;EXPAND&quot;,&quot;GROUP0&quot;,&quot;Down&quot;,new Color(255,255,255),&quot;Default,1,(0,0,0)&quot;,0,&quot;DEFAULT&quot;,false,false,false,&quot;REPEATING_FRAME0_formatEvent&quot;,0,0,0,-1,false);"
+                                   JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame(&quot;REPEATING_FRAME0&quot;,26,12,10,498,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;EXPAND&quot;,&quot;GROUP0&quot;,&quot;Down&quot;,new Color(255,255,255),&quot;Default,1,(0,0,0)&quot;,0,&quot;DEFAULT&quot;,false,false,false,&quot;REPEATING_FRAME0_formatEvent&quot;,0,0,0,-1,false);"
                                    KAO="false" LN="3" LS="Normal"
                                    LW="-1" MRPP="0" MWR="0"
                                    N1="REPEATING_FRAME0" NPG="false"
                                    PBA="false" PBB="false" PD="Down"
-                                   PHN="ROOT&amp;" PND="true"
+                                   PHN="NotModifyJPanel" PND="false"
                                    POO="First page" PP="false" PX="26"
-                                   PY="12" VE="Expand" VSBF="0" W1="495">
+                                   PY="12" VE="Expand" VSBF="0" W1="498">
                                    <LAYOUT_FIELD B1="null" BCF="None"
                                     BG="255,255,255" BO="Ascending"
                                     BPO="Enclosing object" CF="null"
@@ -432,9 +439,10 @@
                                     Last_Location="349,12" MAZ="0"
                                     MWL="0" N1="ANTERIORES"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="First page"
+                                    PND="false" POO="First page"
                                     PP="false" PX="350" PY="12"
                                     S1="GROUP0.ANTERIORES" V2="true"
                                     VE="Expand" VIN="false" W1="90"/>
@@ -453,9 +461,10 @@
                                     Last_Location="177,12" MAZ="0"
                                     MWL="0" N1="ACTUALES"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="First page"
+                                    PND="false" POO="First page"
                                     PP="false" PX="178" PY="12"
                                     S1="GROUP0.ACTUALES" V2="true"
                                     VE="Expand" VIN="false" W1="90"/>
@@ -472,9 +481,10 @@
                                     LW="-1" Last_Location="19,15"
                                     MAZ="10" MWL="0" N1="NOM"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="First page"
+                                    PND="false" POO="First page"
                                     PP="false" PX="26" PY="12"
                                     S1="GROUP0.NOM" V2="true"
                                     VE="Expand" VIN="false" W1="93"/>
@@ -491,9 +501,10 @@
                                     LW="-1" Last_Location="118,12"
                                     MAZ="7" MWL="0" N1="MON"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="First page"
+                                    PND="false" POO="First page"
                                     PP="false" PX="119" PY="12"
                                     S1="GROUP_MON.MON" V2="true"
                                     VE="Expand" VIN="false" W1="59"/>
@@ -511,12 +522,13 @@
                                     Last_Location="267,12" MAZ="20"
                                     MWL="0" N1="PORC_ACT"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="Default"
+                                    PND="false" POO="Default"
                                     PP="false" PX="268" PY="12"
-                                    S1="GROUP0.POR_ACT" V2="true"
-                                    VE="Fixed" VIN="false" W1="82"/>
+                                    S1="GROUP0.PERIODO_ACTUAL"
+                                    V2="true" VE="Fixed" VIN="false" W1="82"/>
                                    <LAYOUT_FIELD B1="null" BCF="None"
                                     BG="255,255,255" BO="None"
                                     BPO="Enclosing object" CF="null"
@@ -528,28 +540,29 @@
                                     HE="Fixed" IF="false" IV="null"
                                     KAO="false" LB="null" LN="20"
                                     LS="Normal" LW="-1"
-                                    Last_Location="439,12" MAZ="20"
+                                    Last_Location="440,12" MAZ="20"
                                     MWL="0" N1="PORC_ANT"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
                                     PP="false" PX="440" PY="12"
-                                    S1="GROUP0.POR_PAS" V2="true"
-                                    VE="Fixed" VIN="false" W1="81"/>
+                                    S1="GROUP0.PERIODO_PASADO"
+                                    V2="true" VE="Fixed" VIN="false" W1="84"/>
                               </REPEATING_FRAME>
                               <FRAME B1="Default,1,(0,0,0)"
                                    BG="0,51,153" BPO="Anchoring object"
                                    CF="null" DO="0 Grades" ELS="false"
                                    FE="null" H1="10" HE="Fixed"
                                    IF="true"
-                                   JAVA="protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame(&quot;FRAME1&quot;,26,2,10,495,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;FIXED&quot;,new Color(0,51,153),&quot;Default,1,(0,0,0)&quot;,&quot;ALLPAGES&quot;,false,false,false,null,0,-1,false);"
+                                   JAVA="protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame(&quot;FRAME1&quot;,26,2,10,498,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;FIXED&quot;,new Color(0,51,153),&quot;Default,1,(0,0,0)&quot;,&quot;ALLPAGES&quot;,false,false,false,null,0,-1,false);"
                                    KAO="false" LN="2" LS="Normal"
                                    LW="-1" N1="FRAME1" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;" PND="true"
+                                   PHN="NotModifyJPanel" PND="false"
                                    POO="All pages" PP="false" PX="26"
-                                   PY="2" VE="Fixed" W1="495">
+                                   PY="2" VE="Fixed" W1="498">
                                    <GRAPHIC B1="null" BCF="None"
                                     BG="255,255,255"
                                     BPO="Enclosing object" CF="null"
@@ -562,7 +575,7 @@
                                     Last_Location="19,5" MWL="0"
                                     N1="t_NOM" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="26" PY="2"
@@ -580,7 +593,7 @@
                                     Last_Location="349,2" MWL="0"
                                     N1="t_ANTERIORES" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="350" PY="2"
@@ -597,7 +610,7 @@
                                     Last_Location="118,2" MWL="0"
                                     N1="t_MON" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="119" PY="2"
@@ -615,7 +628,7 @@
                                     Last_Location="177,2" MWL="0"
                                     N1="t_ACTUALES" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="178" PY="2"
@@ -629,14 +642,14 @@
                                     HA="Alg_Center" HE="Fixed"
                                     IF="true" JN="null" KAO="false"
                                     LB="%" LN="16" LW="-1"
-                                    Last_Location="439,2" MWL="0"
+                                    Last_Location="440,2" MWL="0"
                                     N1="TEXT_GRAPHIC6" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="Default"
+                                    PND="false" POO="Default"
                                     PP="false" PX="440" PY="2"
-                                    VE="Fixed" W1="81"/>
+                                    VE="Fixed" W1="84"/>
                                    <GRAPHIC B1="null" BCF="None"
                                     BG="255,255,255"
                                     BPO="Enclosing object" CF="null"
@@ -649,7 +662,7 @@
                                     Last_Location="267,2" MWL="0"
                                     N1="TEXT_GRAPHIC5" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Default"
                                     PP="false" PX="268" PY="2"
@@ -660,13 +673,13 @@
                                    BPO="Enclosing object" CF="null"
                                    DO="0 Grades" ELS="false" FE="null"
                                    H1="10" HE="Fixed" IF="true"
-                                   JAVA="protected ReportFrame reportFrameMainBodyFrame2 = new ReportFrame(&quot;FRAME2&quot;,26,22,10,495,reportRegionMainBody,12,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;FIXED&quot;,new Color(153,153,153),&quot;Default,1,(0,0,0)&quot;,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
+                                   JAVA="protected ReportFrame reportFrameMainBodyFrame2 = new ReportFrame(&quot;FRAME2&quot;,26,22,10,498,reportRegionMainBody,12,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;FIXED&quot;,new Color(153,153,153),&quot;Default,1,(0,0,0)&quot;,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
                                    KAO="false" LN="12" LS="Normal"
                                    LW="-1" N1="FRAME2" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;" PND="true"
+                                   PHN="NotModifyJPanel" PND="false"
                                    POO="Default" PP="false" PX="26"
-                                   PY="22" VE="Fixed" W1="495">
+                                   PY="22" VE="Fixed" W1="498">
                                    <LAYOUT_FIELD B1="null" BCF="None"
                                     BG="255,255,255" BO="None"
                                     BPO="Enclosing object" CF="null"
@@ -682,9 +695,10 @@
                                     Last_Location="349,22" MAZ="20"
                                     MWL="0" N1="TOTAL_ANT"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="Default"
+                                    PND="false" POO="Default"
                                     PP="false" PX="350" PY="22"
                                     S1="GROUP_MON.SUM_PAS" V2="true"
                                     VE="Fixed" VIN="false" W1="90"/>
@@ -700,7 +714,7 @@
                                     Last_Location="25,26" MWL="0"
                                     N1="TEXT_GRAPHIC4" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Default"
                                     PP="false" PX="26" PY="22"
@@ -720,9 +734,10 @@
                                     Last_Location="177,22" MAZ="20"
                                     MWL="0" N1="TOTAL_ACT"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="Default"
+                                    PND="false" POO="Default"
                                     PP="false" PX="178" PY="22"
                                     S1="GROUP_MON.SUM_ACT" V2="true"
                                     VE="Fixed" VIN="false" W1="90"/>
@@ -741,9 +756,10 @@
                                     Last_Location="267,22" MAZ="20"
                                     MWL="0" N1="TOT_POR_ACT"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="Default"
+                                    PND="false" POO="Default"
                                     PP="false" PX="268" PY="22"
                                     S1="GROUP_MON.TOT_POR_ACT"
                                     V2="true" VE="Fixed" VIN="false" W1="82"/>
@@ -762,12 +778,67 @@
                                     Last_Location="439,22" MAZ="20"
                                     MWL="0" N1="TOT_POR_PAS"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="Default"
+                                    PND="false" POO="Default"
                                     PP="false" PX="440" PY="22"
                                     S1="GROUP_MON.TOT_POR_PAS"
-                                    V2="true" VE="Fixed" VIN="false" W1="81"/>
+                                    V2="true" VE="Fixed" VIN="false" W1="84"/>
+                              </FRAME>
+                              <FRAME B1="null" BG="255,255,255"
+                                   BPO="Enclosing object" CF="null"
+                                   DO="0 Grades" ELS="false" FE="null"
+                                   H1="139" HE="Fixed" IF="false"
+                                   JAVA="protected ReportFrame reportFrameMainBodyFrame3 = new ReportFrame(&quot;FRAME3&quot;,26,32,139,498,reportRegionMainBody,22,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;FIXED&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
+                                   KAO="false" LN="22" LS="Normal"
+                                   LW="-1" N1="FRAME3" NPG="false"
+                                   PBA="false" PBB="false"
+                                   PHN="NotModifyJPanel" PND="false"
+                                   POO="Default" PP="false" PX="26"
+                                   PY="32" VE="Fixed" W1="498">
+                                   <LAYOUT_CHART B1="null" BCF="None"
+                                    BG="255,255,255" BO="None"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    DTF="dd/MM/yyyy"
+                                    ECH="Double click to edit"
+                                    ELS="false" F2="Arial,0,10"
+                                    FE="null" FG="0,0,0" FM="null"
+                                    GFN="D:/Workspace_solagro/JSP7CotizacionesRep/JSP7_Cotizaciones_Rep/src/main/java/INFOPAIS_GRAPHICS.xml"
+                                    H1="115" HA="Alg_Left"
+                                    HE="Fixed" IF="false" IV="null"
+                                    KAO="false" LB="null" LN="23"
+                                    LS="Normal" LW="-1"
+                                    Last_Location="31,50" MAZ="20"
+                                    MWL="0" N1="LAYOUT_CHART0"
+                                    NPG="false" PARAMETROS=""
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="Default"
+                                    PP="false" PX="31" PY="47"
+                                    S1="null" V2="true" VE="Fixed"
+                                    VIN="false" W1="487"/>
+                                   <GRAPHIC B1="null" BCF="None"
+                                    BG="255,255,255"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades" F2="Arial,0,9"
+                                    FE="null" FG="0,0,0"
+                                    GT="TEXT_GRAPHIC" H1="11"
+                                    HA="Alg_Left" HE="Fixed"
+                                    IF="false" JN="null" KAO="false"
+                                    LB="Grafico de ventas por pais por periodo en &amp;mon"
+                                    LN="24" LW="-1"
+                                    Last_Location="173,36" MWL="0"
+                                    N1="TEXT_GRAPHIC7" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="Default"
+                                    PP="false" PX="172" PY="36"
+                                    VE="Fixed" W1="277"/>
                               </FRAME>
                          </REPEATING_FRAME>
                     </FRAME>
@@ -899,13 +970,51 @@
           </TRAILER>
      </LAYOUT_MODEL>
      <PARAMETER_FORM BG="191,191,191" CSS="null" H1="400"
-          NAMES="Titulo,parameterperiodo,Parameterperiodo" PX="0" PY="0" W1="600">
-          <PARAMETER_FIELDS/>
+          NAMES="PF_periodo,G_title,G_hint,G_periodo" PX="0" PY="0" W1="600">
+          <PARAMETER_FIELDS>
+               <PARAMETER_FIELD B1="null" BG="255,255,255"
+                    CPT="DTextField" CSS="null" DT="java.lang.String"
+                    E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
+                    H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"
+                    MAZ="20" N1="PF_periodo" NHL="null" PND="true"
+                    PX="190" PY="140" R3="false" S1="periodo" TT="null"
+                    V2="true" VOL="false" W1="120"/>
+               <PARAMETER_FIELD B1="null" BG="255,255,255"
+                    CPT="DTextField" CSS="null" DT="" E1="true"
+                    F2="Arial,0,10" FG="0,0,0" FM="null" H1="20"
+                    HA="Alg_Left" IV="" JN="null" KN="true" MAZ=""
+                    N1="PF_empresa" NHL="null" PND="true" PX="190"
+                    PY="110" R3="false" S1="empresa" TT="null" V2="true"
+                    VOL="false" W1="120"/>
+          </PARAMETER_FIELDS>
           <GRAPHICAL_BOILERPLATE/>
-          <TEXT_BOILERPLATE/>
+          <TEXT_BOILERPLATE>
+               <GRAPHIC BG="255,255,255" CSS="null"
+                    F2="Courier New,1,14" FG="0,0,0" GT="TEXT_GRAPHIC"
+                    H1="20" IF="false" JN="null"
+                    LB="Parámetros del reporte" N1="G_title" PX="100"
+                    PY="50" W1="164"/>
+               <GRAPHIC BG="255,255,255" CSS="null"
+                    F2="Courier New,1,14" FG="0,0,0" GT="TEXT_GRAPHIC"
+                    H1="20" IF="false" JN="null"
+                    LB="Escriba los valores para el parámetro."
+                    N1="G_hint" PX="100" PY="80" W1="276"/>
+               <GRAPHIC BG="255,255,255" CSS="null"
+                    F2="Courier New,0,12" FG="0,0,0" GT="TEXT_GRAPHIC"
+                    H1="20" IF="false" JN="null" LB="periodo"
+                    N1="G_periodo" PND="true" PX="116" PY="140" W1="59"/>
+               <GRAPHIC BG="255,255,255" CSS="null"
+                    F2="Courier New,0,12" FG="0,0,0" GT="TEXT_GRAPHIC"
+                    H1="20" IF="false" JN="null" LB="empresa"
+                    N1="G_empresa" PND="true" PX="116" PY="110" W1="59"/>
+          </TEXT_BOILERPLATE>
           <IMAGE_BOILERPLATE/>
           <SQLSTATEMENTS/>
           <P_HELP_LIST/>
+          <WIZARD_PARAMETER>
+               <USER_PARAMETER LB="periodo" N1="periodo"/>
+               <USER_PARAMETER LB="empresa" N1="empresa"/>
+          </WIZARD_PARAMETER>
      </PARAMETER_FORM>
      <REPORT_EVENTS>
           <BEFORE_PARAMETER_FORM/>
@@ -955,22 +1064,22 @@
                <PARAMETERS/>
           </PROGRAMUNIT>
           <PROGRAMUNIT COMENTARY="" COMPILE="true"
-               FieldRef="GROUP0.POR_ACT"
+               FieldRef="GROUP0.PERIODO_ACTUAL"
                JAVAC="&#xa;&#x9;java.lang.Double porc=null;&#xa;&#x9;if (isTrue(notEquals(getField(&quot;actuales&quot;).getFieldValue(),0) &amp;&amp; notEquals(getField(&quot;sum_act&quot;).getFieldValue(),0) )){&#xa;&#x9;&#x9;Object object1=ASPMath.round(multiply ((divide (getField(&quot;actuales&quot;).getFieldValue(),getField(&quot;sum_act&quot;).getFieldValue())),100),2);&#xa;&#x9;&#x9;porc=convertTo(object1,porc);&#xa;&#x9;}else {&#xa;&#x9;&#x9;porc=convertTo(0,porc);&#xa;&#x9;}&#xa;&#x9;return (java.lang.Double)convertTo2(porc,&quot;java.lang.Double&quot;);&#xa;&#xa;"
-               N1="por_act_method"
+               N1="periodo_actual_method"
                PARAMETROS="(Vector&lt;ProcedureCallParameters>,argumentVector)"
                PGT="PLSQL"
-               PLSQL="function POR_ACT_method return NUMBER is &#xa;PORC NUMBER(12,2);&#xa;BEGIN&#xa;    if :ACTUALES != 0 AND :SUM_ACT != 0 THEN&#xa;                PORC := round((:ACTUALES / :SUM_ACT)*100,2);&#xa;    ELSE&#xa;        PORC := 0;&#xa;    END IF;&#xa;    return PORC;&#xa;END;&#xa;"
+               PLSQL="function PERIODO_ACTUAL_method return number is &#xa;PORC NUMBER(12,2);&#xa;BEGIN&#xa;    if :ACTUALES != 0 AND :SUM_ACT != 0 THEN&#xa;                PORC := round((:ACTUALES / :SUM_ACT)*100,2);&#xa;    ELSE&#xa;        PORC := 0;&#xa;    END IF;&#xa;    return PORC;&#xa;END;"
                ST="Function" SUMPLA="true" TIPO="java.lang.Double" modify="true">
                <PARAMETERS/>
           </PROGRAMUNIT>
           <PROGRAMUNIT COMENTARY="" COMPILE="true"
-               FieldRef="GROUP0.POR_PAS"
+               FieldRef="GROUP0.PERIODO_PASADO"
                JAVAC="&#xa;&#x9;java.lang.Double porc=null;&#xa;&#x9;if (isTrue(notEquals(getField(&quot;anteriores&quot;).getFieldValue(),0) &amp;&amp; notEquals(getField(&quot;sum_pas&quot;).getFieldValue(),0) )){&#xa;&#x9;&#x9;Object object1=ASPMath.round(multiply ((divide (getField(&quot;anteriores&quot;).getFieldValue(),getField(&quot;sum_pas&quot;).getFieldValue())),100),2);&#xa;&#x9;&#x9;porc=convertTo(object1,porc);&#xa;&#x9;}else {&#xa;&#x9;&#x9;porc=convertTo(0,porc);&#xa;&#x9;}&#xa;&#x9;return (java.lang.Double)convertTo2(porc,&quot;java.lang.Double&quot;);&#xa;&#xa;"
-               N1="por_pas_method"
+               N1="periodo_pasado_method"
                PARAMETROS="(Vector&lt;ProcedureCallParameters>,argumentVector)"
                PGT="PLSQL"
-               PLSQL="function POR_PAS_method return NUMBER is &#xa;PORC NUMBER(12,2);&#xa;BEGIN&#xa;    IF :ANTERIORES != 0 AND :SUM_PAS != 0 THEN&#xa;        PORC := round((:ANTERIORES / :SUM_PAS)*100,2);&#xa;    ELSE&#xa;    PORC := 0;&#xa;    END IF;&#xa;    return PORC;&#xa;END;&#xa;"
+               PLSQL="function PERIODO_PASADO_method return number is &#xa;PORC NUMBER(12,2);&#xa;BEGIN&#xa;    IF :ANTERIORES != 0 AND :SUM_PAS != 0 THEN&#xa;        PORC := round((:ANTERIORES / :SUM_PAS)*100,2);&#xa;    ELSE&#xa;    PORC := 0;&#xa;    END IF;&#xa;    return PORC;&#xa;END;&#xa;"
                ST="Function" SUMPLA="true" TIPO="java.lang.Double" modify="true">
                <PARAMETERS/>
           </PROGRAMUNIT>
