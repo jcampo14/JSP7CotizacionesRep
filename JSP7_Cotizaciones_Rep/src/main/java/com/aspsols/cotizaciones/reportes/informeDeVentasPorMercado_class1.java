@@ -114,8 +114,8 @@ public class informeDeVentasPorMercado_class1 extends JReportRuntime {
 	protected GroupField groupFieldFormula_columnsVENTAS_PAS_ROUND = new GroupField("VENTAS_PAS_ROUND",0,"java.lang.Double","0",null,"NONE",null,null,"REPORT","REPORT","ventas_pas_round_method","FORMULA",null,false,0,tempGroup,this);
 	protected GraphicsObjectServer graphicServergraphicG_title = new GraphicsObjectServer("G_title",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,164,100,50,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Parámetros del reporte");
 	protected GraphicsObjectServer graphicServergraphicG_hint = new GraphicsObjectServer("G_hint",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,276,100,80,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Escriba los valores para el parámetro.");
-	protected GraphicsObjectServer graphicServergraphicG_periodo = new GraphicsObjectServer("G_periodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,100,110,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"periodo");
-	protected GraphicsObjectServer graphicServergraphicG_empresa = new GraphicsObjectServer("G_empresa",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,100,140,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"empresa");
+	protected GraphicsObjectServer graphicServergraphicG_periodo = new GraphicsObjectServer("G_periodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,100,134,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"periodo");
+	protected GraphicsObjectServer graphicServergraphicG_empresa = new GraphicsObjectServer("G_empresa",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,100,108,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"empresa");
 	protected ReportRegion reportRegionHeaderBody = new ReportRegion("BODY");
 	protected ReportRegion reportRegionHeaderMargin = new ReportRegion("MARGIN");
 	protected ReportRegion reportRegionMainBody = new ReportRegion("BODY");
@@ -124,7 +124,7 @@ public class informeDeVentasPorMercado_class1 extends JReportRuntime {
 	protected ReportRegion reportRegionTrailerMargin = new ReportRegion("MARGIN");
 	protected ReportMargin reportMarginHeader = new ReportMargin(70,34,34,70);
 	protected ReportSection reportSectionHeader = new ReportSection("HEADER",reportMarginHeader,792,612,reportRegionHeaderBody,reportRegionHeaderMargin,"Portrait");
-	protected ReportMargin reportMarginMain = new ReportMargin(70,34,34,70);
+	protected ReportMargin reportMarginMain = new ReportMargin(70,15,53,70);
 	protected ReportSection reportSectionMain = new ReportSection("MAIN",reportMarginMain,792,612,reportRegionMainBody,reportRegionMainMargin,"Portrait");
 	protected ReportMargin reportMarginTrailer = new ReportMargin(70,34,34,70);
 	protected ReportSection reportSectionTrailer = new ReportSection("TRAILER",reportMarginTrailer,792,612,reportRegionTrailerBody,reportRegionTrailerMargin,"Portrait");

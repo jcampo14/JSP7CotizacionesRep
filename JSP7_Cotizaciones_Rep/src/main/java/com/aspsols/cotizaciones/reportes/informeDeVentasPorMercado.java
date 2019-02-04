@@ -98,9 +98,9 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 	protected ReportFieldPresentation fieldPresentationMainBodyMercado_n = new ReportFieldPresentation("MERCADO_N",14,11,10,101,reportRegionMainBody,13,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","NOM","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyVentas_pasadas = new ReportFieldPresentation("VENTAS_PASADAS",354,11,10,107,reportRegionMainBody,14,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","VENTAS_PAS_ROUND","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###.###","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyVentas_actual = new ReportFieldPresentation("VENTAS_ACTUAL",182,11,10,107,reportRegionMainBody,15,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","VENTAS_ACT_ROUND","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###,###,###.###","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",522,43,10,50,reportRegionMainMargin,3,null,"FIXED","FIXED","CURRENT_DATE","java.sql.Date",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,8),"dd/MM/yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field1 = new ReportFieldPresentation("LAYOUT_FIELD1",524,54,9,16,reportRegionMainMargin,5,null,"FIXED","FIXED","PAGE_NUMBER","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field2 = new ReportFieldPresentation("LAYOUT_FIELD2",554,54,9,18,reportRegionMainMargin,6,null,"FIXED","FIXED","TOTAL_PAGES","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",490,43,10,50,reportRegionMainMargin,3,null,"FIXED","FIXED","CURRENT_DATE","java.sql.Date",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,8),"dd/MM/yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field1 = new ReportFieldPresentation("LAYOUT_FIELD1",492,54,9,16,reportRegionMainMargin,5,null,"FIXED","FIXED","PAGE_NUMBER","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field2 = new ReportFieldPresentation("LAYOUT_FIELD2",522,54,9,18,reportRegionMainMargin,6,null,"FIXED","FIXED","TOTAL_PAGES","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	
 	public informeDeVentasPorMercado() throws Exception {
 		super();
@@ -179,8 +179,8 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo);
 			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_empresa);
 
-			this.parameterForm.addToVectorGroupField(this.parameterPeriodo);
 			this.parameterForm.addToVectorGroupField(this.parameterEmpresa);
+			this.parameterForm.addToVectorGroupField(this.parameterPeriodo);
 			this.getJreport().addToVectorGroupField(this.parameterBACKGROUND);
 			this.getJreport().addToVectorGroupField(this.parameterCOPIES);
 			this.getJreport().addToVectorGroupField(this.parameterCURRENCY);
@@ -217,8 +217,8 @@ public class informeDeVentasPorMercado extends informeDeVentasPorMercado_class3 
 			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field2 = new PageNumbering(true,true,true,1,1,null);
 			this.fieldPresentationMainMarginLayout_field2.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field2);
 
-			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
 			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterempresa);
+			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
 
 			this.addLayoutTextVariables();
 			this.addColumnInformation();

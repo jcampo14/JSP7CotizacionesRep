@@ -91,12 +91,12 @@ public class informeDeVentasPorMercado_class2 extends informeDeVentasPorMercado_
 	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame("REPEATING_FRAME0",14,11,10,517,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame1,"FIXED","EXPAND","GROUP0","Down",new Color(255,255,255),"Default,1,(0,0,0)",0,"DEFAULT",false,false,false,"REPEATING_FRAME0_formatEvent",0,0,0,-1,false);
 	protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame("FRAME1",14,0,11,517,reportRegionMainBody,4,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(0,51,153),"Default,1,(0,0,0)","ALLPAGES",false,false,false,null,0,-1,false);
 	protected ReportFrame reportFrameMainBodyFrame3 = new ReportFrame("FRAME3",14,31,182,516,reportRegionMainBody,22,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
-	protected DataFieldDefinition dataFieldDefinitionParameterperiodo = new DataFieldDefinition("PF_periodo",174,110,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,20,null,null,false,"periodo");
-	protected DataFieldDefinition dataFieldDefinitionParameterempresa = new DataFieldDefinition("PF_empresa",174,140,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,0,null,null,false,"empresa");
+	protected DataFieldDefinition dataFieldDefinitionParameterempresa = new DataFieldDefinition("PF_empresa",174,108,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,0,null,null,false,"empresa");
+	protected DataFieldDefinition dataFieldDefinitionParameterperiodo = new DataFieldDefinition("PF_periodo",174,134,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,20,null,null,false,"periodo");
 	protected GraphicsObjectServer graphicServergraphicG_title = new GraphicsObjectServer("G_title",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,164,100,50,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Parámetros del reporte");
 	protected GraphicsObjectServer graphicServergraphicG_hint = new GraphicsObjectServer("G_hint",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,276,100,80,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Escriba los valores para el parámetro.");
-	protected GraphicsObjectServer graphicServergraphicG_periodo = new GraphicsObjectServer("G_periodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,100,110,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"periodo");
-	protected GraphicsObjectServer graphicServergraphicG_empresa = new GraphicsObjectServer("G_empresa",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,100,140,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"empresa");
+	protected GraphicsObjectServer graphicServergraphicG_periodo = new GraphicsObjectServer("G_periodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,100,134,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"periodo");
+	protected GraphicsObjectServer graphicServergraphicG_empresa = new GraphicsObjectServer("G_empresa",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,59,100,108,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"empresa");
 
 	// System parameters
 	protected GroupField parameterBACKGROUND = new GroupField("BACKGROUND","java.lang.String","false",true,this.tempGroup,this);
@@ -113,8 +113,8 @@ public class informeDeVentasPorMercado_class2 extends informeDeVentasPorMercado_
 	protected GroupField parameterMAXRECORDS = new GroupField("MAXRECORDS","java.lang.Integer","0",true,this.tempGroup,this);
 
 	// User parameters
-	protected GroupField parameterPeriodo = new GroupField("periodo","java.lang.String",null,"",this.tempGroup,this);
 	protected GroupField parameterEmpresa = new GroupField("empresa","java.lang.String",null,"",this.tempGroup,this);
+	protected GroupField parameterPeriodo = new GroupField("periodo","java.lang.String",null,"",this.tempGroup,this);
 
 			
 	public informeDeVentasPorMercado_class2() throws Exception {
