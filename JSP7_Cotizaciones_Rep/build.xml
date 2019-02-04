@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<project name="JSP7_Cotizaciones_Rep" basedir="." default="main">
+<project name="JSP7CotizacionesRep/JSP7_Cotizaciones_Rep" basedir="." default="main">
 
     <property name="bin.dir"     value="bin"/>
     <property name="tomcat.dir"  value="D:/ASP/apache-tomcat-6.0.18"/>

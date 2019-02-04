@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1541776686832" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1549290608528" MHB="10" MVB="10"
      N1="informeDeVentasPorArticulo" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PPO="null" PT="null"
-     RUTA="D:\Workspace_solagro\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorArticulo.jrb"
+     RUTA="D:\Workspace\Solagro Cotizaciones Reportes\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorArticulo.jrb"
      SBP="true" SPF="true" UM="Pixels" Wizard="true">
      <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo_fin,periodo_ini,QUERY0,GROUP_MON,GROUP0,NOM,COD,PER_CT,VENTAS,color_reg,MON">
           <SYSTEM_PARAMETERS>
@@ -41,7 +41,7 @@
           </USER_PARAMETERS>
           <QUERIES>
                <QUERY CB="null" COLUMNS="MON,NOM,COD,PER_CT,VENTAS"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;AR.NOM,FD.COD,FE.PER_CT,FE.MON,VENTAS&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;NOM,COD,PER_CT,MON,VENTAS,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);"
                     EQS="null"
                     GB="GROUP BY AR.NOM,FD.COD,FE.PER_CT,FE.MON"
                     GR="GROUP_MON" H1="37" LG="GROUP0" MRF="0"
@@ -302,7 +302,7 @@
                H1="792" HPP="1" LAYERS="0" NPG="false" OR="Portrait"
                VPP="1" W1="612">
                <BODY LAYERS="13">
-                    <ANCHORS PHN="ROOT&amp;"/>
+                    <ANCHORS PHN="NotModifyJPanel"/>
                     <FRAME B1="null" BG="255,255,255"
                          BPO="Enclosing object" CF="null" DO="0 Grades"
                          ELS="true" FE="null" H1="210" HE="Fixed"
@@ -310,8 +310,9 @@
                          JAVA="protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame(&quot;FRAME0&quot;,7,0,210,529,reportRegionMainBody,0,null,&quot;FIXED&quot;,&quot;VARIABLE&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
                          KAO="false" LN="0" LS="Normal" LW="-1"
                          N1="FRAME0" NPG="false" PBA="false" PBB="false"
-                         PHN="ROOT&amp;" PND="false" POO="First page"
-                         PP="false" PX="7" PY="0" VE="Variable" W1="529">
+                         PHN="NotModifyJPanel" PND="false"
+                         POO="First page" PP="false" PX="7" PY="0"
+                         VE="Variable" W1="529">
                          <REPEATING_FRAME B1="null" BG="255,255,255"
                               BPO="Enclosing object" CF="null"
                               CMD="false" DO="0 Grades" ELS="false"
@@ -321,9 +322,9 @@
                               KAO="false" LN="1" LS="Normal" LW="-1"
                               MRPP="0" MWR="0" N1="REPEATING_FRAME1"
                               NPG="false" PBA="false" PBB="false"
-                              PD="Down" PHN="ROOT&amp;" PND="false"
-                              POO="Default" PP="false" PX="18" PY="5"
-                              VE="Variable" VSBF="0" W1="514">
+                              PD="Down" PHN="NotModifyJPanel"
+                              PND="false" POO="Default" PP="false"
+                              PX="18" PY="5" VE="Variable" VSBF="0" W1="514">
                               <REPEATING_FRAME B1="Default,1,(0,0,0)"
                                    BG="255,255,255"
                                    BPO="Enclosing object" CF="null"
@@ -336,7 +337,7 @@
                                    LW="-1" MRPP="0" MWR="0"
                                    N1="REPEATING_FRAME0" NPG="false"
                                    PBA="false" PBB="false" PD="Down"
-                                   PHN="ROOT&amp;" PND="false"
+                                   PHN="NotModifyJPanel" PND="false"
                                    POO="First page" PP="false" PX="19"
                                    PY="22" VE="Expand" VSBF="0" W1="499">
                                    <LAYOUT_FIELD B1="null" BCF="None"
@@ -352,7 +353,8 @@
                                     LW="-1" Last_Location="19,22"
                                     MAZ="10" MWL="0" N1="COD"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="First page"
                                     PP="false" PX="19" PY="22"
@@ -371,7 +373,8 @@
                                     LW="-1" Last_Location="63,22"
                                     MAZ="10" MWL="0" N1="NOM"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="First page"
                                     PP="false" PX="64" PY="22"
@@ -391,7 +394,7 @@
                                     Last_Location="277,10" MAZ="7"
                                     MWL="0" N1="MON" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="First page"
                                     PP="false" PX="283" PY="22"
@@ -411,7 +414,7 @@
                                     Last_Location="230,10" MAZ="6"
                                     MWL="0" N1="PER_CT" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="First page"
                                     PP="false" PX="233" PY="22"
@@ -432,7 +435,7 @@
                                     Last_Location="330,22" MAZ="10"
                                     MWL="0" N1="VENTAS" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="First page"
                                     PP="false" PX="331" PY="22"
@@ -448,7 +451,7 @@
                                    KAO="false" LN="8" LS="Normal"
                                    LW="-1" N1="FRAME1" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="ROOT&amp;" PND="false"
+                                   PHN="NotModifyJPanel" PND="false"
                                    POO="All pages" PP="false" PX="19"
                                    PY="12" VE="Fixed" W1="499">
                                    <GRAPHIC B1="null" BCF="None"
@@ -463,7 +466,8 @@
                                     LW="-1" Last_Location="243,12"
                                     MWL="0" N1="t_PER_CT"
                                     NPG="false" PBA="false"
-                                    PBB="false" PHN="ROOT&amp;"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="233" PY="12"
@@ -480,7 +484,7 @@
                                     Last_Location="277,0" MWL="0"
                                     N1="t_MON" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="283" PY="12"
@@ -497,7 +501,7 @@
                                     Last_Location="330,12" MWL="0"
                                     N1="t_VENTAS" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="331" PY="12"
@@ -514,7 +518,7 @@
                                     Last_Location="19,12" MWL="0"
                                     N1="t_COD" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="20" PY="12"
@@ -531,7 +535,7 @@
                                     Last_Location="52,0" MWL="0"
                                     N1="t_NOM" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="ROOT&amp;"
+                                    PHN="NotModifyJPanel"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
                                     PP="false" PX="64" PY="12"
@@ -660,8 +664,7 @@
                </MARGIN>
           </TRAILER>
      </LAYOUT_MODEL>
-     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="400"
-          NAMES="Titulo,parameterperiodo_fin,Parameterperiodo_fin,parameterperiodo_ini,Parameterperiodo_ini"
+     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="400" NAMES=""
           PX="0" PY="0" W1="600">
           <PARAMETER_FIELDS/>
           <GRAPHICAL_BOILERPLATE/>

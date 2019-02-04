@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JForm name="informeDeVentasPorArticuloParamForm" mainClass="com.aspsols.cotizaciones.reportes.informeDeVentasPorArticuloParamForm">
+  <Entities>
+    <Entity name="TOOLBAR" className="com.aspsols.cotizaciones.reportes.data.TOOLBAR_informeDeVentasPorArticuloParamForm" updateAllowed="true" insertAllowed="true" deleteAllowed="true" databaseEntity="false" dataSource="null" alias="null" maxPageSize="50" whereClause="null" orderBy="null" nonUpdatableEntity="false" queryDataSource="null" navigationStyle="SameRecord" singleRecord="false">
+      <fields>
+        <Field name="run" className="com.aspsols.cotizaciones.reportes.data.TOOLBAR_informeDeVentasPorArticuloParamForm.Run" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" />
+        <Field name="exit" className="com.aspsols.cotizaciones.reportes.data.TOOLBAR_informeDeVentasPorArticuloParamForm.Exit" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" />
+        <Field name="help" className="com.aspsols.cotizaciones.reportes.data.TOOLBAR_informeDeVentasPorArticuloParamForm.Help" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" />
+      </fields>
+    </Entity>
+    <Entity name="DATA" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorArticuloParamForm" updateAllowed="true" insertAllowed="true" deleteAllowed="true" databaseEntity="false" dataSource="null" alias="null" maxPageSize="50" whereClause="null" orderBy="null" nonUpdatableEntity="false" queryDataSource="null" navigationStyle="SameRecord" singleRecord="false">
+      <fields>
+        <Field name="parameterperiodo_fin" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorArticuloParamForm.Parameterperiodo_fin" dataType="java.lang.String" initialValue="null" maxSize="20" />
+        <Field name="parameterperiodo_ini" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorArticuloParamForm.Parameterperiodo_ini" dataType="java.lang.String" initialValue="null" maxSize="20" />
+        <Field name="DESFORMAT" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorArticuloParamForm.DESFORMAT" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" initialValue="PDF" />
+      </fields>
+    </Entity>
+  </Entities>
+  <SQLStatements />
+</JForm>
+
