@@ -120,8 +120,8 @@ public class informeDeVentasPorPais_class1 extends JReportRuntime {
 	protected ReportRegion reportRegionTrailerMargin = new ReportRegion("MARGIN");
 	protected ReportMargin reportMarginHeader = new ReportMargin(70,34,34,70);
 	protected ReportSection reportSectionHeader = new ReportSection("HEADER",reportMarginHeader,792,612,reportRegionHeaderBody,reportRegionHeaderMargin,"Portrait");
-	protected ReportMargin reportMarginMain = new ReportMargin(70,34,34,70);
-	protected ReportSection reportSectionMain = new ReportSection("MAIN",reportMarginMain,792,612,reportRegionMainBody,reportRegionMainMargin,"Portrait");
+	protected ReportMargin reportMarginMain = new ReportMargin(70,13,41,70);
+	protected ReportSection reportSectionMain = new ReportSection("MAIN",reportMarginMain,792,598,reportRegionMainBody,reportRegionMainMargin,"Portrait");
 	protected ReportMargin reportMarginTrailer = new ReportMargin(70,34,34,70);
 	protected ReportSection reportSectionTrailer = new ReportSection("TRAILER",reportMarginTrailer,792,612,reportRegionTrailerBody,reportRegionTrailerMargin,"Portrait");
 

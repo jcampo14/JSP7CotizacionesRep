@@ -86,11 +86,11 @@ import com.aspsolutions.jframework.srw.SRWRunReportFailure;
 
 public class informeDeVentasPorPais_class2 extends informeDeVentasPorPais_class1 {
 	protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame("FRAME0",6,0,234,533,reportRegionMainBody,0,null,"FIXED","VARIABLE",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
-	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame1 = new ReportRepetitiveFrame("REPEATING_FRAME1",26,2,195,498,reportRegionMainBody,1,reportFrameMainBodyFrame0,"FIXED","VARIABLE","GROUP_MON","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
-	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame("REPEATING_FRAME0",26,12,10,498,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame1,"FIXED","EXPAND","GROUP0","Down",new Color(255,255,255),"Default,1,(0,0,0)",0,"DEFAULT",false,false,false,"REPEATING_FRAME0_formatEvent",0,0,0,-1,false);
-	protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame("FRAME1",26,2,10,498,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(0,51,153),"Default,1,(0,0,0)","ALLPAGES",false,false,false,null,0,-1,false);
-	protected ReportFrame reportFrameMainBodyFrame2 = new ReportFrame("FRAME2",26,22,10,498,reportRegionMainBody,12,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(153,153,153),"Default,1,(0,0,0)","DEFAULT",false,false,false,null,0,-1,false);
-	protected ReportFrame reportFrameMainBodyFrame3 = new ReportFrame("FRAME3",26,32,139,498,reportRegionMainBody,22,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
+	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame1 = new ReportRepetitiveFrame("REPEATING_FRAME1",14,2,195,498,reportRegionMainBody,1,reportFrameMainBodyFrame0,"FIXED","VARIABLE","GROUP_MON","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
+	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame("REPEATING_FRAME0",14,12,10,498,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame1,"FIXED","EXPAND","GROUP0","Down",new Color(255,255,255),"Default,1,(0,0,0)",0,"DEFAULT",false,false,false,"REPEATING_FRAME0_formatEvent",0,0,0,-1,false);
+	protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame("FRAME1",14,2,10,498,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(0,51,153),"Default,1,(0,0,0)","ALLPAGES",false,false,false,null,0,-1,false);
+	protected ReportFrame reportFrameMainBodyFrame2 = new ReportFrame("FRAME2",14,22,10,498,reportRegionMainBody,12,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(153,153,153),"Default,1,(0,0,0)","DEFAULT",false,false,false,null,0,-1,false);
+	protected ReportFrame reportFrameMainBodyFrame3 = new ReportFrame("FRAME3",14,32,139,498,reportRegionMainBody,22,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
 	protected DataFieldDefinition dataFieldDefinitionParameterperiodo = new DataFieldDefinition("PF_periodo",190,140,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,20,null,null,false,"periodo");
 	protected DataFieldDefinition dataFieldDefinitionParameterempresa = new DataFieldDefinition("PF_empresa",190,110,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,0,null,null,false,"empresa");
 	protected GraphicsObjectServer graphicServergraphicG_title = new GraphicsObjectServer("G_title",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,164,100,50,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Parámetros del reporte");
@@ -113,8 +113,8 @@ public class informeDeVentasPorPais_class2 extends informeDeVentasPorPais_class1
 	protected GroupField parameterMAXRECORDS = new GroupField("MAXRECORDS","java.lang.Integer","0",true,this.tempGroup,this);
 
 	// User parameters
-	protected GroupField parameterPeriodo = new GroupField("periodo","java.lang.String",null,"",this.tempGroup,this);
 	protected GroupField parameterEmpresa = new GroupField("empresa","java.lang.String",null,"",this.tempGroup,this);
+	protected GroupField parameterPeriodo = new GroupField("periodo","java.lang.String",null,"",this.tempGroup,this);
 
 			
 	public informeDeVentasPorPais_class2() throws Exception {
