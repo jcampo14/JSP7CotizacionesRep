@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1541172715588" MHB="10" MVB="10"
+     IsSave="false" JSN="null" LM="1549297876522" MHB="10" MVB="10"
      N1="informeDeVentasPorPeriodo" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PPO="null" PT="null"
      RUTA="D:\Workspace_solagro\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorPeriodo.jrb"
      SBP="true" SPF="true" UM="Pixels" Wizard="true">
-     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo,QUERY0,GROUP_MONEDA,GROUP0,VENTAS_PRESENTE,VENTAS_PASADA,PERIODO_ACT,PERIODO_PAS1,MONEDA,PERIODO_PAS,PERIODO_PRE,MES,PORCENTAJE,LOGO">
+     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo,QUERY0,GROUP_MONEDA,GROUP0,PERIODO_PAS,PERIODO_PRE,MES,PORCENTAJE,LOGO,MONEDA,PERIODO_ACT,VENTAS_PRESENTE,PERIODO_PAS1,VENTAS_PASADA">
           <SYSTEM_PARAMETERS>
                <BACKGROUND DT="java.lang.String" IV="false"
                     JN="parameterBACKGROUND" MAZ="80" N1="BACKGROUND" VL="false"/>
@@ -35,21 +35,25 @@
           </SYSTEM_PARAMETERS>
           <USER_PARAMETERS>
                <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
-                    JN="parameterPeriodo" MAZ="20" N1="periodo" VL="false"/>
+                    MAZ="20" N1="empresa" VL="false"/>
+               <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
+                    JN="parameterPeriodo" LB="periodo" MAZ="20"
+                    N1="periodo" VL="false"/>
           </USER_PARAMETERS>
           <QUERIES>
                <QUERY CB="null"
-                    COLUMNS="MONEDA,VENTAS_PRESENTE,VENTAS_PASADA,PERIODO_ACT,PERIODO_PAS1"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MONEDA);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;MONEDA,PERIODO_ACT,VENTAS_PRESENTE,PERIODO_PAS,VENTAS_PASADA&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;MONEDA,PERIODO_ACT,VENTAS_PRESENTE,PERIODO_PAS1,VENTAS_PASADA,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    COLUMNS="MONEDA,PERIODO_ACT,VENTAS_PRESENTE,PERIODO_PAS1,VENTAS_PASADA"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MONEDA);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);"
                     EQS="null" GB="null" GR="GROUP_MONEDA" H1="30"
-                    LG="GROUP0" MRF="0" N1="QUERY0" OB="ORDER BY VP.MON"
-                    OBR="SQL" PARAMETERS="" PND="false" PX="65" PY="16"
-                    Q1="SELECT VP.MON MONEDA,VP.PER_CT PERIODO_ACT ,VP.VENTAS VENTAS_PRESENTE,VP2.PER_CT PERIODO_PAS,VP2.VENTAS VENTAS_PASADA&#xd;&#xa;FROM VENTA_ALL_PERIODOS VP,VENTA_ALL_PERIODOS VP2 &#xd;&#xa;WHERE vp.mon = vp2.mon&#xd;&#xa;and VP.PER_CT = :periodo and VP2.PER_CT = (SUBSTR(:periodo,1,4)-1)||SUBSTR(:periodo,5,6) ORDER BY VP.MON&#xd;&#xa;"
-                    QTR=" SELECT  VP.MON  MONEDA  ,VP.PER_CT  PERIODO_ACT  ,VP.VENTAS  VENTAS_PRESENTE  ,VP2.PER_CT  PERIODO_PAS  ,VP2.VENTAS  VENTAS_PASADA   FROM VENTA_ALL_PERIODOS VP, VENTA_ALL_PERIODOS VP2  WHERE VP.MON = VP2.MON AND VP.PER_CT = #periodo AND VP2.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )"
+                    LG="GROUP0" MRF="0" N1="QUERY0"
+                    OB=" ORDER BY VP.MON" OBR="SQL" PARAMETERS=""
+                    PND="false" PX="65" PY="16"
+                    Q1="SELECT VP.MON MONEDA,VP.PER_CT PERIODO_ACT ,VP.VENTAS VENTAS_PRESENTE,VP2.PER_CT PERIODO_PAS,VP2.VENTAS VENTAS_PASADA&#xd;&#xa;FROM VENTA_ALL_PERIODOS VP,VENTA_ALL_PERIODOS VP2 &#xd;&#xa;WHERE vp.mon = vp2.mon&#xd;&#xa;and vp.c_Emp = vp2.c_Emp&#xd;&#xa;and vp.c_emp = :empresa&#xd;&#xa;and VP.PER_CT = :periodo and VP2.PER_CT = (SUBSTR(:periodo,1,4)-1)||SUBSTR(:periodo,5,6) ORDER BY VP.MON&#xd;&#xa;"
+                    QTR=" SELECT  VP.MON  MONEDA  ,VP.PER_CT  PERIODO_ACT  ,VP.VENTAS  VENTAS_PRESENTE  ,VP2.PER_CT  PERIODO_PAS  ,VP2.VENTAS  VENTAS_PASADA   FROM VENTA_ALL_PERIODOS VP, VENTA_ALL_PERIODOS VP2  WHERE VP.MON = VP2.MON AND VP.C_EMP = VP2.C_EMP AND VP.C_EMP = #empresa AND VP.PER_CT = #periodo AND VP2.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )"
                     T1="MASTER"
                     TC="MONEDA,PERIODO_ACT,VENTAS_PRESENTE,PERIODO_PAS,VENTAS_PASADA"
                     TCA="MONEDA,PERIODO_ACT,VENTAS_PRESENTE,PERIODO_PAS1,VENTAS_PASADA,"
-                    W1="80" W2="WHERE VP.MON = VP2.MON AND VP.PER_CT = #periodo AND VP2.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )"/>
+                    W1="80" W2=" WHERE VP.MON = VP2.MON AND VP.C_EMP = VP2.C_EMP AND VP.C_EMP = #empresa AND VP.PER_CT = #periodo AND VP2.PER_CT =  ( SUBSTR(#periodo, 1 , 4 ) -  1  )  || SUBSTR(#periodo, 5 , 6 )"/>
           </QUERIES>
           <GROUPS>
                <GROUP
@@ -62,13 +66,13 @@
                          <GROUP_FIELD BO="Ascending"
                               CCT="VENTAS_PRESENTE"
                               CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PRESENTE);"
-                              CT="DATABASE" DT="java.lang.Double"
+                              CT="DATABASE" DT="java.lang.Integer"
                               JN="groupFieldGROUP0VENTAS_PRESENTE"
                               N1="VENTAS_PRESENTE" PND="true" QF="2"
                               RV="VENTAS" VIN="null"/>
                          <GROUP_FIELD BO="Ascending" CCT="VENTAS_PASADA"
                               CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS_PASADA);"
-                              CT="DATABASE" DT="java.lang.Double"
+                              CT="DATABASE" DT="java.lang.String"
                               JN="groupFieldGROUP0VENTAS_PASADA"
                               N1="VENTAS_PASADA" PND="true" QF="4"
                               RV="VENTAS" VIN="null"/>
@@ -279,7 +283,7 @@
                H1="792" HPP="1" LAYERS="-7" NPG="false" OR="Portrait"
                VPP="1" W1="612">
                <BODY LAYERS="13">
-                    <ANCHORS PHN="NotModifyJPanel"/>
+                    <ANCHORS PHN="ROOT&amp;"/>
                     <FRAME B1="null" BG="255,255,255"
                          BPO="Enclosing object" CF="null" DO="0 Grades"
                          ELS="true" FE="null" H1="70" HE="Fixed"
@@ -287,21 +291,20 @@
                          JAVA="protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame(&quot;FRAME0&quot;,9,0,70,514,reportRegionMainBody,0,null,&quot;FIXED&quot;,&quot;VARIABLE&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
                          KAO="false" LN="0" LS="Normal" LW="-1"
                          N1="FRAME0" NPG="false" PBA="false" PBB="false"
-                         PHN="NotModifyJPanel" PND="false"
-                         POO="First page" PP="false" PX="9" PY="0"
-                         VE="Variable" W1="514">
+                         PHN="ROOT&amp;" PND="false" POO="First page"
+                         PP="false" PX="9" PY="0" VE="Variable" W1="514">
                          <REPEATING_FRAME B1="null" BG="255,255,255"
                               BPO="Enclosing object" CF="null"
                               CMD="false" DO="0 Grades" ELS="false"
-                              FE="null" GN="GROUP_MONEDA" H1="20"
+                              FE="null" GN="GROUP_MONEDA" H1="39"
                               HE="Fixed" HSBF="0" IF="false"
                               JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame1 = new ReportRepetitiveFrame(&quot;REPEATING_FRAME1&quot;,22,0,20,486,reportRegionMainBody,1,reportFrameMainBodyFrame0,&quot;FIXED&quot;,&quot;VARIABLE&quot;,&quot;GROUP_MONEDA&quot;,&quot;Down&quot;,new Color(255,255,255),null,0,&quot;DEFAULT&quot;,false,false,false,null,0,0,0,-1,false);"
                               KAO="false" LN="1" LS="Normal" LW="-1"
                               MRPP="0" MWR="0" N1="REPEATING_FRAME1"
                               NPG="false" PBA="false" PBB="false"
-                              PD="Down" PHN="NotModifyJPanel"
-                              PND="false" POO="Default" PP="false"
-                              PX="22" PY="0" VE="Variable" VSBF="0" W1="486">
+                              PD="Down" PHN="ROOT&amp;" PND="false"
+                              POO="Default" PP="false" PX="22" PY="0"
+                              VE="Variable" VSBF="0" W1="486">
                               <REPEATING_FRAME B1="Default,1,(0,0,0)"
                                    BG="255,255,255"
                                    BPO="Enclosing object" CF="null"
@@ -313,9 +316,9 @@
                                    LW="-1" MRPP="0" MWR="0"
                                    N1="REPEATING_FRAME0" NPG="false"
                                    PBA="false" PBB="false" PD="Down"
-                                   PHN="NotModifyJPanel" PND="false"
+                                   PHN="ROOT&amp;" PND="false"
                                    POO="First page" PP="false" PX="22"
-                                   PY="10" VE="Expand" VSBF="0" W1="486">
+                                   PY="18" VE="Expand" VSBF="0" W1="486">
                                    <GRAPHIC B1="Default,1,(0,0,0)"
                                     BCF="None" BG="255,255,255"
                                     BPO="Enclosing object" CF="null"
@@ -329,10 +332,10 @@
                                     Last_Location="17,10" MWL="0"
                                     N1="COMPANIA" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="false" POO="Default"
-                                    PP="false" PX="22" PY="10"
+                                    PND="true" POO="Default"
+                                    PP="false" PX="22" PY="18"
                                     VE="Fixed" W1="105"/>
                                    <LAYOUT_FIELD B1="Default,1,(0,0,0)"
                                     BCF="None" BG="255,255,255"
@@ -349,11 +352,10 @@
                                     Last_Location="301,10" MAZ="20"
                                     MWL="0" N1="VENTAS_PA"
                                     NPG="false" PBA="false"
-                                    PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PBB="false" PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="302" PY="10"
+                                    PP="false" PX="302" PY="18"
                                     S1="GROUP0.VENTAS_PASADA"
                                     V2="true" VE="Fixed" VIN="false" W1="117"/>
                                    <LAYOUT_FIELD B1="Default,1,(0,0,0)"
@@ -368,13 +370,13 @@
                                     HE="Fixed" IF="false" IV="null"
                                     KAO="false" LB="null" LN="6"
                                     LS="Normal" LW="-1"
-                                    Last_Location="417,10" MAZ="20"
+                                    Last_Location="419,10" MAZ="20"
                                     MWL="0" N1="PORCENT" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="419" PY="10"
+                                    PP="false" PX="419" PY="18"
                                     S1="Formula_Columns.PORCENTAJE"
                                     V2="true" VE="Fixed" VIN="false" W1="89"/>
                                    <LAYOUT_FIELD B1="Default,1,(0,0,0)"
@@ -393,11 +395,10 @@
                                     Last_Location="183,10" MAZ="10"
                                     MWL="0" N1="VENTAS_PR"
                                     NPG="false" PBA="false"
-                                    PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PBB="false" PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="185" PY="10"
+                                    PP="false" PX="185" PY="18"
                                     S1="GROUP0.VENTAS_PRESENTE"
                                     V2="true" VE="Expand"
                                     VIN="false" W1="117"/>
@@ -415,10 +416,10 @@
                                     Last_Location="125,10" MAZ="20"
                                     MWL="0" N1="MONEDA" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="127" PY="10"
+                                    PP="false" PX="127" PY="18"
                                     S1="GROUP_MONEDA.MONEDA"
                                     V2="true" VE="Fixed" VIN="false" W1="58"/>
                               </REPEATING_FRAME>
@@ -430,9 +431,9 @@
                                    KAO="false" LN="3" LS="Normal"
                                    LW="-1" N1="FRAME1" NPG="false"
                                    PBA="false" PBB="false"
-                                   PHN="NotModifyJPanel" PND="false"
+                                   PHN="ROOT&amp;" PND="false"
                                    POO="All pages" PP="false" PX="22"
-                                   PY="0" VE="Fixed" W1="486">
+                                   PY="8" VE="Fixed" W1="486">
                                    <GRAPHIC B1="Default,1,(0,0,0)"
                                     BCF="None" BG="255,255,255"
                                     BPO="Enclosing object" CF="null"
@@ -446,10 +447,10 @@
                                     Last_Location="301,0" MWL="0"
                                     N1="t_VENTAS_PAS" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Default"
-                                    PP="false" PX="302" PY="0"
+                                    PP="false" PX="302" PY="8"
                                     VE="Fixed" W1="117"/>
                                    <GRAPHIC B1="Default,1,(0,0,0)"
                                     BCF="None" BG="255,255,255"
@@ -463,10 +464,10 @@
                                     Last_Location="80,0" MWL="0"
                                     N1="C_EMP" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Default"
-                                    PP="false" PX="22" PY="0" UL="F"
+                                    PP="false" PX="22" PY="8" UL="F"
                                     VE="Fixed" W1="105"/>
                                    <GRAPHIC B1="Default,1,(0,0,0)"
                                     BCF="None" BG="255,255,255"
@@ -481,10 +482,10 @@
                                     Last_Location="183,0" MWL="0"
                                     N1="t_VENTAS_ACT" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Firts page"
-                                    PP="false" PX="185" PY="0"
+                                    PP="false" PX="185" PY="8"
                                     VE="Fixed" W1="117"/>
                                    <GRAPHIC B1="Default,1,(0,0,0)"
                                     BCF="None" BG="255,255,255"
@@ -498,10 +499,10 @@
                                     Last_Location="125,0" MWL="0"
                                     N1="t_MONEDA" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="false" POO="Default"
-                                    PP="false" PX="127" PY="0"
+                                    PND="true" POO="Default"
+                                    PP="false" PX="127" PY="8"
                                     VE="Fixed" W1="58"/>
                                    <GRAPHIC B1="Default,1,(0,0,0)"
                                     BCF="None" BG="255,255,255"
@@ -512,13 +513,13 @@
                                     HA="Alg_Center" HE="Fixed"
                                     IF="false" JN="null" KAO="false"
                                     LB="%" LN="8" LW="-1"
-                                    Last_Location="417,0" MWL="0"
+                                    Last_Location="419,0" MWL="0"
                                     N1="PORCENTAJE" NPG="false"
                                     PBA="false" PBB="false"
-                                    PHN="NotModifyJPanel"
+                                    PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="true" POO="Default"
-                                    PP="false" PX="419" PY="0"
+                                    PP="false" PX="419" PY="8"
                                     VE="Fixed" W1="89"/>
                               </FRAME>
                          </REPEATING_FRAME>
@@ -650,14 +651,55 @@
                </MARGIN>
           </TRAILER>
      </LAYOUT_MODEL>
-     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="400"
-          NAMES="Titulo,parameterperiodo,Parameterperiodo" PX="0" PY="0" W1="600">
-          <PARAMETER_FIELDS/>
-          <GRAPHICAL_BOILERPLATE/>
-          <TEXT_BOILERPLATE/>
+     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="263"
+          NAMES="RECTANGLE0,RECTANGLE1,PARAMETER_FIELD0,TEXT_GRAPHIC0"
+          PND="true" PX="0" PY="0" W1="432">
+          <PARAMETER_FIELDS>
+               <PARAMETER_FIELD B1="null" BG="255,255,255"
+                    CPT="DTextField" CSS="null" DT="java.lang.String"
+                    E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
+                    H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"
+                    MAZ="20" N1="PF_periodo" NHL="null" PND="false"
+                    PX="174" PY="146" R3="true" S1="periodo"
+                    TT="(YYYY/MM)" V2="true" VOL="false" W1="120"/>
+               <PARAMETER_FIELD B1="null" BG="255,255,255"
+                    CPT="DTextField" CSS="null" DT="java.lang.String"
+                    E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
+                    H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"
+                    MAZ="20" N1="PARAMETER_FIELD0" NHL="null"
+                    PND="false" PX="174" PY="110" R3="true" S1="empresa"
+                    TT="null" V2="true" VOL="false" W1="120"/>
+          </PARAMETER_FIELDS>
+          <GRAPHICAL_BOILERPLATE>
+               <GRAPHIC BC="0,0,0" BV="Normal" CSS="null"
+                    FC="135,155,211" GT="RECTANGLE" H1="55" IF="false"
+                    JN="null" LW="1" N1="RECTANGLE0" PX="69" PY="40" W1="270"/>
+               <GRAPHIC BC="0,0,0" BV="Normal" CSS="null"
+                    FC="135,155,211" GT="RECTANGLE" H1="94" IF="false"
+                    JN="null" LW="1" N1="RECTANGLE1" PND="true" PX="70"
+                    PY="102" W1="270"/>
+          </GRAPHICAL_BOILERPLATE>
+          <TEXT_BOILERPLATE>
+               <GRAPHIC BG="255,255,255" CSS="null"
+                    F2="Courier New,1,14" FG="0,0,0" GT="TEXT_GRAPHIC"
+                    H1="20" IF="false" JN="null"
+                    LB="Parámetros del reporte" N1="G_title" PX="100"
+                    PY="50" W1="164"/>
+               <GRAPHIC BG="255,255,255" CSS="null"
+                    F2="Courier New,0,12" FG="0,0,0" GT="TEXT_GRAPHIC"
+                    H1="20" IF="false" JN="null" LB="Periodo"
+                    N1="G_periodo" PND="true" PX="108" PY="148" W1="59"/>
+               <GRAPHIC BG="255,255,255" CSS="null"
+                    F2="Courier New,0,12" FG="0,0,0" GT="TEXT_GRAPHIC"
+                    H1="20" IF="false" JN="null" LB="Empresa"
+                    N1="TEXT_GRAPHIC0" PND="true" PX="110" PY="114" W1="59"/>
+          </TEXT_BOILERPLATE>
           <IMAGE_BOILERPLATE/>
           <SQLSTATEMENTS/>
           <P_HELP_LIST/>
+          <WIZARD_PARAMETER>
+               <USER_PARAMETER LB="periodo" N1="periodo"/>
+          </WIZARD_PARAMETER>
      </PARAMETER_FORM>
      <REPORT_EVENTS>
           <BEFORE_PARAMETER_FORM/>

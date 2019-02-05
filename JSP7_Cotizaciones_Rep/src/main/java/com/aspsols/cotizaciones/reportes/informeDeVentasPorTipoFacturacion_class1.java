@@ -89,15 +89,18 @@ public class informeDeVentasPorTipoFacturacion_class1 extends JReportRuntime {
 	protected QueryLogic queryLogic = new QueryLogic();
 	protected Group tempGroup = new Group("GrupoTemporal");
 	
-	protected Query queryQUERY0 = new Query("QUERY0","MASTER","WHERE PER_CT = #periodo",null,null," SELECT  TOTAL   ,MON   ,PER_CT   , 'Total pedido'   TEXT   FROM SUM_PEDIDO_A_UN_MES  WHERE PER_CT = #periodo UNION SELECT  TOTAL   ,MON   ,PER_CT   , 'Total facturado'   TEXT   FROM SUM_FACTURA_A_UN_MES  WHERE PER_CT = #periodo",null);
+	protected Query queryQUERY0 = new Query("QUERY0","MASTER","WHERE PER_CT = #periodo AND C_EMP = #empresa",null,null," SELECT  TOTAL   ,MON   ,PER_CT   , 'Total pedido'   TEXT   FROM SUM_PEDIDO_A_UN_MES  WHERE PER_CT = #periodo AND C_EMP = #empresa UNION SELECT  TOTAL   ,MON   ,PER_CT   , 'Total facturado'   TEXT   FROM SUM_FACTURA_A_UN_MES  WHERE PER_CT = #periodo AND C_EMP = #empresa",null);
 	protected Group groupGROUP_MON = new Group("GROUP_MON",queryQUERY0,"NONE",null,0);
 	protected Group groupGROUP0 = new Group("GROUP0",queryQUERY0,"NONE",null,0);
 	protected GroupField groupFieldGROUP_MONMON = new GroupField("MON",1,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP_MON,this);
 	protected GroupField groupFieldGROUP0TOTAL = new GroupField("TOTAL",0,"java.lang.Integer",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldGROUP0PER_CT = new GroupField("PER_CT",2,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldGROUP0TEXT = new GroupField("TEXT",3,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
-	protected GraphicsObjectServer graphicServergraphicTitulo = new GraphicsObjectServer("Titulo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,100,40,false,false,-1,0,null,0,0,new Font("Arial",1,14),false,"Report parameters");
-	protected GraphicsObjectServer graphicServergraphicParameterperiodo = new GraphicsObjectServer("parameterperiodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,80,80,false,false,-1,0,null,0,0,new Font("Arial",0,10),false,"periodo");
+	protected GraphicsObjectServer graphicServergraphicRECTANGLE0 = new GraphicsObjectServer("RECTANGLE0",new Color(135,155,211),new Color(0,0,0),"RECTANGLE",55,270,67,40,false,false,1,0,"Normal",0,0,null,false,null);
+	protected GraphicsObjectServer graphicServergraphicRECTANGLE1 = new GraphicsObjectServer("RECTANGLE1",new Color(135,155,211),new Color(0,0,0),"RECTANGLE",84,270,67,97,false,false,1,0,"Normal",0,0,null,false,null);
+	protected GraphicsObjectServer graphicServergraphicG_title = new GraphicsObjectServer("G_title",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,164,100,50,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Parámetros del reporte");
+	protected GraphicsObjectServer graphicServergraphicG_periodo = new GraphicsObjectServer("G_periodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",14,49,101,148,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"Periodo");
+	protected GraphicsObjectServer graphicServergraphicTEXT_GRAPHIC0 = new GraphicsObjectServer("TEXT_GRAPHIC0",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",14,49,96,115,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"Empresa");
 	protected ReportRegion reportRegionHeaderBody = new ReportRegion("BODY");
 	protected ReportRegion reportRegionHeaderMargin = new ReportRegion("MARGIN");
 	protected ReportRegion reportRegionMainBody = new ReportRegion("BODY");

@@ -86,12 +86,15 @@ import com.aspsolutions.jframework.srw.SRWRunReportFailure;
 
 public class informeDeVentasPorTipoFacturacion extends informeDeVentasPorTipoFacturacion_class3 {
 
-	protected ParameterForm parameterForm = new ParameterForm(0,0,600,400,new Color(191,191,191),"informeDeVentasPorTipoFacturacion");
+	protected ParameterForm parameterForm = new ParameterForm(0,0,432,252,new Color(191,191,191),"informeDeVentasPorTipoFacturacion");
 	protected PresentationRules presentationRules = new PresentationRules();
-	protected ReportFieldPresentation fieldPresentationMainBodyTotal = new ReportFieldPresentation("TOTAL",86,21,10,42,reportRegionMainBody,4,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","TOTAL","java.lang.Integer",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),"###,###,###,###,###.###","DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyPer_ct = new ReportFieldPresentation("PER_CT",180,21,10,42,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","PER_CT","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyMon = new ReportFieldPresentation("MON",133,21,10,42,reportRegionMainBody,9,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","MON","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyTipo = new ReportFieldPresentation("Tipo",0,21,10,85,reportRegionMainBody,10,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","TEXT","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyTotal = new ReportFieldPresentation("TOTAL",168,23,10,48,reportRegionMainBody,4,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","TOTAL","java.lang.Integer",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),"###,###,###,###,###.###","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyPer_ct = new ReportFieldPresentation("PER_CT",260,23,10,42,reportRegionMainBody,3,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","PER_CT","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyMon = new ReportFieldPresentation("MON",218,23,10,42,reportRegionMainBody,9,repetitiveFrameMainBodyRepeating_frame0,"FIXED","EXPAND","MON","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyTipo = new ReportFieldPresentation("Tipo",83,23,10,85,reportRegionMainBody,10,repetitiveFrameMainBodyRepeating_frame0,"FIXED","FIXED","TEXT","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field0 = new ReportFieldPresentation("LAYOUT_FIELD0",522,43,10,50,reportRegionMainMargin,2,null,"FIXED","FIXED","CURRENT_DATE","java.sql.Date",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",1,8),"dd/MM/yyyy","DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field1 = new ReportFieldPresentation("LAYOUT_FIELD1",524,54,9,16,reportRegionMainMargin,6,null,"FIXED","FIXED","PAGE_NUMBER","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainMarginLayout_field2 = new ReportFieldPresentation("LAYOUT_FIELD2",554,54,9,18,reportRegionMainMargin,7,null,"FIXED","FIXED","TOTAL_PAGES","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	
 	public informeDeVentasPorTipoFacturacion() throws Exception {
 		super();
@@ -144,7 +147,13 @@ public class informeDeVentasPorTipoFacturacion extends informeDeVentasPorTipoFac
 			this.presentationRules.getSections().add(this.reportSectionHeader);
 			this.presentationRules.getSections().add(this.reportSectionMain);
 			this.presentationRules.getSections().add(this.reportSectionTrailer);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE0);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE1);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_title);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicTEXT_GRAPHIC0);
 
+			this.parameterForm.addToVectorGroupField(this.parameterEmpresa);
 			this.parameterForm.addToVectorGroupField(this.parameterPeriodo);
 			this.getJreport().addToVectorGroupField(this.parameterBACKGROUND);
 			this.getJreport().addToVectorGroupField(this.parameterCOPIES);
@@ -159,14 +168,21 @@ public class informeDeVentasPorTipoFacturacion extends informeDeVentasPorTipoFac
 			this.getJreport().addToVectorGroupField(this.parameterTHOUSANDS);
 			this.getJreport().addToVectorGroupField(this.parameterMAXRECORDS);
 
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicTitulo);
-			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicParameterperiodo);
 
 			this.fieldPresentationMainBodyTotal.setGroupFieldReference(this.groupFieldGROUP0TOTAL);
 			this.fieldPresentationMainBodyPer_ct.setGroupFieldReference(this.groupFieldGROUP0PER_CT);
 			this.fieldPresentationMainBodyMon.setGroupFieldReference(this.groupFieldGROUP_MONMON);
 			this.fieldPresentationMainBodyTipo.setGroupFieldReference(this.groupFieldGROUP0TEXT);
+			
+			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field1 = new PageNumbering(true,true,true,1,1,null);
+			this.fieldPresentationMainMarginLayout_field1.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field1);
+
+			
+			PageNumbering pageNumberingfieldPresentationMainMarginLayout_field2 = new PageNumbering(true,true,true,1,1,null);
+			this.fieldPresentationMainMarginLayout_field2.setPageNumbering(pageNumberingfieldPresentationMainMarginLayout_field2);
+
+			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);
+			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterempresa);
 
 			this.addLayoutTextVariables();
 			this.addColumnInformation();
@@ -177,6 +193,7 @@ public class informeDeVentasPorTipoFacturacion extends informeDeVentasPorTipoFac
 			this.setExecutedInit(true);
 
 			this.parameterPeriodo.setQueryParameter(true);
+			this.parameterEmpresa.setQueryParameter(true);
 		} catch(Exception error) {
 			throw new Exception(error);
 		}
@@ -196,6 +213,8 @@ public class informeDeVentasPorTipoFacturacion extends informeDeVentasPorTipoFac
 
 
 	private void addLayoutTextVariables() {
+		LayoutTextVariables ltvreportTextMainMarginText_graphic0_0 = new LayoutTextVariables("periodo", "&periodo");
+		this.reportTextMainMarginText_graphic0.addToVectorVariables(ltvreportTextMainMarginText_graphic0_0);
 	}
 			
 	/**

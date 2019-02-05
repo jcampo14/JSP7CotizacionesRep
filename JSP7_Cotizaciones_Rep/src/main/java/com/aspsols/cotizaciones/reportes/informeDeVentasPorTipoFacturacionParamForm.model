@@ -10,7 +10,8 @@
     </Entity>
     <Entity name="DATA" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorTipoFacturacionParamForm" updateAllowed="true" insertAllowed="true" deleteAllowed="true" databaseEntity="false" dataSource="null" alias="null" maxPageSize="50" whereClause="null" orderBy="null" nonUpdatableEntity="false" queryDataSource="null" navigationStyle="SameRecord" singleRecord="false">
       <fields>
-        <Field name="parameterperiodo" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorTipoFacturacionParamForm.Parameterperiodo" dataType="java.lang.String" initialValue="null" maxSize="20" />
+        <Field name="PF_periodo" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorTipoFacturacionParamForm.PF_periodo" dataType="java.lang.String" initialValue="null" maxSize="20" required="false" />
+        <Field name="PARAMETER_FIELD0" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorTipoFacturacionParamForm.PARAMETER_FIELD0" dataType="java.lang.String" initialValue="null" maxSize="20" required="false" />
         <Field name="DESFORMAT" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorTipoFacturacionParamForm.DESFORMAT" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" initialValue="PDF" />
       </fields>
     </Entity>

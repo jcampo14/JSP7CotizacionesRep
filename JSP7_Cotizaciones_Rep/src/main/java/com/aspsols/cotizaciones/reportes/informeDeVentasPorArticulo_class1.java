@@ -98,9 +98,11 @@ public class informeDeVentasPorArticulo_class1 extends JReportRuntime {
 	protected GroupField groupFieldGROUP0VENTAS = new GroupField("VENTAS",4,"java.lang.Double",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldGROUP0Color_reg = new GroupField("color_reg",0,"java.lang.Double",null,null,"ASC","COUNT",groupGROUP0,"REPORT","REPORT",null,"SUMMARY",null,false,0,groupGROUP0,this);
 	protected GroupField groupFieldGROUP_MONMON = new GroupField("MON",3,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"DATABASE",null,false,0,groupGROUP_MON,this);
-	protected GraphicsObjectServer graphicServergraphicTitulo = new GraphicsObjectServer("Titulo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,100,40,false,false,-1,0,null,0,0,new Font("Arial",1,14),false,"Report parameters");
-	protected GraphicsObjectServer graphicServergraphicParameterperiodo_fin = new GraphicsObjectServer("parameterperiodo_fin",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,80,80,false,false,-1,0,null,0,0,new Font("Arial",0,10),false,"periodo_fin");
-	protected GraphicsObjectServer graphicServergraphicParameterperiodo_ini = new GraphicsObjectServer("parameterperiodo_ini",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,80,110,false,false,-1,0,null,0,0,new Font("Arial",0,10),false,"periodo_ini");
+	protected GraphicsObjectServer graphicServergraphicRECTANGLE0 = new GraphicsObjectServer("RECTANGLE0",new Color(204,204,255),new Color(0,0,0),"RECTANGLE",68,288,67,30,false,true,1,0,"Normal",0,0,null,false,null);
+	protected GraphicsObjectServer graphicServergraphicRECTANGLE1 = new GraphicsObjectServer("RECTANGLE1",new Color(204,204,255),new Color(0,0,0),"RECTANGLE",130,288,67,112,false,true,1,0,"Normal",0,0,null,false,null);
+	protected GraphicsObjectServer graphicServergraphicG_title = new GraphicsObjectServer("G_title",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",17,176,102,51,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Parámetros del reporte");
+	protected GraphicsObjectServer graphicServergraphicG_periodo_fin = new GraphicsObjectServer("G_periodo_fin",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",14,77,89,159,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"Periodo final");
+	protected GraphicsObjectServer graphicServergraphicG_periodo_ini = new GraphicsObjectServer("G_periodo_ini",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",14,77,89,129,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"Periodo inicial");
 	protected ReportRegion reportRegionHeaderBody = new ReportRegion("BODY");
 	protected ReportRegion reportRegionHeaderMargin = new ReportRegion("MARGIN");
 	protected ReportRegion reportRegionMainBody = new ReportRegion("BODY");

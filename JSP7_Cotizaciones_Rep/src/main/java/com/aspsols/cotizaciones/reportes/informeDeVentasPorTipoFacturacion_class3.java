@@ -85,10 +85,16 @@ import com.aspsolutions.jframework.standar.ASPAccessFile;
 import com.aspsolutions.jframework.srw.SRWRunReportFailure;
 
 public class informeDeVentasPorTipoFacturacion_class3 extends informeDeVentasPorTipoFacturacion_class2 {
-	protected ReportText reportTextMainBodyT_total = new ReportText("t_TOTAL",86,10,reportRegionMainBody,6,reportFrameMainBodyFrame1,"Valor",10,42,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",0,8),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
-	protected ReportText reportTextMainBodyT_mon = new ReportText("t_MON",133,10,reportRegionMainBody,7,reportFrameMainBodyFrame1,"Moneda",10,42,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",0,8),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
-	protected ReportText reportTextMainBodyT_per_ct = new ReportText("t_PER_CT",180,10,reportRegionMainBody,8,reportFrameMainBodyFrame1,"Periodo",10,42,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",0,8),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
-	protected ReportText reportTextMainMarginTitle = new ReportText("TITLE",183,18,reportRegionMainMargin,0,null,"Informe de ventas por tipo de facturación",12,246,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",0,10),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainBodyT_total = new ReportText("t_TOTAL",168,13,reportRegionMainBody,6,reportFrameMainBodyFrame1,"Valor",10,48,new Color(255,255,255),new Color(255,255,255),null,new Font("Arial",1,8),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainBodyT_mon = new ReportText("t_MON",218,13,reportRegionMainBody,7,reportFrameMainBodyFrame1,"Moneda",10,42,new Color(255,255,255),new Color(255,255,255),null,new Font("Arial",1,8),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainBodyT_per_ct = new ReportText("t_PER_CT",260,13,reportRegionMainBody,8,reportFrameMainBodyFrame1,"Periodo",10,42,new Color(255,255,255),new Color(255,255,255),null,new Font("Arial",1,8),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainMarginTitle = new ReportText("TITLE",189,6,reportRegionMainMargin,0,null,"SOLAGRO SOLUCIONES AGROINDRUSTRIALES S.A.S.",14,382,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",1,11),"DEFAULT",false,false,false,false,4,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainMarginText_graphic0 = new ReportText("TEXT_GRAPHIC0",223,20,reportRegionMainMargin,1,null,"Informe de ventas por tipo de facturación del año &periodo",21,349,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",1,9),"DEFAULT",false,false,false,false,4,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainMarginText_graphic1 = new ReportText("TEXT_GRAPHIC1",490,43,reportRegionMainMargin,3,null,"Fecha:",10,32,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",1,8),"DEFAULT",false,false,false,false,4,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainMarginText_graphic2 = new ReportText("TEXT_GRAPHIC2",481,54,reportRegionMainMargin,4,null,"Página",9,41,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",1,8),"DEFAULT",false,false,false,false,4,"FIXED","FIXED",null,0,-1);
+	protected ReportText reportTextMainMarginText_graphic3 = new ReportText("TEXT_GRAPHIC3",543,54,reportRegionMainMargin,5,null,"de",9,10,new Color(0,0,0),new Color(255,255,255),null,new Font("Arial",1,8),"DEFAULT",false,false,false,false,2,"FIXED","FIXED",null,0,-1);
+	protected ReportImage reportRectangleMainMarginImage0 = new ReportImage("IMAGE0",34,7,reportRegionMainMargin,8,null,1,new Color(0,0,0),new Color(135,155,211),55,152,"Normal","logo.png","DEFAULT",false,false,false,null,0);  
+	protected ReportLine reportLineMainMarginLine0 = new ReportLine("LINE0",30,64,reportRegionMainMargin,9,null,573,65,new Color(0,0,0),null,1,"DEFAULT",false,false,false,null);
 
 	public informeDeVentasPorTipoFacturacion_class3() throws Exception {
 		super();

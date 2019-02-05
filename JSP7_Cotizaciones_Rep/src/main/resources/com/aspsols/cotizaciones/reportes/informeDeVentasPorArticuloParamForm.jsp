@@ -18,10 +18,10 @@
 <body>
 <f:view>
 <jforms:gwtscript route="../../../../../gwt24/gwt24.nocache.js" />
-	<jforms:desktop width="600" height="400">
-		<jforms:desktopContainer height="400">
-			<jforms:frame bindsTo="frame" width="600" height="400" left="0" cssStyle="frame" backgroundColor="bfbfbf" heightUnit="px" widthUnit="px">
-				<jforms:toolbarPanel bindsTo="toolbar" backgroundColor="bfbfbf" toolbarPosition="Horizontal" width="600" height="60" cssStyle="toolbar-panel">
+	<jforms:desktop width="440" height="335">
+		<jforms:desktopContainer height="335">
+			<jforms:frame bindsTo="frame" width="440" height="335" left="0" cssStyle="frame" backgroundColor="bfbfbf" heightUnit="px" widthUnit="px">
+				<jforms:toolbarPanel bindsTo="toolbar" backgroundColor="bfbfbf" toolbarPosition="Horizontal" width="440" height="60" cssStyle="toolbar-panel">
 											                <jforms:button bindsTo="TOOLBAR.run" height="33" width="35" top="5" left="6" cssStyle="toolbar-button toolbar-run" tooltip="run" horizontalAlignment="Alg_Left" nOfRecDisplayed="1" recordDistance="0" keyboardNavigable="true" mouseNavigable="false" visible="true" enabled="true" htmlTooltip="null">
 					</jforms:button>
 	                <jforms:button bindsTo="TOOLBAR.exit" height="33" width="35" top="5" left="42" cssStyle="toolbar-button toolbar-exit" tooltip="exit" horizontalAlignment="Alg_Left" nOfRecDisplayed="1" recordDistance="0" keyboardNavigable="true" mouseNavigable="false" visible="true" enabled="true" htmlTooltip="null">
@@ -40,18 +40,18 @@
 						</jforms:comboBoxValues>
 					</jforms:comboBox>
 				</jforms:toolbarPanel>
-				<jforms:mainPanel bindsTo="panel0" width="600" height="400"  cssStyle="main-panel" backgroundColor="bfbfbf" overflow="Hidden">
+				<jforms:mainPanel bindsTo="panel0" width="440" height="335"  cssStyle="main-panel" backgroundColor="bfbfbf" overflow="Hidden">
 					<jforms:scrollbar bindsTo="DATA0" height="100" width="20" left="0" top="0" scrollbarOrientation="Vertical" nOfRecDisplayed="1" scrollbarActive="false" currentRecordAttribute="null" visualAttribute="null" currentFieldAttribute="null" recordDistance="0"/>
 				</jforms:mainPanel>
-				<jforms:stackedPanel bindsTo="panel1" width="600" height="410" left="0" top="0" cssStyle="main-panel" backgroundColor="bfbfbf" viewPortWidth="600" viewPortHeight="400" showScrollbar="false" overflow="Hidden" visible="true" positionType="absolute">
-						                <jforms:textGraphic bindsTo="panel1.Titulo" height="20" width="120" left="100" cssStyle="" top="40" fill="false" fillColor="FFFFFF" font="Arial,1,14" fontColor="000000" text="Report parameters"/>
-	                <jforms:textGraphic bindsTo="panel1.parameterperiodo_fin" height="20" width="120" left="80" cssStyle="" top="80" fill="false" fillColor="FFFFFF" font="Arial,0,12" fontColor="000000" text="periodo_fin"/>
-	                <jforms:textGraphic bindsTo="panel1.parameterperiodo_ini" height="20" width="120" left="80" cssStyle="" top="110" fill="false" fillColor="FFFFFF" font="Arial,0,12" fontColor="000000" text="periodo_ini"/>
-						                <jforms:textField bindsTo="DATA.parameterperiodo_fin" height="20" width="120" top="80" left="164" backgroundColor="FFFFFF" foregroundColor="000000" maxSize="20" placeHolder="null" echoChar="null" helpList="" tooltip="null" prompt="null" promptDistance="2,4" promptPosition="left" promptDisplayStyle="AllRecords" promptBackground="000000" promptForeground="000000" promptOpaque="false" nOfRecDisplayed="1" recordDistance="0" formatMask="" promptCssStyle="null" caseRestriction="Normal" horizontalAlignment="Alg_Left" keyboardNavigable="true" mouseNavigable="true" cssStyle="" cursorStyle="Normal" visible="true" editable="true" enabled="true" validateFromList="false" htmlTooltip="null">
+				<jforms:stackedPanel bindsTo="panel1" width="440" height="345" left="0" top="0" cssStyle="main-panel" backgroundColor="bfbfbf" viewPortWidth="440" viewPortHeight="335" showScrollbar="false" overflow="Hidden" visible="true" positionType="absolute">
+						                <jforms:textGraphic bindsTo="panel1.G_title" height="17" width="176" left="102" cssStyle="" top="51" fill="false" fillColor="ffffff" font="Courier New,1,14" fontColor="000000" text="Parámetros del reporte"/>
+	                <jforms:textGraphic bindsTo="panel1.G_periodo_fin" height="14" width="77" left="89" cssStyle="" top="159" fill="false" fillColor="ffffff" font="Courier New,0,12" fontColor="000000" text="Periodo final"/>
+	                <jforms:textGraphic bindsTo="panel1.G_periodo_ini" height="14" width="77" left="89" cssStyle="" top="129" fill="false" fillColor="ffffff" font="Courier New,0,12" fontColor="000000" text="Periodo inicial"/>
+						                <jforms:textField bindsTo="DATA.PF_periodo_fin" height="20" width="120" top="157" left="201" backgroundColor="ffffff" foregroundColor="000000" maxSize="20" placeHolder="(YYYY/MM)" echoChar="null" helpList="" tooltip="(YYYY/MM)" prompt="null" promptDistance="2,4" promptPosition="left" promptDisplayStyle="AllRecords" promptBackground="000000" promptForeground="000000" promptOpaque="false" nOfRecDisplayed="1" recordDistance="0" formatMask="null" promptCssStyle="null" caseRestriction="Normal" horizontalAlignment="Alg_Left" keyboardNavigable="true" mouseNavigable="true" cssStyle="" cursorStyle="Normal" visible="true" editable="true" enabled="true" validateFromList="false" htmlTooltip="null">
 						<jforms:font family="Arial" style="0" size="12"/>
 						<jforms:promptFont family="Arial" style="0" size="12"/>
 					</jforms:textField>
-	                <jforms:textField bindsTo="DATA.parameterperiodo_ini" height="20" width="120" top="110" left="164" backgroundColor="FFFFFF" foregroundColor="000000" maxSize="20" placeHolder="null" echoChar="null" helpList="" tooltip="null" prompt="null" promptDistance="2,4" promptPosition="left" promptDisplayStyle="AllRecords" promptBackground="000000" promptForeground="000000" promptOpaque="false" nOfRecDisplayed="1" recordDistance="0" formatMask="" promptCssStyle="null" caseRestriction="Normal" horizontalAlignment="Alg_Left" keyboardNavigable="true" mouseNavigable="true" cssStyle="" cursorStyle="Normal" visible="true" editable="true" enabled="true" validateFromList="false" htmlTooltip="null">
+	                <jforms:textField bindsTo="DATA.PF_periodo_ini" height="20" width="120" top="127" left="201" backgroundColor="ffffff" foregroundColor="000000" maxSize="20" placeHolder="(YYYY/MM)" echoChar="null" helpList="" tooltip="(YYYY/MM)" prompt="null" promptDistance="2,4" promptPosition="left" promptDisplayStyle="AllRecords" promptBackground="000000" promptForeground="000000" promptOpaque="false" nOfRecDisplayed="1" recordDistance="0" formatMask="null" promptCssStyle="null" caseRestriction="Normal" horizontalAlignment="Alg_Left" keyboardNavigable="true" mouseNavigable="true" cssStyle="" cursorStyle="Normal" visible="true" editable="true" enabled="true" validateFromList="false" htmlTooltip="null">
 						<jforms:font family="Arial" style="0" size="12"/>
 						<jforms:promptFont family="Arial" style="0" size="12"/>
 					</jforms:textField>
@@ -59,7 +59,7 @@
             </jforms:frame>
         </jforms:desktopContainer>
     </jforms:desktop>
-<jforms:statusBar top="380" width="600" showStatusBar="true"/>
+<jforms:statusBar top="315" width="440" showStatusBar="true"/>
 </f:view>
 </body>
 </html>

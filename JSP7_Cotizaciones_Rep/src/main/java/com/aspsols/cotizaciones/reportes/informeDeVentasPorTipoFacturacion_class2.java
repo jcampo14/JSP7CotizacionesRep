@@ -85,13 +85,17 @@ import com.aspsolutions.jframework.standar.ASPAccessFile;
 import com.aspsolutions.jframework.srw.SRWRunReportFailure;
 
 public class informeDeVentasPorTipoFacturacion_class2 extends informeDeVentasPorTipoFacturacion_class1 {
-	protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame("FRAME0",0,0,47,225,reportRegionMainBody,0,null,"FIXED","VARIABLE",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
-	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame1 = new ReportRepetitiveFrame("REPEATING_FRAME1",0,10,31,223,reportRegionMainBody,1,reportFrameMainBodyFrame0,"EXPAND","EXPAND","GROUP_MON","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
-	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame("REPEATING_FRAME0",0,21,11,222,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame1,"EXPAND","EXPAND","GROUP0","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
-	protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame("FRAME1",86,10,10,136,reportRegionMainBody,5,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(255,255,255),null,"ALLPAGES",false,false,false,null,0,-1,false);
-	protected DataFieldDefinition dataFieldDefinitionParameterperiodo = new DataFieldDefinition("parameterperiodo",143,80,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,20,null,null,false,"periodo");
-	protected GraphicsObjectServer graphicServergraphicTitulo = new GraphicsObjectServer("Titulo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,100,40,false,false,-1,0,null,0,0,new Font("Arial",1,14),false,"Report parameters");
-	protected GraphicsObjectServer graphicServergraphicParameterperiodo = new GraphicsObjectServer("parameterperiodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,120,80,80,false,false,-1,0,null,0,0,new Font("Arial",0,10),false,"periodo");
+	protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame("FRAME0",15,3,47,523,reportRegionMainBody,0,null,"FIXED","VARIABLE",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
+	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame1 = new ReportRepetitiveFrame("REPEATING_FRAME1",18,13,31,512,reportRegionMainBody,1,reportFrameMainBodyFrame0,"EXPAND","EXPAND","GROUP_MON","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
+	protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame("REPEATING_FRAME0",83,23,11,388,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame1,"EXPAND","EXPAND","GROUP0","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
+	protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame("FRAME1",83,13,10,388,reportRegionMainBody,5,repetitiveFrameMainBodyRepeating_frame1,"FIXED","FIXED",new Color(0,51,153),"Default,1,(0,0,0)","ALLPAGES",false,false,false,null,0,-1,false);
+	protected DataFieldDefinition dataFieldDefinitionParameterperiodo = new DataFieldDefinition("PF_periodo",175,144,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,20,null,null,false,"periodo");
+	protected DataFieldDefinition dataFieldDefinitionParameterempresa = new DataFieldDefinition("PARAMETER_FIELD0",174,110,120,20,new Color(255,255,255),new Color(0,0,0),null,null,"TF","java.lang.String",true,new Font("Arial",0,10),null,null,null,false,true,null,null,false,null,"",null,2,true,20,null,null,false,"empresa");
+	protected GraphicsObjectServer graphicServergraphicRECTANGLE0 = new GraphicsObjectServer("RECTANGLE0",new Color(135,155,211),new Color(0,0,0),"RECTANGLE",55,270,67,40,false,false,1,0,"Normal",0,0,null,false,null);
+	protected GraphicsObjectServer graphicServergraphicRECTANGLE1 = new GraphicsObjectServer("RECTANGLE1",new Color(135,155,211),new Color(0,0,0),"RECTANGLE",84,270,67,97,false,false,1,0,"Normal",0,0,null,false,null);
+	protected GraphicsObjectServer graphicServergraphicG_title = new GraphicsObjectServer("G_title",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,164,100,50,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Parámetros del reporte");
+	protected GraphicsObjectServer graphicServergraphicG_periodo = new GraphicsObjectServer("G_periodo",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",14,49,101,148,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"Periodo");
+	protected GraphicsObjectServer graphicServergraphicTEXT_GRAPHIC0 = new GraphicsObjectServer("TEXT_GRAPHIC0",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",14,49,96,115,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"Empresa");
 
 	// System parameters
 	protected GroupField parameterBACKGROUND = new GroupField("BACKGROUND","java.lang.String","false",true,this.tempGroup,this);
@@ -108,6 +112,7 @@ public class informeDeVentasPorTipoFacturacion_class2 extends informeDeVentasPor
 	protected GroupField parameterMAXRECORDS = new GroupField("MAXRECORDS","java.lang.Integer","0",true,this.tempGroup,this);
 
 	// User parameters
+	protected GroupField parameterEmpresa = new GroupField("empresa","java.lang.String",null,"",this.tempGroup,this);
 	protected GroupField parameterPeriodo = new GroupField("periodo","java.lang.String",null,"",this.tempGroup,this);
 
 			
