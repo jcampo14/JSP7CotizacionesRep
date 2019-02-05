@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1549287538624" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1549287538809" MHB="10" MVB="10"
      N1="informeDeVentasPorEmpresa" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PPO="null" PT="null"
      RUTA="D:\Workspace\Solagro Cotizaciones Reportes\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorEmpresa.jrb"
@@ -43,7 +43,7 @@
           <QUERIES>
                <QUERY CB="null"
                     COLUMNS="MONEDA,EMPRESA1,ACTUAL,VENTAS_AC,PASADO,VENTAS_PA"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MONEDA);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;EMPRESA,MONEDA,ACTUAL,VENTAS_AC,PASADO,VENTAS_PA&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;EMPRESA1,MONEDA,ACTUAL,VENTAS_AC,PASADO,VENTAS_PA,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MONEDA);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);"
                     EQS="null" GB="null" GR="GROUP_MONEDA" H1="30"
                     LG="GROUP0" MRF="0" N1="QUERY0" OB="null" OBR="SQL"
                     PARAMETERS="" PND="false" PX="115" PY="26"
@@ -720,6 +720,7 @@
           PND="true" PX="0" PY="0" W1="425">
           <PARAMETER_FIELDS>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"
@@ -727,6 +728,7 @@
                     PX="172" PY="110" R3="true" S1="periodo" TT="null"
                     V2="true" VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterempresa);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"

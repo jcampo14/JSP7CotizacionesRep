@@ -151,14 +151,15 @@ public class informeDeVentasPorArticulo extends informeDeVentasPorArticulo_class
 			this.presentationRules.getSections().add(this.reportSectionHeader);
 			this.presentationRules.getSections().add(this.reportSectionMain);
 			this.presentationRules.getSections().add(this.reportSectionTrailer);
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE0);
-			this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE1);
 			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_title);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_hint);
 			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo_fin);
 			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo_ini);
+			this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_empresa);
 
 			this.parameterForm.addToVectorGroupField(this.parameterPeriodo_fin);
 			this.parameterForm.addToVectorGroupField(this.parameterPeriodo_ini);
+			this.parameterForm.addToVectorGroupField(this.parameterEmpresa);
 			this.getJreport().addToVectorGroupField(this.parameterBACKGROUND);
 			this.getJreport().addToVectorGroupField(this.parameterCOPIES);
 			this.getJreport().addToVectorGroupField(this.parameterCURRENCY);
@@ -188,6 +189,7 @@ public class informeDeVentasPorArticulo extends informeDeVentasPorArticulo_class
 
 			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo_fin);
 			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo_ini);
+			this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterempresa);
 
 			this.addLayoutTextVariables();
 			this.addColumnInformation();
@@ -197,6 +199,7 @@ public class informeDeVentasPorArticulo extends informeDeVentasPorArticulo_class
 			this.addFormulaInLayout();
 			this.setExecutedInit(true);
 
+			this.parameterEmpresa.setQueryParameter(true);
 			this.parameterPeriodo_ini.setQueryParameter(true);
 			this.parameterPeriodo_fin.setQueryParameter(true);
 		} catch(Exception error) {

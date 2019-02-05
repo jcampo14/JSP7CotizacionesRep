@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1549378808186" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1549398143717" MHB="10" MVB="10"
      N1="informeDeVentasPorArticulo" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PPO="null" PT="null"
      RUTA="D:\Workspace\Solagro Cotizaciones Reportes\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorArticulo.jrb"
      SBP="true" SPF="true" UM="Pixels" Wizard="true">
-     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo_fin,periodo_ini,QUERY0,GROUP_MON,GROUP0,NOM,COD,PER_CT,VENTAS,color_reg,MON">
+     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo_fin,periodo_ini,empresa,QUERY0,GROUP_MON,GROUP0,NOM,COD,PER_CT,VENTAS,color_reg,MON">
           <SYSTEM_PARAMETERS>
                <BACKGROUND DT="java.lang.String" IV="false"
                     JN="parameterBACKGROUND" MAZ="80" N1="BACKGROUND" VL="false"/>
@@ -35,6 +35,8 @@
           </SYSTEM_PARAMETERS>
           <USER_PARAMETERS>
                <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
+                    LB="empresa" MAZ="20" N1="empresa" VL="false"/>
+               <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
                     JN="parameterPeriodo_fin" LB="periodo_fin" MAZ="20"
                     N1="periodo_fin" VL="false"/>
                <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
@@ -43,17 +45,17 @@
           </USER_PARAMETERS>
           <QUERIES>
                <QUERY CB="null" COLUMNS="MON,NOM,COD,PER_CT,VENTAS"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;AR.NOM,FD.COD,FE.PER_CT,FE.MON,VENTAS&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;NOM,COD,PER_CT,MON,VENTAS,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
                     EQS="null"
                     GB="GROUP BY AR.NOM,FD.COD,FE.PER_CT,FE.MON"
                     GR="GROUP_MON" H1="37" LG="GROUP0" MRF="0"
                     N1="QUERY0" OB="ORDER BY FE.PER_CT" OBR="SQL"
                     PARAMETERS="" PND="false" PX="73" PY="6"
-                    Q1="select ar.nom,fd.cod,fE.PER_CT,fe.mon,sum(round(fd.can*fd.ven,2)) VENTAS&#xd;&#xa;from FAC_DET fd, fac_enc fe,articulo ar&#xd;&#xa;where fe.fac = fd.fac&#xd;&#xa;and fe.c_emp = fd.c_emp&#xd;&#xa;and fe.c_agr = fd.c_agr&#xd;&#xa;and fe.n_ide = fd.n_ide&#xd;&#xa;and fe.est = 'A'&#xd;&#xa;and ar.c_emp = fe.c_emp&#xd;&#xa;and fd.cod = ar.cod&#xd;&#xa;and substr(fE.PER_CT,1,6) between substr(:periodo_ini,1,6) and substr(:periodo_fin,1,6)&#xd;&#xa;group by ar.nom,fd.cod,fE.PER_CT,fe.mon order by fE.PER_CT"
-                    QTR=" SELECT  AR.NOM   ,FD.COD   ,FE.PER_CT   ,FE.MON   ,SUM( ROUND (FD.CAN * FD.VEN, 2 ))  VENTAS   FROM FAC_DET FD, FAC_ENC FE, ARTICULO AR  WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND AR.C_EMP = FE.C_EMP AND FD.COD = AR.COD AND SUBSTR(FE.PER_CT, 1 , 6 ) BETWEEN SUBSTR(#periodo_ini, 1 , 6 ) AND SUBSTR(#periodo_fin, 1 , 6 )  GROUP BY AR.NOM,FD.COD,FE.PER_CT,FE.MON"
+                    Q1="select ar.nom,fd.cod,fE.PER_CT,fe.mon,sum(round(fd.can*fd.ven,2)) VENTAS&#xd;&#xa;from FAC_DET fd, fac_enc fe,articulo ar&#xd;&#xa;where fe.fac = fd.fac&#xd;&#xa;and fe.c_emp = fd.c_emp&#xd;&#xa;and fe.c_agr = fd.c_agr&#xd;&#xa;and fe.n_ide = fd.n_ide&#xd;&#xa;and fe.est = 'A'&#xd;&#xa;and ar.c_emp = fe.c_emp&#xd;&#xa;and fd.cod = ar.cod&#xd;&#xa;and fe.c_emp = :empresa&#xd;&#xa;and substr(fE.PER_CT,1,6) between substr(:periodo_ini,1,6) and substr(:periodo_fin,1,6)&#xd;&#xa;group by ar.nom,fd.cod,fE.PER_CT,fe.mon order by fE.PER_CT"
+                    QTR=" SELECT  AR.NOM   ,FD.COD   ,FE.PER_CT   ,FE.MON   ,SUM( ROUND (FD.CAN * FD.VEN, 2 ))  VENTAS   FROM FAC_DET FD, FAC_ENC FE, ARTICULO AR  WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND AR.C_EMP = FE.C_EMP AND FD.COD = AR.COD AND FE.C_EMP = #empresa AND SUBSTR(FE.PER_CT, 1 , 6 ) BETWEEN SUBSTR(#periodo_ini, 1 , 6 ) AND SUBSTR(#periodo_fin, 1 , 6 )  GROUP BY AR.NOM,FD.COD,FE.PER_CT,FE.MON"
                     T1="MASTER"
                     TC="AR.NOM,FD.COD,FE.PER_CT,FE.MON,VENTAS"
-                    TCA="NOM,COD,PER_CT,MON,VENTAS," W1="80" W2="WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND AR.C_EMP = FE.C_EMP AND FD.COD = AR.COD AND SUBSTR(FE.PER_CT, 1 , 6 ) BETWEEN SUBSTR(#periodo_ini, 1 , 6 ) AND SUBSTR(#periodo_fin, 1 , 6 )"/>
+                    TCA="NOM,COD,PER_CT,MON,VENTAS," W1="80" W2="WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND AR.C_EMP = FE.C_EMP AND FD.COD = AR.COD AND FE.C_EMP = #empresa AND SUBSTR(FE.PER_CT, 1 , 6 ) BETWEEN SUBSTR(#periodo_ini, 1 , 6 ) AND SUBSTR(#periodo_fin, 1 , 6 )"/>
           </QUERIES>
           <GROUPS>
                <GROUP
@@ -80,7 +82,7 @@
                               N1="PER_CT" QF="2" RV="PER_CT" VIN="null"/>
                          <GROUP_FIELD BO="Ascending" CCT="VENTAS"
                               CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS);"
-                              CT="DATABASE" DT="java.lang.Double"
+                              CT="DATABASE" DT="java.lang.String"
                               GR="GROUP0" JN="groupFieldGROUP0VENTAS"
                               N1="VENTAS" PND="true" QF="4"
                               RV="SUM( ROUND (FD.CAN * FD.VEN, 2 ))" VIN="null"/>
@@ -667,74 +669,86 @@
           </TRAILER>
      </LAYOUT_MODEL>
      <PARAMETER_FORM BG="191,191,191" CSS="null" H1="335"
-          NAMES="PF_periodo_fin,PF_periodo_ini,RECTANGLE0,RECTANGLE1,G_title,G_periodo_fin,G_periodo_ini"
+          NAMES="PF_periodo_fin,PF_periodo_ini,PF_empresa,G_title,G_hint,G_periodo_fin,G_periodo_ini,G_empresa"
           PND="true" PX="0" PY="0" W1="440">
           <PARAMETER_FIELDS>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo_fin);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"
-                    MAZ="20" N1="PF_periodo_fin" NHL="null" PND="true"
-                    PX="201" PY="157" R3="false" S1="periodo_fin"
-                    TT="(YYYY/MM)" V2="true" VOL="false" W1="120"/>
+                    MAZ="20" N1="PF_periodo_fin" NHL="null" PND="false"
+                    PX="202" PY="110" R3="false" S1="periodo_fin"
+                    TT="null" V2="true" VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterperiodo_ini);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"
-                    MAZ="20" N1="PF_periodo_ini" NHL="null" PND="true"
-                    PX="201" PY="127" R3="false" S1="periodo_ini"
-                    TT="(YYYY/MM)" V2="true" VOL="false" W1="120"/>
+                    MAZ="20" N1="PF_periodo_ini" NHL="null" PND="false"
+                    PX="202" PY="140" R3="false" S1="periodo_ini"
+                    TT="null" V2="true" VOL="false" W1="120"/>
+               <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CPT="DTextField" CSS="null" DT="java.lang.String"
+                    E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
+                    H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
+                    MAZ="" N1="PF_empresa" NHL="null" PND="false"
+                    PX="202" PY="170" R3="false" S1="empresa" TT="null"
+                    V2="true" VOL="false" W1="120"/>
           </PARAMETER_FIELDS>
-          <GRAPHICAL_BOILERPLATE>
-               <GRAPHIC BC="0,0,0" BV="Normal" CF="null"
-                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE0);"
-                    CSS="null" FC="204,204,255" FE="null" GT="RECTANGLE"
-                    H1="68" IF="true" JN="null" LN="0" LW="1"
-                    N1="RECTANGLE0" NPG="false" PBA="false" PBB="false"
-                    PND="true" POO="Default" PX="67" PY="30" W1="288"/>
-               <GRAPHIC BC="0,0,0" BV="Normal" CF="null"
-                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicRECTANGLE1);"
-                    CSS="null" FC="204,204,255" FE="null" GT="RECTANGLE"
-                    H1="130" IF="true" JN="null" LN="0" LW="1"
-                    N1="RECTANGLE1" NPG="false" PBA="false" PBB="false"
-                    PND="true" POO="Default" PX="67" PY="112" W1="288"/>
-          </GRAPHICAL_BOILERPLATE>
+          <GRAPHICAL_BOILERPLATE/>
           <TEXT_BOILERPLATE>
                <GRAPHIC B1="null" BCF="None" BG="255,255,255"
                     BPO="Enclosing object" CF="null"
                     CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_title);"
                     CSS="null" DO="0 Grades" F2="Courier New,1,14"
-                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="17"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
                     HA="Alg_Left" HE="Fixed" IF="false" JN="null"
                     KAO="false" LB="Parámetros del reporte" LN="0"
                     LW="-1" MWL="0" N1="G_title" NPG="false" PBA="false"
                     PBB="false" PNB="true,true,true,1,1,!Report"
-                    PND="true" POO="Default" PP="false" PX="102" PY="51"
-                    VE="Fixed" W1="176"/>
+                    POO="Default" PP="false" PX="100" PY="50" VE="Fixed" W1="164"/>
+               <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                    BPO="Enclosing object" CF="null"
+                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_hint);"
+                    CSS="null" DO="0 Grades" F2="Courier New,1,14"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
+                    HA="Alg_Left" HE="Fixed" IF="false" JN="null"
+                    KAO="false"
+                    LB="Escriba los valores para el parámetro." LN="0"
+                    LW="-1" MWL="0" N1="G_hint" NPG="false" PBA="false"
+                    PBB="false" PNB="true,true,true,1,1,!Report"
+                    POO="Default" PP="false" PX="100" PY="80" VE="Fixed" W1="276"/>
                <GRAPHIC B1="null" BCF="None" BG="255,255,255"
                     BPO="Enclosing object" CF="null"
                     CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo_fin);"
                     CSS="null" DO="0 Grades" F2="Courier New,0,12"
-                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="14"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
                     HA="Alg_Left" HE="Fixed" IF="false" JN="null"
-                    KAO="false" LB="Periodo final" LN="0" LW="-1"
-                    MWL="0" N1="G_periodo_fin" NPG="false" PBA="false"
+                    KAO="false" LB="periodo_fin" LN="0" LW="-1" MWL="0"
+                    N1="G_periodo_fin" NPG="false" PBA="false"
                     PBB="false" PNB="true,true,true,1,1,!Report"
-                    PND="true" POO="Default" PP="false" PX="89" PY="159"
-                    VE="Fixed" W1="77"/>
+                    POO="Default" PP="false" PX="100" PY="110"
+                    VE="Fixed" W1="87"/>
                <GRAPHIC B1="null" BCF="None" BG="255,255,255"
                     BPO="Enclosing object" CF="null"
                     CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo_ini);"
                     CSS="null" DO="0 Grades" F2="Courier New,0,12"
-                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="14"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
                     HA="Alg_Left" HE="Fixed" IF="false" JN="null"
-                    KAO="false" LB="Periodo inicial" LN="0" LW="-1"
-                    MWL="0" N1="G_periodo_ini" NPG="false" PBA="false"
+                    KAO="false" LB="periodo_ini" LN="0" LW="-1" MWL="0"
+                    N1="G_periodo_ini" NPG="false" PBA="false"
                     PBB="false" PNB="true,true,true,1,1,!Report"
-                    PND="true" POO="Default" PP="false" PX="89" PY="129"
-                    VE="Fixed" W1="77"/>
+                    POO="Default" PP="false" PX="100" PY="140"
+                    VE="Fixed" W1="87"/>
+               <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                    BPO="Enclosing object" CF="null"
+                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_empresa);"
+                    CSS="null" DO="0 Grades" F2="Courier New,0,12"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
+                    HA="Alg_Left" HE="Fixed" IF="false" JN="null"
+                    KAO="false" LB="empresa" LN="0" LW="-1" MWL="0"
+                    N1="G_empresa" NPG="false" PBA="false" PBB="false"
+                    PNB="true,true,true,1,1,!Report" POO="Default"
+                    PP="false" PX="100" PY="170" VE="Fixed" W1="59"/>
           </TEXT_BOILERPLATE>
           <IMAGE_BOILERPLATE/>
           <SQLSTATEMENTS/>
@@ -742,6 +756,7 @@
           <WIZARD_PARAMETER>
                <USER_PARAMETER LB="periodo_fin" N1="periodo_fin"/>
                <USER_PARAMETER LB="periodo_ini" N1="periodo_ini"/>
+               <USER_PARAMETER LB="empresa" N1="empresa"/>
           </WIZARD_PARAMETER>
      </PARAMETER_FORM>
      <REPORT_EVENTS>

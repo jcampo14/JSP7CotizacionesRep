@@ -12,6 +12,7 @@
       <fields>
         <Field name="PF_periodo_fin" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorArticuloParamForm.PF_periodo_fin" dataType="java.lang.String" initialValue="null" maxSize="20" required="false" />
         <Field name="PF_periodo_ini" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorArticuloParamForm.PF_periodo_ini" dataType="java.lang.String" initialValue="null" maxSize="20" required="false" />
+        <Field name="PF_empresa" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorArticuloParamForm.PF_empresa" dataType="java.lang.String" initialValue="" maxSize="" required="false" />
         <Field name="DESFORMAT" className="com.aspsols.cotizaciones.reportes.data.DATA_informeDeVentasPorArticuloParamForm.DESFORMAT" dataType="java.lang.String" databaseField="false" isVersion="false" columnName="null" nextNavigationField="null" previousNavigationField="null" initialValue="PDF" />
       </fields>
     </Entity>
