@@ -807,7 +807,7 @@ Object object1=convertTo2(((Vector)resulSet1.get(0)).get(0),getField("logo_emp")
 		vnom=convertTo("SUBTOTAL PRECIO EN FABRICA",vnom);
 	}else {
 		if (isTrue(isEquals(getField("idioma").getFieldValue(),"INGLES") )){
-			vnom=convertTo("GROSS TOTAL EXWORK PRICE",vnom);
+			vnom=convertTo("SUB-TOTAL EXWORK PRICE",vnom);
 		}
 	}
 	return (java.lang.String)convertTo2(vnom,"java.lang.String");
