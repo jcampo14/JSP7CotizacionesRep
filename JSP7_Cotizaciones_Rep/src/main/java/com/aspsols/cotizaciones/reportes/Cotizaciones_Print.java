@@ -125,8 +125,8 @@ public class Cotizaciones_Print extends Cotizaciones_Print_class3 {
 	protected ReportFieldPresentation fieldPresentationMainBodyCan_descrip = new ReportFieldPresentation("CAN_DESCRIP",94,319,13,54,reportRegionMainBody,108,repetitiveFrameMainBodyDesc_det,"FIXED","FIXED","CAN1","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,9),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyUnd_descrip = new ReportFieldPresentation("UND_DESCRIP",50,319,13,44,reportRegionMainBody,109,repetitiveFrameMainBodyDesc_det,"FIXED","FIXED","UNIDAD1","java.lang.String",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodyCount_det = new ReportFieldPresentation("COUNT_DET",20,319,13,30,reportRegionMainBody,121,repetitiveFrameMainBodyDesc_det,"FIXED","FIXED","COUNT_DET","java.lang.Double",true,0,new Color(255,255,255),null,0,new Color(0,0,0),new Font("Arial",1,9),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyNombre_vendedor = new ReportFieldPresentation("NOMBRE_VENDEDOR",22,633,10,255,reportRegionMainBody,72,reportFrameMainBodyFirma,"FIXED","FIXED","NOMBRE_VENDEDOR","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
-	protected ReportFieldPresentation fieldPresentationMainBodyEmail_vendedor = new ReportFieldPresentation("EMAIL_VENDEDOR",22,653,10,255,reportRegionMainBody,73,reportFrameMainBodyFirma,"FIXED","FIXED","EMAIL_VENDEDOR","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyNombre_vendedor = new ReportFieldPresentation("NOMBRE_VENDEDOR",22,614,10,255,reportRegionMainBody,72,reportFrameMainBodyFirma,"FIXED","FIXED","NOMBRE_VENDEDOR","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",1,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
+	protected ReportFieldPresentation fieldPresentationMainBodyEmail_vendedor = new ReportFieldPresentation("EMAIL_VENDEDOR",22,634,10,255,reportRegionMainBody,73,reportFrameMainBodyFirma,"FIXED","FIXED","EMAIL_VENDEDOR","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,8),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodySt_cantidad = new ReportFieldPresentation("ST_CANTIDAD",483,431,9,52,reportRegionMainBody,88,repetitiveFrameMainBodySt_detalle,"FIXED","FIXED","CAN","java.math.BigDecimal",true,0,new Color(255,255,255),null,4,new Color(0,0,0),new Font("Arial",0,7),"###,###,###,###.##","DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodySt_unidad = new ReportFieldPresentation("ST_UNIDAD",433,431,9,50,reportRegionMainBody,89,repetitiveFrameMainBodySt_detalle,"FIXED","FIXED","UNIDAD","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
 	protected ReportFieldPresentation fieldPresentationMainBodySt_nombre_articulo = new ReportFieldPresentation("ST_NOMBRE_ARTICULO",83,431,9,350,reportRegionMainBody,90,repetitiveFrameMainBodySt_detalle,"FIXED","EXPAND","NOMBRE_ARTICULO","java.lang.String",true,0,new Color(255,255,255),null,2,new Color(0,0,0),new Font("Arial",0,7),null,"DEFAULT",false,false,false,false,null,0,false,-1);
@@ -420,6 +420,7 @@ public class Cotizaciones_Print extends Cotizaciones_Print_class3 {
 			this.groupGROUP_ENCABEZADO.addField(this.groupFieldGROUP_ENCABEZADOEMAIL_VENDEDOR);
 			this.queryLogic.addToFields(this.groupFieldFormula_columnsPARAMETROS);
 			this.queryLogic.addToFields(this.groupFieldPlaceholder_columnsLOGO_EMP);
+			this.queryLogic.addToFields(this.groupFieldPlaceholder_columnsIMG_PIE_COT);
 			this.queryLogic.addDataLink(this.dataLinkLINK0);
 			this.queryLogic.addDataLink(this.dataLinkLINK1);
 			this.queryLogic.addDataLink(this.dataLinkLINK2);
@@ -1191,6 +1192,14 @@ Object object2=convertTo2(((Vector)resulSet1.get(0)).get(1),getField("email_vend
 		setForegroundFillColor("white");
 	}
 	return (java.lang.Boolean)convertTo2(true,"java.lang.Boolean");
+
+
+	}
+
+
+	public java.lang.String img_pie_cot_method () {
+
+	return (java.lang.String)convertTo2("logo-cotizacion.png","java.lang.String");
 
 
 	}

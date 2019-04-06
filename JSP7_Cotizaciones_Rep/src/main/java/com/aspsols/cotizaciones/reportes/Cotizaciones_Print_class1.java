@@ -210,6 +210,7 @@ public class Cotizaciones_Print_class1 extends JReportRuntime {
 	protected GroupField groupFieldGROUP_ENCABEZADOEMAIL_VENDEDOR = new GroupField("EMAIL_VENDEDOR",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"PLACEHOLDER","Text",false,10,groupGROUP_ENCABEZADO,this);
 	protected GroupField groupFieldFormula_columnsPARAMETROS = new GroupField("PARAMETROS",0,"java.lang.String",null,null,"NONE",null,null,"REPORT","REPORT","parametros_method","FORMULA",null,false,0,tempGroup,this);
 	protected GroupField groupFieldPlaceholder_columnsLOGO_EMP = new GroupField("LOGO_EMP",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT",null,"PLACEHOLDER","Image",true,10,tempGroup,this);
+	protected GroupField groupFieldPlaceholder_columnsIMG_PIE_COT = new GroupField("IMG_PIE_COT",0,"java.lang.String",null,null,"ASC",null,null,"REPORT","REPORT","img_pie_cot_method","PLACEHOLDER","Image",true,10,tempGroup,this);
 	protected GraphicsObjectServer graphicServergraphicG_title = new GraphicsObjectServer("G_title",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,164,100,50,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Parámetros del reporte");
 	protected GraphicsObjectServer graphicServergraphicG_hint = new GraphicsObjectServer("G_hint",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,276,100,80,false,false,-1,0,null,0,0,new Font("Courier New",1,14),false,"Escriba los valores para el parámetro.");
 	protected GraphicsObjectServer graphicServergraphicG_cot = new GraphicsObjectServer("G_cot",new Color(255,255,255),new Color(0,0,0),"TEXT_GRAPHIC",20,31,100,110,false,false,-1,0,null,0,0,new Font("Courier New",0,12),false,"cot");
@@ -250,7 +251,7 @@ public class Cotizaciones_Print_class1 extends JReportRuntime {
 	protected ReportRegion reportRegionTrailerMargin = new ReportRegion("MARGIN");
 	protected ReportMargin reportMarginHeader = new ReportMargin(70,34,34,70);
 	protected ReportSection reportSectionHeader = new ReportSection("HEADER",reportMarginHeader,792,612,reportRegionHeaderBody,reportRegionHeaderMargin,"Portrait");
-	protected ReportMargin reportMarginMain = new ReportMargin(70,34,28,46);
+	protected ReportMargin reportMarginMain = new ReportMargin(70,34,28,60);
 	protected ReportSection reportSectionMain = new ReportSection("MAIN",reportMarginMain,792,612,reportRegionMainBody,reportRegionMainMargin,"Portrait");
 	protected ReportMargin reportMarginTrailer = new ReportMargin(70,34,34,70);
 	protected ReportSection reportSectionTrailer = new ReportSection("TRAILER",reportMarginTrailer,792,612,reportRegionTrailerBody,reportRegionTrailerMargin,"Portrait");
