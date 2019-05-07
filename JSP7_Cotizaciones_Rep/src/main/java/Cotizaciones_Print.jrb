@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1554907752503" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1557189810609" MHB="10" MVB="10"
      N1="Cotizaciones_Print" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PND="true" PPO="null"
      PT="null"
@@ -51,7 +51,7 @@
           <QUERIES>
                <QUERY CB="null"
                     COLUMNS="C_EMP1,PER1,C_AGR1,COT1,REV1,N_IDE,COD_SUC,EMI,VEN,BRU,DES,MER,IVA,TOT,COSTOS_ADIC,TOTD,MON,TASA,C_VEN,COD_INCOTERM,ORIGEN,DESTINO,COD_EMB,ZONA,IDIOMA,DESPACHO,TERMINO_PAGO,TIEMPO_ENTREGA,LUGAR_DESTINO,PER_CARGO,CARGO,COD,UNIDAD,CAN,VEN1,IVA1,NOM"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_ENCABEZADO);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;E.C_EMP,E.PER,E.C_AGR,E.COT,E.REV,E.N_IDE,E.COD_SUC,E.EMI,E.VEN,E.BRU,E.DES,E.MER,E.IVA,E.TOT,E.COSTOS_ADIC,E.TOTD,E.MON,E.TASA,E.C_VEN,E.COD_INCOTERM,IDIOMA,E.ORIGEN,DESTINO,E.COD_EMB,E.ZONA,D.COD,D.UNIDAD,D.CAN,D.VEN,D.IVA,E.DESPACHO,E.TERMINO_PAGO,E.TIEMPO_ENTREGA,E.LUGAR_DESTINO,C.PER_CARGO,C.CARGO,D.NOM&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;C_EMP1,PER1,C_AGR1,COT1,REV1,N_IDE,COD_SUC,EMI,VEN,BRU,DES,MER,IVA,TOT,COSTOS_ADIC,TOTD,MON,TASA,C_VEN,COD_INCOTERM,IDIOMA,ORIGEN,DESTINO,COD_EMB,ZONA,COD,UNIDAD,CAN,VEN1,IVA1,DESPACHO,TERMINO_PAGO,TIEMPO_ENTREGA,LUGAR_DESTINO,PER_CARGO,CARGO,NOM,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_ENCABEZADO);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);"
                     EQS="null" GB="null" GR="GROUP_ENCABEZADO" H1="44"
                     LG="GROUP_COD" MRF="0" N1="QUERY0"
                     OB="ORDER BY D.COD" OBR="SQL" PARAMETERS=""
@@ -64,7 +64,7 @@
                     W1="116" W2="WHERE E.COT = #cot AND E.REV = #rev AND E.C_AGR = #c_agr AND E.PER = #per AND E.C_EMP = #c_emp"/>
                <QUERY CB="null"
                     COLUMNS="C_EMP2,PER2,C_AGR2,COT2,REV2,COD_SECCION,DESCRIPCION,NOMBRE_SECCION"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY1);&#xa;&#x9;&#x9;&#x9;this.queryQUERY1.setInitialGroup(this.groupSECCIONES_PRE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY1.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY1 = ASPString.splitExpression(&quot;S.C_EMP,S.PER,S.C_AGR,S.COT,S.REV,S.COD_SECCION,S.DESCRIPCION,NOMBRE_SECCION&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY1 = ASPString.splitExpression(&quot;C_EMP2,PER2,C_AGR2,COT2,REV2,COD_SECCION,DESCRIPCION,NOMBRE_SECCION,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY1.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY1 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY1SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY1[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY1SelectColumns.setColumnName(arrayColumnsqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY1[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY1SelectColumns.setColumnAlias(arrayAliasqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY1 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY1.getColumnsName().add(arrayAliasqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY1SelectColumns.setColumnAlias(arrayColumnsqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY1){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY1.getColumnsName().add(arrayColumnsqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY1.getColumns().add(queryQUERY1SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY1);&#xa;&#x9;&#x9;&#x9;this.queryQUERY1.setInitialGroup(this.groupSECCIONES_PRE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY1.setMaximunRowsToFech(0);"
                     EQS="null" GB="null" GR="SECCIONES_PRE" H1="123"
                     LG="GROUP0" MRF="0" N1="QUERY1"
                     OB="ORDER BY C.ORDEN ASC" OBR="SQL" PARAMETERS=""
@@ -77,7 +77,7 @@
                     W1="137" W2="WHERE C.TIPO_SECCION =  'PRE'"/>
                <QUERY CB="null"
                     COLUMNS="C_EMP3,PER3,C_AGR3,COT3,REV3,COD_SECCION1,DESCRIPCION1,NOMBRE_SECCION1"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY2);&#xa;&#x9;&#x9;&#x9;this.queryQUERY2.setInitialGroup(this.groupSECCIONES_ENC);&#xa;&#x9;&#x9;&#x9;this.queryQUERY2.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY2 = ASPString.splitExpression(&quot;S.C_EMP,S.PER,S.C_AGR,S.COT,S.REV,S.COD_SECCION,S.DESCRIPCION,NOMBRE_SECCION&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY2 = ASPString.splitExpression(&quot;C_EMP3,PER3,C_AGR3,COT3,REV3,COD_SECCION1,DESCRIPCION1,NOMBRE_SECCION1,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY2.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY2 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY2SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY2[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY2SelectColumns.setColumnName(arrayColumnsqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY2[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY2SelectColumns.setColumnAlias(arrayAliasqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY2 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY2.getColumnsName().add(arrayAliasqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY2SelectColumns.setColumnAlias(arrayColumnsqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY2){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY2.getColumnsName().add(arrayColumnsqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY2.getColumns().add(queryQUERY2SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY2);&#xa;&#x9;&#x9;&#x9;this.queryQUERY2.setInitialGroup(this.groupSECCIONES_ENC);&#xa;&#x9;&#x9;&#x9;this.queryQUERY2.setMaximunRowsToFech(0);"
                     EQS="null" GB="null" GR="SECCIONES_ENC" H1="125"
                     LG="GROUP0" MRF="0" N1="QUERY2"
                     OB="ORDER BY C.ORDEN ASC" OBR="SQL" PARAMETERS=""
@@ -90,7 +90,7 @@
                     W1="127" W2="WHERE C.TIPO_SECCION =  'ENC'"/>
                <QUERY CB="null"
                     COLUMNS="C_EMP4,PER4,C_AGR4,COT4,REV4,COD_SECCION2,DESCRIPCION2,NOMBRE_SECCION2"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY3);&#xa;&#x9;&#x9;&#x9;this.queryQUERY3.setInitialGroup(this.groupSECCIONES_PIE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY3.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY3 = ASPString.splitExpression(&quot;S.C_EMP,S.PER,S.C_AGR,S.COT,S.REV,S.COD_SECCION,S.DESCRIPCION,NOMBRE_SECCION&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY3 = ASPString.splitExpression(&quot;C_EMP4,PER4,C_AGR4,COT4,REV4,COD_SECCION2,DESCRIPCION2,NOMBRE_SECCION2,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY3.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY3 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY3SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY3[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY3SelectColumns.setColumnName(arrayColumnsqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY3[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY3SelectColumns.setColumnAlias(arrayAliasqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY3 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY3.getColumnsName().add(arrayAliasqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY3SelectColumns.setColumnAlias(arrayColumnsqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY3){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY3.getColumnsName().add(arrayColumnsqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY3.getColumns().add(queryQUERY3SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY3);&#xa;&#x9;&#x9;&#x9;this.queryQUERY3.setInitialGroup(this.groupSECCIONES_PIE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY3.setMaximunRowsToFech(0);"
                     EQS="null" GB="null" GR="SECCIONES_PIE" H1="122"
                     LG="GROUP0" MRF="0" N1="QUERY3"
                     OB="ORDER BY C.ORDEN ASC" OBR="SQL" PARAMETERS=""
@@ -103,7 +103,7 @@
                     W1="157" W2="WHERE C.TIPO_SECCION =  'PIE'"/>
                <QUERY CB="null"
                     COLUMNS="COD1,C_EMP5,COT5,REV5,C_AGR5,PER5,INF7,NOM_ARTICULO,CAN1,UNIDAD1,NOM1"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY4);&#xa;&#x9;&#x9;&#x9;this.queryQUERY4.setInitialGroup(this.groupDESCRIPCIONES_DETALLE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY4.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY4 = ASPString.splitExpression(&quot;C.C_EMP,C.COT,C.REV,C.C_AGR,C.CAN,C.UNIDAD,C.PER,C.COD,C.INF7,NOM_ARTICULO,C.NOM&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY4 = ASPString.splitExpression(&quot;C_EMP5,COT5,REV5,C_AGR5,CAN1,UNIDAD1,PER5,COD1,INF7,NOM_ARTICULO,NOM1,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY4.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY4 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY4SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY4[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY4SelectColumns.setColumnName(arrayColumnsqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY4[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY4SelectColumns.setColumnAlias(arrayAliasqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY4 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY4.getColumnsName().add(arrayAliasqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY4SelectColumns.setColumnAlias(arrayColumnsqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY4){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY4.getColumnsName().add(arrayColumnsqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY4.getColumns().add(queryQUERY4SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY4);&#xa;&#x9;&#x9;&#x9;this.queryQUERY4.setInitialGroup(this.groupDESCRIPCIONES_DETALLE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY4.setMaximunRowsToFech(0);"
                     EQS="null" GB="null" GR="DESCRIPCIONES_DETALLE"
                     H1="136" LG="GROUP0" MRF="0" N1="QUERY4"
                     OB="ORDER BY C.COD" OBR="SQL" PARAMETERS=""
@@ -116,7 +116,7 @@
                     W1="149" W2="null"/>
                <QUERY CB="null"
                     COLUMNS="C_EMP6,COT6,REV6,C_AGR6,PER6,COD_COSTO,VALOR,NOMBRE_CARGO"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY5);&#xa;&#x9;&#x9;&#x9;this.queryQUERY5.setInitialGroup(this.groupCOSTOS_ADIC);&#xa;&#x9;&#x9;&#x9;this.queryQUERY5.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY5 = ASPString.splitExpression(&quot;C.C_EMP,COT,C.REV,C.C_AGR,C.PER,C.COD_COSTO,C.VALOR,NOMBRE_CARGO&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY5 = ASPString.splitExpression(&quot;C_EMP6,COT6,REV6,C_AGR6,PER6,COD_COSTO,VALOR,NOMBRE_CARGO,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY5.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY5 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY5SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY5[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY5SelectColumns.setColumnName(arrayColumnsqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY5[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY5SelectColumns.setColumnAlias(arrayAliasqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY5 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY5.getColumnsName().add(arrayAliasqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY5SelectColumns.setColumnAlias(arrayColumnsqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY5){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY5.getColumnsName().add(arrayColumnsqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY5.getColumns().add(queryQUERY5SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY5);&#xa;&#x9;&#x9;&#x9;this.queryQUERY5.setInitialGroup(this.groupCOSTOS_ADIC);&#xa;&#x9;&#x9;&#x9;this.queryQUERY5.setMaximunRowsToFech(0);"
                     EQS="null" GB="null" GR="COSTOS_ADIC" H1="114"
                     LG="GROUP0" MRF="0" N1="QUERY5" OB="null" OBR="SQL"
                     PARAMETERS="" PND="false" PX="635" PY="25"
@@ -3220,7 +3220,7 @@
                                     ELS="false" F2="Arial,1,9"
                                     FE="null" FG="0,0,0"
                                     FM="null" H1="13"
-                                    HA="Alg_Left" HE="Fixed"
+                                    HA="Alg_Center" HE="Fixed"
                                     IF="false" IV="null"
                                     KAO="false" LB="null"
                                     LN="62" LS="Normal" LW="-1"
@@ -4244,6 +4244,7 @@
           PX="0" PY="0" W1="600">
           <PARAMETER_FIELDS>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParametercot);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4251,6 +4252,7 @@
                     PY="110" R3="false" S1="cot" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterrev);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4258,6 +4260,7 @@
                     PY="140" R3="false" S1="rev" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterc_agr);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4265,6 +4268,7 @@
                     PY="170" R3="false" S1="c_agr" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterper);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4272,6 +4276,7 @@
                     PY="200" R3="false" S1="per" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterc_emp);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4279,6 +4284,7 @@
                     PY="230" R3="false" S1="c_emp" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterver_totales);"
                     CPT="DCheckBox" CSS="null" CV="S"
                     DT="java.lang.String" E1="true" F2="Arial,0,10"
                     FG="0,0,0" H1="20" IV="S" JN="null" LB="null"
