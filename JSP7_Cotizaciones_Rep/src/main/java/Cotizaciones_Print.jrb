@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1564179407601" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1579272384477" MHB="10" MVB="10"
      N1="Cotizaciones_Print" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PND="true" PPO="null"
      PT="null"
-     RUTA="D:\Workspace\Solagro Cotizaciones Reportes\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\Cotizaciones_Print.jrb"
+     RUTA="D:\Workspace\Reportes\Solagro\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\Cotizaciones_Print.jrb"
      SBP="true" SPF="true" UM="Pixels" Wizard="true">
-     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,cot,c_agr,c_emp,per,rev,ver_totales,QUERY0,QUERY1,QUERY2,QUERY3,QUERY4,QUERY5,GROUP_ENCABEZADO,C_EMP1,PER1,C_AGR1,COT1,REV1,N_IDE,COD_SUC,EMI,VEN,BRU,DES,MER,IVA,TOT,COSTOS_ADIC,TOTD,MON,TASA,C_VEN,COD_INCOTERM,ORIGEN,DESTINO,COD_EMB,GROUP_DETALLE,ORDEN,COD,UNIDAD,CAN,VEN1,IVA1,Subtotal,color_reg,NOMBRE_ARTICULO,NOM,ZONA,DATOS_CLIENTE,NOMBRE_CLIENTE,DIR_CLIENTE,TEL_CLIENTE,UBICACION_CLIENTE,EMAIL_CLIENTE,DIAS_VALIDEZ,NOMBRE_EMBALAJE,MONEDA_TEXTO,DESTINO_NOMBRE,COSTOS_ADIC,C_EMP6,COT6,REV6,C_AGR6,PER6,COD_COSTO,VALOR,NOMBRE_CARGO,COUNT_COSTOS,DESCRIPCIONES_DETALLE,ORDEN1,COD1,C_EMP5,COT5,REV5,C_AGR5,PER5,INF7,NOM_ARTICULO,DESCRIP_ARTICULO,CAN1,UNIDAD1,COUNT_DET,NOM1,SECCIONES_PIE,C_EMP4,PER4,C_AGR4,COT4,REV4,COD_SECCION2,DESCRIPCION2,NOMBRE_SECCION2,SECCIONES_ENC,C_EMP3,PER3,C_AGR3,COT3,REV3,COD_SECCION1,DESCRIPCION1,NOMBRE_SECCION1,SECCIONES_PRE,C_EMP2,PER2,C_AGR2,COT2,REV2,COD_SECCION,DESCRIPCION,NOMBRE_SECCION,IDIOMA,DESPACHO,TERMINO_PAGO,PROMPT_TOTAL_BRUTO,PROMPT_TOTAL_DESCUENTO,PROMPT_TOTAL_BASE,PROMPT_TOTAL_IVA,PROMPT_TOTAL_PARCIAL,PROMPT_TOTAL_NETO,TIEMPO_ENTREGA,LUGAR_DESTINO,PROMPT_DESTINO_NOMBRE,PER_CARGO,CARGO,FIRMA_VENDEDOR,NOMBRE_VENDEDOR,EMAIL_VENDEDOR,CARGO_VEND,PARAMETROS,LOGO_EMP,IMG_PIE_COT">
+     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,ENCRYPTION,cot,c_agr,c_emp,per,rev,ver_totales,QUERY0,QUERY1,QUERY2,QUERY3,QUERY4,QUERY5,GROUP_ENCABEZADO,C_EMP1,PER1,C_AGR1,COT1,REV1,N_IDE,COD_SUC,EMI,VEN,BRU,DES,MER,IVA,TOT,COSTOS_ADIC,TOTD,MON,TASA,C_VEN,COD_INCOTERM,ORIGEN,DESTINO,COD_EMB,GROUP_DETALLE,ORDEN,COD,UNIDAD,CAN,VEN1,IVA1,Subtotal,color_reg,NOMBRE_ARTICULO,NOM,ZONA,DATOS_CLIENTE,NOMBRE_CLIENTE,DIR_CLIENTE,TEL_CLIENTE,UBICACION_CLIENTE,EMAIL_CLIENTE,DIAS_VALIDEZ,NOMBRE_EMBALAJE,MONEDA_TEXTO,DESTINO_NOMBRE,COSTOS_ADIC,C_EMP6,COT6,REV6,C_AGR6,PER6,COD_COSTO,VALOR,NOMBRE_CARGO,COUNT_COSTOS,DESCRIPCIONES_DETALLE,ORDEN1,COD1,C_EMP5,COT5,REV5,C_AGR5,PER5,INF7,NOM_ARTICULO,DESCRIP_ARTICULO,CAN1,UNIDAD1,COUNT_DET,NOM1,SECCIONES_PIE,C_EMP4,PER4,C_AGR4,COT4,REV4,COD_SECCION2,DESCRIPCION2,NOMBRE_SECCION2,SECCIONES_ENC,C_EMP3,PER3,C_AGR3,COT3,REV3,COD_SECCION1,DESCRIPCION1,NOMBRE_SECCION1,SECCIONES_PRE,C_EMP2,PER2,C_AGR2,COT2,REV2,COD_SECCION,DESCRIPCION,NOMBRE_SECCION,IDIOMA,DESPACHO,TERMINO_PAGO,PROMPT_TOTAL_BRUTO,PROMPT_TOTAL_DESCUENTO,PROMPT_TOTAL_BASE,PROMPT_TOTAL_IVA,PROMPT_TOTAL_PARCIAL,PROMPT_TOTAL_NETO,TIEMPO_ENTREGA,LUGAR_DESTINO,PROMPT_DESTINO_NOMBRE,PER_CARGO,CARGO,FIRMA_VENDEDOR,NOMBRE_VENDEDOR,EMAIL_VENDEDOR,CARGO_VEND,PARAMETROS,LOGO_EMP,IMG_PIE_COT">
           <SYSTEM_PARAMETERS>
                <BACKGROUND DT="java.lang.String" IV="false"
                     JN="parameterBACKGROUND" MAZ="80" N1="BACKGROUND" VL="false"/>
@@ -33,6 +33,8 @@
                     JN="parameterTHOUSANDS" MAZ="1" N1="THOUSANDS" VL="false"/>
                <MAXRECORDS DT="java.lang.Integer" IV="0"
                     JN="parameterMAXRECORDS" MAZ="80" N1="MAXRECORDS" VL="false"/>
+               <ENCRYPTION DT="java.lang.String" IV=""
+                    JN="parameterENCRYPTION" MAZ="80" N1="ENCRYPTION" VL="false"/>
           </SYSTEM_PARAMETERS>
           <USER_PARAMETERS>
                <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
@@ -51,7 +53,7 @@
           <QUERIES>
                <QUERY CB="null"
                     COLUMNS="C_EMP1,PER1,C_AGR1,COT1,REV1,N_IDE,COD_SUC,EMI,VEN,BRU,DES,MER,IVA,TOT,COSTOS_ADIC,TOTD,MON,TASA,C_VEN,COD_INCOTERM,ORIGEN,DESTINO,COD_EMB,ZONA,IDIOMA,DESPACHO,TERMINO_PAGO,TIEMPO_ENTREGA,LUGAR_DESTINO,PER_CARGO,CARGO,ORDEN,COD,UNIDAD,CAN,VEN1,IVA1,NOM"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_ENCABEZADO);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_ENCABEZADO);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;E.C_EMP,E.PER,E.C_AGR,E.COT,E.REV,E.N_IDE,E.COD_SUC,E.EMI,E.VEN,E.BRU,E.DES,E.MER,E.IVA,E.TOT,E.COSTOS_ADIC,E.TOTD,E.MON,E.TASA,E.C_VEN,E.COD_INCOTERM,IDIOMA,E.ORIGEN,DESTINO,E.COD_EMB,E.ZONA,D.COD,D.UNIDAD,D.CAN,D.VEN,D.IVA,E.DESPACHO,E.TERMINO_PAGO,E.TIEMPO_ENTREGA,E.LUGAR_DESTINO,C.PER_CARGO,C.CARGO,D.NOM,D.ORDEN&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;C_EMP1,PER1,C_AGR1,COT1,REV1,N_IDE,COD_SUC,EMI,VEN,BRU,DES,MER,IVA,TOT,COSTOS_ADIC,TOTD,MON,TASA,C_VEN,COD_INCOTERM,IDIOMA,ORIGEN,DESTINO,COD_EMB,ZONA,COD,UNIDAD,CAN,VEN1,IVA1,DESPACHO,TERMINO_PAGO,TIEMPO_ENTREGA,LUGAR_DESTINO,PER_CARGO,CARGO,NOM,ORDEN,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
                     EQS="null" GB="null" GR="GROUP_ENCABEZADO" H1="44"
                     LG="GROUP_COD" MRF="0" N1="QUERY0"
                     OB="ORDER BY D.ORDEN" OBR="SQL" PARAMETERS=""
@@ -64,7 +66,7 @@
                     W1="116" W2="WHERE E.COT = #cot AND E.REV = #rev AND E.C_AGR = #c_agr AND E.PER = #per AND E.C_EMP = #c_emp"/>
                <QUERY CB="null"
                     COLUMNS="C_EMP2,PER2,C_AGR2,COT2,REV2,COD_SECCION,DESCRIPCION,NOMBRE_SECCION"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY1);&#xa;&#x9;&#x9;&#x9;this.queryQUERY1.setInitialGroup(this.groupSECCIONES_PRE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY1.setMaximunRowsToFech(0);"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY1);&#xa;&#x9;&#x9;&#x9;this.queryQUERY1.setInitialGroup(this.groupSECCIONES_PRE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY1.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY1 = ASPString.splitExpression(&quot;S.C_EMP,S.PER,S.C_AGR,S.COT,S.REV,S.COD_SECCION,S.DESCRIPCION,NOMBRE_SECCION&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY1 = ASPString.splitExpression(&quot;C_EMP2,PER2,C_AGR2,COT2,REV2,COD_SECCION,DESCRIPCION,NOMBRE_SECCION,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY1.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY1 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY1SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY1[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY1SelectColumns.setColumnName(arrayColumnsqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY1[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY1SelectColumns.setColumnAlias(arrayAliasqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY1 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY1.getColumnsName().add(arrayAliasqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY1SelectColumns.setColumnAlias(arrayColumnsqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY1){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY1.getColumnsName().add(arrayColumnsqueryQUERY1[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY1.getColumns().add(queryQUERY1SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
                     EQS="null" GB="null" GR="SECCIONES_PRE" H1="123"
                     LG="GROUP0" MRF="0" N1="QUERY1"
                     OB="ORDER BY C.ORDEN ASC" OBR="SQL" PARAMETERS=""
@@ -77,7 +79,7 @@
                     W1="137" W2="WHERE C.TIPO_SECCION =  'PRE'"/>
                <QUERY CB="null"
                     COLUMNS="C_EMP3,PER3,C_AGR3,COT3,REV3,COD_SECCION1,DESCRIPCION1,NOMBRE_SECCION1"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY2);&#xa;&#x9;&#x9;&#x9;this.queryQUERY2.setInitialGroup(this.groupSECCIONES_ENC);&#xa;&#x9;&#x9;&#x9;this.queryQUERY2.setMaximunRowsToFech(0);"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY2);&#xa;&#x9;&#x9;&#x9;this.queryQUERY2.setInitialGroup(this.groupSECCIONES_ENC);&#xa;&#x9;&#x9;&#x9;this.queryQUERY2.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY2 = ASPString.splitExpression(&quot;S.C_EMP,S.PER,S.C_AGR,S.COT,S.REV,S.COD_SECCION,S.DESCRIPCION,NOMBRE_SECCION&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY2 = ASPString.splitExpression(&quot;C_EMP3,PER3,C_AGR3,COT3,REV3,COD_SECCION1,DESCRIPCION1,NOMBRE_SECCION1,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY2.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY2 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY2SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY2[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY2SelectColumns.setColumnName(arrayColumnsqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY2[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY2SelectColumns.setColumnAlias(arrayAliasqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY2 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY2.getColumnsName().add(arrayAliasqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY2SelectColumns.setColumnAlias(arrayColumnsqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY2){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY2.getColumnsName().add(arrayColumnsqueryQUERY2[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY2.getColumns().add(queryQUERY2SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
                     EQS="null" GB="null" GR="SECCIONES_ENC" H1="125"
                     LG="GROUP0" MRF="0" N1="QUERY2"
                     OB="ORDER BY C.ORDEN ASC" OBR="SQL" PARAMETERS=""
@@ -90,7 +92,7 @@
                     W1="127" W2="WHERE C.TIPO_SECCION =  'ENC'"/>
                <QUERY CB="null"
                     COLUMNS="C_EMP4,PER4,C_AGR4,COT4,REV4,COD_SECCION2,DESCRIPCION2,NOMBRE_SECCION2"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY3);&#xa;&#x9;&#x9;&#x9;this.queryQUERY3.setInitialGroup(this.groupSECCIONES_PIE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY3.setMaximunRowsToFech(0);"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY3);&#xa;&#x9;&#x9;&#x9;this.queryQUERY3.setInitialGroup(this.groupSECCIONES_PIE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY3.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY3 = ASPString.splitExpression(&quot;S.C_EMP,S.PER,S.C_AGR,S.COT,S.REV,S.COD_SECCION,S.DESCRIPCION,NOMBRE_SECCION&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY3 = ASPString.splitExpression(&quot;C_EMP4,PER4,C_AGR4,COT4,REV4,COD_SECCION2,DESCRIPCION2,NOMBRE_SECCION2,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY3.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY3 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY3SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY3[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY3SelectColumns.setColumnName(arrayColumnsqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY3[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY3SelectColumns.setColumnAlias(arrayAliasqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY3 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY3.getColumnsName().add(arrayAliasqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY3SelectColumns.setColumnAlias(arrayColumnsqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY3){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY3.getColumnsName().add(arrayColumnsqueryQUERY3[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY3.getColumns().add(queryQUERY3SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
                     EQS="null" GB="null" GR="SECCIONES_PIE" H1="122"
                     LG="GROUP0" MRF="0" N1="QUERY3"
                     OB="ORDER BY C.ORDEN ASC" OBR="SQL" PARAMETERS=""
@@ -103,7 +105,7 @@
                     W1="157" W2="WHERE C.TIPO_SECCION =  'PIE'"/>
                <QUERY CB="null"
                     COLUMNS="ORDEN1,COD1,C_EMP5,COT5,REV5,C_AGR5,PER5,INF7,NOM_ARTICULO,CAN1,UNIDAD1,NOM1"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY4);&#xa;&#x9;&#x9;&#x9;this.queryQUERY4.setInitialGroup(this.groupDESCRIPCIONES_DETALLE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY4.setMaximunRowsToFech(0);"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY4);&#xa;&#x9;&#x9;&#x9;this.queryQUERY4.setInitialGroup(this.groupDESCRIPCIONES_DETALLE);&#xa;&#x9;&#x9;&#x9;this.queryQUERY4.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY4 = ASPString.splitExpression(&quot;C.C_EMP,C.COT,C.REV,C.C_AGR,C.CAN,C.UNIDAD,C.PER,C.COD,C.INF7,NOM_ARTICULO,C.NOM,C.ORDEN&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY4 = ASPString.splitExpression(&quot;C_EMP5,COT5,REV5,C_AGR5,CAN1,UNIDAD1,PER5,COD1,INF7,NOM_ARTICULO,NOM1,ORDEN1,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY4.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY4 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY4SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY4[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY4SelectColumns.setColumnName(arrayColumnsqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY4[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY4SelectColumns.setColumnAlias(arrayAliasqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY4 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY4.getColumnsName().add(arrayAliasqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY4SelectColumns.setColumnAlias(arrayColumnsqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY4){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY4.getColumnsName().add(arrayColumnsqueryQUERY4[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY4.getColumns().add(queryQUERY4SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
                     EQS="null" GB="null" GR="DESCRIPCIONES_DETALLE"
                     H1="136" LG="GROUP0" MRF="0" N1="QUERY4"
                     OB="ORDER BY C.ORDEN" OBR="SQL" PARAMETERS=""
@@ -116,7 +118,7 @@
                     W1="149" W2="null"/>
                <QUERY CB="null"
                     COLUMNS="C_EMP6,COT6,REV6,C_AGR6,PER6,COD_COSTO,VALOR,NOMBRE_CARGO"
-                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY5);&#xa;&#x9;&#x9;&#x9;this.queryQUERY5.setInitialGroup(this.groupCOSTOS_ADIC);&#xa;&#x9;&#x9;&#x9;this.queryQUERY5.setMaximunRowsToFech(0);"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY5);&#xa;&#x9;&#x9;&#x9;this.queryQUERY5.setInitialGroup(this.groupCOSTOS_ADIC);&#xa;&#x9;&#x9;&#x9;this.queryQUERY5.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY5 = ASPString.splitExpression(&quot;C.C_EMP,COT,C.REV,C.C_AGR,C.PER,C.COD_COSTO,C.VALOR,NOMBRE_CARGO&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY5 = ASPString.splitExpression(&quot;C_EMP6,COT6,REV6,C_AGR6,PER6,COD_COSTO,VALOR,NOMBRE_CARGO,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY5.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY5 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY5SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY5[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY5SelectColumns.setColumnName(arrayColumnsqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY5[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY5SelectColumns.setColumnAlias(arrayAliasqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY5 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY5.getColumnsName().add(arrayAliasqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY5SelectColumns.setColumnAlias(arrayColumnsqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY5){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY5.getColumnsName().add(arrayColumnsqueryQUERY5[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY5.getColumns().add(queryQUERY5SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
                     EQS="null" GB="null" GR="COSTOS_ADIC" H1="114"
                     LG="GROUP0" MRF="0" N1="QUERY5" OB="null" OBR="SQL"
                     PARAMETERS="" PND="false" PX="635" PY="25"
@@ -255,6 +257,7 @@
                          <GROUP_FIELD BO="Ascending" CCT="D.ORDEN"
                               CONTENIDO="this.groupGROUP_DETALLE.addField(this.groupFieldGROUP_DETALLEORDEN);"
                               CT="DATABASE" DT="java.math.BigInteger"
+                              JN="groupFieldGROUP_DETALLEORDEN"
                               N1="ORDEN" QF="37" RV="ORDEN" VIN="null"/>
                          <GROUP_FIELD BO="None" CCT="D.COD"
                               CONTENIDO="this.groupGROUP_DETALLE.addField(this.groupFieldGROUP_DETALLECOD);"
@@ -446,6 +449,7 @@
                          <GROUP_FIELD BO="Ascending" CCT="C.ORDEN"
                               CONTENIDO="this.groupDESCRIPCIONES_DETALLE.addField(this.groupFieldDESCRIPCIONES_DETALLEORDEN1);"
                               CT="DATABASE" DT="java.math.BigInteger"
+                              JN="groupFieldDESCRIPCIONES_DETALLEORDEN1"
                               N1="ORDEN1" QF="11" RV="ORDEN" VIN="null"/>
                          <GROUP_FIELD BO="None" CCT="C.COD"
                               CONTENIDO="this.groupDESCRIPCIONES_DETALLE.addField(this.groupFieldDESCRIPCIONES_DETALLECOD1);"
@@ -1706,7 +1710,7 @@
                <TOTALS_FIELDS/>
           </WIZARD_REFERENCE>
      </DATA_MODEL>
-     <LAYOUT_MODEL NAMES="FRAME0,ENCABEZADO,ENCABEZADO_COT,TEXT_GRAPHIC5,TEXT_GRAPHIC6,EMI,ORIGEN,TEXT_GRAPHIC7,TEXT_GRAPHIC8,TEXT_GRAPHIC10,TEXT_GRAPHIC9,DIAS_VALIDEZ,EMBALAJE,TEXT_GRAPHIC11,TEXT_GRAPHIC12,TEXT_GRAPHIC14,MONEDA,TEXT_GRAPHIC13,TEXT_GRAPHIC16,DESTINO,TEXT_GRAPHIC17,TEXT_GRAPHIC25,TEXT_GRAPHIC26,DESPACHO,TEXT_GRAPHIC30,TEXT_GRAPHIC31,TIEMPO_ENTREGA,NOMBRES_CARGOS,NOM_CARGO,TEXT_GRAPHIC36,TEXT_GRAPHIC32,TERMINO_PAGO_FRAME,TERMINO_PAGO,TEXT_GRAPHIC28,TEXT_GRAPHIC27,SECCIONES_PRE,NOMBRE_SECCION,DESCRIPCION_SECCION,DETALLE_FRAME,DETALLE,SUBTOTAL,NOMBRE_ARTICULO,COD,UNIDAD,CAN,VEN1,TEXT_GRAPHIC24,TEXT_GRAPHIC22,TEXT_GRAPHIC21,TEXT_GRAPHIC20,TEXT_GRAPHIC19,TEXT_GRAPHIC18,TEXT_GRAPHIC15,tSubtotal,tCod,tCantidad,tUnidad,t_VEN1,TOTALES,BRU,DES,IVA,TOTD,PROMPT_TOT_BRUTO,PROMPT_TOT_DESCUENTO,PROMPT_TOT_IVA,PROMPT_TOT_NETO,COSTOS_ADICIONALES,VALOR_CARGO,NOMBRE_CARGO,SECCIONES_ENC_FRAME,SECCIONES_ENC,NOMBRE_SEC_ENC,DESC_SEC_ENC,SECCIONES_PIE_FRAME,SECCIONES_PIE,NOMBRE_SEC_PIE,DESC_SEC_PIE,DESC_DET_FRAME,DESC_DET,NOM_ARTICULO,DESC_COMERCIAL,LINE0,CAN_DESCRIP,UND_DESCRIP,COUNT_DET,TEXT_GRAPHIC45,TEXT_GRAPHIC44,TEXT_GRAPHIC48,TEXT_GRAPHIC43,TEXT_GRAPHIC46,TEXT_GRAPHIC47,TEXT_GRAPHIC49,TEXT_GRAPHIC50,FIRMA,NOMBRE_VENDEDOR,EMAIL_VENDEDOR,CARGO_VEND,FRAME_DETALLE_SIN_TOT,TEXT_GRAPHIC37,TEXT_GRAPHIC38,TEXT_GRAPHIC39,TEXT_GRAPHIC40,ST_DETALLE,ST_CANTIDAD,ST_UNIDAD,ST_NOMBRE_ARTICULO,ST_COD,TEXT_GRAPHIC23,TEXT_GRAPHIC51,TEXT_GRAPHIC52,TEXT_GRAPHIC53,PRESENTACION,TEXT_GRAPHIC3,TEXT_GRAPHIC2,TEXT_GRAPHIC4,DATOS_CLIENTE,NOMBRE_CLIENTE,TEXT_GRAPHIC0,DIR_CLIENTE,TEL_CLIENTE,EMAIL_CLIENTE,UBICACION_CLIENTE,TEXT_GRAPHIC1,PERSONA_CARGO,CARGO,FRAME_CONT_PRESP,PRESUPUESTO_FRAME,TEXT_GRAPHIC42,TEXT_GRAPHIC41,LOGO_EMP,TEXT_GRAPHIC33,RESERVA_DERECHOS,TEXT_GRAPHIC34,TEXT_GRAPHIC35,IMAGE0">
+     <LAYOUT_MODEL NAMES="FRAME0,ENCABEZADO,ENCABEZADO_COT,TEXT_GRAPHIC5,TEXT_GRAPHIC6,EMI,ORIGEN,TEXT_GRAPHIC7,TEXT_GRAPHIC8,TEXT_GRAPHIC10,TEXT_GRAPHIC9,DIAS_VALIDEZ,EMBALAJE,TEXT_GRAPHIC11,TEXT_GRAPHIC12,TEXT_GRAPHIC14,MONEDA,TEXT_GRAPHIC13,TEXT_GRAPHIC16,DESTINO,TEXT_GRAPHIC17,TEXT_GRAPHIC25,TEXT_GRAPHIC26,DESPACHO,TEXT_GRAPHIC30,TEXT_GRAPHIC31,TIEMPO_ENTREGA,NOMBRES_CARGOS,NOM_CARGO,TEXT_GRAPHIC36,TEXT_GRAPHIC32,TERMINO_PAGO_FRAME,TERMINO_PAGO,TEXT_GRAPHIC28,TEXT_GRAPHIC27,SECCIONES_PRE,NOMBRE_SECCION,DESCRIPCION_SECCION,DETALLE_FRAME,DETALLE,SUBTOTAL,NOMBRE_ARTICULO,COD,UNIDAD,CAN,VEN1,TEXT_GRAPHIC24,TEXT_GRAPHIC22,TEXT_GRAPHIC21,TEXT_GRAPHIC20,TEXT_GRAPHIC19,TEXT_GRAPHIC18,TEXT_GRAPHIC15,tSubtotal,tCod,tCantidad,tUnidad,t_VEN1,TOTALES,BRU,DES,IVA,TOTD,PROMPT_TOT_BRUTO,PROMPT_TOT_DESCUENTO,PROMPT_TOT_IVA,PROMPT_TOT_NETO,COSTOS_ADICIONALES,VALOR_CARGO,NOMBRE_CARGO,LAYOUT_FIELD0,LAYOUT_FIELD2,LAYOUT_FIELD3,LAYOUT_FIELD4,LAYOUT_FIELD1,SECCIONES_ENC_FRAME,SECCIONES_ENC,NOMBRE_SEC_ENC,DESC_SEC_ENC,SECCIONES_PIE_FRAME,SECCIONES_PIE,NOMBRE_SEC_PIE,DESC_SEC_PIE,DESC_DET_FRAME,DESC_DET,NOM_ARTICULO,DESC_COMERCIAL,LINE0,CAN_DESCRIP,UND_DESCRIP,COUNT_DET,TEXT_GRAPHIC45,TEXT_GRAPHIC44,TEXT_GRAPHIC48,TEXT_GRAPHIC43,TEXT_GRAPHIC46,TEXT_GRAPHIC47,TEXT_GRAPHIC49,TEXT_GRAPHIC50,FIRMA,NOMBRE_VENDEDOR,EMAIL_VENDEDOR,CARGO_VEND,FRAME_DETALLE_SIN_TOT,TEXT_GRAPHIC37,TEXT_GRAPHIC38,TEXT_GRAPHIC39,TEXT_GRAPHIC40,ST_DETALLE,ST_CANTIDAD,ST_UNIDAD,ST_NOMBRE_ARTICULO,ST_COD,TEXT_GRAPHIC23,TEXT_GRAPHIC51,TEXT_GRAPHIC52,TEXT_GRAPHIC53,PRESENTACION,TEXT_GRAPHIC3,TEXT_GRAPHIC2,TEXT_GRAPHIC4,DATOS_CLIENTE,NOMBRE_CLIENTE,TEXT_GRAPHIC0,DIR_CLIENTE,TEL_CLIENTE,EMAIL_CLIENTE,UBICACION_CLIENTE,TEXT_GRAPHIC1,PERSONA_CARGO,CARGO,FRAME_CONT_PRESP,PRESUPUESTO_FRAME,TEXT_GRAPHIC42,TEXT_GRAPHIC41,LOGO_EMP,TEXT_GRAPHIC33,RESERVA_DERECHOS,TEXT_GRAPHIC34,TEXT_GRAPHIC35,IMAGE0">
           <HEADER BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
                CONTENIDO="this.presentationRules.getSections().add(this.reportSectionHeader);"
                H1="792" HPP="1" NPG="false" OR="Portrait" VPP="1" W1="612">
@@ -1721,7 +1725,7 @@
                CONTENIDO="this.presentationRules.getSections().add(this.reportSectionMain);"
                H1="792" HPP="1" LAYERS="-75" NPG="false" OR="Portrait"
                VPP="1" W1="612">
-               <BODY LAYERS="129">
+               <BODY LAYERS="134">
                     <ANCHORS PHN="ROOT&amp;"/>
                     <FRAME B1="null" BG="255,255,255"
                          BPO="Enclosing object" CF="null" DO="0 Grades"
@@ -2889,14 +2893,14 @@
                                     H1="9" HA="Alg_Left" HE="Fixed"
                                     IF="false" IV="null" KAO="false"
                                     LB="null" LN="63" LS="Normal"
-                                    LW="-1" Last_Location="282,463"
+                                    LW="-1" Last_Location="255,473"
                                     MAZ="20" MWL="0"
                                     N1="PROMPT_TOT_BRUTO"
                                     NPG="false" PBA="false"
                                     PBB="false" PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="282" PY="473"
+                                    PP="false" PX="254" PY="473"
                                     S1="GROUP_ENCABEZADO.PROMPT_TOTAL_BRUTO"
                                     V2="true" VE="Fixed" VIN="false" W1="147"/>
                                    <LAYOUT_FIELD B1="null" BCF="None"
@@ -2917,7 +2921,7 @@
                                     PBB="false" PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="282" PY="482"
+                                    PP="false" PX="254" PY="482"
                                     S1="GROUP_ENCABEZADO.PROMPT_TOTAL_DESCUENTO"
                                     V2="true" VE="Fixed" VIN="false" W1="147"/>
                                    <LAYOUT_FIELD B1="null" BCF="None"
@@ -2937,7 +2941,7 @@
                                     PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="282" PY="491"
+                                    PP="false" PX="254" PY="491"
                                     S1="GROUP_ENCABEZADO.PROMPT_TOTAL_IVA"
                                     V2="true" VE="Fixed" VIN="false" W1="147"/>
                                    <LAYOUT_FIELD B1="null" BCF="None"
@@ -2957,7 +2961,7 @@
                                     PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="282" PY="509"
+                                    PP="false" PX="254" PY="509"
                                     S1="GROUP_ENCABEZADO.PROMPT_TOTAL_NETO"
                                     V2="true" VE="Expand"
                                     VIN="false" W1="147"/>
@@ -2968,7 +2972,7 @@
                                     ELS="false" FE="null"
                                     GN="COSTOS_ADIC" H1="9"
                                     HE="Fixed" HSBF="0" IF="false"
-                                    JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyCostos_adicionales = new ReportRepetitiveFrame(&quot;COSTOS_ADICIONALES&quot;,282,500,9,253,reportRegionMainBody,67,reportFrameMainBodyTotales,&quot;FIXED&quot;,&quot;VARIABLE&quot;,&quot;COSTOS_ADIC&quot;,&quot;Down&quot;,new Color(255,255,255),null,0,&quot;DEFAULT&quot;,false,false,false,null,0,0,0,-1,false);"
+                                    JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyCostos_adicionales = new ReportRepetitiveFrame(&quot;COSTOS_ADICIONALES&quot;,254,500,9,281,reportRegionMainBody,67,reportFrameMainBodyTotales,&quot;FIXED&quot;,&quot;VARIABLE&quot;,&quot;COSTOS_ADIC&quot;,&quot;Down&quot;,new Color(255,255,255),null,0,&quot;DEFAULT&quot;,false,false,false,null,0,0,0,-1,false);"
                                     KAO="false" LN="67" LS="Normal"
                                     LW="-1" MRPP="0" MWR="0"
                                     N1="COSTOS_ADICIONALES"
@@ -2976,8 +2980,8 @@
                                     PBB="false" PD="Down"
                                     PHN="ROOT&amp;" PND="false"
                                     POO="Default" PP="false"
-                                    PX="282" PY="500" VE="Variable"
-                                    VSBF="0" W1="253">
+                                    PX="254" PY="500" VE="Variable"
+                                    VSBF="0" W1="281">
                                     <LAYOUT_FIELD B1="null"
                                     BCF="None" BG="255,255,255"
                                     BO="None"
@@ -2992,7 +2996,7 @@
                                     IV="null" KAO="false"
                                     LB="null" LN="69"
                                     LS="Normal" LW="-1"
-                                    Last_Location="414,499"
+                                    Last_Location="428,500"
                                     MAZ="20" MWL="0"
                                     N1="VALOR_CARGO"
                                     NPG="false" PBA="false"
@@ -3017,19 +3021,123 @@
                                     IF="false" IV="null"
                                     KAO="false" LB="null"
                                     LN="68" LS="Normal" LW="-1"
-                                    Last_Location="267,499"
+                                    Last_Location="255,500"
                                     MAZ="20" MWL="0"
                                     N1="NOMBRE_CARGO"
                                     NPG="false" PBA="false"
                                     PBB="false" PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
                                     PND="false" POO="Default"
-                                    PP="false" PX="282"
+                                    PP="false" PX="254"
                                     PY="500"
                                     S1="COSTOS_ADIC.NOMBRE_CARGO"
                                     V2="true" VE="Expand"
                                     VIN="false" W1="147"/>
+                                    <LAYOUT_FIELD B1="null"
+                                    BCF="None" BG="255,255,255"
+                                    BO="None"
+                                    BPO="Enclosing object"
+                                    CF="null" DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,1,7"
+                                    FE="null" FG="0,0,0"
+                                    FM="null" H1="9"
+                                    HA="Alg_Left" HE="Fixed"
+                                    IF="false" IV="null"
+                                    KAO="false" LB="null"
+                                    LN="133" LS="Normal"
+                                    LW="-1"
+                                    Last_Location="402,500"
+                                    MAZ="20" MWL="0"
+                                    N1="LAYOUT_FIELD0"
+                                    NPG="false" PBA="false"
+                                    PBB="false" PHN="ROOT&amp;"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="Default"
+                                    PP="false" PX="401"
+                                    PY="500"
+                                    S1="GROUP_ENCABEZADO.MONEDA_TEXTO"
+                                    V2="true" VE="Fixed"
+                                    VIN="false" W1="28"/>
                                    </REPEATING_FRAME>
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="None"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,1,7"
+                                    FE="LAYOUT_FIELD2_formatEvent"
+                                    FG="0,0,0" FM="null" H1="9"
+                                    HA="Alg_Left" HE="Fixed"
+                                    IF="false" IV="null" KAO="false"
+                                    LB="null" LN="130" LS="Normal"
+                                    LW="-1" MAZ="20" MWL="0"
+                                    N1="LAYOUT_FIELD2" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="ROOT&amp;"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="Default"
+                                    PP="false" PX="401" PY="482"
+                                    S1="GROUP_ENCABEZADO.MONEDA_TEXTO"
+                                    V2="true" VE="Fixed" VIN="false" W1="28"/>
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="None"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,1,7"
+                                    FE="null" FG="0,0,0" FM="null"
+                                    H1="9" HA="Alg_Left" HE="Fixed"
+                                    IF="false" IV="null" KAO="false"
+                                    LB="null" LN="131" LS="Normal"
+                                    LW="-1" MAZ="20" MWL="0"
+                                    N1="LAYOUT_FIELD3" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="ROOT&amp;"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="Default"
+                                    PP="false" PX="401" PY="491"
+                                    S1="GROUP_ENCABEZADO.MONEDA_TEXTO"
+                                    V2="true" VE="Fixed" VIN="false" W1="28"/>
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="None"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,1,7"
+                                    FE="null" FG="0,0,0" FM="null"
+                                    H1="9" HA="Alg_Left" HE="Fixed"
+                                    IF="false" IV="null" KAO="false"
+                                    LB="null" LN="132" LS="Normal"
+                                    LW="-1" MAZ="20" MWL="0"
+                                    N1="LAYOUT_FIELD4" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="ROOT&amp;"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="Default"
+                                    PP="false" PX="401" PY="509"
+                                    S1="GROUP_ENCABEZADO.MONEDA_TEXTO"
+                                    V2="true" VE="Fixed" VIN="false" W1="28"/>
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="None"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,1,7"
+                                    FE="null" FG="0,0,0" FM="null"
+                                    H1="9" HA="Alg_Left" HE="Fixed"
+                                    IF="false" IV="null" KAO="false"
+                                    LB="null" LN="134" LS="Normal"
+                                    LW="-1" Last_Location="402,473"
+                                    MAZ="20" MWL="0"
+                                    N1="LAYOUT_FIELD1" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="ROOT&amp;"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="Default"
+                                    PP="false" PX="401" PY="473"
+                                    S1="GROUP_ENCABEZADO.MONEDA_TEXTO"
+                                    V2="true" VE="Fixed" VIN="false" W1="28"/>
                               </FRAME>
                               <FRAME B1="null" BG="255,255,255"
                                    BPO="Enclosing object" CF="null"
@@ -3233,7 +3341,7 @@
                                     NPG="false" PBA="false"
                                     PBB="false" PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="Default"
+                                    PND="false" POO="Default"
                                     PP="false" PX="168"
                                     PY="338"
                                     S1="DESCRIPCIONES_DETALLE.DESCRIP_ARTICULO"
@@ -3258,7 +3366,7 @@
                                     NPG="false" PBA="false"
                                     PBB="false" PHN="ROOT&amp;"
                                     PNB="true,true,true,1,1,!Report"
-                                    PND="true" POO="Default"
+                                    PND="false" POO="Default"
                                     PP="false" PX="168"
                                     PY="356"
                                     S1="DESCRIPCIONES_DETALLE.INF7"
@@ -4269,7 +4377,6 @@
           PX="0" PY="0" W1="600">
           <PARAMETER_FIELDS>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParametercot);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4277,7 +4384,6 @@
                     PY="110" R3="false" S1="cot" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterrev);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4285,7 +4391,6 @@
                     PY="140" R3="false" S1="rev" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterc_agr);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4293,7 +4398,6 @@
                     PY="170" R3="false" S1="c_agr" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterper);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4301,7 +4405,6 @@
                     PY="200" R3="false" S1="per" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterc_emp);"
                     CPT="DTextField" CSS="null" DT="java.lang.String"
                     E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
                     H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
@@ -4309,11 +4412,10 @@
                     PY="230" R3="false" S1="c_emp" TT="null" V2="true"
                     VOL="false" W1="120"/>
                <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
-                    CONTENIDO="this.parameterForm.addToVectorDataFieldDefinition(this.dataFieldDefinitionParameterver_totales);"
                     CPT="DCheckBox" CSS="null" CV="S"
                     DT="java.lang.String" E1="true" F2="Arial,0,10"
                     FG="0,0,0" H1="20" IV="S" JN="null" LB="null"
-                    N1="PARAMETER_FIELD0" PND="true" PX="196" PY="264"
+                    N1="PARAMETER_FIELD0" PND="false" PX="196" PY="264"
                     S1="ver_totales" TT="null" UV="N" V2="true" W1="120"/>
           </PARAMETER_FIELDS>
           <GRAPHICAL_BOILERPLATE/>
@@ -4432,11 +4534,11 @@
           </PROGRAMUNIT>
           <PROGRAMUNIT COMENTARY="" COMPILE="true"
                FieldRef="GROUP_ENCABEZADO.DATOS_CLIENTE"
-               JAVAC="&#xa;&#x9;try{&#xa;&#x9;&#x9;java.lang.String sqlCommand1=&quot;SELECT DECODE(n.ide,'CC',n.nom1 || DECODE(n.nom2,null,'',' ' || n.nom2) || ' ' || n.ape1 || DECODE(n.ape2,null,'',' ' || n.ape2),n.nom),N.dir,'Tel./Phone ' || N.tel,M.nombre || ', ' || P.nom,N.dir_elect &quot;;&#xa;&#x9;&#x9;sqlCommand1+=&quot; FROM nits n JOIN  pais p  ON P.c_pai=N.c_pai AND P.c_emp=N.c_emp  JOIN  departamento d  ON D.c_dpto=N.dep AND D.c_pai=N.c_pai  AND D.c_emp=N.c_emp  JOIN  municipio m  ON M.c_mnpo=N.ciu AND M.c_dpto=N.dep  AND M.c_pai=N.c_pai  AND M.c_emp=N.c_emp  &quot;;&#xa;&#x9;&#x9;sqlCommand1+=&quot;WHERE N.n_ide=#groupFieldGROUP_ENCABEZADON_IDE  AND N.c_emp=#groupFieldGROUP_ENCABEZADOC_EMP1   &quot;;&#xa;&#x9;&#x9;//Generated vector to hold the arguments.&#xa;&#x9;&#x9;Vector&lt;SqlParameter> arguments1=new Vector&lt;SqlParameter>();&#xa;&#x9;&#x9;SqlParameter sqlParameter1=new SqlParameter(&quot;groupFieldGROUP_ENCABEZADON_IDE&quot;,getField(&quot;n_ide&quot;).getFieldValue());&#xa;&#x9;&#x9;arguments1.add(sqlParameter1);&#xa;&#x9;&#x9;SqlParameter sqlParameter2=new SqlParameter(&quot;groupFieldGROUP_ENCABEZADOC_EMP1&quot;,getField(&quot;c_emp1&quot;).getFieldValue());&#xa;&#x9;&#x9;arguments1.add(sqlParameter2);&#xa;&#x9;&#x9;Vector resulSet1=getDAOObject().getRecords(sqlCommand1,arguments1);&#xa;&#x9;&#x9;setRowsAffected(resulSet1.size());&#xa;&#x9;&#x9;if (resulSet1.size()==0){&#xa;&#x9;&#x9;&#x9;throw new NoDataFoundException(&quot;No Data found.&quot;);&#xa;&#x9;&#x9;} else if (resulSet1.size()>1){&#xa;&#x9;&#x9;&#x9;throw new TooManyRows(&quot;Too many Rows.&quot;);&#xa;&#x9;&#x9;}&#xa;Object object1=convertTo2(((Vector)resulSet1.get(0)).get(0),getField(&quot;nombre_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;nombre_cliente&quot;).setFieldValue(object1);&#xa;Object object2=convertTo2(((Vector)resulSet1.get(0)).get(1),getField(&quot;dir_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;dir_cliente&quot;).setFieldValue(object2);&#xa;Object object3=convertTo2(((Vector)resulSet1.get(0)).get(2),getField(&quot;tel_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;tel_cliente&quot;).setFieldValue(object3);&#xa;Object object4=convertTo2(((Vector)resulSet1.get(0)).get(3),getField(&quot;ubicacion_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;ubicacion_cliente&quot;).setFieldValue(object4);&#xa;Object object5=convertTo2(((Vector)resulSet1.get(0)).get(4),getField(&quot;email_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;email_cliente&quot;).setFieldValue(object5);&#xa;&#x9;} catch(NoDataFoundException expt1){&#xa;&#x9;&#x9;try{&#xa;&#x9;&#x9;&#x9;java.lang.String sqlCommand2=&quot;SELECT nombre &quot;;&#xa;&#x9;&#x9;&#x9;sqlCommand2+=&quot; FROM prosp_cl &quot;;&#xa;&#x9;&#x9;&#x9;sqlCommand2+=&quot;WHERE n_ide=#groupFieldGROUP_ENCABEZADON_IDE  AND c_emp=#groupFieldGROUP_ENCABEZADOC_EMP1   &quot;;&#xa;&#x9;&#x9;&#x9;//Generated vector to hold the arguments.&#xa;&#x9;&#x9;&#x9;Vector&lt;SqlParameter> arguments2=new Vector&lt;SqlParameter>();&#xa;&#x9;&#x9;&#x9;SqlParameter sqlParameter3=new SqlParameter(&quot;groupFieldGROUP_ENCABEZADON_IDE&quot;,getField(&quot;n_ide&quot;).getFieldValue());&#xa;&#x9;&#x9;&#x9;arguments2.add(sqlParameter3);&#xa;&#x9;&#x9;&#x9;SqlParameter sqlParameter4=new SqlParameter(&quot;groupFieldGROUP_ENCABEZADOC_EMP1&quot;,getField(&quot;c_emp1&quot;).getFieldValue());&#xa;&#x9;&#x9;&#x9;arguments2.add(sqlParameter4);&#xa;&#x9;&#x9;&#x9;Vector resulSet2=getDAOObject().getRecords(sqlCommand2,arguments2);&#xa;&#x9;&#x9;&#x9;setRowsAffected(resulSet2.size());&#xa;&#x9;&#x9;&#x9;if (resulSet2.size()==0){&#xa;&#x9;&#x9;&#x9;&#x9;throw new NoDataFoundException(&quot;No Data found.&quot;);&#xa;&#x9;&#x9;&#x9;} else if (resulSet2.size()>1){&#xa;&#x9;&#x9;&#x9;&#x9;throw new TooManyRows(&quot;Too many Rows.&quot;);&#xa;&#x9;&#x9;&#x9;}&#xa;Object object6=convertTo2(((Vector)resulSet2.get(0)).get(0),getField(&quot;nombre_cliente&quot;).getDataType());&#xa;&#x9;&#x9;&#x9;getField(&quot;nombre_cliente&quot;).setFieldValue(object6);&#xa;&#x9;&#x9;} catch(NoDataFoundException expt2){&#xa;&#x9;&#x9;&#x9;Object object7=null;&#xa;&#x9;&#x9;&#x9;getField(&quot;nombre_cliente&quot;).setFieldValue(object7);&#xa;&#x9;&#x9;&#x9;Object object8=null;&#xa;&#x9;&#x9;&#x9;getField(&quot;dir_cliente&quot;).setFieldValue(object8);&#xa;&#x9;&#x9;&#x9;Object object9=null;&#xa;&#x9;&#x9;&#x9;getField(&quot;tel_cliente&quot;).setFieldValue(object9);&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;return (java.lang.String)convertTo2(null,&quot;java.lang.String&quot;);&#xa;&#xa;"
+               JAVAC="&#xa;&#x9;try{&#xa;&#x9;&#x9;java.lang.String sqlCommand1=&quot;SELECT DECODE(n.ide,'CC',n.nom1 || DECODE(n.nom2,null,'',' ' || n.nom2) || ' ' || n.ape1 || DECODE(n.ape2,null,'',' ' || n.ape2),n.nom),N.dir,'Tel./Phone ' || N.tel,M.nombre || ', ' || P.nom,N.dir_elect &quot;;&#xa;&#x9;&#x9;sqlCommand1+=&quot; FROM nits n LEFT  JOIN  pais p  ON P.c_pai=N.c_pai AND P.c_emp=N.c_emp  LEFT  JOIN  departamento d  ON D.c_dpto=N.dep AND D.c_pai=N.c_pai  AND D.c_emp=N.c_emp  LEFT  JOIN  municipio m  ON M.c_mnpo=N.ciu AND M.c_dpto=N.dep  AND M.c_pai=N.c_pai  AND M.c_emp=N.c_emp  &quot;;&#xa;&#x9;&#x9;sqlCommand1+=&quot;WHERE N.n_ide=#groupFieldGROUP_ENCABEZADON_IDE  AND N.c_emp=#groupFieldGROUP_ENCABEZADOC_EMP1   &quot;;&#xa;&#x9;&#x9;//Generated vector to hold the arguments.&#xa;&#x9;&#x9;Vector&lt;SqlParameter> arguments1=new Vector&lt;SqlParameter>();&#xa;&#x9;&#x9;SqlParameter sqlParameter1=new SqlParameter(&quot;groupFieldGROUP_ENCABEZADON_IDE&quot;,getField(&quot;n_ide&quot;).getFieldValue());&#xa;&#x9;&#x9;arguments1.add(sqlParameter1);&#xa;&#x9;&#x9;SqlParameter sqlParameter2=new SqlParameter(&quot;groupFieldGROUP_ENCABEZADOC_EMP1&quot;,getField(&quot;c_emp1&quot;).getFieldValue());&#xa;&#x9;&#x9;arguments1.add(sqlParameter2);&#xa;&#x9;&#x9;Vector resulSet1=getDAOObject().getRecords(sqlCommand1,arguments1);&#xa;&#x9;&#x9;setRowsAffected(resulSet1.size());&#xa;&#x9;&#x9;if (resulSet1.size()==0){&#xa;&#x9;&#x9;&#x9;throw new NoDataFoundException(&quot;No Data found.&quot;);&#xa;&#x9;&#x9;} else if (resulSet1.size()>1){&#xa;&#x9;&#x9;&#x9;throw new TooManyRows(&quot;Too many Rows.&quot;);&#xa;&#x9;&#x9;}&#xa;Object object1=convertTo2(((Vector)resulSet1.get(0)).get(0),getField(&quot;nombre_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;nombre_cliente&quot;).setFieldValue(object1);&#xa;Object object2=convertTo2(((Vector)resulSet1.get(0)).get(1),getField(&quot;dir_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;dir_cliente&quot;).setFieldValue(object2);&#xa;Object object3=convertTo2(((Vector)resulSet1.get(0)).get(2),getField(&quot;tel_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;tel_cliente&quot;).setFieldValue(object3);&#xa;Object object4=convertTo2(((Vector)resulSet1.get(0)).get(3),getField(&quot;ubicacion_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;ubicacion_cliente&quot;).setFieldValue(object4);&#xa;Object object5=convertTo2(((Vector)resulSet1.get(0)).get(4),getField(&quot;email_cliente&quot;).getDataType());&#xa;&#x9;&#x9;getField(&quot;email_cliente&quot;).setFieldValue(object5);&#xa;&#x9;} catch(NoDataFoundException expt1){&#xa;&#x9;&#x9;try{&#xa;&#x9;&#x9;&#x9;java.lang.String sqlCommand2=&quot;SELECT N.nombre,N.dir,'Tel./Phone ' || N.tel,M.nombre || ', ' || P.nom &quot;;&#xa;&#x9;&#x9;&#x9;sqlCommand2+=&quot; FROM prosp_cl n LEFT  JOIN  pais p  ON P.c_pai=N.c_pai AND P.c_emp=N.c_emp  LEFT  JOIN  departamento d  ON D.c_dpto=N.dep AND D.c_pai=N.c_pai  AND D.c_emp=N.c_emp  LEFT  JOIN  municipio m  ON M.c_mnpo=N.ciu AND M.c_dpto=N.dep  AND M.c_pai=N.c_pai  AND M.c_emp=N.c_emp  &quot;;&#xa;&#x9;&#x9;&#x9;sqlCommand2+=&quot;WHERE N.n_ide=#groupFieldGROUP_ENCABEZADON_IDE  AND N.c_emp=#groupFieldGROUP_ENCABEZADOC_EMP1   &quot;;&#xa;&#x9;&#x9;&#x9;//Generated vector to hold the arguments.&#xa;&#x9;&#x9;&#x9;Vector&lt;SqlParameter> arguments2=new Vector&lt;SqlParameter>();&#xa;&#x9;&#x9;&#x9;SqlParameter sqlParameter3=new SqlParameter(&quot;groupFieldGROUP_ENCABEZADON_IDE&quot;,getField(&quot;n_ide&quot;).getFieldValue());&#xa;&#x9;&#x9;&#x9;arguments2.add(sqlParameter3);&#xa;&#x9;&#x9;&#x9;SqlParameter sqlParameter4=new SqlParameter(&quot;groupFieldGROUP_ENCABEZADOC_EMP1&quot;,getField(&quot;c_emp1&quot;).getFieldValue());&#xa;&#x9;&#x9;&#x9;arguments2.add(sqlParameter4);&#xa;&#x9;&#x9;&#x9;Vector resulSet2=getDAOObject().getRecords(sqlCommand2,arguments2);&#xa;&#x9;&#x9;&#x9;setRowsAffected(resulSet2.size());&#xa;&#x9;&#x9;&#x9;if (resulSet2.size()==0){&#xa;&#x9;&#x9;&#x9;&#x9;throw new NoDataFoundException(&quot;No Data found.&quot;);&#xa;&#x9;&#x9;&#x9;} else if (resulSet2.size()>1){&#xa;&#x9;&#x9;&#x9;&#x9;throw new TooManyRows(&quot;Too many Rows.&quot;);&#xa;&#x9;&#x9;&#x9;}&#xa;Object object6=convertTo2(((Vector)resulSet2.get(0)).get(0),getField(&quot;nombre_cliente&quot;).getDataType());&#xa;&#x9;&#x9;&#x9;getField(&quot;nombre_cliente&quot;).setFieldValue(object6);&#xa;Object object7=convertTo2(((Vector)resulSet2.get(0)).get(1),getField(&quot;dir_cliente&quot;).getDataType());&#xa;&#x9;&#x9;&#x9;getField(&quot;dir_cliente&quot;).setFieldValue(object7);&#xa;Object object8=convertTo2(((Vector)resulSet2.get(0)).get(2),getField(&quot;tel_cliente&quot;).getDataType());&#xa;&#x9;&#x9;&#x9;getField(&quot;tel_cliente&quot;).setFieldValue(object8);&#xa;Object object9=convertTo2(((Vector)resulSet2.get(0)).get(3),getField(&quot;ubicacion_cliente&quot;).getDataType());&#xa;&#x9;&#x9;&#x9;getField(&quot;ubicacion_cliente&quot;).setFieldValue(object9);&#xa;&#x9;&#x9;} catch(NoDataFoundException expt2){&#xa;&#x9;&#x9;&#x9;Object object10=null;&#xa;&#x9;&#x9;&#x9;getField(&quot;nombre_cliente&quot;).setFieldValue(object10);&#xa;&#x9;&#x9;&#x9;Object object11=null;&#xa;&#x9;&#x9;&#x9;getField(&quot;dir_cliente&quot;).setFieldValue(object11);&#xa;&#x9;&#x9;&#x9;Object object12=null;&#xa;&#x9;&#x9;&#x9;getField(&quot;tel_cliente&quot;).setFieldValue(object12);&#xa;&#x9;&#x9;}&#xa;&#x9;}&#xa;&#x9;return (java.lang.String)convertTo2(null,&quot;java.lang.String&quot;);&#xa;&#xa;"
                N1="datos_cliente_method"
                PARAMETROS="(Vector&lt;ProcedureCallParameters>,argumentVector)"
                PGT="PLSQL"
-               PLSQL="function DATOS_CLIENTE_method return varchar2 is &#xa;BEGIN&#xa; BEGIN&#xa;  SELECT DECODE(N.IDE, 'CC', N.NOM1||DECODE(N.NOM2,NULL,'',' '||N.NOM2)||' '||N.APE1||DECODE(N.APE2,NULL,'',' '||N.APE2),N.NOM), N.DIR, 'Tel./Phone '||N.TEL, M.NOMBRE||', '||P.NOM,&#xa;   N.DIR_ELECT&#xa;  INTO :NOMBRE_CLIENTE, :DIR_CLIENTE, :TEL_CLIENTE, :UBICACION_CLIENTE, :EMAIL_CLIENTE&#xa;  FROM NITS N&#xa;   JOIN PAIS P ON P.C_PAI = N.C_PAI AND P.C_EMP = N.C_EMP&#xa;   JOIN DEPARTAMENTO D ON D.C_DPTO = N.DEP AND D.C_PAI = N.C_PAI AND D.C_EMP = N.C_EMP&#xa;   JOIN MUNICIPIO M ON M.C_MNPO = N.CIU AND M.C_DPTO = N.DEP AND M.C_PAI = N.C_PAI AND M.C_EMP = N.C_EMP&#xa;  WHERE N.N_IDE = :N_IDE AND N.C_EMP = :C_EMP1;&#xa; EXCEPTION&#xa;  WHEN NO_DATA_FOUND THEN&#xa;   -- BUSCAMOS EN LA TABLA DE PROSPECTOS&#xa;   BEGIN&#xa;    SELECT NOMBRE&#xa;    INTO :NOMBRE_CLIENTE&#xa;    FROM PROSP_CL&#xa;    WHERE N_IDE = :N_IDE AND C_EMP = :C_EMP1;&#xa;   EXCEPTION&#xa;    WHEN NO_DATA_FOUND THEN&#xa;     :NOMBRE_CLIENTE := NULL;   &#xa;     :DIR_CLIENTE := NULL;&#xa;     :TEL_CLIENTE := NULL;&#xa;   END;&#xa; END;&#xa;    return null;&#xa;END;&#xa;"
+               PLSQL="function DATOS_CLIENTE_method return varchar2 is &#xa;BEGIN&#xa; BEGIN&#xa;  SELECT DECODE(N.IDE, 'CC', N.NOM1||DECODE(N.NOM2,NULL,'',' '||N.NOM2)||' '||N.APE1||DECODE(N.APE2,NULL,'',' '||N.APE2),N.NOM), N.DIR, 'Tel./Phone '||N.TEL, M.NOMBRE||', '||P.NOM,&#xa;   N.DIR_ELECT&#xa;  INTO :NOMBRE_CLIENTE, :DIR_CLIENTE, :TEL_CLIENTE, :UBICACION_CLIENTE, :EMAIL_CLIENTE&#xa;  FROM NITS N&#xa;   LEFT OUTER JOIN PAIS P ON P.C_PAI = N.C_PAI AND P.C_EMP = N.C_EMP&#xa;   LEFT OUTER JOIN DEPARTAMENTO D ON D.C_DPTO = N.DEP AND D.C_PAI = N.C_PAI AND D.C_EMP = N.C_EMP&#xa;   LEFT OUTER JOIN MUNICIPIO M ON M.C_MNPO = N.CIU AND M.C_DPTO = N.DEP AND M.C_PAI = N.C_PAI AND M.C_EMP = N.C_EMP&#xa;  WHERE N.N_IDE = :N_IDE AND N.C_EMP = :C_EMP1;&#xa; EXCEPTION&#xa;  WHEN NO_DATA_FOUND THEN&#xa;   -- BUSCAMOS EN LA TABLA DE PROSPECTOS&#xa;   BEGIN&#xa;    SELECT N.NOMBRE, N.DIR, 'Tel./Phone '||N.TEL, M.NOMBRE||', '||P.NOM&#xa;    INTO :NOMBRE_CLIENTE, :DIR_CLIENTE, :TEL_CLIENTE, :UBICACION_CLIENTE&#xa;    FROM PROSP_CL N&#xa;    LEFT OUTER JOIN PAIS P ON P.C_PAI = N.C_PAI AND P.C_EMP = N.C_EMP&#xa;    LEFT OUTER JOIN DEPARTAMENTO D ON D.C_DPTO = N.DEP AND D.C_PAI = N.C_PAI AND D.C_EMP = N.C_EMP&#xa;    LEFT OUTER JOIN MUNICIPIO M ON M.C_MNPO = N.CIU AND M.C_DPTO = N.DEP AND M.C_PAI = N.C_PAI AND M.C_EMP = N.C_EMP&#xa;    WHERE N.N_IDE = :N_IDE AND N.C_EMP = :C_EMP1;&#xa;   EXCEPTION&#xa;    WHEN NO_DATA_FOUND THEN&#xa;     :NOMBRE_CLIENTE := NULL;   &#xa;     :DIR_CLIENTE := NULL;&#xa;     :TEL_CLIENTE := NULL;&#xa;   END;&#xa; END;&#xa;    return null;&#xa;END;&#xa;"
                ST="Function" SUMPLA="true" TIPO="java.lang.String" modify="true">
                <PARAMETERS/>
           </PROGRAMUNIT>
@@ -4728,6 +4830,16 @@
                PGT="PLSQL"
                PLSQL="function CARGO_VEND_method return varchar2 is &#xa;BEGIN&#xa; IF :IDIOMA = 'INGLES' THEN&#xa;  RETURN 'Comercial Manager';&#xa; ELSE&#xa;  RETURN 'Director Comercial';&#xa; END IF;&#xa;END;"
                ST="Function" SUMPLA="true" TIPO="java.lang.String" modify="true">
+               <PARAMETERS/>
+          </PROGRAMUNIT>
+          <PROGRAMUNIT COMENTARY="" COMPILE="true"
+               FieldRef="LAYOUT_FIELD.LAYOUT_FIELD2"
+               JAVAC="&#xa;&#x9;if (isTrue(greaterThan(getField(&quot;des&quot;).getFieldValue(),0) )){&#xa;&#x9;&#x9;return (java.lang.Boolean)convertTo2(true,&quot;java.lang.Boolean&quot;);&#xa;&#x9;}else {&#xa;&#x9;&#x9;return (java.lang.Boolean)convertTo2(false,&quot;java.lang.Boolean&quot;);&#xa;&#x9;}&#xa;&#xa;"
+               N1="LAYOUT_FIELD2_formatEvent"
+               PARAMETROS="(Vector&lt;ProcedureCallParameters>,argumentVector)"
+               PGT="PLSQL"
+               PLSQL="function LAYOUT_FIELD2_formatEvent return boolean is &#xa;BEGIN&#xa; IF :DES > 0 THEN&#xa;  return true;&#xa; ELSE&#xa;  return false;&#xa; END IF;&#xa;END;"
+               ST="Function" SUMPLA="true" TIPO="java.lang.Boolean" modify="true">
                <PARAMETERS/>
           </PROGRAMUNIT>
      </PROGRAMUNITS>

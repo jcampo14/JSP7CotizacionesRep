@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
+     D1="null" DCU="false" IAE="true" IB="false" IBO="false"
+     IsSave="true" JSN="null" LM="1549398143717" MHB="10" MVB="10"
+     N1="informeDeVentasPorArticulo" NAMES="" NP="1" PFH="1" PFW="1"
+     PKG="com.aspsols.cotizaciones.reportes" PPO="null" PT="null"
+     RUTA="D:\Workspace\Solagro Cotizaciones Reportes\JSP7CotizacionesRep\JSP7_Cotizaciones_Rep\src\main\java\informeDeVentasPorArticulo.jrb"
+     SBP="true" SPF="true" UM="Pixels" Wizard="true">
+     <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,periodo_fin,periodo_ini,empresa,QUERY0,GROUP_MON,GROUP0,NOM,COD,PER_CT,VENTAS,color_reg,MON">
+          <SYSTEM_PARAMETERS>
+               <BACKGROUND DT="java.lang.String" IV="false"
+                    JN="parameterBACKGROUND" MAZ="80" N1="BACKGROUND" VL="false"/>
+               <COPIES DT="java.lang.Double" IM="null" IV="1"
+                    JN="parameterCOPIES" MAZ="4" N1="COPIES" VL="false"/>
+               <CURRENCY DT="java.lang.String" IV="null"
+                    JN="parameterCURRENCY" MAZ="1024" N1="CURRENCY" VL="false"/>
+               <DECIMAL DT="java.lang.String" IV="0"
+                    JN="parameterDECIMAL" MAZ="1" N1="DECIMAL" VL="false"/>
+               <DESFORMAT DT="java.lang.String" IV="dec"
+                    JN="parameterDESFORMAT" MAZ="1024" N1="DESFORMAT" VL="false"/>
+               <DESNAME DT="java.lang.String" IV="null"
+                    JN="parameterDESNAME" MAZ="1024" N1="DESNAME" VL="false"/>
+               <DESTYPE DT="java.lang.String" IV="Preview"
+                    JN="parameterDESTYPE" MAZ="80" N1="DESTYPE" VL="false"/>
+               <MODE DT="java.lang.String" IV="Default"
+                    JN="parameterMODE" MAZ="80" N1="MODE" VL="false"/>
+               <ORIENTATION DT="java.lang.String" IV="Default"
+                    JN="parameterORIENTATION" MAZ="80" N1="ORIENTATION" VL="false"/>
+               <PRINTJOB DT="java.lang.String" IV="false"
+                    JN="parameterPRINTJOB" MAZ="80" N1="PRINTJOB" VL="false"/>
+               <THOUSANDS DT="java.lang.String" IV="0"
+                    JN="parameterTHOUSANDS" MAZ="1" N1="THOUSANDS" VL="false"/>
+               <MAXRECORDS DT="java.lang.Integer" IV="0"
+                    JN="parameterMAXRECORDS" MAZ="80" N1="MAXRECORDS" VL="false"/>
+          </SYSTEM_PARAMETERS>
+          <USER_PARAMETERS>
+               <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
+                    LB="empresa" MAZ="20" N1="empresa" VL="false"/>
+               <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
+                    JN="parameterPeriodo_fin" LB="periodo_fin" MAZ="20"
+                    N1="periodo_fin" VL="false"/>
+               <USER_PARAMETER DT="java.lang.String" IM="" IV="null"
+                    JN="parameterPeriodo_ini" LB="periodo_ini" MAZ="20"
+                    N1="periodo_ini" VL="false"/>
+          </USER_PARAMETERS>
+          <QUERIES>
+               <QUERY CB="null" COLUMNS="MON,NOM,COD,PER_CT,VENTAS"
+                    CONTENIDO="this.queryLogic.addQueries(this.queryQUERY0);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setInitialGroup(this.groupGROUP_MON);&#xa;&#x9;&#x9;&#x9;this.queryQUERY0.setMaximunRowsToFech(0);&#xa;&#x9;&#x9;&#x9;String[] arrayColumnsqueryQUERY0 = ASPString.splitExpression(&quot;AR.NOM,FD.COD,FE.PER_CT,FE.MON,VENTAS&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;String[] arrayAliasqueryQUERY0 = ASPString.splitExpression(&quot;NOM,COD,PER_CT,MON,VENTAS,&quot;,&quot;,&quot;);&#xa;&#x9;&#x9;&#x9;for(int k=0;k&lt;arrayColumnsqueryQUERY0.length;k++){&#xa;&#x9;&#x9;&#x9;&#x9;boolean insertqueryQUERY0 = true;&#xa;&#x9;&#x9;&#x9;&#x9;SelectColumns queryQUERY0SelectColumns = new SelectColumns();&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayColumnsqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnName(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(!arrayAliasqueryQUERY0[k].equals(&quot;null&quot;)){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;insertqueryQUERY0 = false;&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayAliasqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}else{&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;queryQUERY0SelectColumns.setColumnAlias(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;if(insertqueryQUERY0){&#xa;&#x9;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumnsName().add(arrayColumnsqueryQUERY0[k]);&#xa;&#x9;&#x9;&#x9;&#x9;}&#xa;&#x9;&#x9;&#x9;&#x9;this.queryQUERY0.getColumns().add(queryQUERY0SelectColumns);&#xa;&#x9;&#x9;&#x9;}&#xa;"
+                    EQS="null"
+                    GB="GROUP BY AR.NOM,FD.COD,FE.PER_CT,FE.MON"
+                    GR="GROUP_MON" H1="37" LG="GROUP0" MRF="0"
+                    N1="QUERY0" OB="ORDER BY FE.PER_CT" OBR="SQL"
+                    PARAMETERS="" PND="false" PX="73" PY="6"
+                    Q1="select ar.nom,fd.cod,fE.PER_CT,fe.mon,sum(round(fd.can*fd.ven,2)) VENTAS&#xd;&#xa;from FAC_DET fd, fac_enc fe,articulo ar&#xd;&#xa;where fe.fac = fd.fac&#xd;&#xa;and fe.c_emp = fd.c_emp&#xd;&#xa;and fe.c_agr = fd.c_agr&#xd;&#xa;and fe.n_ide = fd.n_ide&#xd;&#xa;and fe.est = 'A'&#xd;&#xa;and ar.c_emp = fe.c_emp&#xd;&#xa;and fd.cod = ar.cod&#xd;&#xa;and fe.c_emp = :empresa&#xd;&#xa;and substr(fE.PER_CT,1,6) between substr(:periodo_ini,1,6) and substr(:periodo_fin,1,6)&#xd;&#xa;group by ar.nom,fd.cod,fE.PER_CT,fe.mon order by fE.PER_CT"
+                    QTR=" SELECT  AR.NOM   ,FD.COD   ,FE.PER_CT   ,FE.MON   ,SUM( ROUND (FD.CAN * FD.VEN, 2 ))  VENTAS   FROM FAC_DET FD, FAC_ENC FE, ARTICULO AR  WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND AR.C_EMP = FE.C_EMP AND FD.COD = AR.COD AND FE.C_EMP = #empresa AND SUBSTR(FE.PER_CT, 1 , 6 ) BETWEEN SUBSTR(#periodo_ini, 1 , 6 ) AND SUBSTR(#periodo_fin, 1 , 6 )  GROUP BY AR.NOM,FD.COD,FE.PER_CT,FE.MON"
+                    T1="MASTER"
+                    TC="AR.NOM,FD.COD,FE.PER_CT,FE.MON,VENTAS"
+                    TCA="NOM,COD,PER_CT,MON,VENTAS," W1="80" W2="WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND AR.C_EMP = FE.C_EMP AND FD.COD = AR.COD AND FE.C_EMP = #empresa AND SUBSTR(FE.PER_CT, 1 , 6 ) BETWEEN SUBSTR(#periodo_ini, 1 , 6 ) AND SUBSTR(#periodo_fin, 1 , 6 )"/>
+          </QUERIES>
+          <GROUPS>
+               <GROUP
+                    CONTENIDO="this.groupGROUP_MON.addChildGroup(this.groupGROUP0);"
+                    FT="None" GRT="Normal" H1="50" N1="GROUP_MON"
+                    PND="true" PX="42" PY="74" QN="QUERY0" SF="null" W1="120">
+                    <GROUP CONTENIDO="" FT="None" GR="GROUP_MON"
+                         GRT="Normal" H1="150" N1="GROUP0" PND="true"
+                         PX="67" PY="157" QN="QUERY0" SF="null" W1="100">
+                         <GROUP_FIELD BO="Ascending" CCT="AR.NOM"
+                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0NOM);"
+                              CT="DATABASE" DT="java.lang.String"
+                              GR="GROUP0" JN="groupFieldGROUP0NOM"
+                              N1="NOM" QF="0" RV="NOM" VIN="null"/>
+                         <GROUP_FIELD BO="Ascending" CCT="FD.COD"
+                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0COD);"
+                              CT="DATABASE" DT="java.lang.String"
+                              GR="GROUP0" JN="groupFieldGROUP0COD"
+                              N1="COD" QF="1" RV="COD" VIN="null"/>
+                         <GROUP_FIELD BO="Ascending" CCT="FE.PER_CT"
+                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0PER_CT);"
+                              CT="DATABASE" DT="java.lang.String"
+                              GR="GROUP0" JN="groupFieldGROUP0PER_CT"
+                              N1="PER_CT" QF="2" RV="PER_CT" VIN="null"/>
+                         <GROUP_FIELD BO="Ascending" CCT="VENTAS"
+                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0VENTAS);"
+                              CT="DATABASE" DT="java.lang.String"
+                              GR="GROUP0" JN="groupFieldGROUP0VENTAS"
+                              N1="VENTAS" PND="true" QF="4"
+                              RV="SUM( ROUND (FD.CAN * FD.VEN, 2 ))" VIN="null"/>
+                         <SUMMARY BO="Ascending" CA="Report"
+                              CONTENIDO="this.groupGROUP0.addField(this.groupFieldGROUP0Color_reg);&#xa;&#x9;&#x9;&#x9;this.groupFieldGROUP0Color_reg.setSource(this.groupFieldGROUP0COD);"
+                              CT="SUMMARY" DT="java.lang.Double"
+                              F1="Count" JN="groupFieldGROUP0Color_reg"
+                              N1="color_reg" PND="true" RA="Report"
+                              S1="GROUP0.COD" VIN="null"/>
+                    </GROUP>
+                    <GROUP_FIELD BO="Ascending" CCT="FE.MON"
+                         CONTENIDO="this.groupGROUP_MON.addField(this.groupFieldGROUP_MONMON);"
+                         CT="DATABASE" DT="java.lang.String" GR="GROUP0"
+                         JN="groupFieldGROUP_MONMON" N1="MON" QF="3"
+                         RV="MON" VIN="null"/>
+               </GROUP>
+          </GROUPS>
+          <FORMULA_COLUMNS/>
+          <SUMMARY_COLUMNS/>
+          <PLACEHOLDER_COLUMNS/>
+          <DATA_LINKS/>
+          <TEMP_WIZARD_ELEMENT>
+               <DATA_MODEL NAMES="BACKGROUND,COPIES,CURRENCY,DECIMAL,DESFORMAT,DESNAME,DESTYPE,MODE,ORIENTATION,PRINTJOB,THOUSANDS,MAXRECORDS,QUERY0,GROUP0,NOM,COD,PER_CT,MON,VENTAS,periodo_ini,periodo_fin">
+                    <SYSTEM_PARAMETERS>
+                         <BACKGROUND DT="java.lang.String" IV="false"
+                              MAZ="80" N1="BACKGROUND" VL="false"/>
+                         <COPIES DT="java.lang.Double" IM="null" IV="1"
+                              MAZ="4" N1="COPIES" VL="false"/>
+                         <CURRENCY DT="java.lang.String" IV="null"
+                              MAZ="1024" N1="CURRENCY" VL="false"/>
+                         <DECIMAL DT="java.lang.String" IV="0" MAZ="1"
+                              N1="DECIMAL" VL="false"/>
+                         <DESFORMAT DT="java.lang.String" IV="dec"
+                              MAZ="1024" N1="DESFORMAT" VL="false"/>
+                         <DESNAME DT="java.lang.String" IV="null"
+                              MAZ="1024" N1="DESNAME" VL="false"/>
+                         <DESTYPE DT="java.lang.String" IV="Preview"
+                              MAZ="80" N1="DESTYPE" VL="false"/>
+                         <MODE DT="java.lang.String" IV="Default"
+                              MAZ="80" N1="MODE" VL="false"/>
+                         <ORIENTATION DT="java.lang.String" IV="Default"
+                              MAZ="80" N1="ORIENTATION" VL="false"/>
+                         <PRINTJOB DT="java.lang.String" IV="false"
+                              MAZ="80" N1="PRINTJOB" VL="false"/>
+                         <THOUSANDS DT="java.lang.String" IV="0" MAZ="1"
+                              N1="THOUSANDS" VL="false"/>
+                         <MAXRECORDS DT="java.lang.Integer" IV="0"
+                              MAZ="80" N1="MAXRECORDS" VL="false"/>
+                    </SYSTEM_PARAMETERS>
+                    <USER_PARAMETERS>
+                         <USER_PARAMETER N1="periodo_fin"/>
+                         <USER_PARAMETER N1="periodo_ini"/>
+                    </USER_PARAMETERS>
+                    <QUERIES>
+                         <QUERY CB="null"
+                              COLUMNS="NOM,COD,PER_CT,MON,VENTAS"
+                              EQS="null"
+                              GB=" GROUP BY AR.NOM,FD.COD,FE.PER_CT,FE.MON"
+                              GR="GROUP0" H1="30" LG="GROUP0" MRF="0"
+                              N1="QUERY0" OB=" ORDER BY FE.PER_CT"
+                              OBR="SQL" PARAMETERS="" PND="true" PX="40"
+                              PY="40"
+                              Q1="select ar.nom,fd.cod,fE.PER_CT,fe.mon,sum(round(fd.can*fd.ven,2)) VENTAS&#xd;&#xa;from FAC_DET fd, fac_enc fe,articulo ar&#xd;&#xa;where fe.fac = fd.fac&#xd;&#xa;and fe.c_emp = fd.c_emp&#xd;&#xa;and fe.c_agr = fd.c_agr&#xd;&#xa;and fe.n_ide = fd.n_ide&#xd;&#xa;and fe.est = 'A'&#xd;&#xa;and ar.c_emp = fe.c_emp&#xd;&#xa;and fd.cod = ar.cod&#xd;&#xa;and substr(fE.PER_CT,1,6) between substr(:periodo_ini,1,6) and substr(:periodo_fin,1,6)&#xd;&#xa;group by ar.nom,fd.cod,fE.PER_CT,fe.mon order by fE.PER_CT"
+                              QTR=" SELECT  AR.NOM   ,FD.COD   ,FE.PER_CT   ,FE.MON   ,SUM( ROUND (FD.CAN * FD.VEN, 2 ))  VENTAS   FROM FAC_DET FD, FAC_ENC FE, ARTICULO AR  WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND AR.C_EMP = FE.C_EMP AND FD.COD = AR.COD AND SUBSTR(FE.PER_CT, 1 , 6 ) BETWEEN SUBSTR(#periodo_ini, 1 , 6 ) AND SUBSTR(#periodo_fin, 1 , 6 )  GROUP BY AR.NOM,FD.COD,FE.PER_CT,FE.MON"
+                              T1="MASTER" W1="80" W2=" WHERE FE.FAC = FD.FAC AND FE.C_EMP = FD.C_EMP AND FE.C_AGR = FD.C_AGR AND FE.N_IDE = FD.N_IDE AND FE.EST =  'A'  AND AR.C_EMP = FE.C_EMP AND FD.COD = AR.COD AND SUBSTR(FE.PER_CT, 1 , 6 ) BETWEEN SUBSTR(#periodo_ini, 1 , 6 ) AND SUBSTR(#periodo_fin, 1 , 6 )"/>
+                    </QUERIES>
+                    <GROUPS>
+                         <GROUP FT="None" GRT="Normal" H1="150"
+                              N1="GROUP0" PND="true" PX="30" PY="120"
+                              QN="QUERY0" W1="100">
+                              <GROUP_FIELD BO="Ascending" CCT="AR.NOM"
+                                   CT="DATABASE" DT="java.lang.String"
+                                   GR="GROUP0" N1="NOM" QF="0" RV="NOM" VIN="null"/>
+                              <GROUP_FIELD BO="Ascending" CCT="FD.COD"
+                                   CT="DATABASE" DT="java.lang.String"
+                                   GR="GROUP0" N1="COD" QF="1" RV="COD" VIN="null"/>
+                              <GROUP_FIELD BO="Ascending"
+                                   CCT="FE.PER_CT" CT="DATABASE"
+                                   DT="java.lang.String" GR="GROUP0"
+                                   N1="PER_CT" QF="2" RV="PER_CT" VIN="null"/>
+                              <GROUP_FIELD BO="Ascending" CCT="FE.MON"
+                                   CT="DATABASE" DT="java.lang.String"
+                                   GR="GROUP0" N1="MON" QF="3" RV="MON" VIN="null"/>
+                              <GROUP_FIELD BO="Ascending" CCT="VENTAS"
+                                   CT="DATABASE" DT="java.lang.String"
+                                   GR="GROUP0" N1="VENTAS" QF="4"
+                                   RV="SUM( ROUND (FD.CAN * FD.VEN, 2 ))" VIN="null"/>
+                         </GROUP>
+                    </GROUPS>
+                    <FORMULA_COLUMNS/>
+                    <SUMMARY_COLUMNS/>
+                    <PLACEHOLDER_COLUMNS/>
+                    <DATA_LINKS/>
+               </DATA_MODEL>
+          </TEMP_WIZARD_ELEMENT>
+          <WIZARD_REFERENCE
+               Q1="select ar.nom,fd.cod,fE.PER_CT,fe.mon,sum(round(fd.can*fd.ven,2)) VENTAS&#xd;&#xa;from FAC_DET fd, fac_enc fe,articulo ar&#xd;&#xa;where fe.fac = fd.fac&#xd;&#xa;and fe.c_emp = fd.c_emp&#xd;&#xa;and fe.c_agr = fd.c_agr&#xd;&#xa;and fe.n_ide = fd.n_ide&#xd;&#xa;and fe.est = 'A'&#xd;&#xa;and ar.c_emp = fe.c_emp&#xd;&#xa;and fd.cod = ar.cod&#xd;&#xa;and substr(fE.PER_CT,1,6) between substr(:periodo_ini,1,6) and substr(:periodo_fin,1,6)&#xd;&#xa;group by ar.nom,fd.cod,fE.PER_CT,fe.mon order by fE.PER_CT"
+               ReportType="Tabular"
+               T4="SOLAGRO SOLUCIONES AGROINDRUSTRIALES S.A.S." template="null">
+               <QUERY_FIELDS>
+                    <FIELD AL="" AV="true" CCS="AR.NOM" CN="AR.NOM0"
+                         CS="AR.NOM" CU="false" CVTR="NOM"
+                         DT="java.lang.String" IC="false" IF="false"
+                         IFT="false" IIQ="0" IIT="-1" IR="false"
+                         MA="true" MC="false" MMA="false" MMI="false"
+                         MMS="true" MMT="false" MN="false" MS="10"
+                         MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="-1" PRF="null" PRT="null"
+                         RLN="NOM" SU="true" TBN="" TO="true" UO="NOM" VRF="true"/>
+                    <FIELD AL="" AV="true" CCS="FD.COD" CN="FD.COD1"
+                         CS="FD.COD" CU="false" CVTR="COD"
+                         DT="java.lang.String" IC="false" IF="false"
+                         IFT="false" IIQ="1" IIT="-1" IR="false"
+                         MA="true" MC="false" MMA="false" MMI="false"
+                         MMS="true" MMT="false" MN="false" MS="10"
+                         MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="-1" PRF="null" PRT="null"
+                         RLN="COD" SU="true" TBN="" TO="true" UO="COD" VRF="true"/>
+                    <FIELD AL="" AV="true" CCS="FE.PER_CT"
+                         CN="FE.PER_CT2" CS="FE.PER_CT" CU="false"
+                         CVTR="PER_CT" DT="java.lang.String" IC="false"
+                         IF="false" IFT="false" IIQ="2" IIT="-1"
+                         IR="false" MA="true" MC="false" MMA="false"
+                         MMI="false" MMS="true" MMT="false" MN="false"
+                         MS="6" MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="-1" PRF="null" PRT="null"
+                         RLN="PER_CT" SU="true" TBN="" TO="true"
+                         UO="PER_CT" VRF="true"/>
+                    <FIELD AL="" AV="true" CCS="FE.MON" CN="FE.MON3"
+                         CS="FE.MON" CU="false" CVTR="MON"
+                         DT="java.lang.String" IC="false" IF="false"
+                         IFT="false" IIQ="3" IIT="-1" IR="false"
+                         MA="true" MC="false" MMA="false" MMI="false"
+                         MMS="true" MMT="false" MN="false" MS="7"
+                         MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="-1" PRF="null" PRT="null"
+                         RLN="MON" SU="true" TBN="" TO="true" UO="MON" VRF="true"/>
+                    <FIELD AL="VENTAS" AV="true" CCS="VENTAS"
+                         CN="SUM( ROUND (FD.CAN * FD.VEN, 2 ))4"
+                         CS="SUM( ROUND (FD.CAN * FD.VEN, 2 ))"
+                         CU="false"
+                         CVTR="SUM( ROUND (FD.CAN * FD.VEN, 2 ))"
+                         DT="java.lang.String" IC="false" IF="false"
+                         IFT="false" IIQ="4" IIT="-1" IR="false"
+                         MA="true" MC="false" MMA="false" MMI="false"
+                         MMS="true" MMT="false" MN="false" MS="10"
+                         MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="-1" PRF="null" PRT="null"
+                         RLN="VENTAS" SU="true" TBN="" TO="true"
+                         UO="VENTAS" VRF="true"/>
+               </QUERY_FIELDS>
+               <DISPLAY_FIELDS/>
+               <SELECTED_FIELDS>
+                    <FIELD AL="NOM" AV="true" CCS="AR.NOM" CN="AR.NOM0"
+                         CS="AR.NOM" CU="false" CVTR="NOM"
+                         DT="java.lang.String" IC="false" IF="false"
+                         IFT="false" IIQ="0" IIT="0" IR="false"
+                         MA="true" MC="false" MMA="false" MMI="false"
+                         MMS="true" MMT="false" MN="false" MS="10"
+                         MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="42" PRF="null" PRT="null"
+                         RLN="NOM" SU="true" TBN="" TO="true" UO="NOM" VRF="true"/>
+                    <FIELD AL="COD" AV="true" CCS="FD.COD" CN="FD.COD1"
+                         CS="FD.COD" CU="false" CVTR="COD"
+                         DT="java.lang.String" IC="false" IF="false"
+                         IFT="false" IIQ="1" IIT="1" IR="false"
+                         MA="true" MC="false" MMA="false" MMI="false"
+                         MMS="true" MMT="false" MN="false" MS="10"
+                         MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="42" PRF="null" PRT="null"
+                         RLN="COD" SU="true" TBN="" TO="true" UO="COD" VRF="true"/>
+                    <FIELD AL="PER_CT" AV="true" CCS="FE.PER_CT"
+                         CN="FE.PER_CT2" CS="FE.PER_CT" CU="false"
+                         CVTR="PER_CT" DT="java.lang.String" IC="false"
+                         IF="false" IFT="false" IIQ="2" IIT="2"
+                         IR="false" MA="true" MC="false" MMA="false"
+                         MMI="false" MMS="true" MMT="false" MN="false"
+                         MS="6" MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="42" PRF="null" PRT="null"
+                         RLN="PER_CT" SU="true" TBN="" TO="true"
+                         UO="PER_CT" VRF="true"/>
+                    <FIELD AL="MON" AV="true" CCS="FE.MON" CN="FE.MON3"
+                         CS="FE.MON" CU="false" CVTR="MON"
+                         DT="java.lang.String" IC="false" IF="false"
+                         IFT="false" IIQ="3" IIT="3" IR="false"
+                         MA="true" MC="false" MMA="false" MMI="false"
+                         MMS="true" MMT="false" MN="false" MS="7"
+                         MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="42" PRF="null" PRT="null"
+                         RLN="MON" SU="true" TBN="" TO="true" UO="MON" VRF="true"/>
+                    <FIELD AL="VENTAS" AV="true" CCS="VENTAS"
+                         CN="SUM( ROUND (FD.CAN * FD.VEN, 2 ))4"
+                         CS="SUM( ROUND (FD.CAN * FD.VEN, 2 ))"
+                         CU="false"
+                         CVTR="SUM( ROUND (FD.CAN * FD.VEN, 2 ))"
+                         DT="java.lang.String" IC="false" IF="false"
+                         IFT="false" IIQ="4" IIT="4" IR="false"
+                         MA="true" MC="false" MMA="false" MMI="false"
+                         MMS="true" MMT="false" MN="false" MS="10"
+                         MX="false" NCL="true" NDR="null" NV="1"
+                         OT="false" PFW="42" PRF="null" PRT="null"
+                         RLN="VENTAS" SU="true" TBN="" TO="true"
+                         UO="VENTAS" VRF="true"/>
+               </SELECTED_FIELDS>
+               <TOTALS_FIELDS/>
+          </WIZARD_REFERENCE>
+     </DATA_MODEL>
+     <LAYOUT_MODEL NAMES="FRAME0,REPEATING_FRAME1,REPEATING_FRAME0,COD,NOM,MON,PER_CT,VENTAS,FRAME1,t_PER_CT,t_MON,t_VENTAS,t_COD,t_NOM,TITLE,IMAGE0,TEXT_GRAPHIC0,LAYOUT_FIELD0,TEXT_GRAPHIC1,TEXT_GRAPHIC2,LAYOUT_FIELD1,TEXT_GRAPHIC3,LAYOUT_FIELD2">
+          <HEADER BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
+               CONTENIDO="this.presentationRules.getSections().add(this.reportSectionHeader);"
+               H1="792" HPP="1" NPG="false" OR="Portrait" VPP="1" W1="612">
+               <BODY LAYERS="-1">
+                    <ANCHORS/>
+               </BODY>
+               <MARGIN LAYERS="-1">
+                    <ANCHORS/>
+               </MARGIN>
+          </HEADER>
+          <MAIN BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
+               CONTENIDO="this.presentationRules.getSections().add(this.reportSectionMain);"
+               H1="792" HPP="1" LAYERS="0" NPG="false" OR="Portrait"
+               VPP="1" W1="612">
+               <BODY LAYERS="13">
+                    <ANCHORS PHN="NotModifyJPanel"/>
+                    <FRAME B1="null" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         ELS="true" FE="null" H1="634" HE="Fixed"
+                         IF="false"
+                         JAVA="protected ReportFrame reportFrameMainBodyFrame0 = new ReportFrame(&quot;FRAME0&quot;,7,0,634,529,reportRegionMainBody,0,null,&quot;FIXED&quot;,&quot;VARIABLE&quot;,new Color(255,255,255),null,&quot;DEFAULT&quot;,false,false,false,null,0,-1,false);"
+                         KAO="false" LN="0" LS="Normal" LW="-1"
+                         N1="FRAME0" NPG="false" PBA="false" PBB="false"
+                         PHN="NotModifyJPanel" PND="false"
+                         POO="First page" PP="false" PX="7" PY="0"
+                         VE="Variable" W1="529">
+                         <REPEATING_FRAME B1="null" BG="255,255,255"
+                              BPO="Enclosing object" CF="null"
+                              CMD="false" DO="0 Grades" ELS="false"
+                              FE="null" GN="GROUP_MON" H1="56"
+                              HE="Fixed" HSBF="0" IF="false"
+                              JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame1 = new ReportRepetitiveFrame(&quot;REPEATING_FRAME1&quot;,16,0,56,514,reportRegionMainBody,1,reportFrameMainBodyFrame0,&quot;FIXED&quot;,&quot;VARIABLE&quot;,&quot;GROUP_MON&quot;,&quot;Down&quot;,new Color(255,255,255),null,0,&quot;DEFAULT&quot;,false,false,false,null,0,0,0,-1,false);"
+                              KAO="false" LN="1" LS="Normal" LW="-1"
+                              MRPP="0" MWR="0" N1="REPEATING_FRAME1"
+                              NPG="false" PBA="false" PBB="false"
+                              PD="Down" PHN="NotModifyJPanel"
+                              PND="false" POO="Default" PP="false"
+                              PX="16" PY="0" VE="Variable" VSBF="0" W1="514">
+                              <REPEATING_FRAME B1="Default,1,(0,0,0)"
+                                   BG="255,255,255"
+                                   BPO="Enclosing object" CF="null"
+                                   CMD="false" DO="0 Grades" ELS="false"
+                                   FE="REPEATING_FRAME0_formatEvent"
+                                   GN="GROUP0" H1="15" HE="Fixed"
+                                   HSBF="0" IF="false"
+                                   JAVA="protected ReportRepetitiveFrame repetitiveFrameMainBodyRepeating_frame0 = new ReportRepetitiveFrame(&quot;REPEATING_FRAME0&quot;,16,25,15,514,reportRegionMainBody,2,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;EXPAND&quot;,&quot;GROUP0&quot;,&quot;Down&quot;,new Color(255,255,255),&quot;Default,1,(0,0,0)&quot;,0,&quot;DEFAULT&quot;,false,false,false,&quot;REPEATING_FRAME0_formatEvent&quot;,0,0,0,-1,false);"
+                                   KAO="false" LN="2" LS="Normal"
+                                   LW="-1" MRPP="0" MWR="0"
+                                   N1="REPEATING_FRAME0" NPG="false"
+                                   PBA="false" PBB="false" PD="Down"
+                                   PHN="NotModifyJPanel" PND="false"
+                                   POO="First page" PP="false" PX="16"
+                                   PY="25" VE="Expand" VSBF="0" W1="514">
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="Ascending"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,0,8"
+                                    FE="null" FG="0,0,0" FM="null"
+                                    H1="13" HA="Alg_Left" HE="Fixed"
+                                    IF="false" IV="null" KAO="false"
+                                    LB="null" LN="4" LS="Normal"
+                                    LW="-1" Last_Location="19,22"
+                                    MAZ="10" MWL="0" N1="COD"
+                                    NPG="false" PBA="false"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="First page"
+                                    PP="false" PX="16" PY="25"
+                                    S1="GROUP0.COD" V2="true"
+                                    VE="Expand" VIN="false" W1="54"/>
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="Ascending"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,0,8"
+                                    FE="null" FG="0,0,0" FM="null"
+                                    H1="13" HA="Alg_Left" HE="Fixed"
+                                    IF="false" IV="null" KAO="false"
+                                    LB="null" LN="3" LS="Normal"
+                                    LW="-1" Last_Location="63,22"
+                                    MAZ="10" MWL="0" N1="NOM"
+                                    NPG="false" PBA="false"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="First page"
+                                    PP="false" PX="70" PY="25"
+                                    S1="GROUP0.NOM" V2="true"
+                                    VE="Expand" VIN="false" W1="169"/>
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="Ascending"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,0,8"
+                                    FE="null" FG="0,0,0" FM="null"
+                                    H1="13" HA="Alg_Center"
+                                    HE="Fixed" IF="false" IV="null"
+                                    KAO="false" LB="null" LN="6"
+                                    LS="Normal" LW="-1"
+                                    Last_Location="277,10" MAZ="7"
+                                    MWL="0" N1="MON" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="First page"
+                                    PP="false" PX="289" PY="25"
+                                    S1="GROUP_MON.MON" V2="true"
+                                    VE="Expand" VIN="false" W1="48"/>
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="Ascending"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.String"
+                                    ELS="false" F2="Arial,0,8"
+                                    FE="null" FG="0,0,0" FM="null"
+                                    H1="13" HA="Alg_Center"
+                                    HE="Fixed" IF="false" IV="null"
+                                    KAO="false" LB="null" LN="5"
+                                    LS="Normal" LW="-1"
+                                    Last_Location="230,10" MAZ="6"
+                                    MWL="0" N1="PER_CT" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="First page"
+                                    PP="false" PX="239" PY="25"
+                                    S1="GROUP0.PER_CT" V2="true"
+                                    VE="Expand" VIN="false" W1="50"/>
+                                   <LAYOUT_FIELD B1="null" BCF="None"
+                                    BG="255,255,255" BO="Ascending"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades"
+                                    DT="java.lang.Double"
+                                    ELS="false" F2="Arial,0,8"
+                                    FE="null" FG="0,0,0"
+                                    FM="###,###,###,###,###,###.###"
+                                    H1="13" HA="Alg_Center"
+                                    HE="Fixed" IF="false" IV="null"
+                                    KAO="false" LB="null" LN="7"
+                                    LS="Normal" LW="-1"
+                                    Last_Location="330,22" MAZ="10"
+                                    MWL="0" N1="VENTAS" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="false" POO="First page"
+                                    PP="false" PX="337" PY="25"
+                                    S1="GROUP0.VENTAS" V2="true"
+                                    VE="Expand" VIN="false" W1="58"/>
+                              </REPEATING_FRAME>
+                              <FRAME B1="Default,1,(0,0,0)"
+                                   BG="0,51,153" BPO="Anchoring object"
+                                   CF="null" DO="0 Grades" ELS="false"
+                                   FE="null" H1="10" HE="Fixed"
+                                   IF="true"
+                                   JAVA="protected ReportFrame reportFrameMainBodyFrame1 = new ReportFrame(&quot;FRAME1&quot;,16,15,10,514,reportRegionMainBody,8,repetitiveFrameMainBodyRepeating_frame1,&quot;FIXED&quot;,&quot;FIXED&quot;,new Color(0,51,153),&quot;Default,1,(0,0,0)&quot;,&quot;ALLPAGES&quot;,false,false,false,null,0,-1,false);"
+                                   KAO="false" LN="8" LS="Normal"
+                                   LW="-1" N1="FRAME1" NPG="false"
+                                   PBA="false" PBB="false"
+                                   PHN="NotModifyJPanel" PND="false"
+                                   POO="All pages" PP="false" PX="16"
+                                   PY="15" VE="Fixed" W1="514">
+                                   <GRAPHIC B1="null" BCF="None"
+                                    BG="255,255,255"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades" F2="Arial,1,8"
+                                    FE="null" FG="255,255,255"
+                                    GT="TEXT_GRAPHIC" H1="10"
+                                    HA="Alg_Center" HE="Fixed"
+                                    IF="false" JN="null" KAO="false"
+                                    LB="Periodo de venta" LN="10"
+                                    LW="-1" Last_Location="243,12"
+                                    MWL="0" N1="t_PER_CT"
+                                    NPG="false" PBA="false"
+                                    PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="true" POO="Firts page"
+                                    PP="false" PX="239" PY="15"
+                                    VE="Fixed" W1="50"/>
+                                   <GRAPHIC B1="null" BCF="None"
+                                    BG="255,255,255"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades" F2="Arial,1,8"
+                                    FE="null" FG="255,255,255"
+                                    GT="TEXT_GRAPHIC" H1="10"
+                                    HA="Alg_Center" HE="Fixed"
+                                    IF="false" JN="null" KAO="false"
+                                    LB="Moneda" LN="9" LW="-1"
+                                    Last_Location="277,0" MWL="0"
+                                    N1="t_MON" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="true" POO="Firts page"
+                                    PP="false" PX="289" PY="15"
+                                    VE="Fixed" W1="48"/>
+                                   <GRAPHIC B1="null" BCF="None"
+                                    BG="255,255,255"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades" F2="Arial,1,8"
+                                    FE="null" FG="255,255,255"
+                                    GT="TEXT_GRAPHIC" H1="10"
+                                    HA="Alg_Center" HE="Fixed"
+                                    IF="false" JN="null" KAO="false"
+                                    LB="Ventas" LN="13" LW="-1"
+                                    Last_Location="330,12" MWL="0"
+                                    N1="t_VENTAS" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="true" POO="Firts page"
+                                    PP="false" PX="337" PY="15"
+                                    VE="Fixed" W1="58"/>
+                                   <GRAPHIC B1="null" BCF="None"
+                                    BG="255,255,255"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades" F2="Arial,1,8"
+                                    FE="null" FG="255,255,255"
+                                    GT="TEXT_GRAPHIC" H1="10"
+                                    HA="Alg_Center" HE="Fixed"
+                                    IF="false" JN="null" KAO="false"
+                                    LB="Codigo Art" LN="12" LW="-1"
+                                    Last_Location="19,12" MWL="0"
+                                    N1="t_COD" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="true" POO="Firts page"
+                                    PP="false" PX="16" PY="15"
+                                    VE="Fixed" W1="54"/>
+                                   <GRAPHIC B1="null" BCF="None"
+                                    BG="255,255,255"
+                                    BPO="Enclosing object" CF="null"
+                                    DO="0 Grades" F2="Arial,1,8"
+                                    FE="null" FG="255,255,255"
+                                    GT="TEXT_GRAPHIC" H1="10"
+                                    HA="Alg_Center" HE="Fixed"
+                                    IF="false" JN="null" KAO="false"
+                                    LB="Nombre" LN="11" LW="-1"
+                                    Last_Location="52,0" MWL="0"
+                                    N1="t_NOM" NPG="false"
+                                    PBA="false" PBB="false"
+                                    PHN="NotModifyJPanel"
+                                    PNB="true,true,true,1,1,!Report"
+                                    PND="true" POO="Firts page"
+                                    PP="false" PX="70" PY="15"
+                                    VE="Fixed" W1="169"/>
+                              </FRAME>
+                         </REPEATING_FRAME>
+                    </FRAME>
+               </BODY>
+               <MARGIN LAYERS="8">
+                    <ANCHORS PHN="ROOT&amp;"/>
+                    <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         F2="Arial,1,11" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="14" HA="Alg_Right"
+                         HE="Fixed" IF="false" JN="null" KAO="false"
+                         LB="SOLAGRO SOLUCIONES AGROINDRUSTRIALES S.A.S."
+                         LN="0" LW="-1" Last_Location="217,8" MWL="0"
+                         N1="TITLE" NPG="false" PBA="false" PBB="false"
+                         PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="true"
+                         POO="Default" PP="false" PX="217" PY="9"
+                         VE="Fixed" W1="360"/>
+                    <GRAPHIC BC="0,0,0" BV="Normal" CF="null"
+                         DO="0 Grades" FC="135,155,211" FE="null"
+                         GT="IMAGE" H1="55" IP="logo.png" JN="null"
+                         LN="1" LW="1" Last_Location="34,7" N1="IMAGE0"
+                         NPG="false" PHN="ROOT&amp;" PND="false"
+                         POO="Default" PX="34" PY="7" W1="152"/>
+                    <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         F2="Arial,1,9" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="14" HA="Alg_Right"
+                         HE="Fixed" IF="false" JN="null" KAO="false"
+                         LB="Informe de ventas por articulo del periodo &amp;periodo_ini a &amp;periodo_fin"
+                         LN="2" LW="-1" Last_Location="213,22" MWL="0"
+                         N1="TEXT_GRAPHIC0" NPG="false" PBA="false"
+                         PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="true"
+                         POO="Default" PP="false" PX="213" PY="23"
+                         VE="Fixed" W1="364"/>
+                    <LAYOUT_FIELD B1="null" BCF="None" BG="255,255,255"
+                         BO="None" BPO="Enclosing object" CF="null"
+                         DO="0 Grades" DT="java.sql.Date" ELS="false"
+                         F2="Arial,1,8" FE="null" FG="0,0,0"
+                         FM="dd/MM/yyyy" H1="10" HA="Alg_Center"
+                         HE="Fixed" IF="false" IV="null" KAO="false"
+                         LB="null" LN="3" LS="Normal" LW="-1"
+                         Last_Location="522,38" MAZ="20" MWL="0"
+                         N1="LAYOUT_FIELD0" NPG="false" PBA="false"
+                         PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="524" PY="38"
+                         S1="Other variables.Current date" V2="true"
+                         VE="Fixed" VIN="false" W1="53"/>
+                    <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         F2="Arial,1,8" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="10" HA="Alg_Right"
+                         HE="Fixed" IF="false" JN="null" KAO="false"
+                         LB="Fecha:" LN="4" LW="-1"
+                         Last_Location="493,37" MWL="0"
+                         N1="TEXT_GRAPHIC1" NPG="false" PBA="false"
+                         PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="493" PY="38"
+                         VE="Fixed" W1="27"/>
+                    <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         F2="Arial,1,8" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="9" HA="Alg_Right"
+                         HE="Fixed" IF="false" JN="null" KAO="false"
+                         LB="Página" LN="5" LW="-1"
+                         Last_Location="481,51" MWL="0"
+                         N1="TEXT_GRAPHIC2" NPG="false" PBA="false"
+                         PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="true"
+                         POO="Default" PP="false" PX="481" PY="50"
+                         VE="Fixed" W1="41"/>
+                    <LAYOUT_FIELD B1="null" BCF="None" BG="255,255,255"
+                         BO="None" BPO="Enclosing object" CF="null"
+                         DO="0 Grades" DT="java.lang.String" ELS="false"
+                         F2="Arial,1,8" FE="null" FG="0,0,0" FM="null"
+                         H1="10" HA="Alg_Center" HE="Fixed" IF="false"
+                         IV="null" KAO="false" LB="null" LN="6"
+                         LS="Normal" LW="-1" Last_Location="523,49"
+                         MAZ="20" MWL="0" N1="LAYOUT_FIELD1" NPG="false"
+                         PBA="false" PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="524" PY="49"
+                         S1="Other variables.Page number" V2="true"
+                         VE="Fixed" VIN="false" W1="18"/>
+                    <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                         BPO="Enclosing object" CF="null" DO="0 Grades"
+                         F2="Arial,1,8" FE="null" FG="0,0,0"
+                         GT="TEXT_GRAPHIC" H1="10" HA="Alg_Center"
+                         HE="Fixed" IF="false" JN="null" KAO="false"
+                         LB="de" LN="7" LW="-1" Last_Location="543,50"
+                         MWL="0" N1="TEXT_GRAPHIC3" NPG="false"
+                         PBA="false" PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="544" PY="49"
+                         VE="Fixed" W1="13"/>
+                    <LAYOUT_FIELD B1="null" BCF="None" BG="255,255,255"
+                         BO="None" BPO="Enclosing object" CF="null"
+                         DO="0 Grades" DT="java.lang.String" ELS="false"
+                         F2="Arial,1,8" FE="null" FG="0,0,0" FM="null"
+                         H1="10" HA="Alg_Center" HE="Fixed" IF="false"
+                         IV="null" KAO="false" LB="null" LN="8"
+                         LS="Normal" LW="-1" Last_Location="558,49"
+                         MAZ="20" MWL="0" N1="LAYOUT_FIELD2" NPG="false"
+                         PBA="false" PBB="false" PHN="ROOT&amp;"
+                         PNB="true,true,true,1,1,!Report" PND="false"
+                         POO="Default" PP="false" PX="559" PY="49"
+                         S1="Other variables.Total pages" V2="true"
+                         VE="Fixed" VIN="false" W1="18"/>
+               </MARGIN>
+          </MAIN>
+          <TRAILER BH="652" BW="544" BX="34" BY="70" CHH="60" CHW="80"
+               CONTENIDO="this.presentationRules.getSections().add(this.reportSectionTrailer);"
+               H1="792" HPP="1" NPG="false" OR="Portrait" VPP="1" W1="612">
+               <BODY LAYERS="-1">
+                    <ANCHORS/>
+               </BODY>
+               <MARGIN LAYERS="-1">
+                    <ANCHORS/>
+               </MARGIN>
+          </TRAILER>
+     </LAYOUT_MODEL>
+     <PARAMETER_FORM BG="191,191,191" CSS="null" H1="335"
+          NAMES="PF_periodo_fin,PF_periodo_ini,PF_empresa,G_title,G_hint,G_periodo_fin,G_periodo_ini,G_empresa"
+          PND="true" PX="0" PY="0" W1="440">
+          <PARAMETER_FIELDS>
+               <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CPT="DTextField" CSS="null" DT="java.lang.String"
+                    E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
+                    H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"
+                    MAZ="20" N1="PF_periodo_fin" NHL="null" PND="false"
+                    PX="202" PY="110" R3="false" S1="periodo_fin"
+                    TT="null" V2="true" VOL="false" W1="120"/>
+               <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CPT="DTextField" CSS="null" DT="java.lang.String"
+                    E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
+                    H1="20" HA="Alg_Left" IV="null" JN="null" KN="true"
+                    MAZ="20" N1="PF_periodo_ini" NHL="null" PND="false"
+                    PX="202" PY="140" R3="false" S1="periodo_ini"
+                    TT="null" V2="true" VOL="false" W1="120"/>
+               <PARAMETER_FIELD B1="null" BCM="null" BG="255,255,255"
+                    CPT="DTextField" CSS="null" DT="java.lang.String"
+                    E1="true" F2="Arial,0,10" FG="0,0,0" FM="null"
+                    H1="20" HA="Alg_Left" IV="" JN="null" KN="true"
+                    MAZ="" N1="PF_empresa" NHL="null" PND="false"
+                    PX="202" PY="170" R3="false" S1="empresa" TT="null"
+                    V2="true" VOL="false" W1="120"/>
+          </PARAMETER_FIELDS>
+          <GRAPHICAL_BOILERPLATE/>
+          <TEXT_BOILERPLATE>
+               <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                    BPO="Enclosing object" CF="null"
+                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_title);"
+                    CSS="null" DO="0 Grades" F2="Courier New,1,14"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
+                    HA="Alg_Left" HE="Fixed" IF="false" JN="null"
+                    KAO="false" LB="Parámetros del reporte" LN="0"
+                    LW="-1" MWL="0" N1="G_title" NPG="false" PBA="false"
+                    PBB="false" PNB="true,true,true,1,1,!Report"
+                    POO="Default" PP="false" PX="100" PY="50" VE="Fixed" W1="164"/>
+               <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                    BPO="Enclosing object" CF="null"
+                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_hint);"
+                    CSS="null" DO="0 Grades" F2="Courier New,1,14"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
+                    HA="Alg_Left" HE="Fixed" IF="false" JN="null"
+                    KAO="false"
+                    LB="Escriba los valores para el parámetro." LN="0"
+                    LW="-1" MWL="0" N1="G_hint" NPG="false" PBA="false"
+                    PBB="false" PNB="true,true,true,1,1,!Report"
+                    POO="Default" PP="false" PX="100" PY="80" VE="Fixed" W1="276"/>
+               <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                    BPO="Enclosing object" CF="null"
+                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo_fin);"
+                    CSS="null" DO="0 Grades" F2="Courier New,0,12"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
+                    HA="Alg_Left" HE="Fixed" IF="false" JN="null"
+                    KAO="false" LB="periodo_fin" LN="0" LW="-1" MWL="0"
+                    N1="G_periodo_fin" NPG="false" PBA="false"
+                    PBB="false" PNB="true,true,true,1,1,!Report"
+                    POO="Default" PP="false" PX="100" PY="110"
+                    VE="Fixed" W1="87"/>
+               <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                    BPO="Enclosing object" CF="null"
+                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_periodo_ini);"
+                    CSS="null" DO="0 Grades" F2="Courier New,0,12"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
+                    HA="Alg_Left" HE="Fixed" IF="false" JN="null"
+                    KAO="false" LB="periodo_ini" LN="0" LW="-1" MWL="0"
+                    N1="G_periodo_ini" NPG="false" PBA="false"
+                    PBB="false" PNB="true,true,true,1,1,!Report"
+                    POO="Default" PP="false" PX="100" PY="140"
+                    VE="Fixed" W1="87"/>
+               <GRAPHIC B1="null" BCF="None" BG="255,255,255"
+                    BPO="Enclosing object" CF="null"
+                    CONTENIDO="this.parameterForm.addToVectorGraphics(this.graphicServergraphicG_empresa);"
+                    CSS="null" DO="0 Grades" F2="Courier New,0,12"
+                    FE="null" FG="0,0,0" GT="TEXT_GRAPHIC" H1="20"
+                    HA="Alg_Left" HE="Fixed" IF="false" JN="null"
+                    KAO="false" LB="empresa" LN="0" LW="-1" MWL="0"
+                    N1="G_empresa" NPG="false" PBA="false" PBB="false"
+                    PNB="true,true,true,1,1,!Report" POO="Default"
+                    PP="false" PX="100" PY="170" VE="Fixed" W1="59"/>
+          </TEXT_BOILERPLATE>
+          <IMAGE_BOILERPLATE/>
+          <SQLSTATEMENTS/>
+          <P_HELP_LIST/>
+          <WIZARD_PARAMETER>
+               <USER_PARAMETER LB="periodo_fin" N1="periodo_fin"/>
+               <USER_PARAMETER LB="periodo_ini" N1="periodo_ini"/>
+               <USER_PARAMETER LB="empresa" N1="empresa"/>
+          </WIZARD_PARAMETER>
+     </PARAMETER_FORM>
+     <REPORT_EVENTS>
+          <BEFORE_PARAMETER_FORM/>
+          <AFTER_PARAMETER_FORM/>
+          <BEFORE_REPORT/>
+          <BETWEEN_PAGES/>
+          <AFTER_REPORT/>
+     </REPORT_EVENTS>
+     <PROGRAMUNITS>
+          <PROGRAMUNIT COMENTARY="" COMPILE="true"
+               FieldRef="REPEATING_FRAME.REPEATING_FRAME0"
+               JAVAC="&#xa;&#x9;if (isTrue(isEquals(ASPMath.mod(getField(&quot;color_reg&quot;).getFieldValue(),2),0) )){&#xa;&#x9;&#x9;setForegroundFillColor(&quot;r238g238b238&quot;);&#xa;&#x9;}else {&#xa;&#x9;&#x9;setForegroundFillColor(&quot;white&quot;);&#xa;&#x9;}&#xa;&#x9;return (java.lang.Boolean)convertTo2(true,&quot;java.lang.Boolean&quot;);&#xa;&#xa;"
+               N1="REPEATING_FRAME0_formatEvent"
+               PARAMETROS="(Vector&lt;ProcedureCallParameters>,argumentVector)"
+               PGT="PLSQL"
+               PLSQL="function REPEATING_FRAME0_formatEvent return boolean is &#xa;BEGIN&#xa; if :color_reg mod 2 = 0 then&#xa;  srw.set_foreground_fill_color('r238g238b238'); &#xa; else &#xa;  srw.set_foreground_fill_color('white'); &#xa; end if; &#xa;    return true;&#xa;END;"
+               ST="Function" SUMPLA="true" TIPO="java.lang.Boolean" modify="true">
+               <PARAMETERS/>
+          </PROGRAMUNIT>
+     </PROGRAMUNITS>
+     <LIBRARIES/>
+     <IMPORTS/>
+</REPORT>

@@ -94,7 +94,7 @@ public class Cotizaciones_Print_class2 extends Cotizaciones_Print_class1 {
 	protected ReportFrame reportFrameMainBodyDetalle_frame = new ReportFrame("DETALLE_FRAME",0,396,31,548,reportRegionMainBody,24,repetitiveFrameMainBodyEncabezado,"FIXED","EXPAND",new Color(255,255,255),null,"DEFAULT",false,false,false,"DETALLE_FRAME_formatEvent",0,-1,false);
 	protected ReportRepetitiveFrame repetitiveFrameMainBodyDetalle = new ReportRepetitiveFrame("DETALLE",20,416,11,515,reportRegionMainBody,25,reportFrameMainBodyDetalle_frame,"FIXED","EXPAND","GROUP_DETALLE","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,"DETALLE_formatEvent",0,0,0,-1,false);
 	protected ReportFrame reportFrameMainBodyTotales = new ReportFrame("TOTALES",0,463,65,548,reportRegionMainBody,44,repetitiveFrameMainBodyEncabezado,"FIXED","EXPAND",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
-	protected ReportRepetitiveFrame repetitiveFrameMainBodyCostos_adicionales = new ReportRepetitiveFrame("COSTOS_ADICIONALES",282,500,9,253,reportRegionMainBody,67,reportFrameMainBodyTotales,"FIXED","VARIABLE","COSTOS_ADIC","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
+	protected ReportRepetitiveFrame repetitiveFrameMainBodyCostos_adicionales = new ReportRepetitiveFrame("COSTOS_ADICIONALES",254,500,9,281,reportRegionMainBody,67,reportFrameMainBodyTotales,"FIXED","VARIABLE","COSTOS_ADIC","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,0,0,-1,false);
 	protected ReportFrame reportFrameMainBodySecciones_enc_frame = new ReportFrame("SECCIONES_ENC_FRAME",0,262,29,548,reportRegionMainBody,49,repetitiveFrameMainBodyEncabezado,"FIXED","VARIABLE",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
 	protected ReportRepetitiveFrame repetitiveFrameMainBodySecciones_enc = new ReportRepetitiveFrame("SECCIONES_ENC",20,262,29,515,reportRegionMainBody,50,reportFrameMainBodySecciones_enc_frame,"FIXED","VARIABLE","SECCIONES_ENC","Down",new Color(255,255,255),null,0,"DEFAULT",false,false,false,null,0,5,0,-1,false);
 	protected ReportFrame reportFrameMainBodySecciones_pie_frame = new ReportFrame("SECCIONES_PIE_FRAME",0,534,29,548,reportRegionMainBody,53,repetitiveFrameMainBodyEncabezado,"FIXED","EXPAND",new Color(255,255,255),null,"DEFAULT",false,false,false,null,0,-1,false);
@@ -137,6 +137,7 @@ public class Cotizaciones_Print_class2 extends Cotizaciones_Print_class1 {
 	protected GroupField parameterPRINTJOB = new GroupField("PRINTJOB","java.lang.String","false",true,this.tempGroup,this);
 	protected GroupField parameterTHOUSANDS = new GroupField("THOUSANDS","java.lang.String","0",true,this.tempGroup,this);
 	protected GroupField parameterMAXRECORDS = new GroupField("MAXRECORDS","java.lang.Integer","0",true,this.tempGroup,this);
+	protected GroupField parameterENCRYPTION = new GroupField("ENCRYPTION","java.lang.String",null,true,this.tempGroup,this);
 
 	// User parameters
 	protected GroupField parameterCot = new GroupField("cot","java.lang.String",null,"",this.tempGroup,this);

@@ -3,7 +3,6 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/librerias/jdom.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/despliegue/ASPCommunication.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/despliegue/ASPLogger.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/despliegue/ConverterUtils.jar"/>
@@ -19,6 +18,7 @@
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/librerias/core-2.2.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/librerias/itext-2.0.6.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/librerias/javase-2.2.jar"/>
+	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/librerias/jdom.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/librerias/Librerias_1.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/librerias/Librerias_2.jar"/>
 	<classpathentry kind="lib" path="/Asp/src/main/resources/version3/librerias/ojdbc14.jar"/>

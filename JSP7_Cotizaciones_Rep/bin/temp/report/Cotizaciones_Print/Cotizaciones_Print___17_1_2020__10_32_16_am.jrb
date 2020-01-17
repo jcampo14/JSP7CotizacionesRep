@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <REPORT ARREGLO_25102007="true" ArbolArreglado="22-12-2008" CMT="null"
      D1="null" DCU="false" IAE="true" IB="false" IBO="false"
-     IsSave="true" JSN="null" LM="1579272384477" MHB="10" MVB="10"
+     IsSave="true" JSN="null" LM="1579275069223" MHB="10" MVB="10"
      N1="Cotizaciones_Print" NAMES="" NP="1" PFH="1" PFW="1"
      PKG="com.aspsols.cotizaciones.reportes" PND="true" PPO="null"
      PT="null"

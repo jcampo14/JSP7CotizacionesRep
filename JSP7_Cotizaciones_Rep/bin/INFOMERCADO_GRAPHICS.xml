@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JGRAPHICS TY="2">
+	<GR DS="DATA" QR="" XA="NOM:=:-1:=:" YA="PERIODO_ACTUAL:=:-1:=:PERIODO_PASADO:=:-1:=:" PC="">
+		<TIT SHOW="F" TX="" CLR="0,0,0" F="Arial,0,10" />
+		<STI SHOW="F" TX="" CLR="0,0,0" F="Monospaced.plain,0,13" />
+		<FNT SHOW="F" TX="" CLR="0,0,0" F="Monospaced.plain,0,13" />
+		<LGD SHOW="T" PS="Inferior" FCLR="255,255,255" F="Arial,0,6" CLR="0,0,0" />
+		<OPX>
+			<TIT SHOW="F" TX="" CLR="0,0,0" F="Arial,0,7" />
+			<AXIS W1="1" CLR="255,255,255" PS="0" />
+			<LBL SHOW="T" CLR="0,0,0" F="Tahoma,0,7" RT="Standard" />
+		</OPX>
+		<OPY>
+			<TIT SHOW="T" TX="" CLR="0,0,0" F="Arial,0,7" />
+			<AXIS W1="1" CLR="255,255,255" PS="0" />
+			<LBL SHOW="T" CLR="0,0,0" F="Tahoma,0,7" AMIN="T" MIN="0" AMAX="T" MAX="100" />
+		</OPY>
+		<OPD FCLR="255,255,255" BCLR="128,128,128" SHL="T" WHL="1" CHL="128,128,128" SVL="F" WVL="1" CVL="128,128,128" SLD="T" SPD="F">
+		</OPD>
+		<SERIES>
+		<SERIE CLR="0,51,153" /><SERIE CLR="226,107,10" /></SERIES>
+	</GR>
+</JGRAPHICS>
